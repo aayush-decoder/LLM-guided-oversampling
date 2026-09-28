@@ -1,0 +1,6 @@
+# v1 = faithful replication of Pred-LLM (Nguyen et al., arXiv:2410.21717).
+# Values marked (paper) come from Sec. IV-A3 / the authors' code. Override with --set a.b=value.
+
+
+# Responsibility: Configuration stub for v1\configs\default.yaml
+# Specify parameters and configurations as needed.

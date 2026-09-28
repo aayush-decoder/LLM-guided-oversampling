@@ -1,0 +1,18 @@
+# Dataset registry shared by v1 and v2.
+#
+# source.type:
+#   sklearn  - bundled / auto-downloaded by scikit-learn
+#   openml   - auto-downloaded via sklearn.datasets.fetch_openml(data_id=...)
+#   url      - auto-downloaded from a public mirror (first working URL wins)
+#   kaggle   - tries mirrors -> Kaggle API (needs ~/.kaggle/kaggle.json) -> manual (see docs/DATASETS.md)
+#
+# target: column name, or "auto" (OpenML default target / sklearn "target").
+# numerical / categorical: explicit feature lists. Omit to infer from OpenML metadata / dtypes.
+# expected: sizes after cleaning (n rows, m features, k classes) from the paper's Table I or the
+#           extended table. `python -m tabgen audit data` compares against these.
+# binarize: null | median. Regression datasets can be turned into 2-class problems (y > median).
+#           Also available per run with `--binarize median`.
+
+
+# Responsibility: Configuration stub for configs\datasets.yaml
+# Specify parameters and configurations as needed.

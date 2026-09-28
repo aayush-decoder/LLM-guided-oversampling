@@ -1,0 +1,19 @@
+# LLM switch registry, shared by v1 and v2.
+#
+# Only decoder-only causal LMs that support BOTH of these are listed:
+#   (a) fine-tuning through transformers.AutoModelForCausalLM, with PEFT/LoRA using target_modules="all-linear"
+#   (b) byte-level BPE tokenizers (GPT-2, Qwen2.5/3, Llama-3, SmolLM2 families) whose "," is a single
+#       token. v2's schema-constrained decoder relies on this. SentencePiece models (Llama-2, Mistral)
+#       are intentionally NOT listed: their dummy-prefix spaces break piece-wise tokenization.
+# All entries are BASE (not chat/instruct) checkpoints, because the method fine-tunes on serialized rows.
+#
+# mode:  full  = update every weight (the paper's setting for distilgpt2)
+#        lora  = bf16 base weights + LoRA adapters
+#        qlora = 4-bit NF4 base weights (bitsandbytes) + LoRA adapters
+# min_vram_gb: rough minimum GPU memory to fine-tune in `mode` with micro_batch_size=4 and
+#              seq_len <= 256. Use `python -m tabgen llm check --llm <alias>` to test your GPU.
+# gated: true -> accept the licence on huggingface.co and run `huggingface-cli login` first.
+
+
+# Responsibility: Configuration stub for configs\llms.yaml
+# Specify parameters and configurations as needed.

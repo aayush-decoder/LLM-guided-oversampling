@@ -1,0 +1,5 @@
+# Table II of Nguyen et al. (arXiv:2410.21717). Mean over 3 runs. Used by `report` to show the
+# paper's numbers next to ours. Accuracy for classification, MSE for regression.
+
+# Responsibility: Configuration stub for configs\paper_reference.yaml
+# Specify parameters and configurations as needed.

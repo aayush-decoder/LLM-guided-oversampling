@@ -1,0 +1,11 @@
+# Project dependencies stub
+# Core requirements for Pred-LLM, PyTorch, HuggingFace Transformers, SDV, scikit-learn, etc.
+torch>=2.0.0
+transformers>=4.40.0
+datasets
+pandas
+numpy
+scikit-learn
+xgboost
+pyyaml
+tqdm
