@@ -1,6 +1,48 @@
 # v1 = faithful replication of Pred-LLM (Nguyen et al., arXiv:2410.21717).
 # Values marked (paper) come from Sec. IV-A3 / the authors' code. Override with --set a.b=value.
 
+llm: distilgpt2          # (paper) distilled GPT-2. Any key/alias from configs/llms.yaml, e.g. 1.5b, 3b, 8b
+mode: auto               # auto = registry default for the LLM | full | lora | qlora
+device: auto             # auto | cuda | cpu
 
-# Responsibility: Configuration stub for v1\configs\default.yaml
-# Specify parameters and configurations as needed.
+data:
+  test_size: 0.2         # (paper) 80/20 split, re-drawn for every seed
+  train_size: 1.0        # fraction of D_real used for training (Fig. 7a)
+  gen_size: 1.0          # |D_fake| = gen_size * |D_real|  (Fig. 7b)
+  fit_scaler_on: full    # (paper code) MinMax/category codes fitted on the full table | train
+  decimals: 2            # (paper code) features rounded to 2 decimals
+  binarize: null         # null | median  (turns a regression dataset into 2 classes)
+  max_rows: null         # optional stratified cap on dataset size for quick experiments
+
+finetune:
+  epochs: 50             # (paper)
+  batch_size: 32         # (paper) effective batch size
+  micro_batch_size: null # null = batch_size for full FT; 8 (lora) / 4 (qlora) -> gradient accumulation
+  lr: 5.0e-5             # HF Trainer default used by the authors
+  lr_lora: 2.0e-4        # used instead of lr for lora / qlora
+  weight_decay: 0.0
+  warmup_ratio: 0.0
+  max_grad_norm: 1.0
+  max_steps: null        # hard cap on optimizer steps (overrides epochs)
+  log_every: 50
+  reuse: true            # reuse an identical fine-tuned model from runs/<dataset>/_models
+
+sampling:
+  temperature: 0.7       # (paper) T in Eq. 2
+  top_k: 50              # HF generate default used by GReaT / Pred-LLM code
+  batch_size: 100        # (paper code) k = 100 sequences per generate call
+  max_rounds: 30         # re-generation rounds per start column before giving up
+  target_decimals: 4     # regression targets in text
+  clip: 10               # (paper code) clip generated features to [-10, 10]
+
+query:
+  max_retries: 5         # (paper code) re-query invalid labels up to 5 times
+  force_target_key: true # prompt ends with ", target is" so the completion is always the label
+
+eval:
+  runs: 3                # (paper) 3 seeds: 0, 1, 2
+  fidelity: true         # discriminator / inverse KL / density / coverage / DCR
+  max_fidelity_rows: 5000
+
+baselines:
+  epochs: 300            # CTGAN / TVAE / CopulaGAN epochs (SDV default)
