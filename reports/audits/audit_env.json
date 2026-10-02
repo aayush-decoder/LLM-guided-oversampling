@@ -1,0 +1,53 @@
+{
+  "status": "WARN",
+  "items": [
+    {
+      "level": "INFO",
+      "msg": "python 3.12.9 on Windows"
+    },
+    {
+      "level": "PASS",
+      "msg": "torch 2.14.1+cpu"
+    },
+    {
+      "level": "PASS",
+      "msg": "transformers 5.18.0"
+    },
+    {
+      "level": "PASS",
+      "msg": "peft 0.21.2"
+    },
+    {
+      "level": "PASS",
+      "msg": "accelerate 1.15.0"
+    },
+    {
+      "level": "PASS",
+      "msg": "bitsandbytes 0.50.2"
+    },
+    {
+      "level": "PASS",
+      "msg": "xgboost 3.4.1"
+    },
+    {
+      "level": "PASS",
+      "msg": "sklearn 1.9.1"
+    },
+    {
+      "level": "PASS",
+      "msg": "pandas 2.3.3"
+    },
+    {
+      "level": "PASS",
+      "msg": "sdv 1.38.5"
+    },
+    {
+      "level": "WARN",
+      "msg": "CUDA not available: training runs on CPU (only tiny / distilgpt2 are practical)"
+    },
+    {
+      "level": "INFO",
+      "msg": "LLMs that fit this GPU: tiny-gpt2, tiny-llama"
+    }
+  ]
+}
