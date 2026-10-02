@@ -2,7 +2,13 @@
 # ==============================================================================
 # ML RESEARCH PROJECT - AUTOMATED RUNNER (v1 + v2)
 # Optimized for: NVIDIA RTX 5050 GPU | 16 GB RAM | Windows (Git Bash)
-# LLMs Included: distilgpt2 (paper baseline), Qwen2.5-0.5B, Qwen2.5-1.5B (LoRA), tiny-gpt2
+# LLMs Executed: 
+#   - distilgpt2     (82M, Paper Baseline)
+#   - tiny-gpt2      (0.1M, Rapid Smoke/Sanity Tests)
+#   - Qwen2.5-0.5B   (LoRA, 490M params)
+#   - Qwen2.5-1.5B   (LoRA, 1.5B params)
+#   - Qwen3-0.6B     (LoRA, 600M params)
+#   - Qwen3-1.7B     (LoRA, 1.7B params)
 # ==============================================================================
 
 # Enable UTF-8 encoding
@@ -26,9 +32,9 @@ print_banner() {
     echo "======================================================================"
     echo -e "${CLR_RESET}"
     echo -e "${CLR_BOLD}System Target:${CLR_RESET} NVIDIA RTX 5050 GPU  |  16 GB RAM  |  Windows"
-    echo -e "${CLR_BOLD}LLMs Executed:${CLR_RESET} distilgpt2 (82M), Qwen2.5-0.5B (LoRA), Qwen2.5-1.5B (LoRA), tiny-gpt2"
+    echo -e "${CLR_BOLD}LLMs Executed:${CLR_RESET} distilgpt2 (82M), Qwen2.5 (0.5B & 1.5B), Qwen3 (0.6B & 1.7B)"
     echo -e "${CLR_BOLD}What this does:${CLR_RESET} Auto-installs 'uv', configures CUDA 12.8 for RTX 5050,"
-    echo "                runs smoke tests, trains v1 & v2 (distilgpt2 + Qwen),"
+    echo "                runs smoke tests, trains v1 & v2 across all models,"
     echo "                creates plots & tables, and pushes everything to Git!"
     echo "======================================================================"
     echo ""
@@ -205,7 +211,7 @@ fi
 echo -e "${CLR_GREEN}✅ All project packages and modules installed successfully!${CLR_RESET}"
 
 # ==============================================================================
-# STEP 7: Run Environment Audit & LLM Sanity Checks (distilgpt2 + Qwen)
+# STEP 7: Run Environment Audit & LLM Sanity Checks (distilgpt2 + Qwen 2.5 + Qwen 3)
 # ==============================================================================
 run_step "Auditing System Environment & Packages" \
     "tabgen audit env reported missing packages or environment errors." \
@@ -234,6 +240,14 @@ run_step "Sanity Check with Qwen2.5-0.5B (LoRA Mode on GPU)" \
 run_step "Sanity Check with Qwen2.5-1.5B (LoRA Mode on GPU)" \
     "LLM check failed on Qwen2.5-1.5B. Check internet connection for download." \
     python -m tabgen llm check --llm 1.5b
+
+run_step "Sanity Check with Qwen3-0.6B (LoRA Mode on GPU)" \
+    "LLM check failed on Qwen3-0.6B. Check internet connection for download." \
+    python -m tabgen llm check --llm qwen3-0.6b
+
+run_step "Sanity Check with Qwen3-1.7B (LoRA Mode on GPU)" \
+    "LLM check failed on Qwen3-1.7B. Check internet connection for download." \
+    python -m tabgen llm check --llm qwen3-1.7b
 
 # ==============================================================================
 # STEP 8: Download Paper Datasets & Pre-training Visualizations
@@ -271,11 +285,11 @@ run_step "Smoke Test v2 (Pred-LLM v2 schema-constrained check on Iris)" \
     python -m predllm_v2 smoke
 
 # ==============================================================================
-# STEP 10: Full Training & Generation for v1 (distilgpt2 + Qwen2.5-0.5B)
+# STEP 10: Full Training & Generation for v1 (distilgpt2 + Qwen2.5 + Qwen3)
 # ==============================================================================
 echo ""
 echo -e "${CLR_MAGENTA}======================================================================${CLR_RESET}"
-echo -e "${CLR_BOLD}🧠 TRAINING & GENERATING v1 (distilgpt2 + Qwen2.5-0.5B)...${CLR_RESET}"
+echo -e "${CLR_BOLD}🧠 TRAINING & GENERATING v1 (distilgpt2 + Qwen2.5 + Qwen3)...${CLR_RESET}"
 echo -e "${CLR_MAGENTA}======================================================================${CLR_RESET}"
 
 run_step "Training v1 on Iris with distilgpt2 (Pred-LLM, GReaT, TapTap)" \
@@ -286,12 +300,16 @@ run_step "Training v1 on Iris with Qwen2.5-0.5B LoRA" \
     "v1 Qwen2.5-0.5B training run failed on Iris." \
     python -m predllm_v1 run --dataset iris --method pred_llm --llm 0.5b --plots
 
+run_step "Training v1 on Iris with Qwen3-0.6B LoRA" \
+    "v1 Qwen3-0.6B training run failed on Iris." \
+    python -m predllm_v1 run --dataset iris --method pred_llm --llm qwen3-0.6b --plots
+
 # ==============================================================================
-# STEP 11: Full Training & Generation for v2 (distilgpt2 + Qwen2.5-0.5B + Qwen2.5-1.5B)
+# STEP 11: Full Training & Generation for v2 (distilgpt2 + Qwen2.5 + Qwen3)
 # ==============================================================================
 echo ""
 echo -e "${CLR_MAGENTA}======================================================================${CLR_RESET}"
-echo -e "${CLR_BOLD}🧠 TRAINING & GENERATING v2 (distilgpt2 + Qwen2.5-0.5B + Qwen2.5-1.5B)...${CLR_RESET}"
+echo -e "${CLR_BOLD}🧠 TRAINING & GENERATING v2 (distilgpt2 + Qwen2.5 + Qwen3)...${CLR_RESET}"
 echo -e "${CLR_MAGENTA}======================================================================${CLR_RESET}"
 
 run_step "Training v2 on Iris with distilgpt2 (Pred-LLM v2 + Ablations)" \
@@ -306,8 +324,16 @@ run_step "Training v2 on Iris with Qwen2.5-1.5B LoRA" \
     "v2 Qwen2.5-1.5B training run failed on Iris." \
     python -m predllm_v2 run --dataset iris --method pred_llm_v2 --llm 1.5b --plots
 
+run_step "Training v2 on Iris with Qwen3-0.6B LoRA" \
+    "v2 Qwen3-0.6B training run failed on Iris." \
+    python -m predllm_v2 run --dataset iris --method pred_llm_v2 --llm qwen3-0.6b --plots
+
+run_step "Training v2 on Iris with Qwen3-1.7B LoRA" \
+    "v2 Qwen3-1.7B training run failed on Iris." \
+    python -m predllm_v2 run --dataset iris --method pred_llm_v2 --llm qwen3-1.7b --plots
+
 # ==============================================================================
-# STEP 12: Inference, Generation & Attention Testing
+# STEP 12: Inference, Generation & Attention Testing Across Models
 # ==============================================================================
 echo ""
 echo -e "${CLR_MAGENTA}======================================================================${CLR_RESET}"
@@ -331,8 +357,16 @@ run_step "v2 Generation (Sample 150 synthetic rows with distilgpt2)" \
     python -m predllm_v2 generate --run v2/runs/iris/pred_llm_v2__distilgpt2/seed0 --n 150
 
 run_step "v2 Generation (Sample 150 synthetic rows with Qwen2.5-0.5B)" \
-    "v2 Qwen generation failed." \
+    "v2 Qwen2.5-0.5B generation failed." \
     python -m predllm_v2 generate --run v2/runs/iris/pred_llm_v2__qwen2.5-0.5b/seed0 --n 150
+
+run_step "v2 Generation (Sample 150 synthetic rows with Qwen3-0.6B)" \
+    "v2 Qwen3-0.6B generation failed." \
+    python -m predllm_v2 generate --run v2/runs/iris/pred_llm_v2__qwen3-0.6b/seed0 --n 150
+
+run_step "v2 Generation (Sample 150 synthetic rows with Qwen3-1.7B)" \
+    "v2 Qwen3-1.7B generation failed." \
+    python -m predllm_v2 generate --run v2/runs/iris/pred_llm_v2__qwen3-1.7b/seed0 --n 150
 
 run_step "Attention Heatmap Visualization (Figure 4)" \
     "Attention visualization failed." \
@@ -357,7 +391,7 @@ run_step "Auditing v2 Run Artifacts & Metrics" \
     "v2 audit run encountered errors." \
     python -m tabgen audit run --run v2/runs
 
-run_step "Generating Final Comparison Tables (Table II / III)" \
+run_step "Generating Final Comparison Tables (Table II / III across all LLMs)" \
     "Failed to build summary tables." \
     python -m tabgen report --versions v1,v2
 
@@ -388,7 +422,7 @@ if [ -d "reports" ]; then git add reports; fi
 if git diff --staged --quiet; then
     echo "No new changes to commit in runs/ or reports/."
 else
-    git commit -m "Auto-run: experiment runs, metrics, plots, and tables for v1 and v2 (distilgpt2 + Qwen)"
+    git commit -m "Auto-run: experiment runs, metrics, plots, and tables for v1 and v2 (distilgpt2 + Qwen 2.5 + Qwen 3)"
     echo -e "${CLR_GREEN}✅ Successfully committed run results to Git!${CLR_RESET}"
 fi
 
@@ -423,11 +457,11 @@ echo "  1. ⚡ Auto-installed 'uv' & configured Python virtual environment"
 echo "  2. 🎮 PyTorch with CUDA 12.8 installed and verified on RTX 5050"
 echo "  3. 📦 All project modules (transformers, peft, xgboost, etc.) installed"
 echo "  4. 🧪 Smoke tests passed for v1 and v2"
-echo "  5. 🧠 v1 Models trained (distilgpt2 + Qwen2.5-0.5B)"
-echo "  6. 🧠 v2 Models trained (distilgpt2 + Qwen2.5-0.5B + Qwen2.5-1.5B)"
-echo "  7. 🔍 Inference testing & generation executed across models"
+echo "  5. 🧠 v1 Models trained (distilgpt2, Qwen2.5-0.5B, Qwen3-0.6B)"
+echo "  6. 🧠 v2 Models trained (distilgpt2, Qwen2.5-0.5B, Qwen2.5-1.5B, Qwen3-0.6B, Qwen3-1.7B)"
+echo "  7. 🔍 Inference testing & generation executed across all models"
 echo "  8. 📊 Visualizations created (Marginals, t-SNE, DCR, Attention heatmap)"
-echo "  9. 📋 Accuracy & MSE comparison tables compiled in: reports/tables/"
+echo "  9. 📋 Full multi-model comparison tables compiled in: reports/tables/"
 echo " 10. 💾 All run results safely committed to Git!"
 echo ""
 echo -e "${CLR_CYAN}Your generated files are stored in:${CLR_RESET}"
