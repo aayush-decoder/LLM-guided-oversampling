@@ -1,19 +1,7 @@
-"""
-Module: common.tabgen.data
-Responsibility: Data registry, downloading, cleaning, and preprocessing utilities.
-"""
-from typing import Any
+from .download import fetch, is_available, ManualDownloadRequired
+from .preprocess import TARGET, TablePreprocessor, TabularSplit, clean_table, make_split
+from .registry import DatasetSpec, get_spec, load_registry, resolve_datasets
 
-def fetch(*args, **kwargs):
-    """Fetch a dataset from its configured source."""
-    pass
-
-def is_available(*args, **kwargs):
-    """Check if dataset raw files are locally available."""
-    pass
-
-class ManualDownloadRequired(Exception):
-    """Raised when a dataset requires manual download."""
-    pass
-
-__all__ = ["fetch", "is_available", "ManualDownloadRequired"]
+__all__ = ["fetch", "is_available", "ManualDownloadRequired", "TARGET", "TablePreprocessor",
+           "TabularSplit", "clean_table", "make_split", "DatasetSpec", "get_spec", "load_registry",
+           "resolve_datasets"]
