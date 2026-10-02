@@ -1,16 +1,7 @@
-# Python & Environment
 .venv/
-venv/
 __pycache__/
-*.pyc
 *.egg-info/
 .pytest_cache/
-.env
-
-# Research & Papers
-papers/*/*.pdf
-
-# Project Artifacts & Data
 data/raw/
 reports/
 v1/runs/*

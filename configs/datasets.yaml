@@ -13,6 +13,233 @@
 # binarize: null | median. Regression datasets can be turned into 2-class problems (y > median).
 #           Also available per run with `--binarize median`.
 
+datasets:
+  # ---------------------------------------------------------------- paper (Table I) --------
+  iris:
+    group: [paper]
+    task: classification
+    source: {type: sklearn, loader: load_iris}
+    target: target
+    expected: {n: 150, m: 4, k: 3}
+  breast:
+    group: [paper]
+    task: classification
+    source: {type: sklearn, loader: load_breast_cancer}
+    target: target
+    expected: {n: 569, m: 30, k: 2}
+  blood:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1464}
+    target: auto
+    expected: {n: 748, m: 4, k: 2}
+  steel:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1504}
+    target: auto
+    expected: {n: 1941, m: 33, k: 2}
+  diabetes:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 37}
+    target: auto
+    expected: {n: 768, m: 8, k: 2}
+  australian:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 40981}
+    target: auto
+    expected: {n: 690, m: 14, k: 2}
+  balance:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 11}
+    target: auto
+    expected: {n: 625, m: 4, k: 3}
+  compas:
+    group: [paper]
+    task: classification
+    source:
+      type: url
+      urls: ["https://raw.githubusercontent.com/nphdang/Pred-LLM/main/data/compas.csv"]
+    target: two_year_recid
+    numerical: [age, juv_fel_count, juv_misd_count, juv_other_count, priors_count]
+    categorical: [race, sex, c_charge_degree]
+    expected: {n: 4010, m: 8, k: 2}
+  bank:
+    group: [paper, user]
+    task: classification
+    source:
+      type: url
+      urls: ["https://raw.githubusercontent.com/nphdang/Pred-LLM/main/data/bank.csv"]
+    target: subscribe
+    numerical: [balance, duration, campaign, pdays, previous]
+    categorical: [age, marital, job, education, default, housing, loan, contact, poutcome]
+    expected: {n: 4521, m: 14, k: 2}
+  adult:
+    group: [paper, user]
+    task: classification
+    source:
+      type: url
+      urls: ["https://raw.githubusercontent.com/nphdang/Pred-LLM/main/data/adult.csv"]
+    target: income-per-year
+    numerical: [age, education-num, capital-gain, capital-loss, hours-per-week]
+    categorical: [race, sex, workclass, marital-status, occupation, relationship]
+    expected: {n: 30162, m: 11, k: 2}
+  qsar:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1494}
+    target: auto
+    expected: {n: 1055, m: 41, k: 2}
+  phoneme:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1489}
+    target: auto
+    expected: {n: 5404, m: 5, k: 2}
+  waveform:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 60}
+    target: auto
+    expected: {n: 5000, m: 40, k: 3}
+  churn:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 40701}
+    target: auto
+    expected: {n: 5000, m: 20, k: 2}
+  kc1:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1067}
+    target: auto
+    expected: {n: 2109, m: 21, k: 2}
+  kc2:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1063}
+    target: auto
+    expected: {n: 522, m: 21, k: 2}
+  cardio:
+    group: [paper]
+    task: classification
+    source: {type: openml, data_id: 1466}
+    target: auto
+    expected: {n: 2126, m: 35, k: 10}
+    # WARNING: V26-V35 are an exact one-hot encoding of the 10-class target (the CTG
+    # "A..SUSP" class indicators), so any classifier reads the label off them; the
+    # Pred-LLM paper's 1.0000 accuracy for Original and Pred-LLM comes from this. Kept
+    # as published for comparability; draw conclusions from `cardio_noleak`.
+  cardio_noleak:
+    group: [extra]
+    task: classification
+    source: {type: openml, data_id: 1466}
+    target: auto
+    drop: [V26, V27, V28, V29, V30, V31, V32, V33, V34, V35]
+    expected: {n: 2126, m: 25, k: 10}
+  abalone:
+    group: [paper]
+    task: regression
+    source:
+      type: url
+      urls: ["https://raw.githubusercontent.com/nphdang/Pred-LLM/main/data/abalone.csv"]
+    target: Age
+    numerical: [Length, Diameter, Height, Shucked_Weight, Viscera_Weight, Shell_Weight, Rings]
+    categorical: [Sex]
+    expected: {n: 4177, m: 8}
+  fuel:
+    group: [paper, user]
+    task: regression
+    source:
+      type: url
+      urls: ["https://raw.githubusercontent.com/nphdang/Pred-LLM/main/data/fuel.csv"]
+    target: CONSUMPTION
+    numerical: [ENGINE_SIZE, CYLINDERS, COEMISSIONS]
+    categorical: [MAKE, MODEL, VEHICLE_CLASS, TRANSMISSION, FUEL]
+    binarize: null
+    expected: {n: 639, m: 8}
+  california:
+    group: [paper]
+    task: regression
+    source: {type: sklearn, loader: fetch_california_housing}
+    target: MedHouseVal
+    expected: {n: 20640, m: 8}
 
-# Responsibility: Configuration stub for configs\datasets.yaml
-# Specify parameters and configurations as needed.
+  # ---------------------------------------------------------------- extended (user table) --
+  german:
+    group: [user]
+    task: classification
+    source: {type: openml, data_id: 31}
+    target: auto
+    expected: {n: 1000, m: 20, k: 2}
+  insurance:
+    group: [user]
+    task: regression
+    source:
+      type: kaggle
+      slug: mirichoi0218/insurance
+      file: insurance.csv
+      urls: ["https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv"]
+    target: charges
+    numerical: [age, bmi, children]
+    categorical: [sex, smoker, region]
+    binarize: null
+    expected: {n: 1338, m: 6}
+  gem_price:
+    group: [user]
+    task: regression
+    source:
+      type: kaggle
+      slug: colearninglounge/gemstone-price-prediction
+      file: cubic_zirconia.csv
+    target: price
+    numerical: [carat, depth, table, x, y, z]
+    categorical: [cut, color, clarity]
+    binarize: null
+    expected: {n: 26270, m: 9}
+  housing:
+    group: [user]
+    task: regression
+    source:
+      type: kaggle
+      slug: camnugent/california-housing-prices
+      file: housing.csv
+      urls: ["https://raw.githubusercontent.com/ageron/handson-ml2/master/datasets/housing/housing.csv"]
+    target: median_house_value
+    numerical: [longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population,
+                households, median_income]
+    categorical: [ocean_proximity]
+    binarize: null
+    expected: {n: 20433, m: 9}
+  car:
+    group: [user]
+    task: classification
+    source: {type: openml, data_id: 40975}
+    target: auto
+    expected: {n: 1728, m: 6, k: 4}
+  credit_card:
+    group: [user]
+    task: classification
+    source:
+      type: kaggle
+      slug: sakshigoyal7/credit-card-customers
+      file: BankChurners.csv
+    target: Attrition_Flag
+    drop_prefix: [Naive_Bayes_Classifier]
+    drop: [CLIENTNUM]
+    numerical: [Customer_Age, Dependent_count, Months_on_book, Total_Relationship_Count,
+                Months_Inactive_12_mon, Contacts_Count_12_mon, Credit_Limit, Total_Revolving_Bal,
+                Avg_Open_To_Buy, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt, Total_Trans_Ct,
+                Total_Ct_Chng_Q4_Q1, Avg_Utilization_Ratio]
+    categorical: [Gender, Education_Level, Marital_Status, Income_Category, Card_Category]
+    expected: {n: 10127, m: 19, k: 2}
+  sick:
+    group: [user]
+    task: classification
+    source: {type: openml, data_id: 38}
+    target: auto
+    drop: [TBG, TBG_measured]
+    expected: {n: 3560, m: 27, k: 2}
