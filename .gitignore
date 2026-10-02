@@ -3,8 +3,9 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 data/raw/
-reports/
-v1/runs/*
-v2/runs/*
-!v1/runs/.gitkeep
-!v2/runs/.gitkeep
+# Exclude model weights and caches that exceed GitHub 100MB file limit
+**/_models/
+*.safetensors
+*.bin
+*.pt
+*.pth
