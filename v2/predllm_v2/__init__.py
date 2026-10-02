@@ -1,5 +1,4 @@
-"""
-predllm_v2: Pred-LLM with schema-constrained decoding, exact permutation-marginalised label
+"""predllm_v2: Pred-LLM with schema-constrained decoding, exact permutation-marginalised label
 posteriors, weighted value-only training and discriminator-guided curation. See v2/docs/NOVELTY.md.
 
 codec      schema (raw categories/units), canonical piece-wise tokenization, loss weights   (N1, N3)
@@ -12,5 +11,3 @@ methods    presets / ablations (config overrides)
 generator  wires everything + model cache
 cli        run / benchmark / ablation / train / generate / infer / evaluate / smoke
 """
-
-from typing import Any, Optional, List, Dict, Union
