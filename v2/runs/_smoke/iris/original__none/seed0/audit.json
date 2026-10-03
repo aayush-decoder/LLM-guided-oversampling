@@ -1,0 +1,38 @@
+{
+  "run": "D:\\Aayush\\ML\\Research-Project\\v2\\runs\\_smoke\\iris\\original__none\\seed0",
+  "status": "WARN",
+  "items": [
+    {
+      "level": "PASS",
+      "msg": "all required artifacts present"
+    },
+    {
+      "level": "PASS",
+      "msg": "no NaN in synthetic data"
+    },
+    {
+      "level": "PASS",
+      "msg": "|D_fake| = 120"
+    },
+    {
+      "level": "PASS",
+      "msg": "feature values within [0,1] (0.00% outside)"
+    },
+    {
+      "level": "PASS",
+      "msg": "all 3 classes generated"
+    },
+    {
+      "level": "PASS",
+      "msg": "label TV distance 0.000"
+    },
+    {
+      "level": "WARN",
+      "msg": "memorisation: 100.00% exact copies"
+    },
+    {
+      "level": "PASS",
+      "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9327, 'valid': True}"
+    }
+  ]
+}

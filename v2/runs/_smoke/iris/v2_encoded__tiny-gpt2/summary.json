@@ -1,0 +1,21 @@
+{
+  "dataset": "iris",
+  "method": "v2_encoded",
+  "llm": "tiny-gpt2",
+  "seeds": [
+    0
+  ],
+  "metric": "accuracy",
+  "mean": 0.5667,
+  "std": 0.0,
+  "original_mean": 0.9333,
+  "per_seed": [
+    0.5667
+  ],
+  "discriminator": 1.0,
+  "discriminator_lr": 0.9506,
+  "inverse_kl": 0.5339,
+  "density": 0.0,
+  "coverage": 0.0,
+  "dcr_mean": 0.5986
+}
