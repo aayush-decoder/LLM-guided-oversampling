@@ -42,6 +42,7 @@ def score_continuations(model, prefixes: list[list[int]], cands: list[list[int]]
                         max_elems: float = 3e7, use_cache: bool = True) -> torch.Tensor:
     """Returns (B, K) tensor of sum_t log p(cand_k[t] | prefix_b, cand_k[<t])."""
     dev = model.device
+    max_elems = float(max_elems)
     B, K = len(prefixes), len(cands)
     if not use_cache:
         return _score_no_cache(model, prefixes, cands, pad_id, max_elems)
@@ -79,6 +80,7 @@ def score_continuations(model, prefixes: list[list[int]], cands: list[list[int]]
 def _score_no_cache(model, prefixes, cands, pad_id, max_elems) -> torch.Tensor:
     """Reference implementation (full recomputation); used by tests to validate the cached path."""
     dev = model.device
+    max_elems = float(max_elems)
     pairs = [(b, k) for b in range(len(prefixes)) for k in range(len(cands))]
     scores = torch.zeros(len(prefixes), len(cands), device=dev)
     V = model.config.vocab_size

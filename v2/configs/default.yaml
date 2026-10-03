@@ -39,7 +39,7 @@ decoding:                # N2: schema-constrained field-wise decoding
   temperature_num: 0.7   # token-level T for digits (paper's T)
   temperature_cat: 1.0   # sequence-level T over whole categorical values (1 = exact model distribution)
   kv_cache: true         # reuse the prefix KV cache when scoring candidates
-  max_score_elems: 3.0e7 # memory cap (logit elements) per scoring chunk
+  max_score_elems: 30000000 # memory cap (logit elements) per scoring chunk
 
 query:                   # N4: permutation-marginalised exact posterior
   permutations: 4        # R orders averaged (1 = original order only, like the paper)
