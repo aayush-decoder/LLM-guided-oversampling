@@ -1,0 +1,52 @@
+{
+  "dataset": "iris",
+  "method": "pred_llm_v2",
+  "seed": 1,
+  "llm": "qwen2.5-0.5b",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9,
+    "f1_macro": 0.8995,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9332,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "fidelity": {
+    "inverse_kl": 0.6511,
+    "discriminator": 0.3086,
+    "discriminator_auc": 0.6543,
+    "discriminator_acc": 0.6111,
+    "discriminator_lr": 0.0,
+    "discriminator_train": 0.3943,
+    "density": 0.8458,
+    "coverage": 0.9,
+    "dcr_mean": 0.0889,
+    "dcr_median": 0.0803,
+    "exact_copy_rate": 0.1,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "steps": 400,
+    "epochs_run": 50,
+    "final_loss": 0.2012690626966056,
+    "train_seconds": 229.7,
+    "n_sequences": 240
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "posterior_entropy": 0.0083,
+    "pool_size": 180,
+    "dcr_tau": 0.03606,
+    "privacy_dropped": 89,
+    "sir_ess": 36.2,
+    "disc_mean_pool": 0.6088,
+    "preset": "pred_llm_v2"
+  },
+  "seconds_total": 243.3
+}

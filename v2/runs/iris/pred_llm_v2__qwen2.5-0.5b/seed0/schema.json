@@ -1,0 +1,36 @@
+{
+  "kinds": {
+    "sepal length (cm)": "num",
+    "sepal width (cm)": "num",
+    "petal length (cm)": "num",
+    "petal width (cm)": "num",
+    "target": "cat"
+  },
+  "decimals": {
+    "sepal length (cm)": 1,
+    "sepal width (cm)": 1,
+    "petal length (cm)": 1,
+    "petal width (cm)": 1
+  },
+  "ranges": {
+    "sepal length (cm)": [
+      4.3,
+      7.9
+    ],
+    "sepal width (cm)": [
+      2.0,
+      4.4
+    ],
+    "petal length (cm)": [
+      1.0,
+      6.9
+    ],
+    "petal width (cm)": [
+      0.1,
+      2.5
+    ]
+  },
+  "n_categories": {
+    "target": 3
+  }
+}

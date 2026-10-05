@@ -1,13 +1,13 @@
 {
-  "status": "WARN",
+  "status": "PASS",
   "items": [
     {
       "level": "INFO",
-      "msg": "python 3.12.9 on Windows"
+      "msg": "python 3.12.13 on Windows"
     },
     {
       "level": "PASS",
-      "msg": "torch 2.14.1+cpu"
+      "msg": "torch 2.11.0+cu128"
     },
     {
       "level": "PASS",
@@ -35,19 +35,19 @@
     },
     {
       "level": "PASS",
-      "msg": "pandas 2.3.3"
+      "msg": "pandas 3.0.6"
     },
     {
       "level": "PASS",
-      "msg": "sdv 1.38.5"
+      "msg": "sdv 1.32.1"
     },
     {
-      "level": "WARN",
-      "msg": "CUDA not available: training runs on CPU (only tiny / distilgpt2 are practical)"
+      "level": "PASS",
+      "msg": "CUDA available: NVIDIA GeForce RTX 5050 Laptop GPU 8.0 GB"
     },
     {
       "level": "INFO",
-      "msg": "LLMs that fit this GPU: tiny-gpt2, tiny-llama"
+      "msg": "LLMs that fit this GPU: tiny-gpt2, tiny-llama, distilgpt2, gpt2, gpt2-medium, smollm2-360m, qwen2.5-0.5b, qwen3-0.6b, llama3.2-1b, qwen2.5-1.5b, qwen3-1.7b, smollm2-1.7b, qwen2.5-3b, llama3.2-3b, qwen3-4b"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "pool_size": 180,
   "dcr_tau": 0.03701,
   "privacy_dropped": 0,
-  "sir_ess": 9.5,
-  "disc_mean_pool": 0.0841,
+  "sir_ess": 8.9,
+  "disc_mean_pool": 0.0797,
   "preset": "v2_plain_loss"
 }

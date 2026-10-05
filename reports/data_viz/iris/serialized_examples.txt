@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+sepal length (cm) is 0.14, sepal width (cm) is 0.42, petal length (cm) is 0.07, petal width (cm) is 0.08, target is 0
+sepal length (cm) is 0.17, sepal width (cm) is 0.42, petal length (cm) is 0.07, petal width (cm) is 0.04, target is 0
+sepal length (cm) is 0.03, sepal width (cm) is 0.42, petal length (cm) is 0.05, petal width (cm) is 0.04, target is 0
+
+# v2 serialization, clean space (real categories and units):
+sepal length (cm) is 4.8, sepal width (cm) is 3.0, petal length (cm) is 1.4, petal width (cm) is 0.3, target is 0
+sepal length (cm) is 4.9, sepal width (cm) is 3.0, petal length (cm) is 1.4, petal width (cm) is 0.2, target is 0
+sepal length (cm) is 4.4, sepal width (cm) is 3.0, petal length (cm) is 1.3, petal width (cm) is 0.2, target is 0

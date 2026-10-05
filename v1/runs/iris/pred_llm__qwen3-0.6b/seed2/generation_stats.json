@@ -1,0 +1,14 @@
+{
+  "n_generated_texts": 240,
+  "n_valid": 120,
+  "validity_rate": 0.5,
+  "query_fallbacks": 0,
+  "method": {
+    "name": "pred_llm",
+    "permutation": "x",
+    "sampling": "feature",
+    "query": "llm",
+    "augment_original": true,
+    "paper_row": "Pred-LLM (Table III last row)"
+  }
+}

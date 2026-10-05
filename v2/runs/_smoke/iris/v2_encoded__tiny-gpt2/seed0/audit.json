@@ -1,5 +1,5 @@
 {
-  "run": "D:\\Aayush\\ML\\Research-Project\\v2\\runs\\_smoke\\iris\\v2_encoded__tiny-gpt2\\seed0",
+  "run": "v2\\runs\\_smoke\\iris\\v2_encoded__tiny-gpt2\\seed0",
   "status": "PASS",
   "items": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "level": "PASS",
-      "msg": "label TV distance 0.050"
+      "msg": "label TV distance 0.042"
     },
     {
       "level": "PASS",
@@ -32,7 +32,7 @@
     },
     {
       "level": "PASS",
-      "msg": "TSTR valid: {'accuracy': 0.5667, 'f1_macro': 0.5176, 'valid': True}"
+      "msg": "TSTR valid: {'accuracy': 0.5333, 'f1_macro': 0.4908, 'valid': True}"
     },
     {
       "level": "PASS",

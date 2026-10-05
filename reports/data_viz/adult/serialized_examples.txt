@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+age is 0.22, education-num is 0.53, capital-gain is 0, capital-loss is 0, hours-per-week is 0.6, race is 1, sex is 1, workclass is 0.33, marital-status is 0.33, occupation is 0.85, relationship is 0, target is 1
+age is 0.3, education-num is 0.6, capital-gain is 0, capital-loss is 0, hours-per-week is 0.4, race is 1, sex is 0, workclass is 0.33, marital-status is 0.83, occupation is 0.69, relationship is 0.8, target is 0
+age is 0.4, education-num is 0.8, capital-gain is 0, capital-loss is 0, hours-per-week is 0.45, race is 1, sex is 1, workclass is 0.5, marital-status is 0.33, occupation is 0.85, relationship is 0, target is 0
+
+# v2 serialization, clean space (real categories and units):
+age is 33.0, education-num is 9.0, capital-gain is 0.0, capital-loss is 0.0, hours-per-week is 60.0, race is White, sex is Male, workclass is Private, marital-status is Married-civ-spouse, occupation is Sales, relationship is Husband, income-per-year is >50K
+age is 39.0, education-num is 10.0, capital-gain is 0.0, capital-loss is 0.0, hours-per-week is 40.0, race is White, sex is Female, workclass is Private, marital-status is Separated, occupation is Prof-specialty, relationship is Unmarried, income-per-year is <=50K
+age is 46.0, education-num is 13.0, capital-gain is 0.0, capital-loss is 0.0, hours-per-week is 45.0, race is White, sex is Male, workclass is Self-emp-inc, marital-status is Married-civ-spouse, occupation is Sales, relationship is Husband, income-per-year is <=50K

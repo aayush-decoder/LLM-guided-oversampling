@@ -1,0 +1,1048 @@
+[
+  {
+    "run": "v2\\runs\\_smoke\\iris\\original__none\\seed0",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.000"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 100.00% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9327, 'valid': True}"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\_smoke\\iris\\pred_llm_v2__tiny-gpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.033"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.4, 'f1_macro': 0.3576, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\_smoke\\iris\\v2_encoded__tiny-gpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.042"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.5333, 'f1_macro': 0.4908, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\_smoke\\iris\\v2_plain_loss__tiny-gpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.033"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.4, 'f1_macro': 0.3576, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__distilgpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.017"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.8667, 'f1_macro': 0.8611, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__distilgpt2\\seed1",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.075"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9333, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__distilgpt2\\seed2",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.083"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-0.5b\\seed0",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.058"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 56.67% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9327, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-0.5b\\seed1",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.117"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 10.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.8995, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-0.5b\\seed2",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "WARN",
+        "msg": "label distribution shift, TV 0.150"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 13.33%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-1.5b\\seed0",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.033"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 60.83% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-1.5b\\seed1",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.092"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 63.33% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.8995, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen2.5-1.5b\\seed2",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.058"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 16.67%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9667, 'f1_macro': 0.9666, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-0.6b\\seed0",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.017"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 62.50% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9667, 'f1_macro': 0.9666, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-0.6b\\seed1",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.042"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 72.50% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.8995, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-0.6b\\seed2",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "WARN",
+        "msg": "label distribution shift, TV 0.183"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 2.50%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-1.7b\\seed0",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.025"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 66.67% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9667, 'f1_macro': 0.9666, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-1.7b\\seed1",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.025"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 68.33% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.8995, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\pred_llm_v2__qwen3-1.7b\\seed2",
+    "status": "WARN",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.067"
+      },
+      {
+        "level": "WARN",
+        "msg": "memorisation: 69.17% exact copies"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_encoded__distilgpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.083"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.8997, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_encoded__distilgpt2\\seed1",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.117"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9, 'f1_macro': 0.895, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_encoded__distilgpt2\\seed2",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.025"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_plain_loss__distilgpt2\\seed0",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.075"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 1.0, 'f1_macro': 1.0, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_plain_loss__distilgpt2\\seed1",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.075"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9327, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  },
+  {
+    "run": "v2\\runs\\iris\\v2_plain_loss__distilgpt2\\seed2",
+    "status": "PASS",
+    "items": [
+      {
+        "level": "PASS",
+        "msg": "all required artifacts present"
+      },
+      {
+        "level": "PASS",
+        "msg": "no NaN in synthetic data"
+      },
+      {
+        "level": "PASS",
+        "msg": "|D_fake| = 120"
+      },
+      {
+        "level": "PASS",
+        "msg": "feature values within [0,1] (0.00% outside)"
+      },
+      {
+        "level": "PASS",
+        "msg": "all 3 classes generated"
+      },
+      {
+        "level": "PASS",
+        "msg": "label TV distance 0.042"
+      },
+      {
+        "level": "PASS",
+        "msg": "exact copies of training rows 0.00%"
+      },
+      {
+        "level": "PASS",
+        "msg": "TSTR valid: {'accuracy': 0.9333, 'f1_macro': 0.9333, 'valid': True}"
+      },
+      {
+        "level": "PASS",
+        "msg": "generation validity 100.00%"
+      }
+    ]
+  }
+]

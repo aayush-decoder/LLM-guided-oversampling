@@ -1,0 +1,35 @@
+{
+  "dataset": "iris",
+  "method": "ctgan",
+  "seed": 0,
+  "llm": "distilgpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.4333,
+    "f1_macro": 0.3472,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "fidelity": {
+    "inverse_kl": 0.7149,
+    "discriminator": 1.0,
+    "discriminator_auc": 1.0,
+    "discriminator_acc": 1.0,
+    "discriminator_lr": 1.0,
+    "discriminator_train": 0.9907,
+    "density": 0.0,
+    "coverage": 0.0,
+    "dcr_mean": 0.368,
+    "dcr_median": 0.3483,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {},
+  "generation": {},
+  "seconds_total": 3.1
+}

@@ -1,0 +1,52 @@
+{
+  "dataset": "iris",
+  "method": "v2_plain_loss",
+  "seed": 2,
+  "llm": "distilgpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9333,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "fidelity": {
+    "inverse_kl": 0.7955,
+    "discriminator": 0.1852,
+    "discriminator_auc": 0.5926,
+    "discriminator_acc": 0.6667,
+    "discriminator_lr": 0.0,
+    "discriminator_train": 0.159,
+    "density": 0.6458,
+    "coverage": 0.9333,
+    "dcr_mean": 0.1086,
+    "dcr_median": 0.09,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "steps": 400,
+    "epochs_run": 50,
+    "final_loss": 0.2950909012556076,
+    "train_seconds": 42.9,
+    "n_sequences": 240
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "posterior_entropy": 0.0947,
+    "pool_size": 180,
+    "dcr_tau": 0.0411,
+    "privacy_dropped": 18,
+    "sir_ess": 36.6,
+    "disc_mean_pool": 0.3545,
+    "preset": "v2_plain_loss"
+  },
+  "seconds_total": 47.4
+}

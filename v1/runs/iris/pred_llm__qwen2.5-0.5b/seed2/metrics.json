@@ -1,0 +1,54 @@
+{
+  "dataset": "iris",
+  "method": "pred_llm",
+  "seed": 2,
+  "llm": "qwen2.5-0.5b",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "fidelity": {
+    "inverse_kl": 0.7607,
+    "discriminator": 0.0,
+    "discriminator_auc": 0.4938,
+    "discriminator_acc": 0.5,
+    "discriminator_lr": 0.3086,
+    "discriminator_train": 0.0,
+    "density": 1.0917,
+    "coverage": 1.0,
+    "dcr_mean": 0.0484,
+    "dcr_median": 0.04,
+    "exact_copy_rate": 0.5333,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "steps": 400,
+    "epochs_run": 50,
+    "final_loss": 0.13325532822198766,
+    "train_seconds": 1556.8,
+    "n_sequences": 240
+  },
+  "generation": {
+    "n_generated_texts": 240,
+    "n_valid": 120,
+    "validity_rate": 0.5,
+    "query_fallbacks": 0,
+    "method": {
+      "name": "pred_llm",
+      "permutation": "x",
+      "sampling": "feature",
+      "query": "llm",
+      "augment_original": true,
+      "paper_row": "Pred-LLM (Table III last row)"
+    }
+  },
+  "seconds_total": 1634.2
+}

@@ -1,0 +1,12 @@
+{
+  "numeric_fallbacks": 0,
+  "validity_rate": 1.0,
+  "n_sampled": 180,
+  "posterior_entropy": 0.0194,
+  "pool_size": 180,
+  "dcr_tau": 0.0411,
+  "privacy_dropped": 90,
+  "sir_ess": 22.0,
+  "disc_mean_pool": 0.5068,
+  "preset": "pred_llm_v2"
+}

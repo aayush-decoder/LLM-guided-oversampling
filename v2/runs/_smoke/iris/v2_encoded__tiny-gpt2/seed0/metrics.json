@@ -5,8 +5,8 @@
   "llm": "tiny-gpt2",
   "task": "classification",
   "tstr": {
-    "accuracy": 0.5667,
-    "f1_macro": 0.5176,
+    "accuracy": 0.5333,
+    "f1_macro": 0.4908,
     "valid": true
   },
   "original": {
@@ -16,24 +16,24 @@
   },
   "n_synthetic": 120,
   "fidelity": {
-    "inverse_kl": 0.5339,
+    "inverse_kl": 0.5877,
     "discriminator": 1.0,
     "discriminator_auc": 1.0,
     "discriminator_acc": 1.0,
-    "discriminator_lr": 0.9506,
-    "discriminator_train": 1.0,
+    "discriminator_lr": 1.0,
+    "discriminator_train": 0.9907,
     "density": 0.0,
     "coverage": 0.0,
-    "dcr_mean": 0.5986,
-    "dcr_median": 0.6427,
+    "dcr_mean": 0.7029,
+    "dcr_median": 0.6565,
     "exact_copy_rate": 0.0,
     "fidelity_reference": "heldout_test"
   },
   "train": {
     "steps": 30,
     "epochs_run": 4,
-    "final_loss": 10.811688423156738,
-    "train_seconds": 144.7,
+    "final_loss": 10.811800765991212,
+    "train_seconds": 2.3,
     "n_sequences": 240
   },
   "generation": {
@@ -44,9 +44,9 @@
     "pool_size": 180,
     "dcr_tau": 0.03701,
     "privacy_dropped": 0,
-    "sir_ess": 5.7,
-    "disc_mean_pool": 0.0343,
+    "sir_ess": 7.7,
+    "disc_mean_pool": 0.0205,
     "preset": "v2_encoded"
   },
-  "seconds_total": 196.8
+  "seconds_total": 8.8
 }

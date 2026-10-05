@@ -1,0 +1,52 @@
+{
+  "dataset": "iris",
+  "method": "pred_llm_v2",
+  "seed": 1,
+  "llm": "distilgpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9333,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9332,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "fidelity": {
+    "inverse_kl": 0.7135,
+    "discriminator": 0.2346,
+    "discriminator_auc": 0.6173,
+    "discriminator_acc": 0.7222,
+    "discriminator_lr": 0.2593,
+    "discriminator_train": 0.0787,
+    "density": 0.5792,
+    "coverage": 0.8333,
+    "dcr_mean": 0.0956,
+    "dcr_median": 0.0812,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "steps": 400,
+    "epochs_run": 50,
+    "final_loss": 0.532974300980568,
+    "train_seconds": 42.4,
+    "n_sequences": 240
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "posterior_entropy": 0.1224,
+    "pool_size": 180,
+    "dcr_tau": 0.03606,
+    "privacy_dropped": 17,
+    "sir_ess": 39.7,
+    "disc_mean_pool": 0.3658,
+    "preset": "pred_llm_v2"
+  },
+  "seconds_total": 47.6
+}
