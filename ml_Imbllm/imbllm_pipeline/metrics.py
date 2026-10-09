@@ -39,7 +39,7 @@ def quality_metrics(real, synthetic, features, k=2):
     np.fill_diagonal(real_to_real, np.inf)
     radius = float(np.median(real_to_real.min(axis=1)))
     close_probability = float((dcr <= radius).mean())
-    coverage = float((distances <= radius).sum(axis=1).ge(k).mean())
+    coverage = float(((distances <= radius).sum(axis=1) >= k).mean())
     ks = pd.DataFrame(
         {
             "feature": column,
