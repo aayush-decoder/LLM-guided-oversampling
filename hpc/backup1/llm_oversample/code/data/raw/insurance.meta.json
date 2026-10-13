@@ -1,0 +1,13 @@
+{
+  "target": "charges",
+  "numerical": [
+    "age",
+    "bmi",
+    "children"
+  ],
+  "categorical": [
+    "sex",
+    "smoker",
+    "region"
+  ]
+}

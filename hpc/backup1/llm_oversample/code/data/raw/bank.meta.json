@@ -1,0 +1,21 @@
+{
+  "target": "subscribe",
+  "numerical": [
+    "balance",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous"
+  ],
+  "categorical": [
+    "age",
+    "marital",
+    "job",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "poutcome"
+  ]
+}

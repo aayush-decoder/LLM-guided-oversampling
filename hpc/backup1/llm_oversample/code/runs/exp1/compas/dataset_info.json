@@ -1,0 +1,22 @@
+{
+  "dataset": "compas",
+  "rows": 4010,
+  "n_numerical": 5,
+  "n_categorical": 3,
+  "target": "two_year_recid",
+  "class_counts": {
+    "0": 3358,
+    "1": 652
+  },
+  "n_classes": 2,
+  "minority_label": "1",
+  "minority_count": 652,
+  "majority_count": 3358,
+  "minority_fraction": 0.16259351620947632,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [
+    "age_cat",
+    "c_charge_desc"
+  ],
+  "meta_columns_missing_in_csv": []
+}

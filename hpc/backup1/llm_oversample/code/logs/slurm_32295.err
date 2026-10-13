@@ -1,0 +1,5 @@
+/bin/bash: /apps/compilers/anaconda3-24.2/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'torch'
+main.py or data/raw not found -- submit from the project root.

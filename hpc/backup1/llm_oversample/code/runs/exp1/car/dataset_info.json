@@ -1,0 +1,21 @@
+{
+  "dataset": "car",
+  "rows": 1728,
+  "n_numerical": 0,
+  "n_categorical": 6,
+  "target": "class",
+  "class_counts": {
+    "unacc": 1210,
+    "acc": 384,
+    "good": 69,
+    "vgood": 65
+  },
+  "n_classes": 4,
+  "minority_label": "vgood",
+  "minority_count": 65,
+  "majority_count": 1663,
+  "minority_fraction": 0.03761574074074074,
+  "multiclass_merged": true,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

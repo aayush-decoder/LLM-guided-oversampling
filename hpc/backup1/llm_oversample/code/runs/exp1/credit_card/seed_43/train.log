@@ -1,0 +1,98 @@
+2026-10-13 04:43:16 | INFO    | ====================================================================================================
+2026-10-13 04:43:16 | INFO    | [21/22] credit_card seed 43 (2/3) | START
+2026-10-13 04:43:16 | INFO    | credit_card | seed 43 | stage split              | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:16 | INFO    | [21/22] credit_card seed 43 (2/3) | split: train=8101 test=2026 | full-train minority=1302 -> retained=260 (held-out ref=1042) | reduced imbalance 26.1:1 | test minority=325 | test_fingerprint=918da8315e44
+2026-10-13 04:43:16 | INFO    | credit_card | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 04:43:16 | INFO    | credit_card | seed 43 | stage importance         | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:16 | INFO    | [21/22] credit_card seed 43 (2/3) | top features: Total_Trans_Ct=0.6304, Total_Trans_Amt=0.5659, Total_Revolving_Bal=0.1456, Total_Relationship_Count=0.0558, Months_Inactive_12_mon=0.0292
+2026-10-13 04:43:16 | INFO    | credit_card | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:43:16 | INFO    | credit_card | seed 43 | stage Original           | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | Original           | train=8101 (min 1302 / maj 6799) | F1=0.9068 Acc=0.9709 G=0.9339 AUC=0.9938 PR-AUC=0.9675
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage Imbalanced         | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | Imbalanced         | train=7059 (min 260 / maj 6799) | F1=0.7664 Acc=0.9383 G=0.7930 AUC=0.9887 PR-AUC=0.9484
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage RandomOverSampler  | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | RandomOverSampler  | train=13598 (min 6799 / maj 6799) | F1=0.8469 Acc=0.9556 G=0.8717 AUC=0.9890 PR-AUC=0.9501
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:43:17 | INFO    | [21/22] credit_card seed 43 (2/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:43:17 | INFO    | [21/22] credit_card seed 43 (2/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:43:17 | INFO    | credit_card | seed 43 | stage SMOTE-NC           | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:18 | INFO    | credit_card | seed 43 | SMOTE-NC           | train=13598 (min 6799 / maj 6799) | F1=0.8157 Acc=0.9492 G=0.8361 AUC=0.9883 PR-AUC=0.9474
+2026-10-13 04:43:18 | INFO    | credit_card | seed 43 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 04:43:18 | INFO    | credit_card | seed 43 | stage ImbLLM-random      | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:43:18 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-random | fine-tune set = 260 retained minority + 1699 interpolated rows | synthetic to generate = 6539
+2026-10-13 04:43:21 | INFO    | [credit_card/s43/ImbLLM-random] fine-tuning rows=1959 | tokens/row: mean=185 max(probe)=196 -> max_len=233 | device=cuda
+2026-10-13 04:43:22 | INFO    | [credit_card/s43/ImbLLM-random] training: epochs=5 | steps/epoch=62 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:43:22 | INFO    | [credit_card/s43/ImbLLM-random] epoch 1/5 | step 15/310 | loss=3.3988
+2026-10-13 04:43:23 | INFO    | [credit_card/s43/ImbLLM-random] epoch 1/5 | step 30/310 | loss=1.5754
+2026-10-13 04:43:25 | INFO    | [credit_card/s43/ImbLLM-random] epoch 1/5 | step 45/310 | loss=0.9996
+2026-10-13 04:43:26 | INFO    | [credit_card/s43/ImbLLM-random] epoch 1/5 | step 60/310 | loss=0.8835
+2026-10-13 04:43:26 | INFO    | [credit_card/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.6857 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m18s
+2026-10-13 04:43:27 | INFO    | [credit_card/s43/ImbLLM-random] epoch 2/5 | step 77/310 | loss=0.8340
+2026-10-13 04:43:28 | INFO    | [credit_card/s43/ImbLLM-random] epoch 2/5 | step 92/310 | loss=0.8115
+2026-10-13 04:43:28 | INFO    | [credit_card/s43/ImbLLM-random] epoch 2/5 | step 107/310 | loss=0.8008
+2026-10-13 04:43:29 | INFO    | [credit_card/s43/ImbLLM-random] epoch 2/5 | step 122/310 | loss=0.7875
+2026-10-13 04:43:29 | INFO    | [credit_card/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=0.8077 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h00m11s
+2026-10-13 04:43:30 | INFO    | [credit_card/s43/ImbLLM-random] epoch 3/5 | step 139/310 | loss=0.7735
+2026-10-13 04:43:31 | INFO    | [credit_card/s43/ImbLLM-random] epoch 3/5 | step 154/310 | loss=0.7667
+2026-10-13 04:43:32 | INFO    | [credit_card/s43/ImbLLM-random] epoch 3/5 | step 169/310 | loss=0.7640
+2026-10-13 04:43:33 | INFO    | [credit_card/s43/ImbLLM-random] epoch 3/5 | step 184/310 | loss=0.7586
+2026-10-13 04:43:33 | INFO    | [credit_card/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=0.7639 | epoch_time=0h00m03s | elapsed=0h00m11s | ETA=0h00m07s
+2026-10-13 04:43:34 | INFO    | [credit_card/s43/ImbLLM-random] epoch 4/5 | step 201/310 | loss=0.7464
+2026-10-13 04:43:35 | INFO    | [credit_card/s43/ImbLLM-random] epoch 4/5 | step 216/310 | loss=0.7524
+2026-10-13 04:43:36 | INFO    | [credit_card/s43/ImbLLM-random] epoch 4/5 | step 231/310 | loss=0.7472
+2026-10-13 04:43:37 | INFO    | [credit_card/s43/ImbLLM-random] epoch 4/5 | step 246/310 | loss=0.7386
+2026-10-13 04:43:37 | INFO    | [credit_card/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=0.7457 | epoch_time=0h00m03s | elapsed=0h00m15s | ETA=0h00m03s
+2026-10-13 04:43:38 | INFO    | [credit_card/s43/ImbLLM-random] epoch 5/5 | step 263/310 | loss=0.7436
+2026-10-13 04:43:39 | INFO    | [credit_card/s43/ImbLLM-random] epoch 5/5 | step 278/310 | loss=0.7352
+2026-10-13 04:43:41 | INFO    | [credit_card/s43/ImbLLM-random] epoch 5/5 | step 293/310 | loss=0.7294
+2026-10-13 04:43:42 | INFO    | [credit_card/s43/ImbLLM-random] epoch 5/5 | step 308/310 | loss=0.7352
+2026-10-13 04:43:42 | INFO    | [credit_card/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=0.7346 | epoch_time=0h00m04s | elapsed=0h00m20s | ETA=0h00m00s
+2026-10-13 04:43:43 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-random | generating 6539 rows (condition_yx, temperature 0.70)
+2026-10-13 04:44:14 | INFO    | [credit_card/s43/ImbLLM-random] generated 3328/7193 (round 1) | valid parse 100.0% | accepted 3328/6539 | elapsed 0h00m30s
+2026-10-13 04:44:45 | INFO    | [credit_card/s43/ImbLLM-random] generated 6016/7193 (round 1) | valid parse 100.0% | accepted 6016/6539 | elapsed 0h01m01s
+2026-10-13 04:45:00 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 7193, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 6539, 'gen_batch_size_final': 128, 'gen_seconds': 77.2}
+2026-10-13 04:45:01 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0029, 'mean_dist_heldout_real_to_nearest_synth': 2.7896, 'coverage_k2': 0.5749, 'mean_dist_synth_to_train_minority(DCR)': 2.5268, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:45:01 | INFO    | credit_card | seed 43 | ImbLLM-random      | train=13598 (min 6799 / maj 6799) | F1=0.7843 Acc=0.9403 G=0.8189 AUC=0.9834 PR-AUC=0.9290
+2026-10-13 04:45:01 | INFO    | credit_card | seed 43 | stage ImbLLM-random      | DONE in 0h01m42s
+2026-10-13 04:45:01 | INFO    | credit_card | seed 43 | stage ImbLLM-IAFP        | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:45:01 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 260 retained minority + 1699 interpolated rows | synthetic to generate = 6539
+2026-10-13 04:45:04 | INFO    | [credit_card/s43/ImbLLM-IAFP] fine-tuning rows=1959 | tokens/row: mean=185 max(probe)=196 -> max_len=233 | device=cuda
+2026-10-13 04:45:04 | INFO    | [credit_card/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=62 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:45:06 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 1/5 | step 15/310 | loss=3.3724
+2026-10-13 04:45:07 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 1/5 | step 30/310 | loss=1.5627
+2026-10-13 04:45:08 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 1/5 | step 45/310 | loss=0.9720
+2026-10-13 04:45:09 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 1/5 | step 60/310 | loss=0.8584
+2026-10-13 04:45:10 | INFO    | [credit_card/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.6628 | epoch_time=0h00m05s | elapsed=0h00m05s | ETA=0h00m21s
+2026-10-13 04:45:11 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 2/5 | step 77/310 | loss=0.8074
+2026-10-13 04:45:12 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 2/5 | step 92/310 | loss=0.7849
+2026-10-13 04:45:14 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 2/5 | step 107/310 | loss=0.7766
+2026-10-13 04:45:15 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 2/5 | step 122/310 | loss=0.7714
+2026-10-13 04:45:15 | INFO    | [credit_card/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=0.7829 | epoch_time=0h00m05s | elapsed=0h00m10s | ETA=0h00m16s
+2026-10-13 04:45:17 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 3/5 | step 139/310 | loss=0.7492
+2026-10-13 04:45:18 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 3/5 | step 154/310 | loss=0.7430
+2026-10-13 04:45:19 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 3/5 | step 169/310 | loss=0.7361
+2026-10-13 04:45:21 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 3/5 | step 184/310 | loss=0.7341
+2026-10-13 04:45:21 | INFO    | [credit_card/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=0.7410 | epoch_time=0h00m05s | elapsed=0h00m16s | ETA=0h00m11s
+2026-10-13 04:45:22 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 4/5 | step 201/310 | loss=0.7307
+2026-10-13 04:45:24 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 4/5 | step 216/310 | loss=0.7231
+2026-10-13 04:45:25 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 4/5 | step 231/310 | loss=0.7247
+2026-10-13 04:45:27 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 4/5 | step 246/310 | loss=0.7183
+2026-10-13 04:45:27 | INFO    | [credit_card/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=0.7232 | epoch_time=0h00m05s | elapsed=0h00m22s | ETA=0h00m05s
+2026-10-13 04:45:28 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 5/5 | step 263/310 | loss=0.7156
+2026-10-13 04:45:30 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 5/5 | step 278/310 | loss=0.7145
+2026-10-13 04:45:31 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 5/5 | step 293/310 | loss=0.7154
+2026-10-13 04:45:33 | INFO    | [credit_card/s43/ImbLLM-IAFP] epoch 5/5 | step 308/310 | loss=0.7091
+2026-10-13 04:45:34 | INFO    | [credit_card/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=0.7137 | epoch_time=0h00m07s | elapsed=0h00m29s | ETA=0h00m00s
+2026-10-13 04:45:35 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-IAFP | generating 6539 rows (condition_yx, temperature 0.70)
+2026-10-13 04:46:07 | INFO    | [credit_card/s43/ImbLLM-IAFP] generated 2688/7193 (round 1) | valid parse 100.0% | accepted 2688/6539 | elapsed 0h00m31s
+2026-10-13 04:46:38 | INFO    | [credit_card/s43/ImbLLM-IAFP] generated 5504/7193 (round 1) | valid parse 100.0% | accepted 5504/6539 | elapsed 0h01m02s
+2026-10-13 04:46:57 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 7193, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 6539, 'gen_batch_size_final': 128, 'gen_seconds': 81.1}
+2026-10-13 04:46:57 | INFO    | [21/22] credit_card seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0019, 'mean_dist_heldout_real_to_nearest_synth': 2.8228, 'coverage_k2': 0.5681, 'mean_dist_synth_to_train_minority(DCR)': 2.5505, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:46:57 | INFO    | credit_card | seed 43 | ImbLLM-IAFP        | train=13598 (min 6799 / maj 6799) | F1=0.7734 Acc=0.9378 G=0.8095 AUC=0.9788 PR-AUC=0.9140
+2026-10-13 04:46:57 | INFO    | credit_card | seed 43 | stage ImbLLM-IAFP        | DONE in 0h01m56s
+2026-10-13 04:46:57 | INFO    | credit_card | seed 43 | stage plots              | RUNNING [21/22] credit_card seed 43 (2/3)
+2026-10-13 04:47:05 | INFO    | [21/22] credit_card seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:47:05 | INFO    | credit_card | seed 43 | stage plots              | DONE in 0h00m07s
+2026-10-13 04:47:05 | INFO    | [21/22] credit_card seed 43 (2/3) | FINISHED (6/8 methods have metrics)

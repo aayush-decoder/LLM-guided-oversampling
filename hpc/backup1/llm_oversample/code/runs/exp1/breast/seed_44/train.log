@@ -1,0 +1,98 @@
+2026-10-13 03:24:33 | INFO    | ====================================================================================================
+2026-10-13 03:24:33 | INFO    | [3/22] breast seed 44 (3/3) | START
+2026-10-13 03:24:33 | INFO    | breast | seed 44 | stage split              | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:33 | INFO    | [3/22] breast seed 44 (3/3) | split: train=455 test=114 | full-train minority=170 -> retained=34 (held-out ref=136) | reduced imbalance 8.4:1 | test minority=42 | test_fingerprint=674f7d695336
+2026-10-13 03:24:33 | INFO    | breast | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 03:24:33 | INFO    | breast | seed 44 | stage importance         | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | [3/22] breast seed 44 (3/3) | top features: mean concave points=0.0366, worst area=0.0036, mean perimeter=0.0000, mean area=0.0000, mean smoothness=0.0000
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage Original           | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | Original           | train=455 (min 170 / maj 285) | F1=0.9136 Acc=0.9386 G=0.9255 AUC=0.9818 PR-AUC=0.9760
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage Imbalanced         | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | Imbalanced         | train=319 (min 34 / maj 285) | F1=0.8947 Acc=0.9298 G=0.8997 AUC=0.9749 PR-AUC=0.9674
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage RandomOverSampler  | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | RandomOverSampler  | train=570 (min 285 / maj 285) | F1=0.9091 Acc=0.9386 G=0.9129 AUC=0.9716 PR-AUC=0.9628
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage SMOTE              | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | SMOTE              | train=570 (min 285 / maj 285) | F1=0.8974 Acc=0.9298 G=0.9065 AUC=0.9769 PR-AUC=0.9699
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage ADASYN             | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | ADASYN             | train=571 (min 286 / maj 285) | F1=0.8831 Acc=0.9211 G=0.8935 AUC=0.9785 PR-AUC=0.9702
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:24:34 | INFO    | [3/22] breast seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:24:34 | INFO    | breast | seed 44 | stage ImbLLM-random      | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:34 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-random | fine-tune set = 34 retained minority + 100 interpolated rows | synthetic to generate = 251
+2026-10-13 03:24:37 | INFO    | [breast/s44/ImbLLM-random] fine-tuning rows=134 | tokens/row: mean=267 max(probe)=276 -> max_len=325 | device=cuda
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 1/5 | step 1/25 | loss=3.2853
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 1/5 | step 2/25 | loss=3.2838
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 1/5 | step 3/25 | loss=3.0411
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 1/5 | step 4/25 | loss=2.9219
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=3.0734 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 2/5 | step 6/25 | loss=2.6852
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 2/5 | step 7/25 | loss=2.6270
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 2/5 | step 8/25 | loss=2.5449
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 2/5 | step 9/25 | loss=2.4559
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=2.5423 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 3/5 | step 11/25 | loss=2.3656
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 3/5 | step 12/25 | loss=2.2858
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 3/5 | step 13/25 | loss=2.3157
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 3/5 | step 14/25 | loss=2.2298
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=2.2814 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:24:38 | INFO    | [breast/s44/ImbLLM-random] epoch 4/5 | step 16/25 | loss=2.1707
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 4/5 | step 17/25 | loss=2.1563
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 4/5 | step 18/25 | loss=2.1533
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 4/5 | step 19/25 | loss=2.1347
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=2.1446 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 5/5 | step 21/25 | loss=2.1155
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 5/5 | step 22/25 | loss=2.0880
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 5/5 | step 23/25 | loss=2.0766
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] epoch 5/5 | step 24/25 | loss=2.0762
+2026-10-13 03:24:39 | INFO    | [breast/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=2.0784 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:24:40 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-random | generating 251 rows (condition_yx, temperature 0.70)
+2026-10-13 03:24:59 | WARNING | [breast/s44/ImbLLM-random] only 0 valid rows after 4 rounds; topping up with 251 low-quality rows
+2026-10-13 03:24:59 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 1258, 'valid_parse_rate': 0.0, 'rounds': 4, 'rows_returned': 251, 'gen_batch_size_final': 128, 'gen_seconds': 18.3}
+2026-10-13 03:24:59 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0147, 'mean_dist_heldout_real_to_nearest_synth': 4.7745, 'coverage_k2': 0.125, 'mean_dist_synth_to_train_minority(DCR)': 3.2278, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:24:59 | INFO    | breast | seed 44 | ImbLLM-random      | train=570 (min 285 / maj 285) | F1=0.8718 Acc=0.9123 G=0.8872 AUC=0.9755 PR-AUC=0.9656
+2026-10-13 03:24:59 | INFO    | breast | seed 44 | stage ImbLLM-random      | DONE in 0h00m24s
+2026-10-13 03:24:59 | INFO    | breast | seed 44 | stage ImbLLM-IAFP        | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:24:59 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 34 retained minority + 100 interpolated rows | synthetic to generate = 251
+2026-10-13 03:25:01 | INFO    | [breast/s44/ImbLLM-IAFP] fine-tuning rows=134 | tokens/row: mean=267 max(probe)=276 -> max_len=325 | device=cuda
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 1/5 | step 1/25 | loss=3.2983
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 1/5 | step 2/25 | loss=3.2746
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 1/5 | step 3/25 | loss=3.0578
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 1/5 | step 4/25 | loss=2.9150
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=3.0735 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 2/5 | step 6/25 | loss=2.7115
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 2/5 | step 7/25 | loss=2.5925
+2026-10-13 03:25:02 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 2/5 | step 8/25 | loss=2.5308
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 2/5 | step 9/25 | loss=2.4561
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=2.5353 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 3/5 | step 11/25 | loss=2.3519
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 3/5 | step 12/25 | loss=2.3075
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 3/5 | step 13/25 | loss=2.2352
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 3/5 | step 14/25 | loss=2.2762
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=2.2678 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 4/5 | step 16/25 | loss=2.1633
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 4/5 | step 17/25 | loss=2.1537
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 4/5 | step 18/25 | loss=2.1548
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 4/5 | step 19/25 | loss=2.1084
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=2.1358 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 5/5 | step 21/25 | loss=2.0991
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 5/5 | step 22/25 | loss=2.0610
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 5/5 | step 23/25 | loss=2.0782
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] epoch 5/5 | step 24/25 | loss=2.0522
+2026-10-13 03:25:03 | INFO    | [breast/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=2.0627 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:25:05 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-IAFP | generating 251 rows (condition_yx, temperature 0.70)
+2026-10-13 03:25:24 | WARNING | [breast/s44/ImbLLM-IAFP] only 0 valid rows after 4 rounds; topping up with 251 low-quality rows
+2026-10-13 03:25:24 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 1258, 'valid_parse_rate': 0.0, 'rounds': 4, 'rows_returned': 251, 'gen_batch_size_final': 128, 'gen_seconds': 19.1}
+2026-10-13 03:25:24 | INFO    | [3/22] breast seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0074, 'mean_dist_heldout_real_to_nearest_synth': 4.8661, 'coverage_k2': 0.0515, 'mean_dist_synth_to_train_minority(DCR)': 3.6657, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:25:24 | INFO    | breast | seed 44 | ImbLLM-IAFP        | train=570 (min 285 / maj 285) | F1=0.8571 Acc=0.9035 G=0.8740 AUC=0.9778 PR-AUC=0.9688
+2026-10-13 03:25:24 | INFO    | breast | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m25s
+2026-10-13 03:25:24 | INFO    | breast | seed 44 | stage plots              | RUNNING [3/22] breast seed 44 (3/3)
+2026-10-13 03:25:26 | INFO    | [3/22] breast seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:25:26 | INFO    | breast | seed 44 | stage plots              | DONE in 0h00m01s
+2026-10-13 03:25:26 | INFO    | [3/22] breast seed 44 (3/3) | FINISHED (7/8 methods have metrics)

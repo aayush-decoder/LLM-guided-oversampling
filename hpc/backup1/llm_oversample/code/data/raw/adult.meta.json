@@ -1,0 +1,18 @@
+{
+  "target": "income-per-year",
+  "numerical": [
+    "age",
+    "education-num",
+    "capital-gain",
+    "capital-loss",
+    "hours-per-week"
+  ],
+  "categorical": [
+    "race",
+    "sex",
+    "workclass",
+    "marital-status",
+    "occupation",
+    "relationship"
+  ]
+}

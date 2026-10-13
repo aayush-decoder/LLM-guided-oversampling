@@ -1,0 +1,100 @@
+2026-10-13 03:10:21 | INFO    | ====================================================================================================
+2026-10-13 03:10:21 | INFO    | [1/22] iris seed 43 (2/3) | START
+2026-10-13 03:10:21 | INFO    | iris | seed 43 | stage split              | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:21 | INFO    | [1/22] iris seed 43 (2/3) | split: train=120 test=30 | full-train minority=40 -> retained=8 (held-out ref=32) | reduced imbalance 10.0:1 | test minority=10 | test_fingerprint=2165d9ccdc30
+2026-10-13 03:10:21 | INFO    | iris | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 03:10:21 | INFO    | iris | seed 43 | stage importance         | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | [1/22] iris seed 43 (2/3) | top features: petal length (cm)=0.4000, sepal length (cm)=0.0000, sepal width (cm)=0.0000, petal width (cm)=0.0000
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage importance         | DONE in 0h00m03s
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage Original           | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | Original           | train=120 (min 40 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage Imbalanced         | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | Imbalanced         | train=88 (min 8 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage RandomOverSampler  | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | RandomOverSampler  | train=160 (min 80 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage SMOTE              | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | SMOTE              | train=160 (min 80 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage ADASYN             | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | ERROR   | iris | seed 43 | stage ADASYN             | FAILED after 0h00m00s: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.
+Traceback (most recent call last):
+  File "/home/tanmoyhazra/llm_oversample/code/main.py", line 291, in stage
+    yield
+  File "/home/tanmoyhazra/llm_oversample/code/main.py", line 1068, in run_seed
+    Xr, yr = builder().fit_resample(X_imb, y_imb)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/base.py", line 204, in fit_resample
+    return super().fit_resample(X, y, **params)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/sklearn/base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/base.py", line 107, in fit_resample
+    output = self._fit_resample(X, y, **params)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/over_sampling/_adasyn.py", line 161, in _fit_resample
+    raise RuntimeError(
+RuntimeError: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.
+
+2026-10-13 03:10:25 | INFO    | [1/22] iris seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:10:25 | INFO    | iris | seed 43 | stage ImbLLM-random      | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:25 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-random | fine-tune set = 8 retained minority + 100 interpolated rows | synthetic to generate = 72
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] fine-tuning rows=108 | tokens/row: mean=52 max(probe)=54 -> max_len=70 | device=cuda
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] training: epochs=5 | steps/epoch=4 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] epoch 1/5 | step 1/20 | loss=3.2308
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] epoch 1/5 | step 2/20 | loss=3.3508
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] epoch 1/5 | step 3/20 | loss=2.8652
+2026-10-13 03:10:28 | INFO    | [iris/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=3.0039 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 2/5 | step 5/20 | loss=2.2674
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 2/5 | step 6/20 | loss=2.0565
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 2/5 | step 7/20 | loss=1.8849
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.9809 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 3/5 | step 9/20 | loss=1.6046
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 3/5 | step 10/20 | loss=1.5328
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 3/5 | step 11/20 | loss=1.3847
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4983 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 4/5 | step 13/20 | loss=1.3479
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 4/5 | step 14/20 | loss=1.2866
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 4/5 | step 15/20 | loss=1.2233
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.2773 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 5/5 | step 17/20 | loss=1.2000
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 5/5 | step 18/20 | loss=1.1925
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] epoch 5/5 | step 19/20 | loss=1.1359
+2026-10-13 03:10:29 | INFO    | [iris/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.1843 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:10:30 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-random | generating 72 rows (condition_yx, temperature 0.70)
+2026-10-13 03:10:31 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 80, 'valid_parse_rate': 0.9875, 'rounds': 1, 'rows_returned': 72, 'gen_batch_size_final': 128, 'gen_seconds': 1.0}
+2026-10-13 03:10:32 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 1.3421, 'coverage_k2': 0.4375, 'mean_dist_synth_to_train_minority(DCR)': 7.0066, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:10:32 | INFO    | iris | seed 43 | ImbLLM-random      | train=160 (min 80 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:10:32 | INFO    | iris | seed 43 | stage ImbLLM-random      | DONE in 0h00m06s
+2026-10-13 03:10:32 | INFO    | iris | seed 43 | stage ImbLLM-IAFP        | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:10:32 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 100 interpolated rows | synthetic to generate = 72
+2026-10-13 03:11:17 | INFO    | [iris/s43/ImbLLM-IAFP] fine-tuning rows=108 | tokens/row: mean=52 max(probe)=54 -> max_len=70 | device=cuda
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=4 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 1/5 | step 1/20 | loss=3.2526
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 1/5 | step 2/20 | loss=3.3423
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 1/5 | step 3/20 | loss=2.8176
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.9815 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 2/5 | step 5/20 | loss=2.2017
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 2/5 | step 6/20 | loss=2.0013
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 2/5 | step 7/20 | loss=1.8772
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.9432 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:11:18 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 3/5 | step 9/20 | loss=1.5638
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 3/5 | step 10/20 | loss=1.5268
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 3/5 | step 11/20 | loss=1.4015
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.4774 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 4/5 | step 13/20 | loss=1.3019
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 4/5 | step 14/20 | loss=1.2420
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 4/5 | step 15/20 | loss=1.2377
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2535 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 5/5 | step 17/20 | loss=1.1437
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 5/5 | step 18/20 | loss=1.1355
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] epoch 5/5 | step 19/20 | loss=1.1442
+2026-10-13 03:11:19 | INFO    | [iris/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.1344 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:11:20 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-IAFP | generating 72 rows (condition_yx, temperature 0.70)
+2026-10-13 03:11:30 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 80, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 72, 'gen_batch_size_final': 128, 'gen_seconds': 10.2}
+2026-10-13 03:11:31 | INFO    | [1/22] iris seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0625, 'mean_dist_heldout_real_to_nearest_synth': 1.4642, 'coverage_k2': 0.1562, 'mean_dist_synth_to_train_minority(DCR)': 4.3274, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:11:31 | INFO    | iris | seed 43 | ImbLLM-IAFP        | train=160 (min 80 / maj 80) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:11:31 | INFO    | iris | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m58s
+2026-10-13 03:11:31 | INFO    | iris | seed 43 | stage plots              | RUNNING [1/22] iris seed 43 (2/3)
+2026-10-13 03:11:31 | INFO    | [1/22] iris seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:11:31 | INFO    | iris | seed 43 | stage plots              | DONE in 0h00m00s
+2026-10-13 03:11:31 | INFO    | [1/22] iris seed 43 (2/3) | FINISHED (6/8 methods have metrics)

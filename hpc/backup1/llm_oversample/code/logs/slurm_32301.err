@@ -1,0 +1,5 @@
+/bin/bash: /apps/compilers/anaconda3-24.2/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+Traceback (most recent call last):
+  File "/home/tanmoyhazra/llm_oversample/code/main.py", line 51, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

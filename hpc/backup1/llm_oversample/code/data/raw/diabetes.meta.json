@@ -1,0 +1,14 @@
+{
+  "target": "class",
+  "numerical": [
+    "preg",
+    "plas",
+    "pres",
+    "skin",
+    "insu",
+    "mass",
+    "pedi",
+    "age"
+  ],
+  "categorical": []
+}

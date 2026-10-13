@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "train_rows": 598,
+  "test_rows": 150,
+  "test_fingerprint(sha1 of test row ids)": "698782af7229",
+  "full_train_minority": 142,
+  "full_train_majority": 456,
+  "retained_minority(q=0.20)": 28,
+  "heldout_reference_minority": 114,
+  "reduced_train_imbalance_ratio(maj:min)": 16.29,
+  "full_train_imbalance_ratio(maj:min)": 3.21,
+  "test_minority": 36,
+  "test_majority": 114
+}

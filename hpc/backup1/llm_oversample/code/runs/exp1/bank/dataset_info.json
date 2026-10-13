@@ -1,0 +1,19 @@
+{
+  "dataset": "bank",
+  "rows": 4521,
+  "n_numerical": 5,
+  "n_categorical": 9,
+  "target": "subscribe",
+  "class_counts": {
+    "no": 4000,
+    "yes": 521
+  },
+  "n_classes": 2,
+  "minority_label": "yes",
+  "minority_count": 521,
+  "majority_count": 4000,
+  "minority_fraction": 0.11523999115239991,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

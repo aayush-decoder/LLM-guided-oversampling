@@ -1,0 +1,295 @@
+2026-10-13 03:46:43 | INFO    | ====================================================================================================
+2026-10-13 03:46:43 | INFO    | [11/22] DATASET steel | elapsed so far 0h37m45s
+2026-10-13 03:46:43 | INFO    | 
+STATUS  datasets: 28 total | done=8 | partial=2 | pending=11 | running=1 | skipped=6
+  [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
+  [DONE] kc2              seeds_done=3/3
+  [DONE] breast           seeds_done=3/3
+  [DONE] balance          seeds_done=3/3
+  [DONE] australian       seeds_done=3/3
+  [DONE] blood            seeds_done=3/3
+  [DONE] diabetes         seeds_done=3/3
+  [DONE] german           seeds_done=3/3
+  [DONE] qsar             seeds_done=3/3
+  [PART] car              seeds_done=0/3 seed 42 [SMOTE-NC:failed] seed 43 [SMOTE-NC:failed] seed 44 [SMOTE-NC:failed]  (failed stages: [('42', 'SMOTE-NC'), ('43', 'SMOTE-NC'), ('44', 'SMOTE-NC')])
+  [RUN ] steel            seeds_done=0/3
+  [PEND] kc1              seeds_done=0/3
+  [PEND] cardio           seeds_done=0/3
+  [PEND] cardio_noleak    seeds_done=0/3
+  [PEND] sick             seeds_done=0/3
+  [PEND] compas           seeds_done=0/3
+  [PEND] bank             seeds_done=0/3
+  [PEND] churn            seeds_done=0/3
+  [PEND] waveform         seeds_done=0/3
+  [PEND] phoneme          seeds_done=0/3
+  [PEND] credit_card      seeds_done=0/3
+  [PEND] adult            seeds_done=0/3
+  [SKIP] abalone          seeds_done=0/3  (target looks continuous (28 unique values) -> regression)
+  [SKIP] california       seeds_done=0/3  (known regression dataset)
+  [SKIP] fuel             seeds_done=0/3  (known regression dataset)
+  [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
+  [SKIP] housing          seeds_done=0/3  (known regression dataset)
+  [SKIP] insurance        seeds_done=0/3  (known regression dataset)
+2026-10-13 03:46:43 | INFO    | steel | rows=1941 | 33 numeric + 0 categorical features | classes=2 | minority='2': 673 rows (34.67%)
+2026-10-13 03:46:43 | INFO    | ====================================================================================================
+2026-10-13 03:46:43 | INFO    | [11/22] steel seed 42 (1/3) | START
+2026-10-13 03:46:43 | INFO    | steel | seed 42 | stage split              | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:44 | INFO    | [11/22] steel seed 42 (1/3) | split: train=1552 test=389 | full-train minority=538 -> retained=108 (held-out ref=430) | reduced imbalance 9.4:1 | test minority=135 | test_fingerprint=3640cff200c4
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage importance         | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:44 | INFO    | [11/22] steel seed 42 (1/3) | top features: V30=0.4548, V33=0.4289, V28=0.2037, V29=0.1436, V32=0.0109
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage Original           | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | Original           | train=1552 (min 538 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage Imbalanced         | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | Imbalanced         | train=1122 (min 108 / maj 1014) | F1=0.9850 Acc=0.9897 G=0.9851 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:46:44 | INFO    | steel | seed 42 | stage RandomOverSampler  | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | RandomOverSampler  | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage SMOTE              | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | SMOTE              | train=2028 (min 1014 / maj 1014) | F1=0.9850 Acc=0.9897 G=0.9851 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage ADASYN             | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | ADASYN             | train=2040 (min 1026 / maj 1014) | F1=0.9925 Acc=0.9949 G=0.9926 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:46:45 | INFO    | [11/22] steel seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:46:45 | INFO    | steel | seed 42 | stage ImbLLM-random      | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:46:45 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-random | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:46:49 | INFO    | [steel/s42/ImbLLM-random] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=224 -> max_len=265 | device=cuda
+2026-10-13 03:46:50 | INFO    | [steel/s42/ImbLLM-random] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:46:54 | INFO    | [steel/s42/ImbLLM-random] epoch 1/5 | step 3/60 | loss=2.6340
+2026-10-13 03:46:55 | INFO    | [steel/s42/ImbLLM-random] epoch 1/5 | step 6/60 | loss=2.4142
+2026-10-13 03:46:56 | INFO    | [steel/s42/ImbLLM-random] epoch 1/5 | step 9/60 | loss=2.2404
+2026-10-13 03:46:57 | INFO    | [steel/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.3526 | epoch_time=0h00m07s | elapsed=0h00m07s | ETA=0h00m30s
+2026-10-13 03:46:58 | INFO    | [steel/s42/ImbLLM-random] epoch 2/5 | step 15/60 | loss=2.0429
+2026-10-13 03:46:58 | INFO    | [steel/s42/ImbLLM-random] epoch 2/5 | step 18/60 | loss=2.0145
+2026-10-13 03:46:58 | INFO    | [steel/s42/ImbLLM-random] epoch 2/5 | step 21/60 | loss=1.9723
+2026-10-13 03:47:00 | INFO    | [steel/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.9837 | epoch_time=0h00m02s | elapsed=0h00m10s | ETA=0h00m15s
+2026-10-13 03:47:00 | INFO    | [steel/s42/ImbLLM-random] epoch 3/5 | step 27/60 | loss=1.9047
+2026-10-13 03:47:01 | INFO    | [steel/s42/ImbLLM-random] epoch 3/5 | step 30/60 | loss=1.8689
+2026-10-13 03:47:02 | INFO    | [steel/s42/ImbLLM-random] epoch 3/5 | step 33/60 | loss=1.8576
+2026-10-13 03:47:02 | INFO    | [steel/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.8642 | epoch_time=0h00m02s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 03:47:02 | INFO    | [steel/s42/ImbLLM-random] epoch 4/5 | step 39/60 | loss=1.8181
+2026-10-13 03:47:03 | INFO    | [steel/s42/ImbLLM-random] epoch 4/5 | step 42/60 | loss=1.8110
+2026-10-13 03:47:03 | INFO    | [steel/s42/ImbLLM-random] epoch 4/5 | step 45/60 | loss=1.7906
+2026-10-13 03:47:04 | INFO    | [steel/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.7970 | epoch_time=0h00m02s | elapsed=0h00m14s | ETA=0h00m03s
+2026-10-13 03:47:05 | INFO    | [steel/s42/ImbLLM-random] epoch 5/5 | step 51/60 | loss=1.7603
+2026-10-13 03:47:05 | INFO    | [steel/s42/ImbLLM-random] epoch 5/5 | step 54/60 | loss=1.7628
+2026-10-13 03:47:06 | INFO    | [steel/s42/ImbLLM-random] epoch 5/5 | step 57/60 | loss=1.7643
+2026-10-13 03:47:06 | INFO    | [steel/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7615 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m00s
+2026-10-13 03:47:07 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-random | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:48:28 | INFO    | [steel/s42/ImbLLM-random] generated 997/997 (round 1) | valid parse 98.5% | accepted 982/906 | elapsed 0h01m20s
+2026-10-13 03:48:28 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9849548645937813, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 80.8}
+2026-10-13 03:48:28 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.6036, 'coverage_k2': 0.014, 'mean_dist_synth_to_train_minority(DCR)': 10.5542, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:48:28 | INFO    | steel | seed 42 | ImbLLM-random      | train=2028 (min 1014 / maj 1014) | F1=0.9850 Acc=0.9897 G=0.9851 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:48:28 | INFO    | steel | seed 42 | stage ImbLLM-random      | DONE in 0h01m42s
+2026-10-13 03:48:28 | INFO    | steel | seed 42 | stage ImbLLM-IAFP        | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:48:28 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:48:31 | INFO    | [steel/s42/ImbLLM-IAFP] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=224 -> max_len=265 | device=cuda
+2026-10-13 03:48:31 | INFO    | [steel/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:48:32 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 1/5 | step 3/60 | loss=2.6282
+2026-10-13 03:48:32 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 1/5 | step 6/60 | loss=2.4007
+2026-10-13 03:48:32 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 1/5 | step 9/60 | loss=2.2278
+2026-10-13 03:48:32 | INFO    | [steel/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.3427 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 03:48:33 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 2/5 | step 15/60 | loss=2.0370
+2026-10-13 03:48:33 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 2/5 | step 18/60 | loss=1.9900
+2026-10-13 03:48:33 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 2/5 | step 21/60 | loss=1.9504
+2026-10-13 03:48:35 | INFO    | [steel/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.9756 | epoch_time=0h00m02s | elapsed=0h00m03s | ETA=0h00m05s
+2026-10-13 03:48:35 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 3/5 | step 27/60 | loss=1.8789
+2026-10-13 03:48:35 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 3/5 | step 30/60 | loss=1.8589
+2026-10-13 03:48:36 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 3/5 | step 33/60 | loss=1.8486
+2026-10-13 03:48:36 | INFO    | [steel/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.8477 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m03s
+2026-10-13 03:48:36 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 4/5 | step 39/60 | loss=1.7961
+2026-10-13 03:48:37 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 4/5 | step 42/60 | loss=1.7865
+2026-10-13 03:48:37 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 4/5 | step 45/60 | loss=1.7688
+2026-10-13 03:48:38 | INFO    | [steel/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7751 | epoch_time=0h00m02s | elapsed=0h00m07s | ETA=0h00m01s
+2026-10-13 03:48:39 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 5/5 | step 51/60 | loss=1.7537
+2026-10-13 03:48:39 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 5/5 | step 54/60 | loss=1.7420
+2026-10-13 03:48:39 | INFO    | [steel/s42/ImbLLM-IAFP] epoch 5/5 | step 57/60 | loss=1.7420
+2026-10-13 03:48:41 | INFO    | [steel/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7383 | epoch_time=0h00m02s | elapsed=0h00m09s | ETA=0h00m00s
+2026-10-13 03:48:42 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-IAFP | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:49:17 | INFO    | [steel/s42/ImbLLM-IAFP] generated 128/997 (round 1) | valid parse 98.4% | accepted 126/906 | elapsed 0h00m34s
+2026-10-13 03:50:17 | INFO    | [steel/s42/ImbLLM-IAFP] generated 997/997 (round 1) | valid parse 98.5% | accepted 982/906 | elapsed 0h01m34s
+2026-10-13 03:50:17 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9849548645937813, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 95.0}
+2026-10-13 03:50:18 | INFO    | [11/22] steel seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.7267, 'coverage_k2': 0.0023, 'mean_dist_synth_to_train_minority(DCR)': 11.331, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:50:18 | INFO    | steel | seed 42 | ImbLLM-IAFP        | train=2028 (min 1014 / maj 1014) | F1=0.9811 Acc=0.9871 G=0.9813 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:18 | INFO    | steel | seed 42 | stage ImbLLM-IAFP        | DONE in 0h01m49s
+2026-10-13 03:50:18 | INFO    | steel | seed 42 | stage plots              | RUNNING [11/22] steel seed 42 (1/3)
+2026-10-13 03:50:23 | INFO    | [11/22] steel seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:50:23 | INFO    | steel | seed 42 | stage plots              | DONE in 0h00m05s
+2026-10-13 03:50:23 | INFO    | [11/22] steel seed 42 (1/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 03:50:23 | INFO    | ====================================================================================================
+2026-10-13 03:50:23 | INFO    | [11/22] steel seed 43 (2/3) | START
+2026-10-13 03:50:23 | INFO    | steel | seed 43 | stage split              | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:23 | INFO    | [11/22] steel seed 43 (2/3) | split: train=1552 test=389 | full-train minority=538 -> retained=108 (held-out ref=430) | reduced imbalance 9.4:1 | test minority=135 | test_fingerprint=2768e55638b3
+2026-10-13 03:50:23 | INFO    | steel | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 03:50:23 | INFO    | steel | seed 43 | stage importance         | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:24 | INFO    | [11/22] steel seed 43 (2/3) | top features: V33=0.5906, V30=0.5653, V28=0.3936, V29=0.2656, V32=0.0749
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage Original           | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | Original           | train=1552 (min 538 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage Imbalanced         | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | Imbalanced         | train=1122 (min 108 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage RandomOverSampler  | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | RandomOverSampler  | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:50:24 | INFO    | steel | seed 43 | stage SMOTE              | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | SMOTE              | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | stage ADASYN             | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | ADASYN             | train=2072 (min 1058 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:50:25 | INFO    | [11/22] steel seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:50:25 | INFO    | steel | seed 43 | stage ImbLLM-random      | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:25 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-random | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:50:28 | INFO    | [steel/s43/ImbLLM-random] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=224 -> max_len=265 | device=cuda
+2026-10-13 03:50:28 | INFO    | [steel/s43/ImbLLM-random] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:50:28 | INFO    | [steel/s43/ImbLLM-random] epoch 1/5 | step 3/60 | loss=2.6172
+2026-10-13 03:50:30 | INFO    | [steel/s43/ImbLLM-random] epoch 1/5 | step 6/60 | loss=2.4060
+2026-10-13 03:50:30 | INFO    | [steel/s43/ImbLLM-random] epoch 1/5 | step 9/60 | loss=2.2512
+2026-10-13 03:50:31 | INFO    | [steel/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.3482 | epoch_time=0h00m02s | elapsed=0h00m02s | ETA=0h00m09s
+2026-10-13 03:50:31 | INFO    | [steel/s43/ImbLLM-random] epoch 2/5 | step 15/60 | loss=2.0447
+2026-10-13 03:50:31 | INFO    | [steel/s43/ImbLLM-random] epoch 2/5 | step 18/60 | loss=2.0021
+2026-10-13 03:50:31 | INFO    | [steel/s43/ImbLLM-random] epoch 2/5 | step 21/60 | loss=1.9745
+2026-10-13 03:50:32 | INFO    | [steel/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.9845 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m05s
+2026-10-13 03:50:32 | INFO    | [steel/s43/ImbLLM-random] epoch 3/5 | step 27/60 | loss=1.8770
+2026-10-13 03:50:32 | INFO    | [steel/s43/ImbLLM-random] epoch 3/5 | step 30/60 | loss=1.8820
+2026-10-13 03:50:33 | INFO    | [steel/s43/ImbLLM-random] epoch 3/5 | step 33/60 | loss=1.8654
+2026-10-13 03:50:33 | INFO    | [steel/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.8657 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m03s
+2026-10-13 03:50:33 | INFO    | [steel/s43/ImbLLM-random] epoch 4/5 | step 39/60 | loss=1.8300
+2026-10-13 03:50:33 | INFO    | [steel/s43/ImbLLM-random] epoch 4/5 | step 42/60 | loss=1.7998
+2026-10-13 03:50:34 | INFO    | [steel/s43/ImbLLM-random] epoch 4/5 | step 45/60 | loss=1.7929
+2026-10-13 03:50:34 | INFO    | [steel/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.8012 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m01s
+2026-10-13 03:50:34 | INFO    | [steel/s43/ImbLLM-random] epoch 5/5 | step 51/60 | loss=1.7791
+2026-10-13 03:50:34 | INFO    | [steel/s43/ImbLLM-random] epoch 5/5 | step 54/60 | loss=1.7631
+2026-10-13 03:50:35 | INFO    | [steel/s43/ImbLLM-random] epoch 5/5 | step 57/60 | loss=1.7645
+2026-10-13 03:50:35 | INFO    | [steel/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7684 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m00s
+2026-10-13 03:50:36 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-random | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:50:53 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9899699097291875, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 17.0}
+2026-10-13 03:50:53 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.7093, 'coverage_k2': 0.0116, 'mean_dist_synth_to_train_minority(DCR)': 12.0474, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:50:54 | INFO    | steel | seed 43 | ImbLLM-random      | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:50:54 | INFO    | steel | seed 43 | stage ImbLLM-random      | DONE in 0h00m28s
+2026-10-13 03:50:54 | INFO    | steel | seed 43 | stage ImbLLM-IAFP        | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:50:54 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:50:56 | INFO    | [steel/s43/ImbLLM-IAFP] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=224 -> max_len=265 | device=cuda
+2026-10-13 03:50:57 | INFO    | [steel/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:50:57 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 1/5 | step 3/60 | loss=2.6039
+2026-10-13 03:50:57 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 1/5 | step 6/60 | loss=2.3872
+2026-10-13 03:50:57 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 1/5 | step 9/60 | loss=2.2402
+2026-10-13 03:50:58 | INFO    | [steel/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.3341 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 03:50:58 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 2/5 | step 15/60 | loss=2.0465
+2026-10-13 03:50:58 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 2/5 | step 18/60 | loss=1.9724
+2026-10-13 03:50:58 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 2/5 | step 21/60 | loss=1.9488
+2026-10-13 03:50:59 | INFO    | [steel/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.9724 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 03:50:59 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 3/5 | step 27/60 | loss=1.8950
+2026-10-13 03:50:59 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 3/5 | step 30/60 | loss=1.8570
+2026-10-13 03:51:00 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 3/5 | step 33/60 | loss=1.8381
+2026-10-13 03:51:00 | INFO    | [steel/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.8532 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 03:51:00 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 4/5 | step 39/60 | loss=1.8017
+2026-10-13 03:51:01 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 4/5 | step 42/60 | loss=1.7666
+2026-10-13 03:51:01 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 4/5 | step 45/60 | loss=1.7851
+2026-10-13 03:51:01 | INFO    | [steel/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7809 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 03:51:02 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 5/5 | step 51/60 | loss=1.7456
+2026-10-13 03:51:02 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 5/5 | step 54/60 | loss=1.7514
+2026-10-13 03:51:02 | INFO    | [steel/s43/ImbLLM-IAFP] epoch 5/5 | step 57/60 | loss=1.7477
+2026-10-13 03:51:03 | INFO    | [steel/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7486 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 03:51:04 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-IAFP | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:51:19 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9869608826479438, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 15.7}
+2026-10-13 03:51:20 | INFO    | [11/22] steel seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.8141, 'coverage_k2': 0.007, 'mean_dist_synth_to_train_minority(DCR)': 13.4596, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:51:20 | INFO    | steel | seed 43 | ImbLLM-IAFP        | train=2028 (min 1014 / maj 1014) | F1=0.9963 Acc=0.9974 G=0.9963 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:20 | INFO    | steel | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m26s
+2026-10-13 03:51:20 | INFO    | steel | seed 43 | stage plots              | RUNNING [11/22] steel seed 43 (2/3)
+2026-10-13 03:51:25 | INFO    | [11/22] steel seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:51:25 | INFO    | steel | seed 43 | stage plots              | DONE in 0h00m05s
+2026-10-13 03:51:25 | INFO    | [11/22] steel seed 43 (2/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 03:51:25 | INFO    | ====================================================================================================
+2026-10-13 03:51:25 | INFO    | [11/22] steel seed 44 (3/3) | START
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage split              | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:26 | INFO    | [11/22] steel seed 44 (3/3) | split: train=1552 test=389 | full-train minority=538 -> retained=108 (held-out ref=430) | reduced imbalance 9.4:1 | test minority=135 | test_fingerprint=657945ced28f
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage importance         | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:26 | INFO    | [11/22] steel seed 44 (3/3) | top features: V33=0.6462, V30=0.3484, V29=0.2665, V28=0.0960, V32=0.0729
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage Original           | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | Original           | train=1552 (min 538 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage Imbalanced         | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | Imbalanced         | train=1122 (min 108 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:51:26 | INFO    | steel | seed 44 | stage RandomOverSampler  | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | RandomOverSampler  | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage SMOTE              | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | SMOTE              | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage ADASYN             | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | ADASYN             | train=2054 (min 1040 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:51:27 | INFO    | [11/22] steel seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:51:27 | INFO    | steel | seed 44 | stage ImbLLM-random      | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:27 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-random | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:51:31 | INFO    | [steel/s44/ImbLLM-random] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=226 -> max_len=267 | device=cuda
+2026-10-13 03:51:31 | INFO    | [steel/s44/ImbLLM-random] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:51:33 | INFO    | [steel/s44/ImbLLM-random] epoch 1/5 | step 3/60 | loss=2.6199
+2026-10-13 03:51:33 | INFO    | [steel/s44/ImbLLM-random] epoch 1/5 | step 6/60 | loss=2.4056
+2026-10-13 03:51:35 | INFO    | [steel/s44/ImbLLM-random] epoch 1/5 | step 9/60 | loss=2.2356
+2026-10-13 03:51:35 | INFO    | [steel/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.3473 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h00m15s
+2026-10-13 03:51:36 | INFO    | [steel/s44/ImbLLM-random] epoch 2/5 | step 15/60 | loss=2.0487
+2026-10-13 03:51:36 | INFO    | [steel/s44/ImbLLM-random] epoch 2/5 | step 18/60 | loss=2.0168
+2026-10-13 03:51:36 | INFO    | [steel/s44/ImbLLM-random] epoch 2/5 | step 21/60 | loss=1.9652
+2026-10-13 03:51:37 | INFO    | [steel/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.9903 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m07s
+2026-10-13 03:51:37 | INFO    | [steel/s44/ImbLLM-random] epoch 3/5 | step 27/60 | loss=1.9071
+2026-10-13 03:51:37 | INFO    | [steel/s44/ImbLLM-random] epoch 3/5 | step 30/60 | loss=1.8765
+2026-10-13 03:51:38 | INFO    | [steel/s44/ImbLLM-random] epoch 3/5 | step 33/60 | loss=1.8537
+2026-10-13 03:51:38 | INFO    | [steel/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.8659 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m04s
+2026-10-13 03:51:38 | INFO    | [steel/s44/ImbLLM-random] epoch 4/5 | step 39/60 | loss=1.8218
+2026-10-13 03:51:39 | INFO    | [steel/s44/ImbLLM-random] epoch 4/5 | step 42/60 | loss=1.8029
+2026-10-13 03:51:39 | INFO    | [steel/s44/ImbLLM-random] epoch 4/5 | step 45/60 | loss=1.7798
+2026-10-13 03:51:41 | INFO    | [steel/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.7965 | epoch_time=0h00m02s | elapsed=0h00m09s | ETA=0h00m02s
+2026-10-13 03:51:41 | INFO    | [steel/s44/ImbLLM-random] epoch 5/5 | step 51/60 | loss=1.7661
+2026-10-13 03:51:41 | INFO    | [steel/s44/ImbLLM-random] epoch 5/5 | step 54/60 | loss=1.7639
+2026-10-13 03:51:42 | INFO    | [steel/s44/ImbLLM-random] epoch 5/5 | step 57/60 | loss=1.7542
+2026-10-13 03:51:42 | INFO    | [steel/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7612 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m00s
+2026-10-13 03:51:43 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-random | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:51:56 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9879638916750251, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 13.4}
+2026-10-13 03:51:57 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.697, 'coverage_k2': 0.014, 'mean_dist_synth_to_train_minority(DCR)': 12.8462, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:51:57 | INFO    | steel | seed 44 | ImbLLM-random      | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:51:57 | INFO    | steel | seed 44 | stage ImbLLM-random      | DONE in 0h00m29s
+2026-10-13 03:51:57 | INFO    | steel | seed 44 | stage ImbLLM-IAFP        | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:51:57 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 108 retained minority + 253 interpolated rows | synthetic to generate = 906
+2026-10-13 03:52:00 | INFO    | [steel/s44/ImbLLM-IAFP] fine-tuning rows=361 | tokens/row: mean=215 max(probe)=226 -> max_len=267 | device=cuda
+2026-10-13 03:52:01 | INFO    | [steel/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=12 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:52:01 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 1/5 | step 3/60 | loss=2.6092
+2026-10-13 03:52:02 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 1/5 | step 6/60 | loss=2.3914
+2026-10-13 03:52:02 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 1/5 | step 9/60 | loss=2.2235
+2026-10-13 03:52:02 | INFO    | [steel/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.3368 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 03:52:02 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 2/5 | step 15/60 | loss=2.0391
+2026-10-13 03:52:03 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 2/5 | step 18/60 | loss=1.9930
+2026-10-13 03:52:03 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 2/5 | step 21/60 | loss=1.9416
+2026-10-13 03:52:03 | INFO    | [steel/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.9714 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 03:52:04 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 3/5 | step 27/60 | loss=1.8823
+2026-10-13 03:52:04 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 3/5 | step 30/60 | loss=1.8529
+2026-10-13 03:52:04 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 3/5 | step 33/60 | loss=1.8304
+2026-10-13 03:52:04 | INFO    | [steel/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.8451 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 03:52:05 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 4/5 | step 39/60 | loss=1.7932
+2026-10-13 03:52:05 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 4/5 | step 42/60 | loss=1.7905
+2026-10-13 03:52:05 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 4/5 | step 45/60 | loss=1.7679
+2026-10-13 03:52:06 | INFO    | [steel/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7767 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 03:52:06 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 5/5 | step 51/60 | loss=1.7548
+2026-10-13 03:52:06 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 5/5 | step 54/60 | loss=1.7432
+2026-10-13 03:52:06 | INFO    | [steel/s44/ImbLLM-IAFP] epoch 5/5 | step 57/60 | loss=1.7341
+2026-10-13 03:52:07 | INFO    | [steel/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7450 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 03:52:08 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-IAFP | generating 906 rows (condition_yx, temperature 0.70)
+2026-10-13 03:52:27 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 997, 'valid_parse_rate': 0.9909729187562688, 'rounds': 1, 'rows_returned': 906, 'gen_batch_size_final': 128, 'gen_seconds': 18.9}
+2026-10-13 03:52:27 | INFO    | [11/22] steel seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.5816, 'coverage_k2': 0.0047, 'mean_dist_synth_to_train_minority(DCR)': 13.3222, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:52:27 | INFO    | steel | seed 44 | ImbLLM-IAFP        | train=2028 (min 1014 / maj 1014) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:52:27 | INFO    | steel | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m30s
+2026-10-13 03:52:27 | INFO    | steel | seed 44 | stage plots              | RUNNING [11/22] steel seed 44 (3/3)
+2026-10-13 03:52:33 | INFO    | [11/22] steel seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:52:33 | INFO    | steel | seed 44 | stage plots              | DONE in 0h00m05s
+2026-10-13 03:52:33 | INFO    | [11/22] steel seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 03:52:34 | INFO    | steel | DATASET COMPLETE in 0h05m50s -> runs/exp1/steel

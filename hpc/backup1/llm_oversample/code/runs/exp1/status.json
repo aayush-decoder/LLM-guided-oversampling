@@ -1,0 +1,3465 @@
+{
+  "run": "exp1",
+  "started": "2026-10-13 03:08:58",
+  "datasets": {
+    "iris": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 3.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "failed",
+              "error": "RuntimeError: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.",
+              "seconds": 0.0
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 67.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 10.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 0.7
+            }
+          },
+          "state": "partial"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 3.7
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "failed",
+              "error": "RuntimeError: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.",
+              "seconds": 0.0
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 6.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 58.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 0.7
+            }
+          },
+          "state": "partial"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 5.9
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "failed",
+              "error": "RuntimeError: Not any neigbours belong to the majority class. This case will induce a NaN case with a division by zero. ADASYN is not suited for this specific dataset. Use SMOTE instead.",
+              "seconds": 0.0
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 5.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.1
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 0.7
+            }
+          },
+          "state": "partial"
+        }
+      },
+      "order": 1,
+      "n_rows": 150,
+      "reason": "failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')]",
+      "state": "partial"
+    },
+    "kc2": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 229.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 20.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.9
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 22.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 22.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.9
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 48.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 30.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 2,
+      "n_rows": 522,
+      "reason": "",
+      "state": "done"
+    },
+    "breast": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 276.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 28.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 8.4
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 29.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 25.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 24.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 25.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 3,
+      "n_rows": 569,
+      "reason": "",
+      "state": "done"
+    },
+    "balance": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 16.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 5.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 5.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.5
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 4,
+      "n_rows": 625,
+      "reason": "",
+      "state": "done"
+    },
+    "australian": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 53.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 6.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 21.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 6.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.9
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 21.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 32.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 5,
+      "n_rows": 690,
+      "reason": "",
+      "state": "done"
+    },
+    "blood": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 16.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 9.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 5.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.1
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 5.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 5.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 6,
+      "n_rows": 748,
+      "reason": "",
+      "state": "done"
+    },
+    "diabetes": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 63.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 22.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.1
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 28.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 37.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.1
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 26.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 23.2
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 2.2
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 7,
+      "n_rows": 768,
+      "reason": "",
+      "state": "done"
+    },
+    "german": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 213.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 26.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.0
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 62.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 88.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.2
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 33.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 31.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.0
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 8,
+      "n_rows": 1000,
+      "reason": "",
+      "state": "done"
+    },
+    "qsar": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 105.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 21.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 18.8
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 17.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.2
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 16.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 18.2
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 3.2
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 9,
+      "n_rows": 1055,
+      "reason": "",
+      "state": "done"
+    },
+    "car": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "failed",
+              "error": "ValueError: SMOTE-NC is not designed to work only with categorical features. It requires some numerical features.",
+              "seconds": 0.0
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 17.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 7.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.3
+            }
+          },
+          "state": "partial"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "failed",
+              "error": "ValueError: SMOTE-NC is not designed to work only with categorical features. It requires some numerical features.",
+              "seconds": 0.0
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 8.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 10.1
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.0
+            }
+          },
+          "state": "partial"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "failed",
+              "error": "ValueError: SMOTE-NC is not designed to work only with categorical features. It requires some numerical features.",
+              "seconds": 0.0
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 8.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 9.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 4.9
+            }
+          },
+          "state": "partial"
+        }
+      },
+      "order": 10,
+      "n_rows": 1728,
+      "reason": "failed stages: [('42', 'SMOTE-NC'), ('43', 'SMOTE-NC'), ('44', 'SMOTE-NC')]",
+      "state": "partial"
+    },
+    "steel": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 102.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 109.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.4
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 28.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 26.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.5
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 29.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 30.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.4
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 11,
+      "n_rows": 1941,
+      "reason": "",
+      "state": "done"
+    },
+    "kc1": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 93.8
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 33.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.0
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 29.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 30.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.2
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 27.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 28.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.0
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 12,
+      "n_rows": 2109,
+      "reason": "",
+      "state": "done"
+    },
+    "cardio": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 95.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 30.2
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 31.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 29.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.4
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 32.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 70.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.3
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 13,
+      "n_rows": 2126,
+      "reason": "",
+      "state": "done"
+    },
+    "cardio_noleak": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 29.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 31.5
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 28.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 22.2
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.4
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 21.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 22.1
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.2
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 14,
+      "n_rows": 2126,
+      "reason": "",
+      "state": "done"
+    },
+    "sick": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.8
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 106.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 36.5
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.5
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.7
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 40.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 41.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.4
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.7
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 40.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 42.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.5
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 15,
+      "n_rows": 3772,
+      "reason": "",
+      "state": "done"
+    },
+    "compas": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 17.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 15.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.6
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 18.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 18.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.6
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 19.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 19.5
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.6
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 16,
+      "n_rows": 4010,
+      "reason": "",
+      "state": "done"
+    },
+    "bank": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 47.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 21.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.9
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 21.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 21.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.8
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 93.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 21.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 5.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 17,
+      "n_rows": 4521,
+      "reason": "",
+      "state": "done"
+    },
+    "churn": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 127.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 60.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.7
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 62.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 58.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.9
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 63.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 60.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.5
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 18,
+      "n_rows": 5000,
+      "reason": "",
+      "state": "done"
+    },
+    "waveform": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 201.4
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 86.7
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 9.0
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 7.7
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 87.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 87.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.9
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 3.4
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.5
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.6
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 87.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 89.0
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 19,
+      "n_rows": 5000,
+      "reason": "",
+      "state": "done"
+    },
+    "phoneme": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 26.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 17.1
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.9
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 16.1
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 16.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 7.0
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 16.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 15.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 6.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 20,
+      "n_rows": 5404,
+      "reason": "",
+      "state": "done"
+    },
+    "credit_card": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.7
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 131.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 96.2
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.2
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.7
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 102.7
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 116.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 7.7
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.7
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 117.9
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 116.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 7.8
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 21,
+      "n_rows": 10127,
+      "reason": "",
+      "state": "done"
+    },
+    "adult": {
+      "seeds": {
+        "42": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 1.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 151.5
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 115.9
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.7
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 1.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 104.0
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 84.4
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.6
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 1.3
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 83.8
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 84.5
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 8.7
+            }
+          },
+          "state": "done"
+        }
+      },
+      "order": 22,
+      "n_rows": 30162,
+      "reason": "",
+      "state": "done"
+    },
+    "abalone": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 4177,
+      "reason": "target looks continuous (28 unique values) -> regression",
+      "state": "skipped"
+    },
+    "california": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 0,
+      "reason": "known regression dataset",
+      "state": "skipped"
+    },
+    "fuel": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 0,
+      "reason": "known regression dataset",
+      "state": "skipped"
+    },
+    "gem_price": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 0,
+      "reason": "known regression dataset",
+      "state": "skipped"
+    },
+    "housing": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 0,
+      "reason": "known regression dataset",
+      "state": "skipped"
+    },
+    "insurance": {
+      "seeds": {},
+      "order": 1000,
+      "n_rows": 0,
+      "reason": "known regression dataset",
+      "state": "skipped"
+    }
+  },
+  "updated": "2026-10-13 05:02:17"
+}

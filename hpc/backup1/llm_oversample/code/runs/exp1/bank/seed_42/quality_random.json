@@ -1,0 +1,7 @@
+{
+  "close_probability": 0.3532934131736527,
+  "mean_dist_heldout_real_to_nearest_synth": 1.726838743301961,
+  "coverage_k2": 0.718562874251497,
+  "mean_dist_synth_to_train_minority(DCR)": 1.530812297338849,
+  "frac_synth_exact_copy_of_train_minority": 0.0
+}

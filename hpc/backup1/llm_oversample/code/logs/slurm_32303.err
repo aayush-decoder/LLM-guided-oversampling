@@ -1,0 +1,2 @@
+/bin/bash: /apps/compilers/anaconda3-24.2/lib/libtinfo.so.6: no version information available (required by /bin/bash)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.

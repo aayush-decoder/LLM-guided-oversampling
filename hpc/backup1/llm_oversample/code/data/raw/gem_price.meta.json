@@ -1,0 +1,16 @@
+{
+  "target": "price",
+  "numerical": [
+    "carat",
+    "depth",
+    "table",
+    "x",
+    "y",
+    "z"
+  ],
+  "categorical": [
+    "cut",
+    "color",
+    "clarity"
+  ]
+}
