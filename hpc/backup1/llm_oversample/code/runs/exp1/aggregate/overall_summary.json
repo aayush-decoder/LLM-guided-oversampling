@@ -43,24 +43,24 @@
         "SMOTE": 0.6594252052429513,
         "ADASYN": 0.6254087221672601,
         "SMOTE-NC": 0.5534764374352192,
-        "ImbLLM-random": 0.5612361251984318,
-        "ImbLLM-IAFP": 0.5858334050747517
+        "ImbLLM-random": 0.6134570467849223,
+        "ImbLLM-IAFP": 0.6122066131961446
       },
       "avg_rank": {
-        "Original": 1.5454545454545454,
-        "Imbalanced": 5.659090909090909,
-        "RandomOverSampler": 3.2045454545454546,
-        "SMOTE": 2.8461538461538463,
-        "ADASYN": 3.2083333333333335,
-        "SMOTE-NC": 3.625,
-        "ImbLLM-random": 4.681818181818182,
-        "ImbLLM-IAFP": 4.704545454545454
+        "Original": 1.5909090909090908,
+        "Imbalanced": 5.886363636363637,
+        "RandomOverSampler": 3.25,
+        "SMOTE": 2.8846153846153846,
+        "ADASYN": 3.2916666666666665,
+        "SMOTE-NC": 3.875,
+        "ImbLLM-random": 4.386363636363637,
+        "ImbLLM-IAFP": 4.5227272727272725
       },
       "iafp_vs_random": {
-        "wins": 8,
-        "ties": 1,
-        "losses": 13,
-        "mean_delta": 0.024597279876319898
+        "wins": 9,
+        "ties": 3,
+        "losses": 10,
+        "mean_delta": -0.0012504335887778286
       }
     },
     "accuracy": {
@@ -71,24 +71,24 @@
         "SMOTE": 0.8929732164344428,
         "ADASYN": 0.8824264981549312,
         "SMOTE-NC": 0.8712274102843369,
-        "ImbLLM-random": 0.8664379061511792,
-        "ImbLLM-IAFP": 0.8652882603166966
+        "ImbLLM-random": 0.8753331047510823,
+        "ImbLLM-IAFP": 0.8746658975089072
       },
       "avg_rank": {
-        "Original": 2.0,
-        "Imbalanced": 4.590909090909091,
-        "RandomOverSampler": 3.6136363636363638,
-        "SMOTE": 2.5384615384615383,
-        "ADASYN": 2.7916666666666665,
+        "Original": 2.090909090909091,
+        "Imbalanced": 4.954545454545454,
+        "RandomOverSampler": 3.659090909090909,
+        "SMOTE": 2.6153846153846154,
+        "ADASYN": 3.2916666666666665,
         "SMOTE-NC": 3.0,
-        "ImbLLM-random": 5.068181818181818,
-        "ImbLLM-IAFP": 5.159090909090909
+        "ImbLLM-random": 4.636363636363637,
+        "ImbLLM-IAFP": 4.7727272727272725
       },
       "iafp_vs_random": {
-        "wins": 7,
+        "wins": 8,
         "ties": 4,
-        "losses": 11,
-        "mean_delta": -0.001149645834482576
+        "losses": 10,
+        "mean_delta": -0.0006672072421751163
       }
     },
     "g_score": {
@@ -99,24 +99,24 @@
         "SMOTE": 0.7097225128941863,
         "ADASYN": 0.680658675467808,
         "SMOTE-NC": 0.6384238894554927,
-        "ImbLLM-random": 0.6550009061722311,
-        "ImbLLM-IAFP": 0.6768323132684708
+        "ImbLLM-random": 0.7012280118459935,
+        "ImbLLM-IAFP": 0.7002359025788887
       },
       "avg_rank": {
-        "Original": 1.5909090909090908,
-        "Imbalanced": 5.75,
-        "RandomOverSampler": 3.2045454545454546,
-        "SMOTE": 2.923076923076923,
-        "ADASYN": 3.2083333333333335,
-        "SMOTE-NC": 3.5,
-        "ImbLLM-random": 4.7272727272727275,
-        "ImbLLM-IAFP": 4.5227272727272725
+        "Original": 1.6818181818181819,
+        "Imbalanced": 5.886363636363637,
+        "RandomOverSampler": 3.2954545454545454,
+        "SMOTE": 2.9615384615384617,
+        "ADASYN": 3.2916666666666665,
+        "SMOTE-NC": 3.875,
+        "ImbLLM-random": 4.25,
+        "ImbLLM-IAFP": 4.4772727272727275
       },
       "iafp_vs_random": {
-        "wins": 10,
-        "ties": 1,
-        "losses": 11,
-        "mean_delta": 0.02183140709623974
+        "wins": 9,
+        "ties": 3,
+        "losses": 10,
+        "mean_delta": -0.000992109267104712
       }
     },
     "roc_auc": {
@@ -127,24 +127,24 @@
         "SMOTE": 0.8712137381728131,
         "ADASYN": 0.8601338460406458,
         "SMOTE-NC": 0.857803425578876,
-        "ImbLLM-random": 0.8719242113273471,
-        "ImbLLM-IAFP": 0.8658727691593499
+        "ImbLLM-random": 0.8765159404236176,
+        "ImbLLM-IAFP": 0.8728966987755786
       },
       "avg_rank": {
         "Original": 1.5227272727272727,
-        "Imbalanced": 3.7954545454545454,
-        "RandomOverSampler": 4.5227272727272725,
-        "SMOTE": 3.423076923076923,
-        "ADASYN": 3.5833333333333335,
-        "SMOTE-NC": 4.0,
-        "ImbLLM-random": 4.340909090909091,
-        "ImbLLM-IAFP": 4.931818181818182
+        "Imbalanced": 3.840909090909091,
+        "RandomOverSampler": 4.704545454545454,
+        "SMOTE": 3.6538461538461537,
+        "ADASYN": 3.9166666666666665,
+        "SMOTE-NC": 4.125,
+        "ImbLLM-random": 4.0227272727272725,
+        "ImbLLM-IAFP": 4.659090909090909
       },
       "iafp_vs_random": {
         "wins": 6,
-        "ties": 2,
-        "losses": 14,
-        "mean_delta": -0.0060514421679974265
+        "ties": 4,
+        "losses": 12,
+        "mean_delta": -0.0036192416480388904
       }
     },
     "pr_auc": {
@@ -155,24 +155,24 @@
         "SMOTE": 0.7480106433506207,
         "ADASYN": 0.7255469450145506,
         "SMOTE-NC": 0.6832443934177412,
-        "ImbLLM-random": 0.7266840121575663,
-        "ImbLLM-IAFP": 0.7228512302369534
+        "ImbLLM-random": 0.7353369730582874,
+        "ImbLLM-IAFP": 0.7305799221430497
       },
       "avg_rank": {
-        "Original": 1.6136363636363635,
-        "Imbalanced": 3.5681818181818183,
-        "RandomOverSampler": 4.204545454545454,
-        "SMOTE": 3.576923076923077,
-        "ADASYN": 3.75,
-        "SMOTE-NC": 4.125,
-        "ImbLLM-random": 4.613636363636363,
-        "ImbLLM-IAFP": 4.886363636363637
+        "Original": 1.5681818181818181,
+        "Imbalanced": 3.7954545454545454,
+        "RandomOverSampler": 4.5227272727272725,
+        "SMOTE": 3.8076923076923075,
+        "ADASYN": 4.0,
+        "SMOTE-NC": 4.0,
+        "ImbLLM-random": 4.204545454545454,
+        "ImbLLM-IAFP": 4.568181818181818
       },
       "iafp_vs_random": {
         "wins": 7,
-        "ties": 2,
-        "losses": 13,
-        "mean_delta": -0.0038327819206129504
+        "ties": 4,
+        "losses": 11,
+        "mean_delta": -0.004757050915237721
       }
     },
     "precision": {
@@ -183,24 +183,24 @@
         "SMOTE": 0.777691775762234,
         "ADASYN": 0.7516255584861905,
         "SMOTE-NC": 0.7611366603942894,
-        "ImbLLM-random": 0.7543955451268456,
-        "ImbLLM-IAFP": 0.749726805632982
+        "ImbLLM-random": 0.7721228366737265,
+        "ImbLLM-IAFP": 0.7720995333283242
       },
       "avg_rank": {
-        "Original": 4.363636363636363,
-        "Imbalanced": 2.25,
+        "Original": 4.5,
+        "Imbalanced": 2.4545454545454546,
         "RandomOverSampler": 3.840909090909091,
-        "SMOTE": 3.5384615384615383,
-        "ADASYN": 4.291666666666667,
+        "SMOTE": 4.0,
+        "ADASYN": 4.791666666666667,
         "SMOTE-NC": 3.125,
-        "ImbLLM-random": 4.090909090909091,
-        "ImbLLM-IAFP": 4.431818181818182
+        "ImbLLM-random": 3.840909090909091,
+        "ImbLLM-IAFP": 3.7954545454545454
       },
       "iafp_vs_random": {
-        "wins": 6,
+        "wins": 10,
         "ties": 4,
-        "losses": 12,
-        "mean_delta": -0.004668739493863738
+        "losses": 8,
+        "mean_delta": -2.3303345402325197e-05
       }
     },
     "recall": {
@@ -211,24 +211,24 @@
         "SMOTE": 0.6058967661505771,
         "ADASYN": 0.569570637233091,
         "SMOTE-NC": 0.4588599583784355,
-        "ImbLLM-random": 0.5050638805075441,
-        "ImbLLM-IAFP": 0.5448493614506182
+        "ImbLLM-random": 0.5640148888319207,
+        "ImbLLM-IAFP": 0.5614099358373771
       },
       "avg_rank": {
-        "Original": 1.5909090909090908,
-        "Imbalanced": 5.818181818181818,
-        "RandomOverSampler": 3.3863636363636362,
-        "SMOTE": 3.0384615384615383,
-        "ADASYN": 3.0833333333333335,
-        "SMOTE-NC": 3.375,
-        "ImbLLM-random": 4.681818181818182,
-        "ImbLLM-IAFP": 4.363636363636363
+        "Original": 1.6818181818181819,
+        "Imbalanced": 5.9772727272727275,
+        "RandomOverSampler": 3.4318181818181817,
+        "SMOTE": 3.076923076923077,
+        "ADASYN": 3.1666666666666665,
+        "SMOTE-NC": 3.75,
+        "ImbLLM-random": 4.136363636363637,
+        "ImbLLM-IAFP": 4.409090909090909
       },
       "iafp_vs_random": {
-        "wins": 10,
-        "ties": 4,
-        "losses": 8,
-        "mean_delta": 0.03978548094307406
+        "wins": 6,
+        "ties": 6,
+        "losses": 10,
+        "mean_delta": -0.0026049529945437145
       }
     }
   }

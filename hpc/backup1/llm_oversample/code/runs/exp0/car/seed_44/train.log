@@ -1,0 +1,120 @@
+2026-10-13 03:46:15 | INFO    | ====================================================================================================
+2026-10-13 03:46:15 | INFO    | [10/22] car seed 44 (3/3) | START
+2026-10-13 03:46:15 | INFO    | car | seed 44 | stage split              | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:15 | INFO    | [10/22] car seed 44 (3/3) | split: train=1382 test=346 | full-train minority=52 -> retained=10 (held-out ref=42) | reduced imbalance 133.0:1 | test minority=13 | test_fingerprint=49c78c91b759
+2026-10-13 03:46:15 | INFO    | car | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 03:46:15 | INFO    | car | seed 44 | stage importance         | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:15 | INFO    | [10/22] car seed 44 (3/3) | top features: safety=0.7864, buying=0.6967, lug_boot=0.5967, maint=0.4780, persons=0.4544
+2026-10-13 03:46:15 | INFO    | car | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:46:15 | INFO    | car | seed 44 | stage Original           | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:16 | INFO    | car | seed 44 | Original           | train=1382 (min 52 / maj 1330) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage Imbalanced         | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:16 | INFO    | car | seed 44 | Imbalanced         | train=1340 (min 10 / maj 1330) | F1=0.1429 Acc=0.9653 G=0.2774 AUC=0.9958 PR-AUC=0.9188
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage RandomOverSampler  | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:16 | INFO    | car | seed 44 | RandomOverSampler  | train=2660 (min 1330 / maj 1330) | F1=0.9231 Acc=0.9942 G=0.9593 AUC=0.9993 PR-AUC=0.9856
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:46:16 | INFO    | [10/22] car seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 03:46:16 | INFO    | [10/22] car seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage SMOTE-NC           | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:16 | ERROR   | car | seed 44 | stage SMOTE-NC           | FAILED after 0h00m00s: SMOTE-NC is not designed to work only with categorical features. It requires some numerical features.
+Traceback (most recent call last):
+  File "/home/tanmoyhazra/llm_oversample/code/main.py", line 291, in stage
+    yield
+  File "/home/tanmoyhazra/llm_oversample/code/main.py", line 1068, in run_seed
+    Xr, yr = builder().fit_resample(X_imb, y_imb)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/base.py", line 204, in fit_resample
+    return super().fit_resample(X, y, **params)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/sklearn/base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/base.py", line 107, in fit_resample
+    output = self._fit_resample(X, y, **params)
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 598, in _fit_resample
+    self._validate_estimator()
+  File "/home/tanmoyhazra/.conda/envs/imbllm/lib/python3.10/site-packages/imblearn/over_sampling/_smote/base.py", line 585, in _validate_estimator
+    raise ValueError(
+ValueError: SMOTE-NC is not designed to work only with categorical features. It requires some numerical features.
+
+2026-10-13 03:46:16 | INFO    | car | seed 44 | stage ImbLLM-random      | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:16 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-random | fine-tune set = 10 retained minority + 332 interpolated rows | synthetic to generate = 1320
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] fine-tuning rows=342 | tokens/row: mean=32 max(probe)=33 -> max_len=45 | device=cuda
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] training: epochs=5 | steps/epoch=11 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] epoch 1/5 | step 2/55 | loss=5.6819
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] epoch 1/5 | step 4/55 | loss=4.9706
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] epoch 1/5 | step 6/55 | loss=4.1371
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] epoch 1/5 | step 8/55 | loss=3.3852
+2026-10-13 03:46:19 | INFO    | [car/s44/ImbLLM-random] epoch 1/5 | step 10/55 | loss=2.7967
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=4.0377 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 2/5 | step 13/55 | loss=2.2028
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 2/5 | step 15/55 | loss=1.9193
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 2/5 | step 17/55 | loss=1.6732
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 2/5 | step 19/55 | loss=1.3521
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 2/5 | step 21/55 | loss=1.1668
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.6069 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 3/5 | step 24/55 | loss=0.9916
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 3/5 | step 26/55 | loss=0.8775
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 3/5 | step 28/55 | loss=0.8283
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 3/5 | step 30/55 | loss=0.7566
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 3/5 | step 32/55 | loss=0.7311
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=0.8243 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 4/5 | step 35/55 | loss=0.6822
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 4/5 | step 37/55 | loss=0.6520
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 4/5 | step 39/55 | loss=0.6428
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 4/5 | step 41/55 | loss=0.6363
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 4/5 | step 43/55 | loss=0.6062
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=0.6402 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 5/5 | step 46/55 | loss=0.6107
+2026-10-13 03:46:20 | INFO    | [car/s44/ImbLLM-random] epoch 5/5 | step 48/55 | loss=0.5890
+2026-10-13 03:46:21 | INFO    | [car/s44/ImbLLM-random] epoch 5/5 | step 50/55 | loss=0.5986
+2026-10-13 03:46:21 | INFO    | [car/s44/ImbLLM-random] epoch 5/5 | step 52/55 | loss=0.5909
+2026-10-13 03:46:21 | INFO    | [car/s44/ImbLLM-random] epoch 5/5 | step 54/55 | loss=0.5575
+2026-10-13 03:46:21 | INFO    | [car/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=0.5883 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:46:22 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-random | generating 1320 rows (condition_yx, temperature 0.70)
+2026-10-13 03:46:24 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 1453, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1320, 'gen_batch_size_final': 128, 'gen_seconds': 2.4}
+2026-10-13 03:46:24 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.8333, 'mean_dist_heldout_real_to_nearest_synth': 0.1618, 'coverage_k2': 1.0, 'mean_dist_synth_to_train_minority(DCR)': 1.3533, 'frac_synth_exact_copy_of_train_minority': 0.2023}
+2026-10-13 03:46:25 | INFO    | car | seed 44 | ImbLLM-random      | train=2660 (min 1330 / maj 1330) | F1=0.8125 Acc=0.9827 G=0.9910 AUC=0.9951 PR-AUC=0.8932
+2026-10-13 03:46:25 | INFO    | car | seed 44 | stage ImbLLM-random      | DONE in 0h00m08s
+2026-10-13 03:46:25 | INFO    | car | seed 44 | stage ImbLLM-IAFP        | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:25 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 10 retained minority + 332 interpolated rows | synthetic to generate = 1320
+2026-10-13 03:46:27 | INFO    | [car/s44/ImbLLM-IAFP] fine-tuning rows=342 | tokens/row: mean=32 max(probe)=33 -> max_len=45 | device=cuda
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=11 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 1/5 | step 2/55 | loss=5.6913
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 1/5 | step 4/55 | loss=4.9779
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 1/5 | step 6/55 | loss=4.1132
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 1/5 | step 8/55 | loss=3.3610
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 1/5 | step 10/55 | loss=2.7501
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=4.0195 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 2/5 | step 13/55 | loss=2.1632
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 2/5 | step 15/55 | loss=1.8226
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 2/5 | step 17/55 | loss=1.5462
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 2/5 | step 19/55 | loss=1.2804
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 2/5 | step 21/55 | loss=1.0713
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5230 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 3/5 | step 24/55 | loss=0.9586
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 3/5 | step 26/55 | loss=0.8105
+2026-10-13 03:46:28 | INFO    | [car/s44/ImbLLM-IAFP] epoch 3/5 | step 28/55 | loss=0.7531
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 3/5 | step 30/55 | loss=0.7464
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 3/5 | step 32/55 | loss=0.6698
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=0.7763 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 4/5 | step 35/55 | loss=0.6413
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 4/5 | step 37/55 | loss=0.6299
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 4/5 | step 39/55 | loss=0.6040
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 4/5 | step 41/55 | loss=0.5654
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 4/5 | step 43/55 | loss=0.5967
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=0.6037 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 5/5 | step 46/55 | loss=0.5609
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 5/5 | step 48/55 | loss=0.5587
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 5/5 | step 50/55 | loss=0.5166
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 5/5 | step 52/55 | loss=0.5574
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] epoch 5/5 | step 54/55 | loss=0.5093
+2026-10-13 03:46:29 | INFO    | [car/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=0.5379 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:46:30 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-IAFP | generating 1320 rows (condition_yx, temperature 0.70)
+2026-10-13 03:46:33 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 1453, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1320, 'gen_batch_size_final': 128, 'gen_seconds': 2.9}
+2026-10-13 03:46:33 | INFO    | [10/22] car seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.8571, 'mean_dist_heldout_real_to_nearest_synth': 0.15, 'coverage_k2': 1.0, 'mean_dist_synth_to_train_minority(DCR)': 1.3378, 'frac_synth_exact_copy_of_train_minority': 0.2159}
+2026-10-13 03:46:34 | INFO    | car | seed 44 | ImbLLM-IAFP        | train=2660 (min 1330 / maj 1330) | F1=0.8125 Acc=0.9827 G=0.9910 AUC=0.9958 PR-AUC=0.9114
+2026-10-13 03:46:34 | INFO    | car | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m08s
+2026-10-13 03:46:34 | INFO    | car | seed 44 | stage plots              | RUNNING [10/22] car seed 44 (3/3)
+2026-10-13 03:46:38 | INFO    | [10/22] car seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:46:39 | INFO    | car | seed 44 | stage plots              | DONE in 0h00m04s
+2026-10-13 03:46:39 | INFO    | [10/22] car seed 44 (3/3) | FINISHED (5/8 methods have metrics)

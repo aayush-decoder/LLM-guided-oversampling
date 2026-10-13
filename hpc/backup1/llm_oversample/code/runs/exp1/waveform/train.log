@@ -1,6 +1,6 @@
-2026-10-13 04:25:22 | INFO    | ====================================================================================================
-2026-10-13 04:25:22 | INFO    | [19/22] DATASET waveform | elapsed so far 1h16m23s
-2026-10-13 04:25:22 | INFO    | 
+2026-10-13 15:42:21 | INFO    | ====================================================================================================
+2026-10-13 15:42:21 | INFO    | [19/22] DATASET waveform | elapsed so far 2h31m43s
+2026-10-13 15:42:21 | INFO    | 
 STATUS  datasets: 28 total | done=16 | partial=2 | pending=3 | running=1 | skipped=6
   [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
   [DONE] kc2              seeds_done=3/3
@@ -30,300 +30,749 @@ STATUS  datasets: 28 total | done=16 | partial=2 | pending=3 | running=1 | skipp
   [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
   [SKIP] housing          seeds_done=0/3  (known regression dataset)
   [SKIP] insurance        seeds_done=0/3  (known regression dataset)
-2026-10-13 04:25:22 | INFO    | waveform | rows=5000 | 40 numeric + 0 categorical features | classes=3 (smallest class = minority, others merged) | minority='1': 1653 rows (33.06%)
-2026-10-13 04:25:22 | INFO    | ====================================================================================================
-2026-10-13 04:25:22 | INFO    | [19/22] waveform seed 42 (1/3) | START
-2026-10-13 04:25:22 | INFO    | waveform | seed 42 | stage split              | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:22 | INFO    | [19/22] waveform seed 42 (1/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=c48a561792ed
-2026-10-13 04:25:22 | INFO    | waveform | seed 42 | stage split              | DONE in 0h00m00s
-2026-10-13 04:25:22 | INFO    | waveform | seed 42 | stage importance         | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:23 | INFO    | [19/22] waveform seed 42 (1/3) | top features: x11=0.1801, x16=0.0606, x10=0.0537, x9=0.0509, x7=0.0431
-2026-10-13 04:25:23 | INFO    | waveform | seed 42 | stage importance         | DONE in 0h00m00s
-2026-10-13 04:25:23 | INFO    | waveform | seed 42 | stage Original           | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:23 | INFO    | waveform | seed 42 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8688 Acc=0.9100 G=0.9075 AUC=0.9701 PR-AUC=0.9367
-2026-10-13 04:25:23 | INFO    | waveform | seed 42 | stage Original           | DONE in 0h00m00s
-2026-10-13 04:25:23 | INFO    | waveform | seed 42 | stage Imbalanced         | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.6898 Acc=0.8390 G=0.7304 AUC=0.9627 PR-AUC=0.9229
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.7589 Acc=0.8640 G=0.7926 AUC=0.9623 PR-AUC=0.9239
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 04:25:24 | INFO    | waveform | seed 42 | stage SMOTE              | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.7967 Acc=0.8770 G=0.8320 AUC=0.9601 PR-AUC=0.9118
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | stage SMOTE              | DONE in 0h00m00s
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | stage ADASYN             | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | ADASYN             | train=5358 (min 2680 / maj 2678) | F1=0.7862 Acc=0.8700 G=0.8253 AUC=0.9577 PR-AUC=0.9061
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | stage ADASYN             | DONE in 0h00m00s
-2026-10-13 04:25:25 | INFO    | [19/22] waveform seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
-2026-10-13 04:25:25 | INFO    | waveform | seed 42 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:25:25 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:25:28 | INFO    | [waveform/s42/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=351 -> max_len=411 | device=cuda
-2026-10-13 04:25:29 | INFO    | [waveform/s42/ImbLLM-random] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:25:36 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/5 | step 7/150 | loss=2.1893
-2026-10-13 04:25:40 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/5 | step 14/150 | loss=1.9933
-2026-10-13 04:25:43 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/5 | step 21/150 | loss=1.9030
-2026-10-13 04:25:45 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/5 | step 28/150 | loss=1.8604
-2026-10-13 04:25:47 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.9785 | epoch_time=0h00m17s | elapsed=0h00m17s | ETA=0h01m11s
-2026-10-13 04:25:48 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/5 | step 37/150 | loss=1.8234
-2026-10-13 04:25:49 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/5 | step 44/150 | loss=1.8155
-2026-10-13 04:25:50 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/5 | step 51/150 | loss=1.7839
-2026-10-13 04:25:51 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/5 | step 58/150 | loss=1.7668
-2026-10-13 04:25:53 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.7977 | epoch_time=0h00m06s | elapsed=0h00m23s | ETA=0h00m35s
-2026-10-13 04:25:55 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/5 | step 67/150 | loss=1.7893
-2026-10-13 04:25:56 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/5 | step 74/150 | loss=1.7848
-2026-10-13 04:25:58 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/5 | step 81/150 | loss=1.7625
-2026-10-13 04:25:59 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/5 | step 88/150 | loss=1.7555
-2026-10-13 04:26:01 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.7697 | epoch_time=0h00m07s | elapsed=0h00m31s | ETA=0h00m21s
-2026-10-13 04:26:02 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/5 | step 97/150 | loss=1.7560
-2026-10-13 04:26:03 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/5 | step 104/150 | loss=1.7744
-2026-10-13 04:26:04 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/5 | step 111/150 | loss=1.7539
-2026-10-13 04:26:05 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/5 | step 118/150 | loss=1.7730
-2026-10-13 04:26:07 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.7631 | epoch_time=0h00m06s | elapsed=0h00m37s | ETA=0h00m09s
-2026-10-13 04:26:08 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/5 | step 127/150 | loss=1.7429
-2026-10-13 04:26:09 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/5 | step 134/150 | loss=1.7699
-2026-10-13 04:26:10 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/5 | step 141/150 | loss=1.7710
-2026-10-13 04:26:11 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/5 | step 148/150 | loss=1.7617
-2026-10-13 04:26:11 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7568 | epoch_time=0h00m04s | elapsed=0h00m42s | ETA=0h00m00s
-2026-10-13 04:26:13 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:26:44 | INFO    | [waveform/s42/ImbLLM-random] generated 1536/2656 (round 1) | valid parse 99.6% | accepted 1530/2414 | elapsed 0h00m31s
-2026-10-13 04:28:46 | INFO    | [waveform/s42/ImbLLM-random] generated 2656/2656 (round 1) | valid parse 99.6% | accepted 2645/2414 | elapsed 0h02m33s
-2026-10-13 04:28:46 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9958584337349398, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 153.4}
-2026-10-13 04:28:46 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3902, 'coverage_k2': 0.9452, 'mean_dist_synth_to_train_minority(DCR)': 4.9287, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:28:47 | INFO    | waveform | seed 42 | ImbLLM-random      | train=5356 (min 2678 / maj 2678) | F1=0.7390 Acc=0.8580 G=0.7722 AUC=0.9622 PR-AUC=0.9212
-2026-10-13 04:28:47 | INFO    | waveform | seed 42 | stage ImbLLM-random      | DONE in 0h03m21s
-2026-10-13 04:28:47 | INFO    | waveform | seed 42 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:28:47 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:28:49 | INFO    | [waveform/s42/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=351 -> max_len=411 | device=cuda
-2026-10-13 04:28:50 | INFO    | [waveform/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:28:51 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/5 | step 7/150 | loss=2.1755
-2026-10-13 04:28:52 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/5 | step 14/150 | loss=1.9763
-2026-10-13 04:28:53 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/5 | step 21/150 | loss=1.8883
-2026-10-13 04:28:54 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/5 | step 28/150 | loss=1.8524
-2026-10-13 04:28:54 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.9650 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m17s
-2026-10-13 04:28:55 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/5 | step 37/150 | loss=1.8259
-2026-10-13 04:28:57 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/5 | step 44/150 | loss=1.7905
-2026-10-13 04:28:58 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/5 | step 51/150 | loss=1.7890
-2026-10-13 04:28:59 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/5 | step 58/150 | loss=1.7404
-2026-10-13 04:28:59 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.7839 | epoch_time=0h00m04s | elapsed=0h00m08s | ETA=0h00m13s
-2026-10-13 04:29:00 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/5 | step 67/150 | loss=1.7495
-2026-10-13 04:29:01 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/5 | step 74/150 | loss=1.7637
-2026-10-13 04:29:02 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/5 | step 81/150 | loss=1.7717
-2026-10-13 04:29:04 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/5 | step 88/150 | loss=1.7573
-2026-10-13 04:29:04 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.7573 | epoch_time=0h00m04s | elapsed=0h00m13s | ETA=0h00m09s
-2026-10-13 04:29:05 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/5 | step 97/150 | loss=1.7498
-2026-10-13 04:29:06 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/5 | step 104/150 | loss=1.7552
-2026-10-13 04:29:08 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/5 | step 111/150 | loss=1.7540
-2026-10-13 04:29:09 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/5 | step 118/150 | loss=1.7494
-2026-10-13 04:29:10 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7490 | epoch_time=0h00m05s | elapsed=0h00m19s | ETA=0h00m04s
-2026-10-13 04:29:11 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/5 | step 127/150 | loss=1.7207
-2026-10-13 04:29:12 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/5 | step 134/150 | loss=1.7212
-2026-10-13 04:29:14 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/5 | step 141/150 | loss=1.7576
-2026-10-13 04:29:15 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/5 | step 148/150 | loss=1.7784
-2026-10-13 04:29:17 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7465 | epoch_time=0h00m07s | elapsed=0h00m26s | ETA=0h00m00s
-2026-10-13 04:29:18 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:29:49 | INFO    | [waveform/s42/ImbLLM-IAFP] generated 1408/2656 (round 1) | valid parse 99.8% | accepted 1405/2414 | elapsed 0h00m30s
-2026-10-13 04:30:13 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9981174698795181, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 54.6}
-2026-10-13 04:30:13 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3871, 'coverage_k2': 0.9518, 'mean_dist_synth_to_train_minority(DCR)': 4.9462, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:30:14 | INFO    | waveform | seed 42 | ImbLLM-IAFP        | train=5356 (min 2678 / maj 2678) | F1=0.7540 Acc=0.8630 G=0.7869 AUC=0.9620 PR-AUC=0.9216
-2026-10-13 04:30:14 | INFO    | waveform | seed 42 | stage ImbLLM-IAFP        | DONE in 0h01m26s
-2026-10-13 04:30:14 | INFO    | waveform | seed 42 | stage plots              | RUNNING [19/22] waveform seed 42 (1/3)
-2026-10-13 04:30:22 | INFO    | [19/22] waveform seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 04:30:23 | INFO    | waveform | seed 42 | stage plots              | DONE in 0h00m08s
-2026-10-13 04:30:23 | INFO    | [19/22] waveform seed 42 (1/3) | FINISHED (7/8 methods have metrics)
-2026-10-13 04:30:23 | INFO    | ====================================================================================================
-2026-10-13 04:30:23 | INFO    | [19/22] waveform seed 43 (2/3) | START
-2026-10-13 04:30:23 | INFO    | waveform | seed 43 | stage split              | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:23 | INFO    | [19/22] waveform seed 43 (2/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=75ee7f139c92
-2026-10-13 04:30:23 | INFO    | waveform | seed 43 | stage split              | DONE in 0h00m00s
-2026-10-13 04:30:23 | INFO    | waveform | seed 43 | stage importance         | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:30 | INFO    | [19/22] waveform seed 43 (2/3) | top features: x11=0.1633, x16=0.1092, x9=0.0852, x17=0.0684, x6=0.0675
-2026-10-13 04:30:30 | INFO    | waveform | seed 43 | stage importance         | DONE in 0h00m07s
-2026-10-13 04:30:30 | INFO    | waveform | seed 43 | stage Original           | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8743 Acc=0.9140 G=0.9113 AUC=0.9741 PR-AUC=0.9483
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | stage Original           | DONE in 0h00m00s
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | stage Imbalanced         | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.7514 Acc=0.8630 G=0.7831 AUC=0.9710 PR-AUC=0.9398
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 04:30:31 | INFO    | waveform | seed 43 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:32 | INFO    | waveform | seed 43 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.8303 Acc=0.8970 G=0.8567 AUC=0.9697 PR-AUC=0.9402
-2026-10-13 04:30:32 | INFO    | waveform | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 04:30:32 | INFO    | waveform | seed 43 | stage SMOTE              | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.8421 Acc=0.9010 G=0.8715 AUC=0.9680 PR-AUC=0.9338
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | stage SMOTE              | DONE in 0h00m00s
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | stage ADASYN             | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | ADASYN             | train=5350 (min 2672 / maj 2678) | F1=0.8394 Acc=0.8990 G=0.8701 AUC=0.9667 PR-AUC=0.9288
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | stage ADASYN             | DONE in 0h00m00s
-2026-10-13 04:30:33 | INFO    | [19/22] waveform seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
-2026-10-13 04:30:33 | INFO    | waveform | seed 43 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:30:33 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:30:36 | INFO    | [waveform/s43/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=349 -> max_len=409 | device=cuda
-2026-10-13 04:30:36 | INFO    | [waveform/s43/ImbLLM-random] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:30:37 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/5 | step 7/150 | loss=2.2100
-2026-10-13 04:30:38 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/5 | step 14/150 | loss=1.9861
-2026-10-13 04:30:39 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/5 | step 21/150 | loss=1.8902
-2026-10-13 04:30:41 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/5 | step 28/150 | loss=1.8799
-2026-10-13 04:30:41 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.9756 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m17s
-2026-10-13 04:30:42 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/5 | step 37/150 | loss=1.8333
-2026-10-13 04:30:43 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/5 | step 44/150 | loss=1.8063
-2026-10-13 04:30:44 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/5 | step 51/150 | loss=1.7753
-2026-10-13 04:30:46 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/5 | step 58/150 | loss=1.7861
-2026-10-13 04:30:47 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.8028 | epoch_time=0h00m06s | elapsed=0h00m10s | ETA=0h00m16s
-2026-10-13 04:30:49 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/5 | step 67/150 | loss=1.7609
-2026-10-13 04:30:50 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/5 | step 74/150 | loss=1.7760
-2026-10-13 04:30:51 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/5 | step 81/150 | loss=1.7758
-2026-10-13 04:30:52 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/5 | step 88/150 | loss=1.7842
-2026-10-13 04:30:52 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.7704 | epoch_time=0h00m05s | elapsed=0h00m15s | ETA=0h00m10s
-2026-10-13 04:30:54 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/5 | step 97/150 | loss=1.7770
-2026-10-13 04:30:55 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/5 | step 104/150 | loss=1.7282
-2026-10-13 04:30:56 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/5 | step 111/150 | loss=1.7655
-2026-10-13 04:30:57 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/5 | step 118/150 | loss=1.7814
-2026-10-13 04:30:58 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.7597 | epoch_time=0h00m05s | elapsed=0h00m21s | ETA=0h00m05s
-2026-10-13 04:30:59 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/5 | step 127/150 | loss=1.7455
-2026-10-13 04:31:00 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/5 | step 134/150 | loss=1.7665
-2026-10-13 04:31:01 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/5 | step 141/150 | loss=1.7572
-2026-10-13 04:31:03 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/5 | step 148/150 | loss=1.7728
-2026-10-13 04:31:03 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7627 | epoch_time=0h00m05s | elapsed=0h00m26s | ETA=0h00m00s
-2026-10-13 04:31:04 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:31:37 | INFO    | [waveform/s43/ImbLLM-random] generated 1536/2656 (round 1) | valid parse 99.5% | accepted 1529/2414 | elapsed 0h00m32s
-2026-10-13 04:32:00 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9947289156626506, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 56.3}
-2026-10-13 04:32:01 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3901, 'coverage_k2': 0.9357, 'mean_dist_synth_to_train_minority(DCR)': 4.8888, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:32:01 | INFO    | waveform | seed 43 | ImbLLM-random      | train=5356 (min 2678 / maj 2678) | F1=0.7860 Acc=0.8780 G=0.8134 AUC=0.9700 PR-AUC=0.9383
-2026-10-13 04:32:01 | INFO    | waveform | seed 43 | stage ImbLLM-random      | DONE in 0h01m27s
-2026-10-13 04:32:01 | INFO    | waveform | seed 43 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:32:01 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:32:03 | INFO    | [waveform/s43/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=349 -> max_len=409 | device=cuda
-2026-10-13 04:32:04 | INFO    | [waveform/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:32:05 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/5 | step 7/150 | loss=2.1890
-2026-10-13 04:32:06 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/5 | step 14/150 | loss=1.9611
-2026-10-13 04:32:07 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/5 | step 21/150 | loss=1.8725
-2026-10-13 04:32:08 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/5 | step 28/150 | loss=1.8608
-2026-10-13 04:32:08 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.9547 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m18s
-2026-10-13 04:32:10 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/5 | step 37/150 | loss=1.7867
-2026-10-13 04:32:11 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/5 | step 44/150 | loss=1.7814
-2026-10-13 04:32:12 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/5 | step 51/150 | loss=1.7736
-2026-10-13 04:32:13 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/5 | step 58/150 | loss=1.7775
-2026-10-13 04:32:14 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.7785 | epoch_time=0h00m05s | elapsed=0h00m09s | ETA=0h00m14s
-2026-10-13 04:32:15 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/5 | step 67/150 | loss=1.7497
-2026-10-13 04:32:16 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/5 | step 74/150 | loss=1.7410
-2026-10-13 04:32:18 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/5 | step 81/150 | loss=1.7777
-2026-10-13 04:32:19 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/5 | step 88/150 | loss=1.7457
-2026-10-13 04:32:19 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.7537 | epoch_time=0h00m05s | elapsed=0h00m15s | ETA=0h00m10s
-2026-10-13 04:32:20 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/5 | step 97/150 | loss=1.7514
-2026-10-13 04:32:22 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/5 | step 104/150 | loss=1.7395
-2026-10-13 04:32:23 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/5 | step 111/150 | loss=1.7400
-2026-10-13 04:32:24 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/5 | step 118/150 | loss=1.7440
-2026-10-13 04:32:25 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7441 | epoch_time=0h00m06s | elapsed=0h00m21s | ETA=0h00m05s
-2026-10-13 04:32:27 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/5 | step 127/150 | loss=1.7504
-2026-10-13 04:32:28 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/5 | step 134/150 | loss=1.7294
-2026-10-13 04:32:29 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/5 | step 141/150 | loss=1.7327
-2026-10-13 04:32:31 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/5 | step 148/150 | loss=1.7480
-2026-10-13 04:32:32 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7401 | epoch_time=0h00m06s | elapsed=0h00m28s | ETA=0h00m00s
-2026-10-13 04:32:33 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:33:05 | INFO    | [waveform/s43/ImbLLM-IAFP] generated 1536/2656 (round 1) | valid parse 99.9% | accepted 1534/2414 | elapsed 0h00m32s
-2026-10-13 04:33:28 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9988704819277109, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 54.7}
-2026-10-13 04:33:28 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3882, 'coverage_k2': 0.9376, 'mean_dist_synth_to_train_minority(DCR)': 4.9229, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:33:29 | INFO    | waveform | seed 43 | ImbLLM-IAFP        | train=5356 (min 2678 / maj 2678) | F1=0.8069 Acc=0.8880 G=0.8313 AUC=0.9697 PR-AUC=0.9409
-2026-10-13 04:33:29 | INFO    | waveform | seed 43 | stage ImbLLM-IAFP        | DONE in 0h01m27s
-2026-10-13 04:33:29 | INFO    | waveform | seed 43 | stage plots              | RUNNING [19/22] waveform seed 43 (2/3)
-2026-10-13 04:33:37 | INFO    | [19/22] waveform seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 04:33:38 | INFO    | waveform | seed 43 | stage plots              | DONE in 0h00m08s
-2026-10-13 04:33:38 | INFO    | [19/22] waveform seed 43 (2/3) | FINISHED (7/8 methods have metrics)
-2026-10-13 04:33:38 | INFO    | ====================================================================================================
-2026-10-13 04:33:38 | INFO    | [19/22] waveform seed 44 (3/3) | START
-2026-10-13 04:33:38 | INFO    | waveform | seed 44 | stage split              | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:38 | INFO    | [19/22] waveform seed 44 (3/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=40c6b43b856e
-2026-10-13 04:33:38 | INFO    | waveform | seed 44 | stage split              | DONE in 0h00m00s
-2026-10-13 04:33:38 | INFO    | waveform | seed 44 | stage importance         | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:41 | INFO    | [19/22] waveform seed 44 (3/3) | top features: x11=0.1368, x16=0.1176, x6=0.0791, x17=0.0776, x10=0.0720
-2026-10-13 04:33:41 | INFO    | waveform | seed 44 | stage importance         | DONE in 0h00m03s
-2026-10-13 04:33:41 | INFO    | waveform | seed 44 | stage Original           | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8580 Acc=0.9020 G=0.9000 AUC=0.9712 PR-AUC=0.9444
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | stage Original           | DONE in 0h00m00s
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | stage Imbalanced         | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.7518 Acc=0.8640 G=0.7824 AUC=0.9665 PR-AUC=0.9334
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 04:33:42 | INFO    | waveform | seed 44 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:43 | INFO    | waveform | seed 44 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.8200 Acc=0.8920 G=0.8471 AUC=0.9671 PR-AUC=0.9364
-2026-10-13 04:33:43 | INFO    | waveform | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 04:33:43 | INFO    | waveform | seed 44 | stage SMOTE              | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.8273 Acc=0.8910 G=0.8617 AUC=0.9644 PR-AUC=0.9228
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | stage SMOTE              | DONE in 0h00m00s
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | stage ADASYN             | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | ADASYN             | train=5347 (min 2669 / maj 2678) | F1=0.8172 Acc=0.8850 G=0.8537 AUC=0.9618 PR-AUC=0.9202
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | stage ADASYN             | DONE in 0h00m00s
-2026-10-13 04:33:44 | INFO    | [19/22] waveform seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
-2026-10-13 04:33:44 | INFO    | waveform | seed 44 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:33:44 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:33:47 | INFO    | [waveform/s44/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=352 -> max_len=412 | device=cuda
-2026-10-13 04:33:47 | INFO    | [waveform/s44/ImbLLM-random] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:33:49 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/5 | step 7/150 | loss=2.2054
-2026-10-13 04:33:50 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/5 | step 14/150 | loss=1.9924
-2026-10-13 04:33:51 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/5 | step 21/150 | loss=1.8935
-2026-10-13 04:33:52 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/5 | step 28/150 | loss=1.8501
-2026-10-13 04:33:52 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.9744 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m18s
-2026-10-13 04:33:53 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/5 | step 37/150 | loss=1.7960
-2026-10-13 04:33:54 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/5 | step 44/150 | loss=1.8101
-2026-10-13 04:33:55 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/5 | step 51/150 | loss=1.7867
-2026-10-13 04:33:56 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/5 | step 58/150 | loss=1.7975
-2026-10-13 04:33:56 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.7970 | epoch_time=0h00m04s | elapsed=0h00m08s | ETA=0h00m13s
-2026-10-13 04:33:58 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/5 | step 67/150 | loss=1.7719
-2026-10-13 04:33:59 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/5 | step 74/150 | loss=1.7695
-2026-10-13 04:34:01 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/5 | step 81/150 | loss=1.7668
-2026-10-13 04:34:02 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/5 | step 88/150 | loss=1.7720
-2026-10-13 04:34:02 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.7739 | epoch_time=0h00m05s | elapsed=0h00m14s | ETA=0h00m09s
-2026-10-13 04:34:04 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/5 | step 97/150 | loss=1.7448
-2026-10-13 04:34:05 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/5 | step 104/150 | loss=1.7642
-2026-10-13 04:34:06 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/5 | step 111/150 | loss=1.7762
-2026-10-13 04:34:08 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/5 | step 118/150 | loss=1.7825
-2026-10-13 04:34:08 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.7566 | epoch_time=0h00m05s | elapsed=0h00m20s | ETA=0h00m05s
-2026-10-13 04:34:09 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/5 | step 127/150 | loss=1.7620
-2026-10-13 04:34:11 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/5 | step 134/150 | loss=1.7637
-2026-10-13 04:34:12 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/5 | step 141/150 | loss=1.7312
-2026-10-13 04:34:13 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/5 | step 148/150 | loss=1.7884
-2026-10-13 04:34:15 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.7547 | epoch_time=0h00m06s | elapsed=0h00m27s | ETA=0h00m00s
-2026-10-13 04:34:16 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:34:47 | INFO    | [waveform/s44/ImbLLM-random] generated 1536/2656 (round 1) | valid parse 99.5% | accepted 1529/2414 | elapsed 0h00m30s
-2026-10-13 04:35:11 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9947289156626506, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 55.1}
-2026-10-13 04:35:11 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.407, 'coverage_k2': 0.9405, 'mean_dist_synth_to_train_minority(DCR)': 5.0388, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:35:12 | INFO    | waveform | seed 44 | ImbLLM-random      | train=5356 (min 2678 / maj 2678) | F1=0.7817 Acc=0.8760 G=0.8097 AUC=0.9651 PR-AUC=0.9298
-2026-10-13 04:35:12 | INFO    | waveform | seed 44 | stage ImbLLM-random      | DONE in 0h01m27s
-2026-10-13 04:35:12 | INFO    | waveform | seed 44 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:35:12 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 2414
-2026-10-13 04:35:14 | INFO    | [waveform/s44/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=352 -> max_len=412 | device=cuda
-2026-10-13 04:35:15 | INFO    | [waveform/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 04:35:16 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/5 | step 7/150 | loss=2.1869
-2026-10-13 04:35:17 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/5 | step 14/150 | loss=1.9691
-2026-10-13 04:35:18 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/5 | step 21/150 | loss=1.8763
-2026-10-13 04:35:19 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/5 | step 28/150 | loss=1.8309
-2026-10-13 04:35:20 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.9549 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h00m17s
-2026-10-13 04:35:21 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/5 | step 37/150 | loss=1.7986
-2026-10-13 04:35:22 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/5 | step 44/150 | loss=1.7940
-2026-10-13 04:35:23 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/5 | step 51/150 | loss=1.7640
-2026-10-13 04:35:25 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/5 | step 58/150 | loss=1.7769
-2026-10-13 04:35:25 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.7728 | epoch_time=0h00m05s | elapsed=0h00m09s | ETA=0h00m14s
-2026-10-13 04:35:26 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/5 | step 67/150 | loss=1.7470
-2026-10-13 04:35:27 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/5 | step 74/150 | loss=1.7587
-2026-10-13 04:35:29 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/5 | step 81/150 | loss=1.7366
-2026-10-13 04:35:30 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/5 | step 88/150 | loss=1.7484
-2026-10-13 04:35:30 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.7498 | epoch_time=0h00m05s | elapsed=0h00m15s | ETA=0h00m10s
-2026-10-13 04:35:31 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/5 | step 97/150 | loss=1.7256
-2026-10-13 04:35:33 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/5 | step 104/150 | loss=1.7659
-2026-10-13 04:35:34 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/5 | step 111/150 | loss=1.7556
-2026-10-13 04:35:35 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/5 | step 118/150 | loss=1.7165
-2026-10-13 04:35:37 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.7405 | epoch_time=0h00m06s | elapsed=0h00m21s | ETA=0h00m05s
-2026-10-13 04:35:38 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/5 | step 127/150 | loss=1.7258
-2026-10-13 04:35:40 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/5 | step 134/150 | loss=1.7249
-2026-10-13 04:35:41 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/5 | step 141/150 | loss=1.7582
-2026-10-13 04:35:42 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/5 | step 148/150 | loss=1.7256
-2026-10-13 04:35:42 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.7326 | epoch_time=0h00m05s | elapsed=0h00m27s | ETA=0h00m00s
-2026-10-13 04:35:44 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | generating 2414 rows (condition_yx, temperature 0.70)
-2026-10-13 04:36:16 | INFO    | [waveform/s44/ImbLLM-IAFP] generated 1536/2656 (round 1) | valid parse 99.9% | accepted 1535/2414 | elapsed 0h00m32s
-2026-10-13 04:36:40 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 2656, 'valid_parse_rate': 0.9992469879518072, 'rounds': 1, 'rows_returned': 2414, 'gen_batch_size_final': 128, 'gen_seconds': 56.4}
-2026-10-13 04:36:40 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3891, 'coverage_k2': 0.9509, 'mean_dist_synth_to_train_minority(DCR)': 5.0365, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 04:36:41 | INFO    | waveform | seed 44 | ImbLLM-IAFP        | train=5356 (min 2678 / maj 2678) | F1=0.7979 Acc=0.8820 G=0.8264 AUC=0.9660 PR-AUC=0.9325
-2026-10-13 04:36:41 | INFO    | waveform | seed 44 | stage ImbLLM-IAFP        | DONE in 0h01m28s
-2026-10-13 04:36:41 | INFO    | waveform | seed 44 | stage plots              | RUNNING [19/22] waveform seed 44 (3/3)
-2026-10-13 04:36:49 | INFO    | [19/22] waveform seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 04:36:50 | INFO    | waveform | seed 44 | stage plots              | DONE in 0h00m08s
-2026-10-13 04:36:50 | INFO    | [19/22] waveform seed 44 (3/3) | FINISHED (7/8 methods have metrics)
-2026-10-13 04:36:51 | INFO    | waveform | DATASET COMPLETE in 0h11m28s -> runs/exp1/waveform
+2026-10-13 15:42:21 | INFO    | waveform | rows=5000 | 40 numeric + 0 categorical features | classes=3 (smallest class = minority, others merged) | minority='1': 1653 rows (33.06%)
+2026-10-13 15:42:21 | INFO    | ====================================================================================================
+2026-10-13 15:42:21 | INFO    | [19/22] waveform seed 42 (1/3) | START
+2026-10-13 15:42:21 | INFO    | waveform | seed 42 | stage split              | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:21 | INFO    | [19/22] waveform seed 42 (1/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=c48a561792ed
+2026-10-13 15:42:21 | INFO    | waveform | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 15:42:21 | INFO    | waveform | seed 42 | stage importance         | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:21 | INFO    | [19/22] waveform seed 42 (1/3) | top features: x11=0.1801, x16=0.0606, x10=0.0537, x9=0.0509, x7=0.0431
+2026-10-13 15:42:21 | INFO    | waveform | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 15:42:21 | INFO    | waveform | seed 42 | stage Original           | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8688 Acc=0.9100 G=0.9075 AUC=0.9701 PR-AUC=0.9367
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | stage Imbalanced         | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.6898 Acc=0.8390 G=0.7304 AUC=0.9627 PR-AUC=0.9229
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 15:42:22 | INFO    | waveform | seed 42 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.7589 Acc=0.8640 G=0.7926 AUC=0.9623 PR-AUC=0.9239
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | stage SMOTE              | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.7967 Acc=0.8770 G=0.8320 AUC=0.9601 PR-AUC=0.9118
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 15:42:23 | INFO    | waveform | seed 42 | stage ADASYN             | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:24 | INFO    | waveform | seed 42 | ADASYN             | train=5358 (min 2680 / maj 2678) | F1=0.7862 Acc=0.8700 G=0.8253 AUC=0.9577 PR-AUC=0.9061
+2026-10-13 15:42:24 | INFO    | waveform | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 15:42:24 | INFO    | [19/22] waveform seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 15:42:24 | INFO    | waveform | seed 42 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:42:24 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:43:10 | INFO    | [waveform/s42/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=351 -> max_len=411 | device=cuda
+2026-10-13 15:43:10 | INFO    | [waveform/s42/ImbLLM-random] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:43:18 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/20 | step 7/600 | loss=2.2256
+2026-10-13 15:43:21 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/20 | step 14/600 | loss=2.1249
+2026-10-13 15:43:25 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/20 | step 21/600 | loss=2.0188
+2026-10-13 15:43:27 | INFO    | [waveform/s42/ImbLLM-random] epoch 1/20 | step 28/600 | loss=1.9274
+2026-10-13 15:43:28 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0633 | epoch_time=0h00m17s | elapsed=0h00m17s | ETA=0h05m36s
+2026-10-13 15:43:29 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/20 | step 37/600 | loss=1.8551
+2026-10-13 15:43:30 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/20 | step 44/600 | loss=1.8350
+2026-10-13 15:43:31 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/20 | step 51/600 | loss=1.7956
+2026-10-13 15:43:32 | INFO    | [waveform/s42/ImbLLM-random] epoch 2/20 | step 58/600 | loss=1.7728
+2026-10-13 15:43:34 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.8139 | epoch_time=0h00m05s | elapsed=0h00m23s | ETA=0h03m27s
+2026-10-13 15:43:34 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/20 | step 67/600 | loss=1.7915
+2026-10-13 15:43:35 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/20 | step 74/600 | loss=1.7859
+2026-10-13 15:43:36 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/20 | step 81/600 | loss=1.7619
+2026-10-13 15:43:37 | INFO    | [waveform/s42/ImbLLM-random] epoch 3/20 | step 88/600 | loss=1.7530
+2026-10-13 15:43:39 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.7698 | epoch_time=0h00m05s | elapsed=0h00m28s | ETA=0h02m39s
+2026-10-13 15:43:40 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/20 | step 97/600 | loss=1.7528
+2026-10-13 15:43:40 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/20 | step 104/600 | loss=1.7706
+2026-10-13 15:43:41 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/20 | step 111/600 | loss=1.7503
+2026-10-13 15:43:42 | INFO    | [waveform/s42/ImbLLM-random] epoch 4/20 | step 118/600 | loss=1.7680
+2026-10-13 15:43:44 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.7592 | epoch_time=0h00m05s | elapsed=0h00m33s | ETA=0h02m13s
+2026-10-13 15:43:45 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/20 | step 127/600 | loss=1.7366
+2026-10-13 15:43:46 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/20 | step 134/600 | loss=1.7625
+2026-10-13 15:43:47 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/20 | step 141/600 | loss=1.7627
+2026-10-13 15:43:48 | INFO    | [waveform/s42/ImbLLM-random] epoch 5/20 | step 148/600 | loss=1.7531
+2026-10-13 15:43:48 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.7492 | epoch_time=0h00m03s | elapsed=0h00m37s | ETA=0h01m51s
+2026-10-13 15:43:49 | INFO    | [waveform/s42/ImbLLM-random] epoch 6/20 | step 157/600 | loss=1.7770
+2026-10-13 15:43:50 | INFO    | [waveform/s42/ImbLLM-random] epoch 6/20 | step 164/600 | loss=1.7360
+2026-10-13 15:43:51 | INFO    | [waveform/s42/ImbLLM-random] epoch 6/20 | step 171/600 | loss=1.7413
+2026-10-13 15:43:52 | INFO    | [waveform/s42/ImbLLM-random] epoch 6/20 | step 178/600 | loss=1.7233
+2026-10-13 15:43:53 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.7477 | epoch_time=0h00m05s | elapsed=0h00m42s | ETA=0h01m39s
+2026-10-13 15:43:54 | INFO    | [waveform/s42/ImbLLM-random] epoch 7/20 | step 187/600 | loss=1.7269
+2026-10-13 15:43:55 | INFO    | [waveform/s42/ImbLLM-random] epoch 7/20 | step 194/600 | loss=1.7460
+2026-10-13 15:43:56 | INFO    | [waveform/s42/ImbLLM-random] epoch 7/20 | step 201/600 | loss=1.7408
+2026-10-13 15:43:57 | INFO    | [waveform/s42/ImbLLM-random] epoch 7/20 | step 208/600 | loss=1.7559
+2026-10-13 15:43:58 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.7443 | epoch_time=0h00m05s | elapsed=0h00m47s | ETA=0h01m28s
+2026-10-13 15:43:59 | INFO    | [waveform/s42/ImbLLM-random] epoch 8/20 | step 217/600 | loss=1.7474
+2026-10-13 15:44:00 | INFO    | [waveform/s42/ImbLLM-random] epoch 8/20 | step 224/600 | loss=1.7451
+2026-10-13 15:44:01 | INFO    | [waveform/s42/ImbLLM-random] epoch 8/20 | step 231/600 | loss=1.7210
+2026-10-13 15:44:02 | INFO    | [waveform/s42/ImbLLM-random] epoch 8/20 | step 238/600 | loss=1.7473
+2026-10-13 15:44:04 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.7341 | epoch_time=0h00m05s | elapsed=0h00m53s | ETA=0h01m19s
+2026-10-13 15:44:05 | INFO    | [waveform/s42/ImbLLM-random] epoch 9/20 | step 247/600 | loss=1.7320
+2026-10-13 15:44:06 | INFO    | [waveform/s42/ImbLLM-random] epoch 9/20 | step 254/600 | loss=1.7351
+2026-10-13 15:44:07 | INFO    | [waveform/s42/ImbLLM-random] epoch 9/20 | step 261/600 | loss=1.7230
+2026-10-13 15:44:08 | INFO    | [waveform/s42/ImbLLM-random] epoch 9/20 | step 268/600 | loss=1.7665
+2026-10-13 15:44:08 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.7294 | epoch_time=0h00m04s | elapsed=0h00m57s | ETA=0h01m10s
+2026-10-13 15:44:09 | INFO    | [waveform/s42/ImbLLM-random] epoch 10/20 | step 277/600 | loss=1.7176
+2026-10-13 15:44:10 | INFO    | [waveform/s42/ImbLLM-random] epoch 10/20 | step 284/600 | loss=1.7509
+2026-10-13 15:44:11 | INFO    | [waveform/s42/ImbLLM-random] epoch 10/20 | step 291/600 | loss=1.7370
+2026-10-13 15:44:12 | INFO    | [waveform/s42/ImbLLM-random] epoch 10/20 | step 298/600 | loss=1.7364
+2026-10-13 15:44:13 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.7328 | epoch_time=0h00m05s | elapsed=0h01m02s | ETA=0h01m02s
+2026-10-13 15:44:14 | INFO    | [waveform/s42/ImbLLM-random] epoch 11/20 | step 307/600 | loss=1.7452
+2026-10-13 15:44:15 | INFO    | [waveform/s42/ImbLLM-random] epoch 11/20 | step 314/600 | loss=1.7170
+2026-10-13 15:44:16 | INFO    | [waveform/s42/ImbLLM-random] epoch 11/20 | step 321/600 | loss=1.7368
+2026-10-13 15:44:17 | INFO    | [waveform/s42/ImbLLM-random] epoch 11/20 | step 328/600 | loss=1.7359
+2026-10-13 15:44:19 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.7322 | epoch_time=0h00m05s | elapsed=0h01m08s | ETA=0h00m55s
+2026-10-13 15:44:20 | INFO    | [waveform/s42/ImbLLM-random] epoch 12/20 | step 337/600 | loss=1.7227
+2026-10-13 15:44:21 | INFO    | [waveform/s42/ImbLLM-random] epoch 12/20 | step 344/600 | loss=1.7430
+2026-10-13 15:44:22 | INFO    | [waveform/s42/ImbLLM-random] epoch 12/20 | step 351/600 | loss=1.7311
+2026-10-13 15:44:23 | INFO    | [waveform/s42/ImbLLM-random] epoch 12/20 | step 358/600 | loss=1.7275
+2026-10-13 15:44:23 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.7294 | epoch_time=0h00m04s | elapsed=0h01m12s | ETA=0h00m48s
+2026-10-13 15:44:24 | INFO    | [waveform/s42/ImbLLM-random] epoch 13/20 | step 367/600 | loss=1.7439
+2026-10-13 15:44:25 | INFO    | [waveform/s42/ImbLLM-random] epoch 13/20 | step 374/600 | loss=1.7504
+2026-10-13 15:44:26 | INFO    | [waveform/s42/ImbLLM-random] epoch 13/20 | step 381/600 | loss=1.7191
+2026-10-13 15:44:27 | INFO    | [waveform/s42/ImbLLM-random] epoch 13/20 | step 388/600 | loss=1.7109
+2026-10-13 15:44:27 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.7309 | epoch_time=0h00m04s | elapsed=0h01m16s | ETA=0h00m41s
+2026-10-13 15:44:28 | INFO    | [waveform/s42/ImbLLM-random] epoch 14/20 | step 397/600 | loss=1.7233
+2026-10-13 15:44:29 | INFO    | [waveform/s42/ImbLLM-random] epoch 14/20 | step 404/600 | loss=1.7325
+2026-10-13 15:44:30 | INFO    | [waveform/s42/ImbLLM-random] epoch 14/20 | step 411/600 | loss=1.7182
+2026-10-13 15:44:31 | INFO    | [waveform/s42/ImbLLM-random] epoch 14/20 | step 418/600 | loss=1.7466
+2026-10-13 15:44:31 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.7262 | epoch_time=0h00m04s | elapsed=0h01m20s | ETA=0h00m34s
+2026-10-13 15:44:32 | INFO    | [waveform/s42/ImbLLM-random] epoch 15/20 | step 427/600 | loss=1.7278
+2026-10-13 15:44:33 | INFO    | [waveform/s42/ImbLLM-random] epoch 15/20 | step 434/600 | loss=1.7308
+2026-10-13 15:44:34 | INFO    | [waveform/s42/ImbLLM-random] epoch 15/20 | step 441/600 | loss=1.7343
+2026-10-13 15:44:35 | INFO    | [waveform/s42/ImbLLM-random] epoch 15/20 | step 448/600 | loss=1.7242
+2026-10-13 15:44:35 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.7230 | epoch_time=0h00m04s | elapsed=0h01m24s | ETA=0h00m28s
+2026-10-13 15:44:36 | INFO    | [waveform/s42/ImbLLM-random] epoch 16/20 | step 457/600 | loss=1.7043
+2026-10-13 15:44:37 | INFO    | [waveform/s42/ImbLLM-random] epoch 16/20 | step 464/600 | loss=1.7368
+2026-10-13 15:44:38 | INFO    | [waveform/s42/ImbLLM-random] epoch 16/20 | step 471/600 | loss=1.7213
+2026-10-13 15:44:39 | INFO    | [waveform/s42/ImbLLM-random] epoch 16/20 | step 478/600 | loss=1.7469
+2026-10-13 15:44:39 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.7266 | epoch_time=0h00m04s | elapsed=0h01m28s | ETA=0h00m22s
+2026-10-13 15:44:40 | INFO    | [waveform/s42/ImbLLM-random] epoch 17/20 | step 487/600 | loss=1.7121
+2026-10-13 15:44:41 | INFO    | [waveform/s42/ImbLLM-random] epoch 17/20 | step 494/600 | loss=1.7321
+2026-10-13 15:44:42 | INFO    | [waveform/s42/ImbLLM-random] epoch 17/20 | step 501/600 | loss=1.7187
+2026-10-13 15:44:43 | INFO    | [waveform/s42/ImbLLM-random] epoch 17/20 | step 508/600 | loss=1.7386
+2026-10-13 15:44:45 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.7263 | epoch_time=0h00m05s | elapsed=0h01m34s | ETA=0h00m16s
+2026-10-13 15:44:46 | INFO    | [waveform/s42/ImbLLM-random] epoch 18/20 | step 517/600 | loss=1.7272
+2026-10-13 15:44:47 | INFO    | [waveform/s42/ImbLLM-random] epoch 18/20 | step 524/600 | loss=1.7424
+2026-10-13 15:44:48 | INFO    | [waveform/s42/ImbLLM-random] epoch 18/20 | step 531/600 | loss=1.7279
+2026-10-13 15:44:49 | INFO    | [waveform/s42/ImbLLM-random] epoch 18/20 | step 538/600 | loss=1.6993
+2026-10-13 15:44:49 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.7230 | epoch_time=0h00m04s | elapsed=0h01m38s | ETA=0h00m10s
+2026-10-13 15:44:50 | INFO    | [waveform/s42/ImbLLM-random] epoch 19/20 | step 547/600 | loss=1.7306
+2026-10-13 15:44:51 | INFO    | [waveform/s42/ImbLLM-random] epoch 19/20 | step 554/600 | loss=1.7275
+2026-10-13 15:44:52 | INFO    | [waveform/s42/ImbLLM-random] epoch 19/20 | step 561/600 | loss=1.7132
+2026-10-13 15:44:53 | INFO    | [waveform/s42/ImbLLM-random] epoch 19/20 | step 568/600 | loss=1.7267
+2026-10-13 15:44:53 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.7253 | epoch_time=0h00m04s | elapsed=0h01m42s | ETA=0h00m05s
+2026-10-13 15:44:54 | INFO    | [waveform/s42/ImbLLM-random] epoch 20/20 | step 577/600 | loss=1.7288
+2026-10-13 15:44:55 | INFO    | [waveform/s42/ImbLLM-random] epoch 20/20 | step 584/600 | loss=1.7188
+2026-10-13 15:44:56 | INFO    | [waveform/s42/ImbLLM-random] epoch 20/20 | step 591/600 | loss=1.7016
+2026-10-13 15:44:57 | INFO    | [waveform/s42/ImbLLM-random] epoch 20/20 | step 598/600 | loss=1.7355
+2026-10-13 15:44:57 | INFO    | [waveform/s42/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.7269 | epoch_time=0h00m04s | elapsed=0h01m46s | ETA=0h00m00s
+2026-10-13 15:44:59 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 15:45:31 | INFO    | [waveform/s42/ImbLLM-random] generated 1024/1473 (round 1) | valid parse 100.0% | accepted 1024/1339 | elapsed 0h00m32s
+2026-10-13 15:47:24 | INFO    | [waveform/s42/ImbLLM-random] generated 1473/1473 (round 1) | valid parse 100.0% | accepted 1473/1339 | elapsed 0h02m24s
+2026-10-13 15:47:24 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 1473, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 144.8}
+2026-10-13 15:47:24 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.4435, 'coverage_k2': 0.9461, 'mean_dist_synth_to_train_minority(DCR)': 4.9568, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 15:47:25 | INFO    | waveform | seed 42 | ImbLLM-random      | train=4281 (min 1603 / maj 2678) | F1=0.7482 Acc=0.8620 G=0.7799 AUC=0.9629 PR-AUC=0.9227
+2026-10-13 15:47:25 | INFO    | waveform | seed 42 | stage ImbLLM-random      | DONE in 0h05m01s
+2026-10-13 15:47:25 | INFO    | waveform | seed 42 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:47:25 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:48:12 | INFO    | [waveform/s42/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=351 -> max_len=411 | device=cuda
+2026-10-13 15:48:12 | INFO    | [waveform/s42/ImbLLM-IAFP] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:48:13 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/20 | step 7/600 | loss=2.2142
+2026-10-13 15:48:13 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/20 | step 14/600 | loss=2.1117
+2026-10-13 15:48:14 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/20 | step 21/600 | loss=2.0013
+2026-10-13 15:48:15 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 1/20 | step 28/600 | loss=1.9138
+2026-10-13 15:48:15 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0492 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h01m08s
+2026-10-13 15:48:16 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/20 | step 37/600 | loss=1.8570
+2026-10-13 15:48:17 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/20 | step 44/600 | loss=1.8089
+2026-10-13 15:48:18 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/20 | step 51/600 | loss=1.7972
+2026-10-13 15:48:19 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 2/20 | step 58/600 | loss=1.7444
+2026-10-13 15:48:19 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7985 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h01m05s
+2026-10-13 15:48:20 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/20 | step 67/600 | loss=1.7499
+2026-10-13 15:48:21 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/20 | step 74/600 | loss=1.7626
+2026-10-13 15:48:22 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/20 | step 81/600 | loss=1.7703
+2026-10-13 15:48:22 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 3/20 | step 88/600 | loss=1.7547
+2026-10-13 15:48:23 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.7558 | epoch_time=0h00m03s | elapsed=0h00m10s | ETA=0h01m02s
+2026-10-13 15:48:24 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/20 | step 97/600 | loss=1.7449
+2026-10-13 15:48:24 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/20 | step 104/600 | loss=1.7508
+2026-10-13 15:48:25 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/20 | step 111/600 | loss=1.7487
+2026-10-13 15:48:26 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 4/20 | step 118/600 | loss=1.7443
+2026-10-13 15:48:27 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.7441 | epoch_time=0h00m03s | elapsed=0h00m14s | ETA=0h00m59s
+2026-10-13 15:48:27 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/20 | step 127/600 | loss=1.7133
+2026-10-13 15:48:28 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/20 | step 134/600 | loss=1.7129
+2026-10-13 15:48:29 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/20 | step 141/600 | loss=1.7488
+2026-10-13 15:48:30 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 5/20 | step 148/600 | loss=1.7678
+2026-10-13 15:48:30 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.7377 | epoch_time=0h00m03s | elapsed=0h00m18s | ETA=0h00m56s
+2026-10-13 15:48:31 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 6/20 | step 157/600 | loss=1.7217
+2026-10-13 15:48:32 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 6/20 | step 164/600 | loss=1.7429
+2026-10-13 15:48:33 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 6/20 | step 171/600 | loss=1.7453
+2026-10-13 15:48:34 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 6/20 | step 178/600 | loss=1.7200
+2026-10-13 15:48:34 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.7332 | epoch_time=0h00m04s | elapsed=0h00m22s | ETA=0h00m53s
+2026-10-13 15:48:35 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 7/20 | step 187/600 | loss=1.7258
+2026-10-13 15:48:36 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 7/20 | step 194/600 | loss=1.7340
+2026-10-13 15:48:37 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 7/20 | step 201/600 | loss=1.7223
+2026-10-13 15:48:38 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 7/20 | step 208/600 | loss=1.7299
+2026-10-13 15:48:38 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.7217 | epoch_time=0h00m04s | elapsed=0h00m26s | ETA=0h00m49s
+2026-10-13 15:48:39 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 8/20 | step 217/600 | loss=1.7398
+2026-10-13 15:48:40 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 8/20 | step 224/600 | loss=1.7363
+2026-10-13 15:48:41 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 8/20 | step 231/600 | loss=1.6873
+2026-10-13 15:48:42 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 8/20 | step 238/600 | loss=1.7158
+2026-10-13 15:48:43 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.7233 | epoch_time=0h00m04s | elapsed=0h00m30s | ETA=0h00m46s
+2026-10-13 15:48:43 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 9/20 | step 247/600 | loss=1.7184
+2026-10-13 15:48:44 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 9/20 | step 254/600 | loss=1.7025
+2026-10-13 15:48:45 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 9/20 | step 261/600 | loss=1.7279
+2026-10-13 15:48:46 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 9/20 | step 268/600 | loss=1.7227
+2026-10-13 15:48:47 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.7231 | epoch_time=0h00m04s | elapsed=0h00m34s | ETA=0h00m42s
+2026-10-13 15:48:48 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 10/20 | step 277/600 | loss=1.7116
+2026-10-13 15:48:49 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 10/20 | step 284/600 | loss=1.7023
+2026-10-13 15:48:49 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 10/20 | step 291/600 | loss=1.7306
+2026-10-13 15:48:50 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 10/20 | step 298/600 | loss=1.7112
+2026-10-13 15:48:51 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.7161 | epoch_time=0h00m04s | elapsed=0h00m38s | ETA=0h00m38s
+2026-10-13 15:48:52 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 11/20 | step 307/600 | loss=1.7215
+2026-10-13 15:48:53 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 11/20 | step 314/600 | loss=1.7037
+2026-10-13 15:48:54 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 11/20 | step 321/600 | loss=1.7402
+2026-10-13 15:48:55 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 11/20 | step 328/600 | loss=1.6960
+2026-10-13 15:48:55 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.7168 | epoch_time=0h00m04s | elapsed=0h00m43s | ETA=0h00m35s
+2026-10-13 15:48:56 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 12/20 | step 337/600 | loss=1.7053
+2026-10-13 15:48:57 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 12/20 | step 344/600 | loss=1.7141
+2026-10-13 15:48:58 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 12/20 | step 351/600 | loss=1.7114
+2026-10-13 15:48:59 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 12/20 | step 358/600 | loss=1.7242
+2026-10-13 15:48:59 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.7140 | epoch_time=0h00m04s | elapsed=0h00m47s | ETA=0h00m31s
+2026-10-13 15:49:00 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 13/20 | step 367/600 | loss=1.7182
+2026-10-13 15:49:01 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 13/20 | step 374/600 | loss=1.7026
+2026-10-13 15:49:02 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 13/20 | step 381/600 | loss=1.7051
+2026-10-13 15:49:03 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 13/20 | step 388/600 | loss=1.7217
+2026-10-13 15:49:03 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.7071 | epoch_time=0h00m04s | elapsed=0h00m51s | ETA=0h00m27s
+2026-10-13 15:49:04 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 14/20 | step 397/600 | loss=1.6930
+2026-10-13 15:49:05 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 14/20 | step 404/600 | loss=1.7129
+2026-10-13 15:49:06 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 14/20 | step 411/600 | loss=1.7038
+2026-10-13 15:49:07 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 14/20 | step 418/600 | loss=1.7362
+2026-10-13 15:49:07 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.7076 | epoch_time=0h00m04s | elapsed=0h00m55s | ETA=0h00m23s
+2026-10-13 15:49:08 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 15/20 | step 427/600 | loss=1.7338
+2026-10-13 15:49:09 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 15/20 | step 434/600 | loss=1.6895
+2026-10-13 15:49:10 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 15/20 | step 441/600 | loss=1.6961
+2026-10-13 15:49:11 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 15/20 | step 448/600 | loss=1.7124
+2026-10-13 15:49:11 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.7071 | epoch_time=0h00m04s | elapsed=0h00m59s | ETA=0h00m19s
+2026-10-13 15:49:12 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 16/20 | step 457/600 | loss=1.6787
+2026-10-13 15:49:13 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 16/20 | step 464/600 | loss=1.7200
+2026-10-13 15:49:14 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 16/20 | step 471/600 | loss=1.7144
+2026-10-13 15:49:15 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 16/20 | step 478/600 | loss=1.7138
+2026-10-13 15:49:16 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.7072 | epoch_time=0h00m04s | elapsed=0h01m03s | ETA=0h00m15s
+2026-10-13 15:49:17 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 17/20 | step 487/600 | loss=1.6941
+2026-10-13 15:49:18 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 17/20 | step 494/600 | loss=1.7052
+2026-10-13 15:49:19 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 17/20 | step 501/600 | loss=1.7069
+2026-10-13 15:49:20 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 17/20 | step 508/600 | loss=1.7202
+2026-10-13 15:49:20 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.7044 | epoch_time=0h00m04s | elapsed=0h01m08s | ETA=0h00m12s
+2026-10-13 15:49:21 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 18/20 | step 517/600 | loss=1.6895
+2026-10-13 15:49:22 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 18/20 | step 524/600 | loss=1.7301
+2026-10-13 15:49:23 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 18/20 | step 531/600 | loss=1.6921
+2026-10-13 15:49:24 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 18/20 | step 538/600 | loss=1.7089
+2026-10-13 15:49:24 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.7056 | epoch_time=0h00m04s | elapsed=0h01m12s | ETA=0h00m08s
+2026-10-13 15:49:25 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 19/20 | step 547/600 | loss=1.7042
+2026-10-13 15:49:26 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 19/20 | step 554/600 | loss=1.6929
+2026-10-13 15:49:27 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 19/20 | step 561/600 | loss=1.7103
+2026-10-13 15:49:28 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 19/20 | step 568/600 | loss=1.7089
+2026-10-13 15:49:28 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.7080 | epoch_time=0h00m04s | elapsed=0h01m16s | ETA=0h00m04s
+2026-10-13 15:49:29 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 20/20 | step 577/600 | loss=1.6809
+2026-10-13 15:49:30 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 20/20 | step 584/600 | loss=1.7128
+2026-10-13 15:49:31 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 20/20 | step 591/600 | loss=1.7059
+2026-10-13 15:49:32 | INFO    | [waveform/s42/ImbLLM-IAFP] epoch 20/20 | step 598/600 | loss=1.7170
+2026-10-13 15:49:32 | INFO    | [waveform/s42/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.7051 | epoch_time=0h00m04s | elapsed=0h01m20s | ETA=0h00m00s
+2026-10-13 15:49:34 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 15:50:04 | INFO    | [waveform/s42/ImbLLM-IAFP] generated 1408/1473 (round 1) | valid parse 100.0% | accepted 1408/1339 | elapsed 0h00m30s
+2026-10-13 15:50:06 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 1473, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 32.0}
+2026-10-13 15:50:06 | INFO    | [19/22] waveform seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.431, 'coverage_k2': 0.9537, 'mean_dist_synth_to_train_minority(DCR)': 4.9405, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 15:50:07 | INFO    | waveform | seed 42 | ImbLLM-IAFP        | train=4281 (min 1603 / maj 2678) | F1=0.7473 Acc=0.8600 G=0.7813 AUC=0.9621 PR-AUC=0.9198
+2026-10-13 15:50:07 | INFO    | waveform | seed 42 | stage ImbLLM-IAFP        | DONE in 0h02m41s
+2026-10-13 15:50:07 | INFO    | waveform | seed 42 | stage plots              | RUNNING [19/22] waveform seed 42 (1/3)
+2026-10-13 15:50:15 | INFO    | [19/22] waveform seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 15:50:16 | INFO    | waveform | seed 42 | stage plots              | DONE in 0h00m08s
+2026-10-13 15:50:16 | INFO    | [19/22] waveform seed 42 (1/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 15:50:16 | INFO    | ====================================================================================================
+2026-10-13 15:50:16 | INFO    | [19/22] waveform seed 43 (2/3) | START
+2026-10-13 15:50:16 | INFO    | waveform | seed 43 | stage split              | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:16 | INFO    | [19/22] waveform seed 43 (2/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=75ee7f139c92
+2026-10-13 15:50:16 | INFO    | waveform | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 15:50:16 | INFO    | waveform | seed 43 | stage importance         | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:21 | INFO    | [19/22] waveform seed 43 (2/3) | top features: x11=0.1633, x16=0.1092, x9=0.0852, x17=0.0684, x6=0.0675
+2026-10-13 15:50:21 | INFO    | waveform | seed 43 | stage importance         | DONE in 0h00m05s
+2026-10-13 15:50:21 | INFO    | waveform | seed 43 | stage Original           | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8743 Acc=0.9140 G=0.9113 AUC=0.9741 PR-AUC=0.9483
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | stage Imbalanced         | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.7514 Acc=0.8630 G=0.7831 AUC=0.9710 PR-AUC=0.9398
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 15:50:22 | INFO    | waveform | seed 43 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.8303 Acc=0.8970 G=0.8567 AUC=0.9697 PR-AUC=0.9402
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | stage SMOTE              | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.8421 Acc=0.9010 G=0.8715 AUC=0.9680 PR-AUC=0.9338
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 15:50:23 | INFO    | waveform | seed 43 | stage ADASYN             | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:24 | INFO    | waveform | seed 43 | ADASYN             | train=5350 (min 2672 / maj 2678) | F1=0.8394 Acc=0.8990 G=0.8701 AUC=0.9667 PR-AUC=0.9288
+2026-10-13 15:50:24 | INFO    | waveform | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 15:50:24 | INFO    | [19/22] waveform seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 15:50:24 | INFO    | waveform | seed 43 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:50:24 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:51:11 | INFO    | [waveform/s43/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=349 -> max_len=409 | device=cuda
+2026-10-13 15:51:11 | INFO    | [waveform/s43/ImbLLM-random] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:51:12 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/20 | step 7/600 | loss=2.2459
+2026-10-13 15:51:12 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/20 | step 14/600 | loss=2.1139
+2026-10-13 15:51:13 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/20 | step 21/600 | loss=2.0045
+2026-10-13 15:51:14 | INFO    | [waveform/s43/ImbLLM-random] epoch 1/20 | step 28/600 | loss=1.9441
+2026-10-13 15:51:14 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0582 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h01m11s
+2026-10-13 15:51:15 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/20 | step 37/600 | loss=1.8652
+2026-10-13 15:51:16 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/20 | step 44/600 | loss=1.8254
+2026-10-13 15:51:17 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/20 | step 51/600 | loss=1.7856
+2026-10-13 15:51:18 | INFO    | [waveform/s43/ImbLLM-random] epoch 2/20 | step 58/600 | loss=1.7927
+2026-10-13 15:51:18 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.8189 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h01m07s
+2026-10-13 15:51:19 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/20 | step 67/600 | loss=1.7637
+2026-10-13 15:51:20 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/20 | step 74/600 | loss=1.7763
+2026-10-13 15:51:21 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/20 | step 81/600 | loss=1.7753
+2026-10-13 15:51:22 | INFO    | [waveform/s43/ImbLLM-random] epoch 3/20 | step 88/600 | loss=1.7825
+2026-10-13 15:51:22 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.7705 | epoch_time=0h00m03s | elapsed=0h00m11s | ETA=0h01m04s
+2026-10-13 15:51:23 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/20 | step 97/600 | loss=1.7734
+2026-10-13 15:51:24 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/20 | step 104/600 | loss=1.7242
+2026-10-13 15:51:25 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/20 | step 111/600 | loss=1.7611
+2026-10-13 15:51:26 | INFO    | [waveform/s43/ImbLLM-random] epoch 4/20 | step 118/600 | loss=1.7762
+2026-10-13 15:51:26 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.7554 | epoch_time=0h00m03s | elapsed=0h00m15s | ETA=0h01m01s
+2026-10-13 15:51:27 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/20 | step 127/600 | loss=1.7396
+2026-10-13 15:51:28 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/20 | step 134/600 | loss=1.7601
+2026-10-13 15:51:29 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/20 | step 141/600 | loss=1.7498
+2026-10-13 15:51:30 | INFO    | [waveform/s43/ImbLLM-random] epoch 5/20 | step 148/600 | loss=1.7651
+2026-10-13 15:51:30 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.7557 | epoch_time=0h00m04s | elapsed=0h00m19s | ETA=0h00m58s
+2026-10-13 15:51:31 | INFO    | [waveform/s43/ImbLLM-random] epoch 6/20 | step 157/600 | loss=1.7597
+2026-10-13 15:51:32 | INFO    | [waveform/s43/ImbLLM-random] epoch 6/20 | step 164/600 | loss=1.7397
+2026-10-13 15:51:33 | INFO    | [waveform/s43/ImbLLM-random] epoch 6/20 | step 171/600 | loss=1.7672
+2026-10-13 15:51:34 | INFO    | [waveform/s43/ImbLLM-random] epoch 6/20 | step 178/600 | loss=1.7371
+2026-10-13 15:51:34 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.7469 | epoch_time=0h00m04s | elapsed=0h00m23s | ETA=0h00m54s
+2026-10-13 15:51:35 | INFO    | [waveform/s43/ImbLLM-random] epoch 7/20 | step 187/600 | loss=1.7850
+2026-10-13 15:51:36 | INFO    | [waveform/s43/ImbLLM-random] epoch 7/20 | step 194/600 | loss=1.7321
+2026-10-13 15:51:37 | INFO    | [waveform/s43/ImbLLM-random] epoch 7/20 | step 201/600 | loss=1.7335
+2026-10-13 15:51:38 | INFO    | [waveform/s43/ImbLLM-random] epoch 7/20 | step 208/600 | loss=1.7243
+2026-10-13 15:51:38 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.7454 | epoch_time=0h00m04s | elapsed=0h00m27s | ETA=0h00m50s
+2026-10-13 15:51:39 | INFO    | [waveform/s43/ImbLLM-random] epoch 8/20 | step 217/600 | loss=1.7485
+2026-10-13 15:51:40 | INFO    | [waveform/s43/ImbLLM-random] epoch 8/20 | step 224/600 | loss=1.7357
+2026-10-13 15:51:41 | INFO    | [waveform/s43/ImbLLM-random] epoch 8/20 | step 231/600 | loss=1.7595
+2026-10-13 15:51:42 | INFO    | [waveform/s43/ImbLLM-random] epoch 8/20 | step 238/600 | loss=1.7240
+2026-10-13 15:51:42 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.7399 | epoch_time=0h00m04s | elapsed=0h00m31s | ETA=0h00m47s
+2026-10-13 15:51:43 | INFO    | [waveform/s43/ImbLLM-random] epoch 9/20 | step 247/600 | loss=1.7426
+2026-10-13 15:51:44 | INFO    | [waveform/s43/ImbLLM-random] epoch 9/20 | step 254/600 | loss=1.7276
+2026-10-13 15:51:45 | INFO    | [waveform/s43/ImbLLM-random] epoch 9/20 | step 261/600 | loss=1.7597
+2026-10-13 15:51:46 | INFO    | [waveform/s43/ImbLLM-random] epoch 9/20 | step 268/600 | loss=1.7105
+2026-10-13 15:51:46 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.7429 | epoch_time=0h00m04s | elapsed=0h00m35s | ETA=0h00m43s
+2026-10-13 15:51:47 | INFO    | [waveform/s43/ImbLLM-random] epoch 10/20 | step 277/600 | loss=1.7588
+2026-10-13 15:51:48 | INFO    | [waveform/s43/ImbLLM-random] epoch 10/20 | step 284/600 | loss=1.7021
+2026-10-13 15:51:49 | INFO    | [waveform/s43/ImbLLM-random] epoch 10/20 | step 291/600 | loss=1.7404
+2026-10-13 15:51:50 | INFO    | [waveform/s43/ImbLLM-random] epoch 10/20 | step 298/600 | loss=1.7532
+2026-10-13 15:51:51 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.7312 | epoch_time=0h00m04s | elapsed=0h00m39s | ETA=0h00m39s
+2026-10-13 15:51:51 | INFO    | [waveform/s43/ImbLLM-random] epoch 11/20 | step 307/600 | loss=1.7485
+2026-10-13 15:51:52 | INFO    | [waveform/s43/ImbLLM-random] epoch 11/20 | step 314/600 | loss=1.7520
+2026-10-13 15:51:53 | INFO    | [waveform/s43/ImbLLM-random] epoch 11/20 | step 321/600 | loss=1.6990
+2026-10-13 15:51:54 | INFO    | [waveform/s43/ImbLLM-random] epoch 11/20 | step 328/600 | loss=1.7381
+2026-10-13 15:51:55 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.7364 | epoch_time=0h00m04s | elapsed=0h00m43s | ETA=0h00m35s
+2026-10-13 15:51:56 | INFO    | [waveform/s43/ImbLLM-random] epoch 12/20 | step 337/600 | loss=1.7403
+2026-10-13 15:51:57 | INFO    | [waveform/s43/ImbLLM-random] epoch 12/20 | step 344/600 | loss=1.7196
+2026-10-13 15:51:58 | INFO    | [waveform/s43/ImbLLM-random] epoch 12/20 | step 351/600 | loss=1.7284
+2026-10-13 15:51:59 | INFO    | [waveform/s43/ImbLLM-random] epoch 12/20 | step 358/600 | loss=1.7389
+2026-10-13 15:51:59 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.7315 | epoch_time=0h00m04s | elapsed=0h00m48s | ETA=0h00m32s
+2026-10-13 15:52:00 | INFO    | [waveform/s43/ImbLLM-random] epoch 13/20 | step 367/600 | loss=1.7235
+2026-10-13 15:52:01 | INFO    | [waveform/s43/ImbLLM-random] epoch 13/20 | step 374/600 | loss=1.7109
+2026-10-13 15:52:02 | INFO    | [waveform/s43/ImbLLM-random] epoch 13/20 | step 381/600 | loss=1.7435
+2026-10-13 15:52:03 | INFO    | [waveform/s43/ImbLLM-random] epoch 13/20 | step 388/600 | loss=1.7504
+2026-10-13 15:52:03 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.7334 | epoch_time=0h00m03s | elapsed=0h00m52s | ETA=0h00m28s
+2026-10-13 15:52:04 | INFO    | [waveform/s43/ImbLLM-random] epoch 14/20 | step 397/600 | loss=1.7272
+2026-10-13 15:52:05 | INFO    | [waveform/s43/ImbLLM-random] epoch 14/20 | step 404/600 | loss=1.7389
+2026-10-13 15:52:06 | INFO    | [waveform/s43/ImbLLM-random] epoch 14/20 | step 411/600 | loss=1.7147
+2026-10-13 15:52:06 | INFO    | [waveform/s43/ImbLLM-random] epoch 14/20 | step 418/600 | loss=1.7506
+2026-10-13 15:52:07 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.7265 | epoch_time=0h00m03s | elapsed=0h00m55s | ETA=0h00m23s
+2026-10-13 15:52:08 | INFO    | [waveform/s43/ImbLLM-random] epoch 15/20 | step 427/600 | loss=1.7095
+2026-10-13 15:52:09 | INFO    | [waveform/s43/ImbLLM-random] epoch 15/20 | step 434/600 | loss=1.7594
+2026-10-13 15:52:10 | INFO    | [waveform/s43/ImbLLM-random] epoch 15/20 | step 441/600 | loss=1.7200
+2026-10-13 15:52:11 | INFO    | [waveform/s43/ImbLLM-random] epoch 15/20 | step 448/600 | loss=1.7374
+2026-10-13 15:52:11 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.7275 | epoch_time=0h00m04s | elapsed=0h01m00s | ETA=0h00m20s
+2026-10-13 15:52:12 | INFO    | [waveform/s43/ImbLLM-random] epoch 16/20 | step 457/600 | loss=1.7409
+2026-10-13 15:52:14 | INFO    | [waveform/s43/ImbLLM-random] epoch 16/20 | step 464/600 | loss=1.7214
+2026-10-13 15:52:15 | INFO    | [waveform/s43/ImbLLM-random] epoch 16/20 | step 471/600 | loss=1.7218
+2026-10-13 15:52:16 | INFO    | [waveform/s43/ImbLLM-random] epoch 16/20 | step 478/600 | loss=1.7303
+2026-10-13 15:52:16 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.7261 | epoch_time=0h00m05s | elapsed=0h01m05s | ETA=0h00m16s
+2026-10-13 15:52:17 | INFO    | [waveform/s43/ImbLLM-random] epoch 17/20 | step 487/600 | loss=1.7331
+2026-10-13 15:52:18 | INFO    | [waveform/s43/ImbLLM-random] epoch 17/20 | step 494/600 | loss=1.7278
+2026-10-13 15:52:19 | INFO    | [waveform/s43/ImbLLM-random] epoch 17/20 | step 501/600 | loss=1.7382
+2026-10-13 15:52:20 | INFO    | [waveform/s43/ImbLLM-random] epoch 17/20 | step 508/600 | loss=1.7157
+2026-10-13 15:52:20 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.7282 | epoch_time=0h00m04s | elapsed=0h01m09s | ETA=0h00m12s
+2026-10-13 15:52:21 | INFO    | [waveform/s43/ImbLLM-random] epoch 18/20 | step 517/600 | loss=1.7312
+2026-10-13 15:52:22 | INFO    | [waveform/s43/ImbLLM-random] epoch 18/20 | step 524/600 | loss=1.7437
+2026-10-13 15:52:23 | INFO    | [waveform/s43/ImbLLM-random] epoch 18/20 | step 531/600 | loss=1.7318
+2026-10-13 15:52:24 | INFO    | [waveform/s43/ImbLLM-random] epoch 18/20 | step 538/600 | loss=1.7162
+2026-10-13 15:52:24 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.7281 | epoch_time=0h00m04s | elapsed=0h01m13s | ETA=0h00m08s
+2026-10-13 15:52:25 | INFO    | [waveform/s43/ImbLLM-random] epoch 19/20 | step 547/600 | loss=1.7077
+2026-10-13 15:52:26 | INFO    | [waveform/s43/ImbLLM-random] epoch 19/20 | step 554/600 | loss=1.7042
+2026-10-13 15:52:27 | INFO    | [waveform/s43/ImbLLM-random] epoch 19/20 | step 561/600 | loss=1.7618
+2026-10-13 15:52:28 | INFO    | [waveform/s43/ImbLLM-random] epoch 19/20 | step 568/600 | loss=1.7365
+2026-10-13 15:52:28 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.7239 | epoch_time=0h00m04s | elapsed=0h01m17s | ETA=0h00m04s
+2026-10-13 15:52:29 | INFO    | [waveform/s43/ImbLLM-random] epoch 20/20 | step 577/600 | loss=1.7359
+2026-10-13 15:52:30 | INFO    | [waveform/s43/ImbLLM-random] epoch 20/20 | step 584/600 | loss=1.7008
+2026-10-13 15:52:31 | INFO    | [waveform/s43/ImbLLM-random] epoch 20/20 | step 591/600 | loss=1.7359
+2026-10-13 15:52:32 | INFO    | [waveform/s43/ImbLLM-random] epoch 20/20 | step 598/600 | loss=1.7409
+2026-10-13 15:52:33 | INFO    | [waveform/s43/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.7284 | epoch_time=0h00m04s | elapsed=0h01m21s | ETA=0h00m00s
+2026-10-13 15:52:34 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 15:53:05 | INFO    | [waveform/s43/ImbLLM-random] generated 1473/1473 (round 1) | valid parse 100.0% | accepted 1473/1339 | elapsed 0h00m30s
+2026-10-13 15:53:05 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 1473, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 30.8}
+2026-10-13 15:53:05 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.4392, 'coverage_k2': 0.9405, 'mean_dist_synth_to_train_minority(DCR)': 4.9284, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 15:53:05 | INFO    | waveform | seed 43 | ImbLLM-random      | train=4281 (min 1603 / maj 2678) | F1=0.7993 Acc=0.8840 G=0.8253 AUC=0.9700 PR-AUC=0.9402
+2026-10-13 15:53:06 | INFO    | waveform | seed 43 | stage ImbLLM-random      | DONE in 0h02m41s
+2026-10-13 15:53:06 | INFO    | waveform | seed 43 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:53:06 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:53:52 | INFO    | [waveform/s43/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=349 -> max_len=409 | device=cuda
+2026-10-13 15:53:52 | INFO    | [waveform/s43/ImbLLM-IAFP] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:53:53 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/20 | step 7/600 | loss=2.2293
+2026-10-13 15:53:54 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/20 | step 14/600 | loss=2.0939
+2026-10-13 15:53:55 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/20 | step 21/600 | loss=1.9822
+2026-10-13 15:53:56 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 1/20 | step 28/600 | loss=1.9263
+2026-10-13 15:53:56 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0394 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h01m11s
+2026-10-13 15:53:57 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/20 | step 37/600 | loss=1.8229
+2026-10-13 15:53:58 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/20 | step 44/600 | loss=1.8026
+2026-10-13 15:53:59 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/20 | step 51/600 | loss=1.7878
+2026-10-13 15:54:00 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 2/20 | step 58/600 | loss=1.7862
+2026-10-13 15:54:00 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7974 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h01m08s
+2026-10-13 15:54:01 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/20 | step 67/600 | loss=1.7539
+2026-10-13 15:54:02 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/20 | step 74/600 | loss=1.7423
+2026-10-13 15:54:02 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/20 | step 81/600 | loss=1.7773
+2026-10-13 15:54:03 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 3/20 | step 88/600 | loss=1.7444
+2026-10-13 15:54:04 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.7545 | epoch_time=0h00m03s | elapsed=0h00m11s | ETA=0h01m05s
+2026-10-13 15:54:04 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/20 | step 97/600 | loss=1.7485
+2026-10-13 15:54:05 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/20 | step 104/600 | loss=1.7349
+2026-10-13 15:54:06 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/20 | step 111/600 | loss=1.7351
+2026-10-13 15:54:07 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 4/20 | step 118/600 | loss=1.7374
+2026-10-13 15:54:08 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.7389 | epoch_time=0h00m04s | elapsed=0h00m15s | ETA=0h01m02s
+2026-10-13 15:54:09 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/20 | step 127/600 | loss=1.7431
+2026-10-13 15:54:09 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/20 | step 134/600 | loss=1.7196
+2026-10-13 15:54:10 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/20 | step 141/600 | loss=1.7228
+2026-10-13 15:54:11 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 5/20 | step 148/600 | loss=1.7378
+2026-10-13 15:54:12 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.7307 | epoch_time=0h00m04s | elapsed=0h00m19s | ETA=0h00m58s
+2026-10-13 15:54:13 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 6/20 | step 157/600 | loss=1.7285
+2026-10-13 15:54:14 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 6/20 | step 164/600 | loss=1.7166
+2026-10-13 15:54:15 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 6/20 | step 171/600 | loss=1.7193
+2026-10-13 15:54:15 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 6/20 | step 178/600 | loss=1.7361
+2026-10-13 15:54:16 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.7278 | epoch_time=0h00m04s | elapsed=0h00m23s | ETA=0h00m55s
+2026-10-13 15:54:17 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 7/20 | step 187/600 | loss=1.7185
+2026-10-13 15:54:18 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 7/20 | step 194/600 | loss=1.7286
+2026-10-13 15:54:19 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 7/20 | step 201/600 | loss=1.7191
+2026-10-13 15:54:20 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 7/20 | step 208/600 | loss=1.7153
+2026-10-13 15:54:20 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.7173 | epoch_time=0h00m04s | elapsed=0h00m27s | ETA=0h00m51s
+2026-10-13 15:54:21 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 8/20 | step 217/600 | loss=1.7321
+2026-10-13 15:54:22 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 8/20 | step 224/600 | loss=1.6950
+2026-10-13 15:54:23 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 8/20 | step 231/600 | loss=1.7270
+2026-10-13 15:54:24 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 8/20 | step 238/600 | loss=1.7142
+2026-10-13 15:54:24 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.7173 | epoch_time=0h00m04s | elapsed=0h00m31s | ETA=0h00m47s
+2026-10-13 15:54:25 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 9/20 | step 247/600 | loss=1.7159
+2026-10-13 15:54:26 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 9/20 | step 254/600 | loss=1.6994
+2026-10-13 15:54:27 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 9/20 | step 261/600 | loss=1.7126
+2026-10-13 15:54:28 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 9/20 | step 268/600 | loss=1.7132
+2026-10-13 15:54:28 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.7119 | epoch_time=0h00m04s | elapsed=0h00m35s | ETA=0h00m43s
+2026-10-13 15:54:29 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 10/20 | step 277/600 | loss=1.7043
+2026-10-13 15:54:30 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 10/20 | step 284/600 | loss=1.6727
+2026-10-13 15:54:31 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 10/20 | step 291/600 | loss=1.7263
+2026-10-13 15:54:32 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 10/20 | step 298/600 | loss=1.7298
+2026-10-13 15:54:32 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.7099 | epoch_time=0h00m04s | elapsed=0h00m40s | ETA=0h00m40s
+2026-10-13 15:54:33 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 11/20 | step 307/600 | loss=1.7021
+2026-10-13 15:54:34 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 11/20 | step 314/600 | loss=1.7158
+2026-10-13 15:54:35 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 11/20 | step 321/600 | loss=1.7062
+2026-10-13 15:54:36 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 11/20 | step 328/600 | loss=1.6934
+2026-10-13 15:54:36 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.7042 | epoch_time=0h00m03s | elapsed=0h00m44s | ETA=0h00m36s
+2026-10-13 15:54:37 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 12/20 | step 337/600 | loss=1.7220
+2026-10-13 15:54:38 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 12/20 | step 344/600 | loss=1.6948
+2026-10-13 15:54:39 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 12/20 | step 351/600 | loss=1.6931
+2026-10-13 15:54:40 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 12/20 | step 358/600 | loss=1.7064
+2026-10-13 15:54:40 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.7018 | epoch_time=0h00m03s | elapsed=0h00m47s | ETA=0h00m31s
+2026-10-13 15:54:41 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 13/20 | step 367/600 | loss=1.6929
+2026-10-13 15:54:42 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 13/20 | step 374/600 | loss=1.7142
+2026-10-13 15:54:43 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 13/20 | step 381/600 | loss=1.7113
+2026-10-13 15:54:44 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 13/20 | step 388/600 | loss=1.6981
+2026-10-13 15:54:44 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.6988 | epoch_time=0h00m04s | elapsed=0h00m51s | ETA=0h00m27s
+2026-10-13 15:54:45 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 14/20 | step 397/600 | loss=1.6857
+2026-10-13 15:54:46 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 14/20 | step 404/600 | loss=1.6896
+2026-10-13 15:54:47 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 14/20 | step 411/600 | loss=1.7271
+2026-10-13 15:54:48 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 14/20 | step 418/600 | loss=1.7043
+2026-10-13 15:54:48 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.7025 | epoch_time=0h00m04s | elapsed=0h00m55s | ETA=0h00m23s
+2026-10-13 15:54:49 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 15/20 | step 427/600 | loss=1.7019
+2026-10-13 15:54:50 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 15/20 | step 434/600 | loss=1.7067
+2026-10-13 15:54:51 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 15/20 | step 441/600 | loss=1.6797
+2026-10-13 15:54:52 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 15/20 | step 448/600 | loss=1.7007
+2026-10-13 15:54:52 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.6986 | epoch_time=0h00m04s | elapsed=0h01m00s | ETA=0h00m20s
+2026-10-13 15:54:53 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 16/20 | step 457/600 | loss=1.6759
+2026-10-13 15:54:54 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 16/20 | step 464/600 | loss=1.7016
+2026-10-13 15:54:55 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 16/20 | step 471/600 | loss=1.7136
+2026-10-13 15:54:56 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 16/20 | step 478/600 | loss=1.6947
+2026-10-13 15:54:56 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.6936 | epoch_time=0h00m04s | elapsed=0h01m04s | ETA=0h00m16s
+2026-10-13 15:54:57 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 17/20 | step 487/600 | loss=1.6913
+2026-10-13 15:54:58 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 17/20 | step 494/600 | loss=1.7094
+2026-10-13 15:54:59 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 17/20 | step 501/600 | loss=1.7003
+2026-10-13 15:55:00 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 17/20 | step 508/600 | loss=1.6727
+2026-10-13 15:55:01 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.6917 | epoch_time=0h00m04s | elapsed=0h01m08s | ETA=0h00m12s
+2026-10-13 15:55:01 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 18/20 | step 517/600 | loss=1.7180
+2026-10-13 15:55:03 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 18/20 | step 524/600 | loss=1.6729
+2026-10-13 15:55:04 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 18/20 | step 531/600 | loss=1.7050
+2026-10-13 15:55:04 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 18/20 | step 538/600 | loss=1.6869
+2026-10-13 15:55:05 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.6949 | epoch_time=0h00m04s | elapsed=0h01m12s | ETA=0h00m08s
+2026-10-13 15:55:06 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 19/20 | step 547/600 | loss=1.6867
+2026-10-13 15:55:07 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 19/20 | step 554/600 | loss=1.6979
+2026-10-13 15:55:08 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 19/20 | step 561/600 | loss=1.6902
+2026-10-13 15:55:09 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 19/20 | step 568/600 | loss=1.6931
+2026-10-13 15:55:09 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.6960 | epoch_time=0h00m04s | elapsed=0h01m16s | ETA=0h00m04s
+2026-10-13 15:55:10 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 20/20 | step 577/600 | loss=1.7046
+2026-10-13 15:55:11 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 20/20 | step 584/600 | loss=1.6770
+2026-10-13 15:55:12 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 20/20 | step 591/600 | loss=1.6975
+2026-10-13 15:55:13 | INFO    | [waveform/s43/ImbLLM-IAFP] epoch 20/20 | step 598/600 | loss=1.6963
+2026-10-13 15:55:13 | INFO    | [waveform/s43/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.6941 | epoch_time=0h00m04s | elapsed=0h01m20s | ETA=0h00m00s
+2026-10-13 15:55:14 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 15:55:44 | INFO    | [waveform/s43/ImbLLM-IAFP] generated 1473/1473 (round 1) | valid parse 100.0% | accepted 1473/1339 | elapsed 0h00m30s
+2026-10-13 15:55:45 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 1473, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 30.2}
+2026-10-13 15:55:45 | INFO    | [19/22] waveform seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.4422, 'coverage_k2': 0.9319, 'mean_dist_synth_to_train_minority(DCR)': 4.9729, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 15:55:45 | INFO    | waveform | seed 43 | ImbLLM-IAFP        | train=4281 (min 1603 / maj 2678) | F1=0.8103 Acc=0.8900 G=0.8337 AUC=0.9699 PR-AUC=0.9399
+2026-10-13 15:55:45 | INFO    | waveform | seed 43 | stage ImbLLM-IAFP        | DONE in 0h02m39s
+2026-10-13 15:55:45 | INFO    | waveform | seed 43 | stage plots              | RUNNING [19/22] waveform seed 43 (2/3)
+2026-10-13 15:55:54 | INFO    | [19/22] waveform seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 15:55:54 | INFO    | waveform | seed 43 | stage plots              | DONE in 0h00m09s
+2026-10-13 15:55:54 | INFO    | [19/22] waveform seed 43 (2/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 15:55:54 | INFO    | ====================================================================================================
+2026-10-13 15:55:54 | INFO    | [19/22] waveform seed 44 (3/3) | START
+2026-10-13 15:55:54 | INFO    | waveform | seed 44 | stage split              | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:55:54 | INFO    | [19/22] waveform seed 44 (3/3) | split: train=4000 test=1000 | full-train minority=1322 -> retained=264 (held-out ref=1058) | reduced imbalance 10.1:1 | test minority=331 | test_fingerprint=40c6b43b856e
+2026-10-13 15:55:54 | INFO    | waveform | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 15:55:54 | INFO    | waveform | seed 44 | stage importance         | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:00 | INFO    | [19/22] waveform seed 44 (3/3) | top features: x11=0.1368, x16=0.1176, x6=0.0791, x17=0.0776, x10=0.0720
+2026-10-13 15:56:00 | INFO    | waveform | seed 44 | stage importance         | DONE in 0h00m05s
+2026-10-13 15:56:00 | INFO    | waveform | seed 44 | stage Original           | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | Original           | train=4000 (min 1322 / maj 2678) | F1=0.8580 Acc=0.9020 G=0.9000 AUC=0.9712 PR-AUC=0.9444
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | stage Imbalanced         | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | Imbalanced         | train=2942 (min 264 / maj 2678) | F1=0.7518 Acc=0.8640 G=0.7824 AUC=0.9665 PR-AUC=0.9334
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 15:56:01 | INFO    | waveform | seed 44 | stage RandomOverSampler  | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | RandomOverSampler  | train=5356 (min 2678 / maj 2678) | F1=0.8200 Acc=0.8920 G=0.8471 AUC=0.9671 PR-AUC=0.9364
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | stage SMOTE              | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | SMOTE              | train=5356 (min 2678 / maj 2678) | F1=0.8273 Acc=0.8910 G=0.8617 AUC=0.9644 PR-AUC=0.9228
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 15:56:02 | INFO    | waveform | seed 44 | stage ADASYN             | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:03 | INFO    | waveform | seed 44 | ADASYN             | train=5347 (min 2669 / maj 2678) | F1=0.8172 Acc=0.8850 G=0.8537 AUC=0.9618 PR-AUC=0.9202
+2026-10-13 15:56:03 | INFO    | waveform | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 15:56:03 | INFO    | [19/22] waveform seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 15:56:03 | INFO    | waveform | seed 44 | stage ImbLLM-random      | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:56:03 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:56:49 | INFO    | [waveform/s44/ImbLLM-random] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=352 -> max_len=412 | device=cuda
+2026-10-13 15:56:50 | INFO    | [waveform/s44/ImbLLM-random] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:56:50 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/20 | step 7/600 | loss=2.2431
+2026-10-13 15:56:51 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/20 | step 14/600 | loss=2.1256
+2026-10-13 15:56:52 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/20 | step 21/600 | loss=2.0091
+2026-10-13 15:56:53 | INFO    | [waveform/s44/ImbLLM-random] epoch 1/20 | step 28/600 | loss=1.9178
+2026-10-13 15:56:53 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0601 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h01m09s
+2026-10-13 15:56:54 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/20 | step 37/600 | loss=1.8273
+2026-10-13 15:56:55 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/20 | step 44/600 | loss=1.8280
+2026-10-13 15:56:56 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/20 | step 51/600 | loss=1.7979
+2026-10-13 15:56:57 | INFO    | [waveform/s44/ImbLLM-random] epoch 2/20 | step 58/600 | loss=1.8025
+2026-10-13 15:56:57 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.8123 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h01m06s
+2026-10-13 15:56:58 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/20 | step 67/600 | loss=1.7737
+2026-10-13 15:56:59 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/20 | step 74/600 | loss=1.7692
+2026-10-13 15:57:00 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/20 | step 81/600 | loss=1.7651
+2026-10-13 15:57:01 | INFO    | [waveform/s44/ImbLLM-random] epoch 3/20 | step 88/600 | loss=1.7703
+2026-10-13 15:57:01 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.7732 | epoch_time=0h00m03s | elapsed=0h00m11s | ETA=0h01m03s
+2026-10-13 15:57:02 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/20 | step 97/600 | loss=1.7409
+2026-10-13 15:57:03 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/20 | step 104/600 | loss=1.7592
+2026-10-13 15:57:04 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/20 | step 111/600 | loss=1.7706
+2026-10-13 15:57:05 | INFO    | [waveform/s44/ImbLLM-random] epoch 4/20 | step 118/600 | loss=1.7763
+2026-10-13 15:57:05 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.7513 | epoch_time=0h00m03s | elapsed=0h00m15s | ETA=0h01m00s
+2026-10-13 15:57:06 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/20 | step 127/600 | loss=1.7555
+2026-10-13 15:57:07 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/20 | step 134/600 | loss=1.7553
+2026-10-13 15:57:08 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/20 | step 141/600 | loss=1.7233
+2026-10-13 15:57:09 | INFO    | [waveform/s44/ImbLLM-random] epoch 5/20 | step 148/600 | loss=1.7796
+2026-10-13 15:57:10 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.7467 | epoch_time=0h00m05s | elapsed=0h00m20s | ETA=0h01m01s
+2026-10-13 15:57:11 | INFO    | [waveform/s44/ImbLLM-random] epoch 6/20 | step 157/600 | loss=1.7353
+2026-10-13 15:57:12 | INFO    | [waveform/s44/ImbLLM-random] epoch 6/20 | step 164/600 | loss=1.7450
+2026-10-13 15:57:13 | INFO    | [waveform/s44/ImbLLM-random] epoch 6/20 | step 171/600 | loss=1.7563
+2026-10-13 15:57:14 | INFO    | [waveform/s44/ImbLLM-random] epoch 6/20 | step 178/600 | loss=1.7493
+2026-10-13 15:57:14 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.7487 | epoch_time=0h00m04s | elapsed=0h00m24s | ETA=0h00m57s
+2026-10-13 15:57:15 | INFO    | [waveform/s44/ImbLLM-random] epoch 7/20 | step 187/600 | loss=1.7507
+2026-10-13 15:57:16 | INFO    | [waveform/s44/ImbLLM-random] epoch 7/20 | step 194/600 | loss=1.7758
+2026-10-13 15:57:17 | INFO    | [waveform/s44/ImbLLM-random] epoch 7/20 | step 201/600 | loss=1.7256
+2026-10-13 15:57:18 | INFO    | [waveform/s44/ImbLLM-random] epoch 7/20 | step 208/600 | loss=1.7250
+2026-10-13 15:57:18 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.7416 | epoch_time=0h00m04s | elapsed=0h00m28s | ETA=0h00m52s
+2026-10-13 15:57:19 | INFO    | [waveform/s44/ImbLLM-random] epoch 8/20 | step 217/600 | loss=1.7362
+2026-10-13 15:57:20 | INFO    | [waveform/s44/ImbLLM-random] epoch 8/20 | step 224/600 | loss=1.7312
+2026-10-13 15:57:21 | INFO    | [waveform/s44/ImbLLM-random] epoch 8/20 | step 231/600 | loss=1.7608
+2026-10-13 15:57:22 | INFO    | [waveform/s44/ImbLLM-random] epoch 8/20 | step 238/600 | loss=1.7282
+2026-10-13 15:57:22 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.7416 | epoch_time=0h00m04s | elapsed=0h00m32s | ETA=0h00m48s
+2026-10-13 15:57:23 | INFO    | [waveform/s44/ImbLLM-random] epoch 9/20 | step 247/600 | loss=1.7374
+2026-10-13 15:57:24 | INFO    | [waveform/s44/ImbLLM-random] epoch 9/20 | step 254/600 | loss=1.7323
+2026-10-13 15:57:25 | INFO    | [waveform/s44/ImbLLM-random] epoch 9/20 | step 261/600 | loss=1.7471
+2026-10-13 15:57:26 | INFO    | [waveform/s44/ImbLLM-random] epoch 9/20 | step 268/600 | loss=1.7437
+2026-10-13 15:57:26 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.7386 | epoch_time=0h00m04s | elapsed=0h00m36s | ETA=0h00m44s
+2026-10-13 15:57:27 | INFO    | [waveform/s44/ImbLLM-random] epoch 10/20 | step 277/600 | loss=1.7461
+2026-10-13 15:57:28 | INFO    | [waveform/s44/ImbLLM-random] epoch 10/20 | step 284/600 | loss=1.7223
+2026-10-13 15:57:29 | INFO    | [waveform/s44/ImbLLM-random] epoch 10/20 | step 291/600 | loss=1.7225
+2026-10-13 15:57:30 | INFO    | [waveform/s44/ImbLLM-random] epoch 10/20 | step 298/600 | loss=1.7440
+2026-10-13 15:57:30 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.7397 | epoch_time=0h00m04s | elapsed=0h00m40s | ETA=0h00m40s
+2026-10-13 15:57:31 | INFO    | [waveform/s44/ImbLLM-random] epoch 11/20 | step 307/600 | loss=1.7599
+2026-10-13 15:57:32 | INFO    | [waveform/s44/ImbLLM-random] epoch 11/20 | step 314/600 | loss=1.6934
+2026-10-13 15:57:33 | INFO    | [waveform/s44/ImbLLM-random] epoch 11/20 | step 321/600 | loss=1.7345
+2026-10-13 15:57:34 | INFO    | [waveform/s44/ImbLLM-random] epoch 11/20 | step 328/600 | loss=1.7449
+2026-10-13 15:57:35 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.7312 | epoch_time=0h00m04s | elapsed=0h00m44s | ETA=0h00m36s
+2026-10-13 15:57:36 | INFO    | [waveform/s44/ImbLLM-random] epoch 12/20 | step 337/600 | loss=1.7275
+2026-10-13 15:57:37 | INFO    | [waveform/s44/ImbLLM-random] epoch 12/20 | step 344/600 | loss=1.7409
+2026-10-13 15:57:38 | INFO    | [waveform/s44/ImbLLM-random] epoch 12/20 | step 351/600 | loss=1.7360
+2026-10-13 15:57:39 | INFO    | [waveform/s44/ImbLLM-random] epoch 12/20 | step 358/600 | loss=1.7261
+2026-10-13 15:57:39 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.7269 | epoch_time=0h00m04s | elapsed=0h00m49s | ETA=0h00m32s
+2026-10-13 15:57:40 | INFO    | [waveform/s44/ImbLLM-random] epoch 13/20 | step 367/600 | loss=1.7109
+2026-10-13 15:57:41 | INFO    | [waveform/s44/ImbLLM-random] epoch 13/20 | step 374/600 | loss=1.7353
+2026-10-13 15:57:42 | INFO    | [waveform/s44/ImbLLM-random] epoch 13/20 | step 381/600 | loss=1.7296
+2026-10-13 15:57:43 | INFO    | [waveform/s44/ImbLLM-random] epoch 13/20 | step 388/600 | loss=1.7380
+2026-10-13 15:57:44 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.7287 | epoch_time=0h00m05s | elapsed=0h00m54s | ETA=0h00m29s
+2026-10-13 15:57:45 | INFO    | [waveform/s44/ImbLLM-random] epoch 14/20 | step 397/600 | loss=1.7418
+2026-10-13 15:57:46 | INFO    | [waveform/s44/ImbLLM-random] epoch 14/20 | step 404/600 | loss=1.7138
+2026-10-13 15:57:47 | INFO    | [waveform/s44/ImbLLM-random] epoch 14/20 | step 411/600 | loss=1.7265
+2026-10-13 15:57:48 | INFO    | [waveform/s44/ImbLLM-random] epoch 14/20 | step 418/600 | loss=1.7354
+2026-10-13 15:57:48 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.7304 | epoch_time=0h00m04s | elapsed=0h00m58s | ETA=0h00m25s
+2026-10-13 15:57:49 | INFO    | [waveform/s44/ImbLLM-random] epoch 15/20 | step 427/600 | loss=1.7534
+2026-10-13 15:57:50 | INFO    | [waveform/s44/ImbLLM-random] epoch 15/20 | step 434/600 | loss=1.7174
+2026-10-13 15:57:51 | INFO    | [waveform/s44/ImbLLM-random] epoch 15/20 | step 441/600 | loss=1.7211
+2026-10-13 15:57:52 | INFO    | [waveform/s44/ImbLLM-random] epoch 15/20 | step 448/600 | loss=1.7121
+2026-10-13 15:57:53 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.7316 | epoch_time=0h00m04s | elapsed=0h01m03s | ETA=0h00m21s
+2026-10-13 15:57:54 | INFO    | [waveform/s44/ImbLLM-random] epoch 16/20 | step 457/600 | loss=1.7369
+2026-10-13 15:57:55 | INFO    | [waveform/s44/ImbLLM-random] epoch 16/20 | step 464/600 | loss=1.7249
+2026-10-13 15:57:56 | INFO    | [waveform/s44/ImbLLM-random] epoch 16/20 | step 471/600 | loss=1.7395
+2026-10-13 15:57:57 | INFO    | [waveform/s44/ImbLLM-random] epoch 16/20 | step 478/600 | loss=1.7033
+2026-10-13 15:57:57 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.7277 | epoch_time=0h00m04s | elapsed=0h01m07s | ETA=0h00m16s
+2026-10-13 15:57:58 | INFO    | [waveform/s44/ImbLLM-random] epoch 17/20 | step 487/600 | loss=1.7345
+2026-10-13 15:57:59 | INFO    | [waveform/s44/ImbLLM-random] epoch 17/20 | step 494/600 | loss=1.7268
+2026-10-13 15:58:00 | INFO    | [waveform/s44/ImbLLM-random] epoch 17/20 | step 501/600 | loss=1.7260
+2026-10-13 15:58:01 | INFO    | [waveform/s44/ImbLLM-random] epoch 17/20 | step 508/600 | loss=1.7178
+2026-10-13 15:58:01 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.7237 | epoch_time=0h00m04s | elapsed=0h01m11s | ETA=0h00m12s
+2026-10-13 15:58:02 | INFO    | [waveform/s44/ImbLLM-random] epoch 18/20 | step 517/600 | loss=1.7250
+2026-10-13 15:58:03 | INFO    | [waveform/s44/ImbLLM-random] epoch 18/20 | step 524/600 | loss=1.7275
+2026-10-13 15:58:04 | INFO    | [waveform/s44/ImbLLM-random] epoch 18/20 | step 531/600 | loss=1.7293
+2026-10-13 15:58:05 | INFO    | [waveform/s44/ImbLLM-random] epoch 18/20 | step 538/600 | loss=1.7160
+2026-10-13 15:58:07 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.7212 | epoch_time=0h00m05s | elapsed=0h01m17s | ETA=0h00m08s
+2026-10-13 15:58:08 | INFO    | [waveform/s44/ImbLLM-random] epoch 19/20 | step 547/600 | loss=1.7441
+2026-10-13 15:58:09 | INFO    | [waveform/s44/ImbLLM-random] epoch 19/20 | step 554/600 | loss=1.7184
+2026-10-13 15:58:10 | INFO    | [waveform/s44/ImbLLM-random] epoch 19/20 | step 561/600 | loss=1.6982
+2026-10-13 15:58:11 | INFO    | [waveform/s44/ImbLLM-random] epoch 19/20 | step 568/600 | loss=1.7296
+2026-10-13 15:58:11 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.7281 | epoch_time=0h00m04s | elapsed=0h01m21s | ETA=0h00m04s
+2026-10-13 15:58:12 | INFO    | [waveform/s44/ImbLLM-random] epoch 20/20 | step 577/600 | loss=1.6947
+2026-10-13 15:58:13 | INFO    | [waveform/s44/ImbLLM-random] epoch 20/20 | step 584/600 | loss=1.7280
+2026-10-13 15:58:14 | INFO    | [waveform/s44/ImbLLM-random] epoch 20/20 | step 591/600 | loss=1.7404
+2026-10-13 15:58:15 | INFO    | [waveform/s44/ImbLLM-random] epoch 20/20 | step 598/600 | loss=1.7314
+2026-10-13 15:58:15 | INFO    | [waveform/s44/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.7255 | epoch_time=0h00m04s | elapsed=0h01m25s | ETA=0h00m00s
+2026-10-13 15:58:16 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 15:58:46 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 1473, 'valid_parse_rate': 0.9986422267481331, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 29.5}
+2026-10-13 15:58:46 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.4355, 'coverage_k2': 0.949, 'mean_dist_synth_to_train_minority(DCR)': 5.0424, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 15:58:46 | INFO    | waveform | seed 44 | ImbLLM-random      | train=4281 (min 1603 / maj 2678) | F1=0.7945 Acc=0.8810 G=0.8223 AUC=0.9657 PR-AUC=0.9305
+2026-10-13 15:58:46 | INFO    | waveform | seed 44 | stage ImbLLM-random      | DONE in 0h02m43s
+2026-10-13 15:58:46 | INFO    | waveform | seed 44 | stage ImbLLM-IAFP        | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 15:58:47 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 264 retained minority + 669 interpolated rows | synthetic to generate = 1339 (CAPPED from 2414; classes will not be perfectly balanced)
+2026-10-13 15:59:33 | INFO    | [waveform/s44/ImbLLM-IAFP] fine-tuning rows=933 | tokens/row: mean=303 max(probe)=352 -> max_len=412 | device=cuda
+2026-10-13 15:59:33 | INFO    | [waveform/s44/ImbLLM-IAFP] training: epochs=20 | steps/epoch=30 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 15:59:34 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/20 | step 7/600 | loss=2.2264
+2026-10-13 15:59:35 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/20 | step 14/600 | loss=2.1037
+2026-10-13 15:59:36 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/20 | step 21/600 | loss=1.9834
+2026-10-13 15:59:37 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 1/20 | step 28/600 | loss=1.8944
+2026-10-13 15:59:37 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0385 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h01m11s
+2026-10-13 15:59:38 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/20 | step 37/600 | loss=1.8313
+2026-10-13 15:59:39 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/20 | step 44/600 | loss=1.8128
+2026-10-13 15:59:40 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/20 | step 51/600 | loss=1.7759
+2026-10-13 15:59:40 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 2/20 | step 58/600 | loss=1.7830
+2026-10-13 15:59:41 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7892 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h01m08s
+2026-10-13 15:59:42 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/20 | step 67/600 | loss=1.7471
+2026-10-13 15:59:42 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/20 | step 74/600 | loss=1.7590
+2026-10-13 15:59:43 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/20 | step 81/600 | loss=1.7352
+2026-10-13 15:59:44 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 3/20 | step 88/600 | loss=1.7441
+2026-10-13 15:59:44 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.7483 | epoch_time=0h00m03s | elapsed=0h00m11s | ETA=0h01m04s
+2026-10-13 15:59:45 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/20 | step 97/600 | loss=1.7205
+2026-10-13 15:59:46 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/20 | step 104/600 | loss=1.7595
+2026-10-13 15:59:47 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/20 | step 111/600 | loss=1.7486
+2026-10-13 15:59:48 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 4/20 | step 118/600 | loss=1.7091
+2026-10-13 15:59:48 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.7339 | epoch_time=0h00m03s | elapsed=0h00m15s | ETA=0h01m01s
+2026-10-13 15:59:49 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/20 | step 127/600 | loss=1.7147
+2026-10-13 15:59:50 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/20 | step 134/600 | loss=1.7152
+2026-10-13 15:59:51 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/20 | step 141/600 | loss=1.7473
+2026-10-13 15:59:52 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 5/20 | step 148/600 | loss=1.7134
+2026-10-13 15:59:52 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.7217 | epoch_time=0h00m03s | elapsed=0h00m19s | ETA=0h00m58s
+2026-10-13 15:59:53 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 6/20 | step 157/600 | loss=1.7203
+2026-10-13 15:59:54 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 6/20 | step 164/600 | loss=1.7357
+2026-10-13 15:59:55 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 6/20 | step 171/600 | loss=1.7144
+2026-10-13 15:59:56 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 6/20 | step 178/600 | loss=1.7088
+2026-10-13 15:59:56 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.7185 | epoch_time=0h00m04s | elapsed=0h00m23s | ETA=0h00m54s
+2026-10-13 15:59:57 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 7/20 | step 187/600 | loss=1.6807
+2026-10-13 15:59:58 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 7/20 | step 194/600 | loss=1.7085
+2026-10-13 15:59:59 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 7/20 | step 201/600 | loss=1.7290
+2026-10-13 16:00:00 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 7/20 | step 208/600 | loss=1.7329
+2026-10-13 16:00:01 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.7142 | epoch_time=0h00m04s | elapsed=0h00m27s | ETA=0h00m51s
+2026-10-13 16:00:02 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 8/20 | step 217/600 | loss=1.6946
+2026-10-13 16:00:03 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 8/20 | step 224/600 | loss=1.7250
+2026-10-13 16:00:03 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 8/20 | step 231/600 | loss=1.6846
+2026-10-13 16:00:04 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 8/20 | step 238/600 | loss=1.7232
+2026-10-13 16:00:05 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.7089 | epoch_time=0h00m04s | elapsed=0h00m31s | ETA=0h00m47s
+2026-10-13 16:00:06 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 9/20 | step 247/600 | loss=1.7119
+2026-10-13 16:00:07 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 9/20 | step 254/600 | loss=1.6905
+2026-10-13 16:00:08 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 9/20 | step 261/600 | loss=1.7010
+2026-10-13 16:00:09 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 9/20 | step 268/600 | loss=1.7182
+2026-10-13 16:00:09 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.7062 | epoch_time=0h00m04s | elapsed=0h00m35s | ETA=0h00m43s
+2026-10-13 16:00:10 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 10/20 | step 277/600 | loss=1.7005
+2026-10-13 16:00:11 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 10/20 | step 284/600 | loss=1.6817
+2026-10-13 16:00:12 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 10/20 | step 291/600 | loss=1.7171
+2026-10-13 16:00:13 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 10/20 | step 298/600 | loss=1.7039
+2026-10-13 16:00:13 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.7021 | epoch_time=0h00m04s | elapsed=0h00m39s | ETA=0h00m39s
+2026-10-13 16:00:14 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 11/20 | step 307/600 | loss=1.7121
+2026-10-13 16:00:15 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 11/20 | step 314/600 | loss=1.6913
+2026-10-13 16:00:16 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 11/20 | step 321/600 | loss=1.6917
+2026-10-13 16:00:17 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 11/20 | step 328/600 | loss=1.7048
+2026-10-13 16:00:17 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.6931 | epoch_time=0h00m04s | elapsed=0h00m44s | ETA=0h00m36s
+2026-10-13 16:00:18 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 12/20 | step 337/600 | loss=1.6976
+2026-10-13 16:00:19 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 12/20 | step 344/600 | loss=1.6990
+2026-10-13 16:00:20 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 12/20 | step 351/600 | loss=1.6831
+2026-10-13 16:00:21 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 12/20 | step 358/600 | loss=1.7117
+2026-10-13 16:00:21 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.7013 | epoch_time=0h00m04s | elapsed=0h00m48s | ETA=0h00m32s
+2026-10-13 16:00:22 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 13/20 | step 367/600 | loss=1.6957
+2026-10-13 16:00:23 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 13/20 | step 374/600 | loss=1.6789
+2026-10-13 16:00:24 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 13/20 | step 381/600 | loss=1.7209
+2026-10-13 16:00:25 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 13/20 | step 388/600 | loss=1.6793
+2026-10-13 16:00:25 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.6956 | epoch_time=0h00m04s | elapsed=0h00m52s | ETA=0h00m28s
+2026-10-13 16:00:26 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 14/20 | step 397/600 | loss=1.6866
+2026-10-13 16:00:27 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 14/20 | step 404/600 | loss=1.7002
+2026-10-13 16:00:28 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 14/20 | step 411/600 | loss=1.7069
+2026-10-13 16:00:29 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 14/20 | step 418/600 | loss=1.6816
+2026-10-13 16:00:30 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.6945 | epoch_time=0h00m04s | elapsed=0h00m56s | ETA=0h00m24s
+2026-10-13 16:00:31 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 15/20 | step 427/600 | loss=1.6795
+2026-10-13 16:00:32 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 15/20 | step 434/600 | loss=1.7015
+2026-10-13 16:00:33 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 15/20 | step 441/600 | loss=1.7006
+2026-10-13 16:00:34 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 15/20 | step 448/600 | loss=1.6825
+2026-10-13 16:00:34 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.6860 | epoch_time=0h00m04s | elapsed=0h01m00s | ETA=0h00m20s
+2026-10-13 16:00:35 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 16/20 | step 457/600 | loss=1.6890
+2026-10-13 16:00:36 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 16/20 | step 464/600 | loss=1.7176
+2026-10-13 16:00:37 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 16/20 | step 471/600 | loss=1.6713
+2026-10-13 16:00:37 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 16/20 | step 478/600 | loss=1.6851
+2026-10-13 16:00:38 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.6916 | epoch_time=0h00m03s | elapsed=0h01m04s | ETA=0h00m16s
+2026-10-13 16:00:39 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 17/20 | step 487/600 | loss=1.6948
+2026-10-13 16:00:39 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 17/20 | step 494/600 | loss=1.6769
+2026-10-13 16:00:40 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 17/20 | step 501/600 | loss=1.6809
+2026-10-13 16:00:41 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 17/20 | step 508/600 | loss=1.7027
+2026-10-13 16:00:42 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.6866 | epoch_time=0h00m03s | elapsed=0h01m08s | ETA=0h00m12s
+2026-10-13 16:00:43 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 18/20 | step 517/600 | loss=1.6826
+2026-10-13 16:00:43 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 18/20 | step 524/600 | loss=1.6859
+2026-10-13 16:00:44 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 18/20 | step 531/600 | loss=1.6923
+2026-10-13 16:00:45 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 18/20 | step 538/600 | loss=1.6889
+2026-10-13 16:00:46 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.6851 | epoch_time=0h00m04s | elapsed=0h01m12s | ETA=0h00m08s
+2026-10-13 16:00:47 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 19/20 | step 547/600 | loss=1.6823
+2026-10-13 16:00:48 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 19/20 | step 554/600 | loss=1.6960
+2026-10-13 16:00:49 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 19/20 | step 561/600 | loss=1.6838
+2026-10-13 16:00:50 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 19/20 | step 568/600 | loss=1.6814
+2026-10-13 16:00:50 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.6873 | epoch_time=0h00m04s | elapsed=0h01m16s | ETA=0h00m04s
+2026-10-13 16:00:51 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 20/20 | step 577/600 | loss=1.6805
+2026-10-13 16:00:52 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 20/20 | step 584/600 | loss=1.6820
+2026-10-13 16:00:53 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 20/20 | step 591/600 | loss=1.6798
+2026-10-13 16:00:54 | INFO    | [waveform/s44/ImbLLM-IAFP] epoch 20/20 | step 598/600 | loss=1.7000
+2026-10-13 16:00:54 | INFO    | [waveform/s44/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.6872 | epoch_time=0h00m04s | elapsed=0h01m20s | ETA=0h00m00s
+2026-10-13 16:00:55 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | generating 1339 rows (condition_yx, temperature 0.70)
+2026-10-13 16:01:26 | INFO    | [waveform/s44/ImbLLM-IAFP] generated 1473/1473 (round 1) | valid parse 100.0% | accepted 1473/1339 | elapsed 0h00m31s
+2026-10-13 16:01:26 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 1473, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 1339, 'gen_batch_size_final': 128, 'gen_seconds': 31.1}
+2026-10-13 16:01:27 | INFO    | [19/22] waveform seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.4311, 'coverage_k2': 0.9537, 'mean_dist_synth_to_train_minority(DCR)': 5.0857, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 16:01:27 | INFO    | waveform | seed 44 | ImbLLM-IAFP        | train=4281 (min 1603 / maj 2678) | F1=0.7832 Acc=0.8760 G=0.8121 AUC=0.9661 PR-AUC=0.9339
+2026-10-13 16:01:27 | INFO    | waveform | seed 44 | stage ImbLLM-IAFP        | DONE in 0h02m40s
+2026-10-13 16:01:27 | INFO    | waveform | seed 44 | stage plots              | RUNNING [19/22] waveform seed 44 (3/3)
+2026-10-13 16:01:36 | INFO    | [19/22] waveform seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 16:01:36 | INFO    | waveform | seed 44 | stage plots              | DONE in 0h00m08s
+2026-10-13 16:01:36 | INFO    | [19/22] waveform seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 16:01:37 | INFO    | waveform | DATASET COMPLETE in 0h19m16s -> runs/exp1/waveform

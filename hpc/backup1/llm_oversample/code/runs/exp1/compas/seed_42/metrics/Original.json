@@ -22,6 +22,6 @@
   "test_minority": 130,
   "test_fingerprint": "2f8ad5e56a72",
   "threshold": 0.5,
-  "eval_seconds": 0.2,
+  "eval_seconds": 0.3,
   "note": "all minority rows of the train split (reference upper bound)"
 }

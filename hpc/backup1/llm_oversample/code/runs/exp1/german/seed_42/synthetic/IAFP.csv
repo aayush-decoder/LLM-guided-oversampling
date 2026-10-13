@@ -1,513 +1,281 @@
 duration,credit_amount,installment_commitment,residence_since,age,existing_credits,num_dependents,checking_status,credit_history,purpose,savings_status,employment,personal_status,other_parties,property_magnitude,other_payment_plans,housing,job,own_telephone,foreign_worker
-24.0,2606.0,4.0,4.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,50.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,2.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,1.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,7174.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1512.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-35.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,4.0,31.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,55.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-20.0,2606.0,4.0,3.0,26.0,4.0,1.0,0<=X<200,no credits/all paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1659.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,2.0,24.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2359.0,4.0,4.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-5.0,10961.0,4.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-26.0,2359.0,4.0,1.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,1808.0,4.0,1.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,35.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,3446.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1808.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,unskilled resident,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-4.0,950.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,1659.0,4.0,4.0,44.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-36.0,2606.0,4.0,1.0,28.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,950.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1285.0,4.0,4.0,24.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-26.0,11938.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,950.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,20.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-31.0,276.0,4.0,1.0,25.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,14027.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,4.0,33.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-35.0,2606.0,4.0,4.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-29.0,11560.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2100.0,4.0,3.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,276.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,6560.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,276.0,4.0,3.0,34.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,8339.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+40.0,2606.0,4.0,2.0,39.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,1371.0,4.0,2.0,30.0,1.0,2.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+21.0,1371.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,<1,male single,none,car,none,own,high qualif/self emp/mgmt,yes,yes
+25.0,2249.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+28.0,1659.0,3.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,7174.0,4.0,3.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1512.0,4.0,4.0,32.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,>=7,male single,none,real estate,bank,own,skilled,none,yes
+24.0,1359.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,2476.0,4.0,3.0,31.0,1.0,1.0,<0,existing paid,business,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+24.0,10771.0,3.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,no credits/all paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1659.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1358.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2359.0,3.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+15.0,10961.0,4.0,3.0,32.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,4302.0,4.0,4.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,2359.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1808.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,3.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,6997.0,4.0,4.0,37.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+29.0,2469.0,2.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,yes,yes
+24.0,3446.0,4.0,2.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1808.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
+18.0,2606.0,3.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,rent,unskilled resident,none,yes
+24.0,3922.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,950.0,4.0,3.0,36.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+24.0,8648.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,yes,yes
+21.0,1659.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
+24.0,1773.0,4.0,3.0,28.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2780.0,4.0,4.0,34.0,1.0,1.0,<0,existing paid,new car,<100,<1,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,950.0,4.0,2.0,44.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,1285.0,4.0,4.0,38.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,female div/dep/mar,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,11938.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+16.0,950.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
+24.0,2339.0,3.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,32.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,4<=X<7,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+24.0,14027.0,4.0,4.0,26.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,>=7,male single,none,car,none,for free,skilled,none,yes
+24.0,2606.0,4.0,1.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,1659.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2723.0,4.0,4.0,29.0,2.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
+37.0,487.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,500<=X<1000,1<=X<4,male single,none,car,none,own,skilled,yes,yes
+20.0,11560.0,4.0,3.0,27.0,1.0,1.0,<0,critical/other existing credit,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2100.0,4.0,3.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+20.0,4229.0,4.0,3.0,27.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,rent,skilled,none,yes
+28.0,1371.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,40.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,32.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,female div/dep/mar,none,real estate,none,for free,skilled,none,yes
+24.0,1329.0,2.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+18.0,6560.0,4.0,4.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,4200.0,4.0,3.0,35.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+18.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
 24.0,4241.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-29.0,2606.0,4.0,3.0,22.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-15.0,2606.0,4.0,3.0,36.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,11938.0,4.0,4.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,55.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,4500.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1808.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-27.0,1285.0,4.0,3.0,19.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-19.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4241.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,31.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,1534.0,4.0,3.0,49.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,7763.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-31.0,884.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,4200.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,11560.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,65.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,40.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,8386.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,639.0,4.0,4.0,55.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3446.0,4.0,1.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,4736.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1534.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,23.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,950.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-21.0,1056.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,884.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,11560.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,6560.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3100.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,2606.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,used car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,3349.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,276.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,3.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1271.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,all paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,1512.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,2606.0,4.0,4.0,26.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2100.0,4.0,1.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,3.0,19.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,unemp/unskilled non res,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,11560.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,1.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2359.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,11938.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,1.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,for free,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1808.0,4.0,4.0,25.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4113.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,45.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,6761.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2064.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,50.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1345.0,4.0,3.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,1919.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,1056.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2631.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,7174.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1207.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-29.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1271.0,4.0,4.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2100.0,4.0,1.0,30.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,6761.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,24.0,3.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-4.0,1924.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,40.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-14.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-60.0,12579.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-25.0,2100.0,4.0,4.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,40.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-26.0,3349.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,7174.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2580.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
-24.0,950.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,8648.0,4.0,4.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,4.0,25.0,4.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,6560.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,19.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,12579.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,19.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-24.0,7763.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,1.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,14027.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,49.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,4870.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,22.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,884.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2580.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,1009.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,used car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,2606.0,4.0,3.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,1.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,14027.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-18.0,11938.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4736.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-29.0,3446.0,4.0,1.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2580.0,4.0,1.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1345.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,6468.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,1534.0,4.0,1.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,9572.0,4.0,3.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,9572.0,4.0,3.0,34.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,7174.0,4.0,1.0,31.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,500.0,4.0,4.0,50.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2631.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,14027.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-29.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,30.0,2.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-35.0,2606.0,4.0,3.0,36.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,22.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-60.0,8229.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,2.0,34.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,6560.0,4.0,1.0,35.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3446.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,for free,skilled,none,yes
-26.0,2606.0,4.0,3.0,35.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,26.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,4.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,50.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-26.0,2606.0,4.0,4.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,49.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-27.0,1207.0,4.0,4.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3446.0,4.0,3.0,30.0,3.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,884.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,4.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,884.0,4.0,1.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,21.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1442.0,4.0,1.0,19.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-5.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,21.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-5.0,2606.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,1.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,1.0,31.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,1.0,19.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-26.0,2606.0,4.0,3.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,all paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,65.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-35.0,2606.0,4.0,3.0,50.0,2.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,30.0,4.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,6761.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,1.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,4736.0,4.0,3.0,35.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-31.0,1442.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-29.0,2606.0,4.0,1.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,8229.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2064.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2473.0,4.0,4.0,25.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-19.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,8648.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,12680.0,4.0,1.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,2606.0,4.0,1.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,11938.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2100.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,9572.0,4.0,4.0,36.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,1659.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-8.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,8229.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1207.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,1.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4500.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,4.0,49.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,1534.0,4.0,4.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-36.0,6560.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,29.0,1.0,1.0,no checking,existing paid,new car,>=1000,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,276.0,4.0,1.0,34.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,2606.0,4.0,4.0,26.0,1.0,1.0,0<=X<200,no credits/all paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,37.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,for free,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1274.0,4.0,1.0,30.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2064.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,1.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-22.0,2606.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-12.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-17.0,1345.0,4.0,1.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,22.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,44.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,7763.0,4.0,3.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,1.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,1.0,44.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,8386.0,4.0,4.0,21.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,other,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,25.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,28.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,12579.0,4.0,3.0,65.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,11938.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1534.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-40.0,2606.0,4.0,1.0,26.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,9572.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,7174.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-28.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,8229.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-19.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-31.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-4.0,1271.0,4.0,1.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,276.0,4.0,2.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,31.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-25.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,4736.0,4.0,3.0,50.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,1512.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-20.0,2606.0,4.0,1.0,35.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,1919.0,4.0,4.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1274.0,4.0,1.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4113.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,2606.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2473.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4113.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3161.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1056.0,4.0,4.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1442.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,884.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,8229.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,4.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,8386.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,12579.0,4.0,4.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2064.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-21.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1659.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,55.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,4870.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2473.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1808.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-31.0,2606.0,4.0,4.0,39.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,25.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,3.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1442.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-23.0,2606.0,4.0,3.0,26.0,4.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,4241.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-50.0,2606.0,4.0,1.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1271.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-29.0,2606.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,14027.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,1.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-15.0,9572.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4736.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-16.0,2606.0,4.0,3.0,40.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-28.0,2606.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-27.0,1919.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,2064.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,2580.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,3349.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-16.0,2606.0,4.0,4.0,35.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1271.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-35.0,2606.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1207.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,6761.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1271.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,4.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,276.0,4.0,3.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,7763.0,4.0,1.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
-24.0,276.0,4.0,3.0,31.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,30.0,4.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,4870.0,4.0,1.0,19.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,1808.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,27.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
-24.0,4870.0,4.0,4.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,8229.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,4611.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-21.0,2606.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1274.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3161.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,7174.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-20.0,2606.0,4.0,3.0,31.0,1.0,1.0,0<=X<200,existing paid,used car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1345.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2473.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,639.0,4.0,1.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,2606.0,4.0,4.0,65.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,real estate,none,own,skilled,none,yes
-26.0,276.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-60.0,6468.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-30.0,6761.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-4.0,2359.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,8229.0,4.0,3.0,26.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1371.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,3446.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-18.0,2606.0,4.0,3.0,64.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,4500.0,4.0,4.0,40.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3349.0,1.0,3.0,30.0,3.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-29.0,2606.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-18.0,11938.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1442.0,4.0,4.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,276.0,4.0,2.0,30.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,1.0,25.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,939.0,4.0,3.0,44.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,1207.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
-24.0,2606.0,4.0,3.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,2.0,20.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
-24.0,276.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-4.0,2606.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,2606.0,4.0,1.0,21.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
-24.0,3349.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2449.0,4.0,3.0,25.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,25.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,11938.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,female div/dep/mar,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,2200.0,4.0,2.0,44.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,no known property,none,rent,skilled,none,yes
+24.0,1459.0,4.0,3.0,42.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,unemployed,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,8989.0,3.0,4.0,29.0,1.0,1.0,no checking,existing paid,used car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+21.0,3200.0,4.0,4.0,33.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,41.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,1808.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+22.0,7339.0,4.0,3.0,26.0,2.0,1.0,0<=X<200,critical/other existing credit,furniture/equipment,<100,1<=X<4,male single,none,life insurance,stores,own,skilled,none,yes
+18.0,1285.0,4.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,life insurance,none,own,skilled,none,yes
+18.0,8285.0,2.0,2.0,38.0,1.0,1.0,>=200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+40.0,1041.0,4.0,3.0,32.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+15.0,3198.0,4.0,3.0,32.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+21.0,7912.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,7980.0,4.0,2.0,41.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,1707.0,4.0,3.0,27.0,1.0,1.0,<0,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+26.0,4241.0,2.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,4266.0,4.0,2.0,32.0,2.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,life insurance,none,own,skilled,none,yes
+24.0,2606.0,2.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
+24.0,1534.0,4.0,3.0,36.0,1.0,2.0,0<=X<200,existing paid,new car,<100,<1,male single,none,life insurance,none,own,skilled,none,yes
+21.0,7763.0,4.0,2.0,41.0,4.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+30.0,5007.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+16.0,884.0,4.0,4.0,49.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
+24.0,2180.0,4.0,4.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,11560.0,4.0,3.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+21.0,4285.0,3.0,3.0,40.0,1.0,1.0,<0,existing paid,new car,<100,unemployed,male single,none,car,none,own,skilled,none,yes
+24.0,1341.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,1229.0,4.0,2.0,49.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+21.0,8386.0,4.0,3.0,30.0,2.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2783.0,2.0,3.0,30.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,973.0,4.0,3.0,25.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,<1,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,2606.0,2.0,3.0,32.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,no known savings,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,639.0,3.0,4.0,33.0,2.0,1.0,<0,existing paid,furniture/equipment,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,3446.0,4.0,2.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,yes,yes
+24.0,6174.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+26.0,1480.0,4.0,1.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,4736.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+30.0,1534.0,3.0,3.0,24.0,2.0,1.0,<0,existing paid,radio/tv,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,1707.0,4.0,3.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+24.0,2727.0,4.0,3.0,30.0,2.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,950.0,4.0,2.0,33.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1056.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,<1,male single,none,car,none,own,skilled,yes,yes
+24.0,884.0,4.0,3.0,44.0,1.0,1.0,<0,existing paid,radio/tv,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,11560.0,3.0,2.0,28.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+18.0,6560.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1871.0,4.0,2.0,32.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,car,stores,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,28.0,2.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+24.0,919.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,used car,<100,1<=X<4,male single,none,life insurance,none,own,high qualif/self emp/mgmt,none,yes
+24.0,3349.0,4.0,2.0,28.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+18.0,1445.0,4.0,4.0,26.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,yes,yes
+24.0,4285.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,945.0,4.0,2.0,34.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,4302.0,4.0,3.0,31.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,yes,yes
+24.0,1271.0,4.0,3.0,31.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,no known property,none,own,high qualif/self emp/mgmt,none,yes
+24.0,2606.0,4.0,4.0,27.0,1.0,1.0,0<=X<200,all paid,new car,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+24.0,1512.0,4.0,2.0,26.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,life insurance,none,own,skilled,yes,yes
+21.0,4784.0,4.0,3.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,no known property,none,own,skilled,yes,yes
+24.0,7302.0,4.0,3.0,23.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,no known property,bank,own,skilled,yes,yes
+24.0,2606.0,4.0,4.0,33.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,bank,own,skilled,none,yes
+24.0,2285.0,4.0,3.0,35.0,2.0,1.0,<0,delayed previously,radio/tv,<100,>=7,male single,none,no known property,none,rent,skilled,none,yes
+24.0,2100.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,female div/dep/mar,none,car,none,rent,skilled,none,yes
+29.0,2485.0,4.0,3.0,29.0,1.0,1.0,<0,critical/other existing credit,new car,<100,<1,female div/dep/mar,none,real estate,none,own,unemp/unskilled non res,none,yes
+24.0,2223.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,11560.0,3.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,4889.0,3.0,3.0,37.0,4.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,real estate,bank,own,skilled,none,yes
+24.0,1329.0,4.0,2.0,33.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2359.0,4.0,2.0,37.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,11938.0,4.0,4.0,30.0,1.0,1.0,<0,delayed previously,radio/tv,<100,1<=X<4,male single,none,real estate,none,own,high qualif/self emp/mgmt,yes,yes
+18.0,939.0,3.0,3.0,25.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+30.0,8771.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,for free,skilled,none,yes
+21.0,2480.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,no known property,none,own,skilled,yes,yes
+24.0,1808.0,4.0,3.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+24.0,4113.0,4.0,2.0,40.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+24.0,1280.0,4.0,2.0,25.0,1.0,1.0,0<=X<200,critical/other existing credit,radio/tv,500<=X<1000,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,6761.0,4.0,3.0,26.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,yes,yes
+24.0,2064.0,3.0,2.0,33.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,no known property,none,own,skilled,yes,yes
+19.0,1345.0,4.0,4.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,yes,yes
+24.0,1919.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1056.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+24.0,1345.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+25.0,2631.0,2.0,3.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,7174.0,3.0,3.0,39.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1207.0,2.0,2.0,38.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,4177.0,3.0,4.0,26.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1388.0,4.0,4.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,<1,male single,none,life insurance,none,own,skilled,none,yes
+18.0,1812.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,real estate,none,rent,skilled,none,yes
+15.0,6889.0,4.0,4.0,27.0,1.0,1.0,no checking,existing paid,new car,<100,<1,male single,none,car,bank,own,skilled,none,yes
+24.0,1271.0,2.0,3.0,24.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2100.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,6761.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,female div/dep/mar,none,life insurance,bank,own,skilled,none,yes
+25.0,7923.0,4.0,2.0,34.0,1.0,1.0,<0,existing paid,radio/tv,<100,>=7,male single,none,car,none,own,skilled,yes,yes
+24.0,1924.0,2.0,4.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,yes,yes
+24.0,2476.0,4.0,4.0,38.0,1.0,1.0,0<=X<200,existing paid,new car,no known savings,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1659.0,4.0,2.0,35.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,4266.0,4.0,2.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,for free,high qualif/self emp/mgmt,none,yes
+24.0,2212.0,3.0,4.0,25.0,2.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,4339.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+24.0,12579.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,rent,skilled,none,yes
+24.0,6077.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,2100.0,4.0,4.0,28.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,rent,skilled,none,yes
+21.0,2606.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,bank,own,skilled,none,yes
+24.0,4296.0,4.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,4353.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,100<=X<500,<1,male single,none,car,none,own,skilled,none,yes
+24.0,2585.0,4.0,4.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+22.0,3349.0,4.0,3.0,28.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,7174.0,4.0,2.0,30.0,1.0,1.0,<0,existing paid,radio/tv,<100,>=7,male single,none,car,bank,own,skilled,yes,yes
+24.0,2580.0,4.0,4.0,29.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,950.0,2.0,2.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,no known property,none,for free,skilled,yes,yes
+24.0,1333.0,2.0,3.0,29.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,611.0,4.0,2.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,8648.0,4.0,2.0,24.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,yes,yes
+24.0,8989.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,business,<100,4<=X<7,female div/dep/mar,none,car,none,own,skilled,none,yes
+27.0,6560.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,>=7,male single,none,no known property,none,own,skilled,none,yes
+24.0,8488.0,4.0,3.0,30.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,bank,own,high qualif/self emp/mgmt,none,yes
+18.0,12579.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,no known savings,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,29.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2480.0,3.0,4.0,36.0,1.0,1.0,no checking,existing paid,new car,<100,>=7,female div/dep/mar,none,car,none,own,skilled,yes,yes
+24.0,939.0,3.0,3.0,28.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+24.0,983.0,4.0,4.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,unemployed,male single,none,car,bank,own,skilled,none,yes
+24.0,7763.0,4.0,4.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,rent,skilled,yes,yes
+24.0,619.0,4.0,3.0,36.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+40.0,4161.0,3.0,2.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+21.0,14027.0,4.0,4.0,32.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,4455.0,3.0,3.0,30.0,2.0,1.0,<0,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,1362.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,real estate,none,own,high qualif/self emp/mgmt,none,yes
+24.0,4870.0,3.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,bank,own,skilled,none,yes
+18.0,6174.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
+24.0,2345.0,4.0,3.0,28.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,rent,skilled,none,yes
+18.0,884.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2459.0,4.0,2.0,24.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,bank,own,skilled,none,yes
+24.0,1777.0,4.0,4.0,24.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,real estate,bank,own,skilled,yes,yes
+24.0,2580.0,4.0,2.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,819.0,4.0,3.0,28.0,1.0,1.0,0<=X<200,existing paid,used car,<100,1<=X<4,male single,none,real estate,none,rent,skilled,none,yes
+24.0,3873.0,4.0,3.0,32.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+18.0,839.0,4.0,4.0,33.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,no known property,none,own,skilled,none,yes
+26.0,939.0,4.0,3.0,37.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+30.0,14027.0,4.0,4.0,36.0,2.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,2958.0,3.0,3.0,33.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,11938.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,business,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,4736.0,4.0,3.0,29.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,3446.0,3.0,3.0,30.0,1.0,1.0,<0,existing paid,business,<100,>=7,male single,none,car,none,own,skilled,none,yes
+27.0,2580.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+18.0,1056.0,2.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,bank,own,skilled,none,yes
+21.0,4889.0,4.0,3.0,23.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,yes,yes
+24.0,1345.0,4.0,4.0,30.0,2.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,>=7,female div/dep/mar,none,car,none,own,skilled,none,yes
+18.0,6468.0,4.0,4.0,37.0,1.0,1.0,>=200,existing paid,new car,<100,>=7,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,1534.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,radio/tv,<100,1<=X<4,female div/dep/mar,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,9572.0,4.0,3.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,bank,own,skilled,none,yes
+21.0,9572.0,4.0,4.0,24.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,7174.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,high qualif/self emp/mgmt,none,yes
+24.0,487.0,4.0,3.0,30.0,2.0,1.0,<0,existing paid,repairs,<100,1<=X<4,male single,none,real estate,none,own,skilled,yes,yes
+21.0,2445.0,4.0,4.0,32.0,1.0,1.0,<0,existing paid,business,<100,1<=X<4,male single,none,car,none,own,skilled,yes,yes
+24.0,4266.0,2.0,4.0,36.0,1.0,1.0,<0,delayed previously,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2631.0,2.0,3.0,29.0,2.0,1.0,0<=X<200,existing paid,radio/tv,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,14027.0,4.0,3.0,33.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,own,skilled,yes,yes
+24.0,2606.0,2.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,3263.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,2480.0,4.0,3.0,28.0,1.0,1.0,<0,existing paid,business,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,2.0,30.0,1.0,1.0,<0,delayed previously,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,1056.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,radio/tv,<100,1<=X<4,male single,none,car,none,rent,high qualif/self emp/mgmt,none,yes
+21.0,1368.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+27.0,7923.0,4.0,2.0,49.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,36.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
+23.0,2770.0,4.0,3.0,30.0,2.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,yes,yes
+24.0,8229.0,4.0,2.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+24.0,939.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,high qualif/self emp/mgmt,none,yes
+24.0,6560.0,4.0,2.0,27.0,1.0,1.0,>=200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,yes,yes
+24.0,3446.0,4.0,4.0,25.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2364.0,4.0,2.0,28.0,1.0,1.0,<0,existing paid,new car,no known savings,1<=X<4,male single,none,real estate,bank,for free,skilled,none,yes
+31.0,2606.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,delayed previously,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1836.0,4.0,2.0,27.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,for free,skilled,none,yes
+24.0,619.0,4.0,2.0,25.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1659.0,4.0,4.0,29.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,2764.0,3.0,4.0,25.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+34.0,1407.0,4.0,3.0,32.0,1.0,1.0,no checking,delayed previously,furniture/equipment,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,4455.0,4.0,2.0,24.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+16.0,2907.0,4.0,4.0,30.0,1.0,1.0,<0,existing paid,new car,500<=X<1000,1<=X<4,female div/dep/mar,none,car,none,for free,skilled,none,yes
+22.0,7296.0,4.0,3.0,37.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+23.0,1207.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,<1,male single,none,car,none,rent,skilled,none,yes
+29.0,3446.0,2.0,2.0,28.0,1.0,2.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,yes,yes
+24.0,6339.0,2.0,2.0,37.0,1.0,1.0,no checking,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,stores,own,skilled,none,yes
+27.0,884.0,3.0,3.0,30.0,1.0,2.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,6174.0,4.0,3.0,30.0,2.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,2.0,2.0,40.0,2.0,2.0,0<=X<200,existing paid,new car,<100,4<=X<7,male single,none,real estate,none,own,skilled,none,yes
+23.0,884.0,4.0,2.0,28.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,2.0,27.0,1.0,2.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,8455.0,4.0,3.0,24.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,>=7,male single,none,car,none,rent,skilled,yes,yes
+24.0,2927.0,4.0,2.0,30.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,1459.0,3.0,2.0,33.0,1.0,1.0,<0,existing paid,radio/tv,<100,<1,male single,none,real estate,none,own,skilled,none,yes
+24.0,4371.0,3.0,2.0,30.0,2.0,1.0,0<=X<200,delayed previously,new car,<100,<1,male single,none,car,none,own,skilled,none,yes
+24.0,1442.0,4.0,4.0,30.0,1.0,1.0,<0,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,4819.0,2.0,3.0,25.0,1.0,1.0,<0,critical/other existing credit,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,4229.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,yes,yes
+24.0,2606.0,2.0,2.0,38.0,1.0,1.0,0<=X<200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+24.0,939.0,4.0,1.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,bank,own,skilled,none,yes
+27.0,7621.0,4.0,3.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,1371.0,4.0,2.0,33.0,1.0,1.0,no checking,existing paid,new car,<100,1<=X<4,male single,none,car,bank,own,skilled,none,yes
+20.0,7960.0,4.0,2.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,<1,female div/dep/mar,none,life insurance,none,own,skilled,none,yes
+27.0,3812.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,new car,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+24.0,4383.0,4.0,2.0,31.0,1.0,2.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,28.0,1.0,1.0,<0,critical/other existing credit,radio/tv,<100,>=7,male single,none,no known property,none,own,skilled,none,yes
+24.0,2606.0,4.0,4.0,30.0,1.0,2.0,0<=X<200,existing paid,new car,<100,<1,male single,none,car,none,own,skilled,yes,yes
+18.0,7914.0,4.0,3.0,30.0,1.0,1.0,<0,existing paid,radio/tv,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,6200.0,2.0,3.0,29.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,2.0,2.0,35.0,1.0,1.0,<0,all paid,new car,<100,1<=X<4,male single,none,real estate,bank,rent,skilled,none,yes
+24.0,4455.0,2.0,3.0,37.0,1.0,1.0,0<=X<200,existing paid,business,<100,4<=X<7,male single,none,car,none,own,skilled,none,yes
+24.0,1029.0,2.0,3.0,37.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,2.0,4.0,25.0,1.0,1.0,>=200,existing paid,furniture/equipment,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes
+24.0,2606.0,4.0,2.0,35.0,1.0,1.0,0<=X<200,critical/other existing credit,furniture/equipment,<100,1<=X<4,female div/dep/mar,none,car,none,own,skilled,none,yes
+24.0,1056.0,3.0,4.0,26.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,<1,male single,none,car,none,rent,skilled,none,yes
+24.0,2606.0,3.0,3.0,30.0,1.0,1.0,0<=X<200,critical/other existing credit,new car,<100,1<=X<4,male single,none,no known property,none,own,skilled,none,yes
+24.0,6761.0,2.0,4.0,38.0,1.0,1.0,<0,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,2860.0,4.0,3.0,36.0,1.0,1.0,<0,existing paid,furniture/equipment,<100,<1,female div/dep/mar,none,real estate,none,own,skilled,none,yes
+24.0,4736.0,4.0,4.0,30.0,1.0,1.0,0<=X<200,existing paid,new car,<100,>=7,male single,none,car,none,own,skilled,none,yes
+24.0,1442.0,4.0,3.0,34.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+27.0,2606.0,4.0,3.0,24.0,1.0,1.0,<0,critical/other existing credit,new car,<100,1<=X<4,male single,none,car,none,own,skilled,none,yes
+24.0,2606.0,4.0,3.0,28.0,1.0,1.0,no checking,existing paid,new car,<100,>=7,male single,none,real estate,none,own,skilled,none,yes
+24.0,4889.0,4.0,3.0,29.0,1.0,1.0,<0,existing paid,new car,no known savings,1<=X<4,male single,none,life insurance,none,own,skilled,none,yes
+24.0,8229.0,4.0,4.0,39.0,1.0,1.0,0<=X<200,existing paid,new car,<100,1<=X<4,male single,none,real estate,none,own,skilled,none,yes

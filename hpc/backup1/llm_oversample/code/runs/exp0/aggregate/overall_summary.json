@@ -1,0 +1,235 @@
+{
+  "n_datasets": 22,
+  "datasets": [
+    "adult",
+    "australian",
+    "balance",
+    "bank",
+    "blood",
+    "breast",
+    "car",
+    "cardio",
+    "cardio_noleak",
+    "churn",
+    "compas",
+    "credit_card",
+    "diabetes",
+    "german",
+    "iris",
+    "kc1",
+    "kc2",
+    "phoneme",
+    "qsar",
+    "sick",
+    "steel",
+    "waveform"
+  ],
+  "methods": [
+    "Original",
+    "Imbalanced",
+    "RandomOverSampler",
+    "SMOTE",
+    "ADASYN",
+    "SMOTE-NC",
+    "ImbLLM-random",
+    "ImbLLM-IAFP"
+  ],
+  "metrics": {
+    "f1": {
+      "mean_over_datasets": {
+        "Original": 0.7198641427309241,
+        "Imbalanced": 0.501528186757059,
+        "RandomOverSampler": 0.6309492172431589,
+        "SMOTE": 0.6594252052429513,
+        "ADASYN": 0.6254087221672601,
+        "SMOTE-NC": 0.5534764374352192,
+        "ImbLLM-random": 0.5612361251984318,
+        "ImbLLM-IAFP": 0.5858334050747517
+      },
+      "avg_rank": {
+        "Original": 1.5454545454545454,
+        "Imbalanced": 5.659090909090909,
+        "RandomOverSampler": 3.2045454545454546,
+        "SMOTE": 2.8461538461538463,
+        "ADASYN": 3.2083333333333335,
+        "SMOTE-NC": 3.625,
+        "ImbLLM-random": 4.681818181818182,
+        "ImbLLM-IAFP": 4.704545454545454
+      },
+      "iafp_vs_random": {
+        "wins": 8,
+        "ties": 1,
+        "losses": 13,
+        "mean_delta": 0.024597279876319898
+      }
+    },
+    "accuracy": {
+      "mean_over_datasets": {
+        "Original": 0.902202749961088,
+        "Imbalanced": 0.8769045547157077,
+        "RandomOverSampler": 0.8812554311039066,
+        "SMOTE": 0.8929732164344428,
+        "ADASYN": 0.8824264981549312,
+        "SMOTE-NC": 0.8712274102843369,
+        "ImbLLM-random": 0.8664379061511792,
+        "ImbLLM-IAFP": 0.8652882603166966
+      },
+      "avg_rank": {
+        "Original": 2.0,
+        "Imbalanced": 4.590909090909091,
+        "RandomOverSampler": 3.6136363636363638,
+        "SMOTE": 2.5384615384615383,
+        "ADASYN": 2.7916666666666665,
+        "SMOTE-NC": 3.0,
+        "ImbLLM-random": 5.068181818181818,
+        "ImbLLM-IAFP": 5.159090909090909
+      },
+      "iafp_vs_random": {
+        "wins": 7,
+        "ties": 4,
+        "losses": 11,
+        "mean_delta": -0.001149645834482576
+      }
+    },
+    "g_score": {
+      "mean_over_datasets": {
+        "Original": 0.7789377861302352,
+        "Imbalanced": 0.5647717577778627,
+        "RandomOverSampler": 0.6977776917730679,
+        "SMOTE": 0.7097225128941863,
+        "ADASYN": 0.680658675467808,
+        "SMOTE-NC": 0.6384238894554927,
+        "ImbLLM-random": 0.6550009061722311,
+        "ImbLLM-IAFP": 0.6768323132684708
+      },
+      "avg_rank": {
+        "Original": 1.5909090909090908,
+        "Imbalanced": 5.75,
+        "RandomOverSampler": 3.2045454545454546,
+        "SMOTE": 2.923076923076923,
+        "ADASYN": 3.2083333333333335,
+        "SMOTE-NC": 3.5,
+        "ImbLLM-random": 4.7272727272727275,
+        "ImbLLM-IAFP": 4.5227272727272725
+      },
+      "iafp_vs_random": {
+        "wins": 10,
+        "ties": 1,
+        "losses": 11,
+        "mean_delta": 0.02183140709623974
+      }
+    },
+    "roc_auc": {
+      "mean_over_datasets": {
+        "Original": 0.8984176550676334,
+        "Imbalanced": 0.8711822606193916,
+        "RandomOverSampler": 0.8667704519063606,
+        "SMOTE": 0.8712137381728131,
+        "ADASYN": 0.8601338460406458,
+        "SMOTE-NC": 0.857803425578876,
+        "ImbLLM-random": 0.8719242113273471,
+        "ImbLLM-IAFP": 0.8658727691593499
+      },
+      "avg_rank": {
+        "Original": 1.5227272727272727,
+        "Imbalanced": 3.7954545454545454,
+        "RandomOverSampler": 4.5227272727272725,
+        "SMOTE": 3.423076923076923,
+        "ADASYN": 3.5833333333333335,
+        "SMOTE-NC": 4.0,
+        "ImbLLM-random": 4.340909090909091,
+        "ImbLLM-IAFP": 4.931818181818182
+      },
+      "iafp_vs_random": {
+        "wins": 6,
+        "ties": 2,
+        "losses": 14,
+        "mean_delta": -0.0060514421679974265
+      }
+    },
+    "pr_auc": {
+      "mean_over_datasets": {
+        "Original": 0.7763319947023948,
+        "Imbalanced": 0.7358163576938668,
+        "RandomOverSampler": 0.7292877404042408,
+        "SMOTE": 0.7480106433506207,
+        "ADASYN": 0.7255469450145506,
+        "SMOTE-NC": 0.6832443934177412,
+        "ImbLLM-random": 0.7266840121575663,
+        "ImbLLM-IAFP": 0.7228512302369534
+      },
+      "avg_rank": {
+        "Original": 1.6136363636363635,
+        "Imbalanced": 3.5681818181818183,
+        "RandomOverSampler": 4.204545454545454,
+        "SMOTE": 3.576923076923077,
+        "ADASYN": 3.75,
+        "SMOTE-NC": 4.125,
+        "ImbLLM-random": 4.613636363636363,
+        "ImbLLM-IAFP": 4.886363636363637
+      },
+      "iafp_vs_random": {
+        "wins": 7,
+        "ties": 2,
+        "losses": 13,
+        "mean_delta": -0.0038327819206129504
+      }
+    },
+    "precision": {
+      "mean_over_datasets": {
+        "Original": 0.7700275873647459,
+        "Imbalanced": 0.8217720136078462,
+        "RandomOverSampler": 0.7539859311767994,
+        "SMOTE": 0.777691775762234,
+        "ADASYN": 0.7516255584861905,
+        "SMOTE-NC": 0.7611366603942894,
+        "ImbLLM-random": 0.7543955451268456,
+        "ImbLLM-IAFP": 0.749726805632982
+      },
+      "avg_rank": {
+        "Original": 4.363636363636363,
+        "Imbalanced": 2.25,
+        "RandomOverSampler": 3.840909090909091,
+        "SMOTE": 3.5384615384615383,
+        "ADASYN": 4.291666666666667,
+        "SMOTE-NC": 3.125,
+        "ImbLLM-random": 4.090909090909091,
+        "ImbLLM-IAFP": 4.431818181818182
+      },
+      "iafp_vs_random": {
+        "wins": 6,
+        "ties": 4,
+        "losses": 12,
+        "mean_delta": -0.004668739493863738
+      }
+    },
+    "recall": {
+      "mean_over_datasets": {
+        "Original": 0.6884437034842311,
+        "Imbalanced": 0.4149623636396811,
+        "RandomOverSampler": 0.575205360082455,
+        "SMOTE": 0.6058967661505771,
+        "ADASYN": 0.569570637233091,
+        "SMOTE-NC": 0.4588599583784355,
+        "ImbLLM-random": 0.5050638805075441,
+        "ImbLLM-IAFP": 0.5448493614506182
+      },
+      "avg_rank": {
+        "Original": 1.5909090909090908,
+        "Imbalanced": 5.818181818181818,
+        "RandomOverSampler": 3.3863636363636362,
+        "SMOTE": 3.0384615384615383,
+        "ADASYN": 3.0833333333333335,
+        "SMOTE-NC": 3.375,
+        "ImbLLM-random": 4.681818181818182,
+        "ImbLLM-IAFP": 4.363636363636363
+      },
+      "iafp_vs_random": {
+        "wins": 10,
+        "ties": 4,
+        "losses": 8,
+        "mean_delta": 0.03978548094307406
+      }
+    }
+  }
+}

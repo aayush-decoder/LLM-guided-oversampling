@@ -1,0 +1,19 @@
+{
+  "dataset": "steel",
+  "rows": 1941,
+  "n_numerical": 33,
+  "n_categorical": 0,
+  "target": "Class",
+  "class_counts": {
+    "1": 1268,
+    "2": 673
+  },
+  "n_classes": 2,
+  "minority_label": "2",
+  "minority_count": 673,
+  "majority_count": 1268,
+  "minority_fraction": 0.3467284904688305,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

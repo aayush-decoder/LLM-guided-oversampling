@@ -1,6 +1,6 @@
 {
   "run": "exp1",
-  "started": "2026-10-13 03:08:58",
+  "started": "2026-10-13 13:10:37",
   "datasets": {
     "iris": {
       "seeds": {
@@ -12,7 +12,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 3.2
+              "seconds": 8.6
             },
             "Original": {
               "state": "done",
@@ -41,15 +41,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 67.7
+              "seconds": 81.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 10.8
+              "seconds": 55.4
             },
             "plots": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.6
             }
           },
           "state": "partial"
@@ -62,7 +62,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 3.7
+              "seconds": 4.1
             },
             "Original": {
               "state": "done",
@@ -91,15 +91,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 6.7
+              "seconds": 63.2
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 58.9
+              "seconds": 54.7
             },
             "plots": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.6
             }
           },
           "state": "partial"
@@ -112,11 +112,11 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 5.9
+              "seconds": 0.4
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "Imbalanced": {
               "state": "done",
@@ -141,15 +141,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 5.2
+              "seconds": 52.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 5.1
+              "seconds": 52.7
             },
             "plots": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.6
             }
           },
           "state": "partial"
@@ -174,7 +174,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -198,15 +198,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 229.1
+              "seconds": 186.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 20.0
+              "seconds": 64.6
             },
             "plots": {
               "state": "done",
-              "seconds": 1.9
+              "seconds": 1.4
             }
           },
           "state": "done"
@@ -223,7 +223,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
@@ -247,15 +247,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 22.0
+              "seconds": 58.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 22.8
+              "seconds": 56.4
             },
             "plots": {
               "state": "done",
-              "seconds": 1.9
+              "seconds": 1.5
             }
           },
           "state": "done"
@@ -296,15 +296,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 48.4
+              "seconds": 58.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 30.0
+              "seconds": 57.0
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.4
             }
           },
           "state": "done"
@@ -353,15 +353,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 276.9
+              "seconds": 201.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 28.8
+              "seconds": 63.8
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.4
             }
           },
           "state": "done"
@@ -374,11 +374,11 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 8.4
+              "seconds": 0.2
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -402,15 +402,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 29.1
+              "seconds": 63.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 25.0
+              "seconds": 59.0
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.3
             }
           },
           "state": "done"
@@ -451,15 +451,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 24.5
+              "seconds": 62.0
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 25.3
+              "seconds": 60.8
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.4
             }
           },
           "state": "done"
@@ -480,56 +480,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.2
-            },
-            "Original": {
-              "state": "done",
-              "seconds": 0.2
-            },
-            "Imbalanced": {
-              "state": "done",
-              "seconds": 0.2
-            },
-            "RandomOverSampler": {
-              "state": "done",
-              "seconds": 0.2
-            },
-            "SMOTE": {
-              "state": "done",
-              "seconds": 0.2
-            },
-            "ADASYN": {
-              "state": "done",
-              "seconds": 0.2
-            },
-            "SMOTE-NC": {
-              "state": "skipped",
-              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
-            },
-            "ImbLLM-random": {
-              "state": "done",
-              "seconds": 16.5
-            },
-            "ImbLLM-IAFP": {
-              "state": "done",
-              "seconds": 5.8
-            },
-            "plots": {
-              "state": "done",
-              "seconds": 2.2
-            }
-          },
-          "state": "done"
-        },
-        "43": {
-          "stages": {
-            "split": {
-              "state": "done",
-              "seconds": 0.0
-            },
-            "importance": {
-              "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "Original": {
               "state": "done",
@@ -557,20 +508,20 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 5.5
+              "seconds": 59.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 5.6
+              "seconds": 55.7
             },
             "plots": {
               "state": "done",
-              "seconds": 2.2
+              "seconds": 1.6
             }
           },
           "state": "done"
         },
-        "44": {
+        "43": {
           "stages": {
             "split": {
               "state": "done",
@@ -578,7 +529,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "Original": {
               "state": "done",
@@ -606,15 +557,64 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 5.7
+              "seconds": 50.6
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 5.5
+              "seconds": 50.7
             },
             "plots": {
               "state": "done",
-              "seconds": 2.2
+              "seconds": 1.7
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.1
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.2
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 50.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 50.6
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 1.6
             }
           },
           "state": "done"
@@ -663,15 +663,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 53.4
+              "seconds": 78.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 6.4
+              "seconds": 53.9
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.6
             }
           },
           "state": "done"
@@ -712,15 +712,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 21.2
+              "seconds": 61.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 6.4
+              "seconds": 55.9
             },
             "plots": {
               "state": "done",
-              "seconds": 1.9
+              "seconds": 1.6
             }
           },
           "state": "done"
@@ -737,7 +737,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -745,7 +745,7 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "SMOTE": {
               "state": "skipped",
@@ -761,15 +761,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 21.1
+              "seconds": 56.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 32.8
+              "seconds": 55.6
             },
             "plots": {
               "state": "done",
-              "seconds": 1.8
+              "seconds": 1.6
             }
           },
           "state": "done"
@@ -818,15 +818,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 16.6
+              "seconds": 63.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 9.4
+              "seconds": 56.4
             },
             "plots": {
               "state": "done",
-              "seconds": 2.2
+              "seconds": 1.7
             }
           },
           "state": "done"
@@ -843,7 +843,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -867,15 +867,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 53.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 5.7
+              "seconds": 58.3
             },
             "plots": {
               "state": "done",
-              "seconds": 2.1
+              "seconds": 1.6
             }
           },
           "state": "done"
@@ -892,7 +892,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -916,15 +916,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 5.9
+              "seconds": 52.0
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 5.7
+              "seconds": 52.8
             },
             "plots": {
               "state": "done",
-              "seconds": 2.2
+              "seconds": 1.7
             }
           },
           "state": "done"
@@ -961,7 +961,7 @@
             },
             "SMOTE": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "ADASYN": {
               "state": "done",
@@ -973,15 +973,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 63.2
+              "seconds": 73.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 22.9
+              "seconds": 54.4
             },
             "plots": {
               "state": "done",
-              "seconds": 2.1
+              "seconds": 1.7
             }
           },
           "state": "done"
@@ -998,7 +998,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
@@ -1006,7 +1006,7 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "SMOTE": {
               "state": "done",
@@ -1022,15 +1022,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 28.7
+              "seconds": 54.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 37.4
+              "seconds": 54.4
             },
             "plots": {
               "state": "done",
-              "seconds": 2.1
+              "seconds": 1.7
             }
           },
           "state": "done"
@@ -1059,11 +1059,11 @@
             },
             "SMOTE": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "ADASYN": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "SMOTE-NC": {
               "state": "skipped",
@@ -1071,15 +1071,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 26.2
+              "seconds": 54.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 23.2
+              "seconds": 53.9
             },
             "plots": {
               "state": "done",
-              "seconds": 2.2
+              "seconds": 1.8
             }
           },
           "state": "done"
@@ -1104,7 +1104,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -1128,15 +1128,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 213.1
+              "seconds": 122.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 26.0
+              "seconds": 66.2
             },
             "plots": {
               "state": "done",
-              "seconds": 3.0
+              "seconds": 2.3
             }
           },
           "state": "done"
@@ -1149,7 +1149,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Original": {
               "state": "done",
@@ -1157,7 +1157,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "RandomOverSampler": {
               "state": "done",
@@ -1177,15 +1177,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 62.0
+              "seconds": 76.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 88.6
+              "seconds": 67.6
             },
             "plots": {
               "state": "done",
-              "seconds": 3.2
+              "seconds": 2.4
             }
           },
           "state": "done"
@@ -1198,11 +1198,11 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Imbalanced": {
               "state": "done",
@@ -1210,7 +1210,7 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "SMOTE": {
               "state": "skipped",
@@ -1226,15 +1226,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 33.6
+              "seconds": 67.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 31.9
+              "seconds": 66.3
             },
             "plots": {
               "state": "done",
-              "seconds": 3.0
+              "seconds": 2.4
             }
           },
           "state": "done"
@@ -1255,7 +1255,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Original": {
               "state": "done",
@@ -1263,7 +1263,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "RandomOverSampler": {
               "state": "done",
@@ -1283,15 +1283,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 105.4
+              "seconds": 128.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 21.7
+              "seconds": 80.8
             },
             "plots": {
               "state": "done",
-              "seconds": 3.2
+              "seconds": 2.5
             }
           },
           "state": "done"
@@ -1332,15 +1332,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 18.8
+              "seconds": 76.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 17.8
+              "seconds": 81.3
             },
             "plots": {
               "state": "done",
-              "seconds": 3.2
+              "seconds": 2.5
             }
           },
           "state": "done"
@@ -1381,15 +1381,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 16.7
+              "seconds": 81.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 18.2
+              "seconds": 79.3
             },
             "plots": {
               "state": "done",
-              "seconds": 3.2
+              "seconds": 2.5
             }
           },
           "state": "done"
@@ -1439,15 +1439,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 17.0
+              "seconds": 69.6
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 7.9
+              "seconds": 61.0
             },
             "plots": {
               "state": "done",
-              "seconds": 5.3
+              "seconds": 4.0
             }
           },
           "state": "partial"
@@ -1464,7 +1464,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
@@ -1489,15 +1489,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 8.4
+              "seconds": 60.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 10.1
+              "seconds": 67.4
             },
             "plots": {
               "state": "done",
-              "seconds": 5.0
+              "seconds": 4.0
             }
           },
           "state": "partial"
@@ -1539,15 +1539,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 8.6
+              "seconds": 55.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 9.0
+              "seconds": 60.1
             },
             "plots": {
               "state": "done",
-              "seconds": 4.9
+              "seconds": 4.0
             }
           },
           "state": "partial"
@@ -1568,7 +1568,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 3.5
             },
             "Original": {
               "state": "done",
@@ -1596,15 +1596,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 102.9
+              "seconds": 178.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 109.6
+              "seconds": 163.0
             },
             "plots": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 4.2
             }
           },
           "state": "done"
@@ -1617,7 +1617,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 9.1
             },
             "Original": {
               "state": "done",
@@ -1625,7 +1625,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "RandomOverSampler": {
               "state": "done",
@@ -1645,15 +1645,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 28.6
+              "seconds": 78.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 26.3
+              "seconds": 75.9
             },
             "plots": {
               "state": "done",
-              "seconds": 5.5
+              "seconds": 4.2
             }
           },
           "state": "done"
@@ -1694,15 +1694,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 29.7
+              "seconds": 78.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 30.4
+              "seconds": 80.5
             },
             "plots": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 4.2
             }
           },
           "state": "done"
@@ -1751,69 +1751,20 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 93.8
+              "seconds": 132.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 33.3
+              "seconds": 78.4
             },
             "plots": {
               "state": "done",
-              "seconds": 6.0
+              "seconds": 4.9
             }
           },
           "state": "done"
         },
         "43": {
-          "stages": {
-            "split": {
-              "state": "done",
-              "seconds": 0.0
-            },
-            "importance": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "Original": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "Imbalanced": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "RandomOverSampler": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "SMOTE": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "ADASYN": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "SMOTE-NC": {
-              "state": "skipped",
-              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
-            },
-            "ImbLLM-random": {
-              "state": "done",
-              "seconds": 29.5
-            },
-            "ImbLLM-IAFP": {
-              "state": "done",
-              "seconds": 30.0
-            },
-            "plots": {
-              "state": "done",
-              "seconds": 6.2
-            }
-          },
-          "state": "done"
-        },
-        "44": {
           "stages": {
             "split": {
               "state": "done",
@@ -1849,15 +1800,64 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 27.9
+              "seconds": 73.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 28.9
+              "seconds": 75.6
             },
             "plots": {
               "state": "done",
-              "seconds": 6.0
+              "seconds": 5.0
+            }
+          },
+          "state": "done"
+        },
+        "44": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "ADASYN": {
+              "state": "done",
+              "seconds": 0.3
+            },
+            "SMOTE-NC": {
+              "state": "skipped",
+              "reason": "dataset is numeric-only (SMOTE-NC is for mixed data)"
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 70.6
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 69.8
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 4.8
             }
           },
           "state": "done"
@@ -1906,15 +1906,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 95.6
+              "seconds": 137.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 30.2
+              "seconds": 79.2
             },
             "plots": {
               "state": "done",
-              "seconds": 5.2
+              "seconds": 4.8
             }
           },
           "state": "done"
@@ -1939,11 +1939,11 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "SMOTE": {
               "state": "done",
-              "seconds": 0.1
+              "seconds": 0.2
             },
             "ADASYN": {
               "state": "done",
@@ -1955,15 +1955,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 31.5
+              "seconds": 114.7
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 29.8
+              "seconds": 73.6
             },
             "plots": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 4.9
             }
           },
           "state": "done"
@@ -1992,7 +1992,7 @@
             },
             "SMOTE": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "ADASYN": {
               "state": "done",
@@ -2004,15 +2004,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 32.9
+              "seconds": 75.6
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 70.7
+              "seconds": 74.0
             },
             "plots": {
               "state": "done",
-              "seconds": 5.3
+              "seconds": 4.9
             }
           },
           "state": "done"
@@ -2061,15 +2061,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 29.5
+              "seconds": 73.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 31.5
+              "seconds": 78.9
             },
             "plots": {
               "state": "done",
-              "seconds": 5.2
+              "seconds": 4.8
             }
           },
           "state": "done"
@@ -2110,15 +2110,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 28.2
+              "seconds": 73.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 22.2
+              "seconds": 79.6
             },
             "plots": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 4.9
             }
           },
           "state": "done"
@@ -2143,11 +2143,11 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "SMOTE": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.1
             },
             "ADASYN": {
               "state": "done",
@@ -2159,15 +2159,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 21.2
+              "seconds": 79.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 22.1
+              "seconds": 79.5
             },
             "plots": {
               "state": "done",
-              "seconds": 5.2
+              "seconds": 4.9
             }
           },
           "state": "done"
@@ -2216,15 +2216,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 106.5
+              "seconds": 184.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 36.5
+              "seconds": 111.7
             },
             "plots": {
               "state": "done",
-              "seconds": 5.5
+              "seconds": 9.4
             }
           },
           "state": "done"
@@ -2237,11 +2237,11 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 5.3
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
@@ -2261,19 +2261,19 @@
             },
             "SMOTE-NC": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.8
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 40.0
+              "seconds": 110.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 41.3
+              "seconds": 111.8
             },
             "plots": {
               "state": "done",
-              "seconds": 5.4
+              "seconds": 5.5
             }
           },
           "state": "done"
@@ -2310,15 +2310,15 @@
             },
             "SMOTE-NC": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.8
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 40.9
+              "seconds": 108.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 42.6
+              "seconds": 108.2
             },
             "plots": {
               "state": "done",
@@ -2347,11 +2347,11 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "RandomOverSampler": {
               "state": "done",
@@ -2371,15 +2371,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 17.7
+              "seconds": 90.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 15.7
+              "seconds": 70.0
             },
             "plots": {
               "state": "done",
-              "seconds": 5.6
+              "seconds": 5.7
             }
           },
           "state": "done"
@@ -2420,11 +2420,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 18.9
+              "seconds": 69.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 18.7
+              "seconds": 74.6
             },
             "plots": {
               "state": "done",
@@ -2449,7 +2449,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 0.3
             },
             "RandomOverSampler": {
               "state": "done",
@@ -2469,11 +2469,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 19.1
+              "seconds": 69.6
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 19.5
+              "seconds": 69.7
             },
             "plots": {
               "state": "done",
@@ -2498,7 +2498,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.2
             },
             "Original": {
               "state": "done",
@@ -2526,15 +2526,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 47.7
+              "seconds": 102.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 21.8
+              "seconds": 76.0
             },
             "plots": {
               "state": "done",
-              "seconds": 5.9
+              "seconds": 5.8
             }
           },
           "state": "done"
@@ -2575,15 +2575,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 21.2
+              "seconds": 76.2
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 21.9
+              "seconds": 75.4
             },
             "plots": {
               "state": "done",
-              "seconds": 5.8
+              "seconds": 5.9
             }
           },
           "state": "done"
@@ -2624,15 +2624,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 93.7
+              "seconds": 77.2
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 21.8
+              "seconds": 80.8
             },
             "plots": {
               "state": "done",
-              "seconds": 5.8
+              "seconds": 5.7
             }
           },
           "state": "done"
@@ -2657,11 +2657,60 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.4
             },
             "Imbalanced": {
               "state": "done",
               "seconds": 0.3
+            },
+            "RandomOverSampler": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "SMOTE": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "ADASYN": {
+              "state": "skipped",
+              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
+            },
+            "SMOTE-NC": {
+              "state": "done",
+              "seconds": 0.8
+            },
+            "ImbLLM-random": {
+              "state": "done",
+              "seconds": 169.2
+            },
+            "ImbLLM-IAFP": {
+              "state": "done",
+              "seconds": 122.3
+            },
+            "plots": {
+              "state": "done",
+              "seconds": 9.3
+            }
+          },
+          "state": "done"
+        },
+        "43": {
+          "stages": {
+            "split": {
+              "state": "done",
+              "seconds": 0.0
+            },
+            "importance": {
+              "state": "done",
+              "seconds": 5.6
+            },
+            "Original": {
+              "state": "done",
+              "seconds": 0.4
+            },
+            "Imbalanced": {
+              "state": "done",
+              "seconds": 0.4
             },
             "RandomOverSampler": {
               "state": "done",
@@ -2681,64 +2730,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 127.1
+              "seconds": 121.2
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 60.9
+              "seconds": 120.8
             },
             "plots": {
               "state": "done",
-              "seconds": 6.7
-            }
-          },
-          "state": "done"
-        },
-        "43": {
-          "stages": {
-            "split": {
-              "state": "done",
-              "seconds": 0.0
-            },
-            "importance": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "Original": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "Imbalanced": {
-              "state": "done",
-              "seconds": 0.3
-            },
-            "RandomOverSampler": {
-              "state": "done",
-              "seconds": 0.4
-            },
-            "SMOTE": {
-              "state": "skipped",
-              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
-            },
-            "ADASYN": {
-              "state": "skipped",
-              "reason": "dataset has categorical features (SMOTE/ADASYN need numeric-only)"
-            },
-            "SMOTE-NC": {
-              "state": "done",
-              "seconds": 0.6
-            },
-            "ImbLLM-random": {
-              "state": "done",
-              "seconds": 62.0
-            },
-            "ImbLLM-IAFP": {
-              "state": "done",
-              "seconds": 58.9
-            },
-            "plots": {
-              "state": "done",
-              "seconds": 6.9
+              "seconds": 6.4
             }
           },
           "state": "done"
@@ -2755,7 +2755,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.4
+              "seconds": 0.3
             },
             "Imbalanced": {
               "state": "done",
@@ -2779,15 +2779,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 63.4
+              "seconds": 121.9
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 60.6
+              "seconds": 125.7
             },
             "plots": {
               "state": "done",
-              "seconds": 6.5
+              "seconds": 6.7
             }
           },
           "state": "done"
@@ -2808,7 +2808,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.5
+              "seconds": 0.4
             },
             "Original": {
               "state": "done",
@@ -2836,11 +2836,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 201.4
+              "seconds": 301.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 86.7
+              "seconds": 161.5
             },
             "plots": {
               "state": "done",
@@ -2857,7 +2857,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 7.7
+              "seconds": 5.6
             },
             "Original": {
               "state": "done",
@@ -2885,15 +2885,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 87.9
+              "seconds": 161.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 87.6
+              "seconds": 159.8
             },
             "plots": {
               "state": "done",
-              "seconds": 8.9
+              "seconds": 9.0
             }
           },
           "state": "done"
@@ -2906,7 +2906,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 3.4
+              "seconds": 5.7
             },
             "Original": {
               "state": "done",
@@ -2918,7 +2918,7 @@
             },
             "RandomOverSampler": {
               "state": "done",
-              "seconds": 0.6
+              "seconds": 0.5
             },
             "SMOTE": {
               "state": "done",
@@ -2934,11 +2934,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 87.6
+              "seconds": 163.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 89.0
+              "seconds": 160.6
             },
             "plots": {
               "state": "done",
@@ -2963,7 +2963,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 4.2
             },
             "Original": {
               "state": "done",
@@ -2991,15 +2991,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 26.2
+              "seconds": 83.5
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 17.1
+              "seconds": 78.2
             },
             "plots": {
               "state": "done",
-              "seconds": 6.9
+              "seconds": 6.8
             }
           },
           "state": "done"
@@ -3012,7 +3012,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.2
+              "seconds": 7.8
             },
             "Original": {
               "state": "done",
@@ -3040,15 +3040,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 16.1
+              "seconds": 72.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 16.6
+              "seconds": 72.4
             },
             "plots": {
               "state": "done",
-              "seconds": 7.0
+              "seconds": 6.7
             }
           },
           "state": "done"
@@ -3065,7 +3065,7 @@
             },
             "Original": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.4
             },
             "Imbalanced": {
               "state": "done",
@@ -3089,11 +3089,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 16.5
+              "seconds": 72.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 15.3
+              "seconds": 71.7
             },
             "plots": {
               "state": "done",
@@ -3118,7 +3118,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 3.6
             },
             "Original": {
               "state": "done",
@@ -3126,7 +3126,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.4
+              "seconds": 0.3
             },
             "RandomOverSampler": {
               "state": "done",
@@ -3142,19 +3142,19 @@
             },
             "SMOTE-NC": {
               "state": "done",
-              "seconds": 0.7
+              "seconds": 0.9
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 131.9
+              "seconds": 212.4
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 96.2
+              "seconds": 206.3
             },
             "plots": {
               "state": "done",
-              "seconds": 8.2
+              "seconds": 8.7
             }
           },
           "state": "done"
@@ -3163,11 +3163,11 @@
           "stages": {
             "split": {
               "state": "done",
-              "seconds": 0.1
+              "seconds": 0.0
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 8.9
             },
             "Original": {
               "state": "done",
@@ -3175,7 +3175,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.4
+              "seconds": 0.3
             },
             "RandomOverSampler": {
               "state": "done",
@@ -3195,15 +3195,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 102.7
+              "seconds": 201.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 116.3
+              "seconds": 195.4
             },
             "plots": {
               "state": "done",
-              "seconds": 7.7
+              "seconds": 7.9
             }
           },
           "state": "done"
@@ -3216,7 +3216,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 5.2
             },
             "Original": {
               "state": "done",
@@ -3244,15 +3244,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 117.9
+              "seconds": 197.0
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 116.9
+              "seconds": 200.0
             },
             "plots": {
               "state": "done",
-              "seconds": 7.8
+              "seconds": 8.1
             }
           },
           "state": "done"
@@ -3273,7 +3273,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 4.7
             },
             "Original": {
               "state": "done",
@@ -3281,7 +3281,7 @@
             },
             "Imbalanced": {
               "state": "done",
-              "seconds": 0.3
+              "seconds": 0.4
             },
             "RandomOverSampler": {
               "state": "done",
@@ -3301,15 +3301,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 151.5
+              "seconds": 293.1
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 115.9
+              "seconds": 247.7
             },
             "plots": {
               "state": "done",
-              "seconds": 8.7
+              "seconds": 8.6
             }
           },
           "state": "done"
@@ -3322,7 +3322,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.4
+              "seconds": 8.6
             },
             "Original": {
               "state": "done",
@@ -3350,15 +3350,15 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 104.0
+              "seconds": 206.8
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 84.4
+              "seconds": 205.4
             },
             "plots": {
               "state": "done",
-              "seconds": 8.6
+              "seconds": 8.7
             }
           },
           "state": "done"
@@ -3371,7 +3371,7 @@
             },
             "importance": {
               "state": "done",
-              "seconds": 0.4
+              "seconds": 5.1
             },
             "Original": {
               "state": "done",
@@ -3399,11 +3399,11 @@
             },
             "ImbLLM-random": {
               "state": "done",
-              "seconds": 83.8
+              "seconds": 213.3
             },
             "ImbLLM-IAFP": {
               "state": "done",
-              "seconds": 84.5
+              "seconds": 206.3
             },
             "plots": {
               "state": "done",
@@ -3461,5 +3461,5 @@
       "state": "skipped"
     }
   },
-  "updated": "2026-10-13 05:02:17"
+  "updated": "2026-10-13 16:54:52"
 }

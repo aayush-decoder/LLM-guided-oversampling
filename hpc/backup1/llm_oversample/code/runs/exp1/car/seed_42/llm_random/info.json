@@ -1,14 +1,14 @@
 {
   "micro_batch": 32,
   "grad_accum": 1,
-  "epochs": 5,
-  "train_seconds": 3.8,
-  "total_steps": 55,
+  "epochs": 20,
+  "train_seconds": 13.1,
+  "total_steps": 220,
   "max_len": 45,
-  "generated_total": 1453,
+  "generated_total": 732,
   "valid_parse_rate": 1.0,
   "rounds": 1,
-  "rows_returned": 1320,
+  "rows_returned": 665,
   "gen_batch_size_final": 128,
-  "gen_seconds": 8.9
+  "gen_seconds": 8.4
 }

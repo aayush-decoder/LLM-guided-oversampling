@@ -1,96 +1,246 @@
-2026-10-13 03:29:49 | INFO    | ====================================================================================================
-2026-10-13 03:29:49 | INFO    | [6/22] blood seed 44 (3/3) | START
-2026-10-13 03:29:49 | INFO    | blood | seed 44 | stage split              | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:49 | INFO    | [6/22] blood seed 44 (3/3) | split: train=598 test=150 | full-train minority=142 -> retained=28 (held-out ref=114) | reduced imbalance 16.3:1 | test minority=36 | test_fingerprint=ff13ea02a20d
-2026-10-13 03:29:49 | INFO    | blood | seed 44 | stage split              | DONE in 0h00m00s
-2026-10-13 03:29:49 | INFO    | blood | seed 44 | stage importance         | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:50 | INFO    | [6/22] blood seed 44 (3/3) | top features: V4=0.1155, V1=0.1105, V3=0.0033, V2=0.0000
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage importance         | DONE in 0h00m00s
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage Original           | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | Original           | train=598 (min 142 / maj 456) | F1=0.3333 Acc=0.7600 G=0.4799 AUC=0.7052 PR-AUC=0.4946
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage Original           | DONE in 0h00m00s
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage Imbalanced         | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | Imbalanced         | train=484 (min 28 / maj 456) | F1=0.1500 Acc=0.7733 G=0.2874 AUC=0.5804 PR-AUC=0.3679
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage RandomOverSampler  | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | RandomOverSampler  | train=912 (min 456 / maj 456) | F1=0.2264 Acc=0.7267 G=0.3881 AUC=0.5621 PR-AUC=0.3604
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage SMOTE              | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | SMOTE              | train=912 (min 456 / maj 456) | F1=0.2128 Acc=0.7533 G=0.3627 AUC=0.5478 PR-AUC=0.3204
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage SMOTE              | DONE in 0h00m00s
-2026-10-13 03:29:50 | INFO    | blood | seed 44 | stage ADASYN             | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:51 | INFO    | blood | seed 44 | ADASYN             | train=902 (min 446 / maj 456) | F1=0.2041 Acc=0.7400 G=0.3594 AUC=0.5395 PR-AUC=0.2970
-2026-10-13 03:29:51 | INFO    | blood | seed 44 | stage ADASYN             | DONE in 0h00m00s
-2026-10-13 03:29:51 | INFO    | [6/22] blood seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
-2026-10-13 03:29:51 | INFO    | blood | seed 44 | stage ImbLLM-random      | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:51 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | fine-tune set = 28 retained minority + 114 interpolated rows | synthetic to generate = 428
-2026-10-13 03:29:53 | INFO    | [blood/s44/ImbLLM-random] fine-tuning rows=142 | tokens/row: mean=26 max(probe)=26 -> max_len=37 | device=cuda
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 1/5 | step 1/25 | loss=3.5528
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 1/5 | step 2/25 | loss=3.4835
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 1/5 | step 3/25 | loss=2.9829
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 1/5 | step 4/25 | loss=2.5601
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.9701 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 2/5 | step 6/25 | loss=2.0143
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 2/5 | step 7/25 | loss=1.8600
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 2/5 | step 8/25 | loss=1.7134
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 2/5 | step 9/25 | loss=1.6047
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.7501 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 3/5 | step 11/25 | loss=1.4919
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 3/5 | step 12/25 | loss=1.3731
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 3/5 | step 13/25 | loss=1.3867
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 3/5 | step 14/25 | loss=1.3305
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4082 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 4/5 | step 16/25 | loss=1.3348
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 4/5 | step 17/25 | loss=1.3205
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 4/5 | step 18/25 | loss=1.2887
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 4/5 | step 19/25 | loss=1.2828
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.2824 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 5/5 | step 21/25 | loss=1.2547
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 5/5 | step 22/25 | loss=1.2404
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 5/5 | step 23/25 | loss=1.2289
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] epoch 5/5 | step 24/25 | loss=1.2429
-2026-10-13 03:29:54 | INFO    | [blood/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2445 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:29:56 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | generating 428 rows (condition_yx, temperature 0.70)
-2026-10-13 03:29:56 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 471, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 428, 'gen_batch_size_final': 128, 'gen_seconds': 0.6}
-2026-10-13 03:29:56 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.4561, 'mean_dist_heldout_real_to_nearest_synth': 0.6029, 'coverage_k2': 0.3333, 'mean_dist_synth_to_train_minority(DCR)': 0.9172, 'frac_synth_exact_copy_of_train_minority': 0.007}
-2026-10-13 03:29:57 | INFO    | blood | seed 44 | ImbLLM-random      | train=912 (min 456 / maj 456) | F1=0.1860 Acc=0.7667 G=0.3289 AUC=0.6240 PR-AUC=0.3705
-2026-10-13 03:29:57 | INFO    | blood | seed 44 | stage ImbLLM-random      | DONE in 0h00m05s
-2026-10-13 03:29:57 | INFO    | blood | seed 44 | stage ImbLLM-IAFP        | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:29:57 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 28 retained minority + 114 interpolated rows | synthetic to generate = 428
-2026-10-13 03:29:59 | INFO    | [blood/s44/ImbLLM-IAFP] fine-tuning rows=142 | tokens/row: mean=26 max(probe)=26 -> max_len=37 | device=cuda
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/5 | step 1/25 | loss=3.5555
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/5 | step 2/25 | loss=3.4969
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/5 | step 3/25 | loss=2.9761
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/5 | step 4/25 | loss=2.5481
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.9672 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/5 | step 6/25 | loss=1.9860
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/5 | step 7/25 | loss=1.8005
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/5 | step 8/25 | loss=1.6385
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/5 | step 9/25 | loss=1.5210
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.6874 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/5 | step 11/25 | loss=1.3936
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/5 | step 12/25 | loss=1.3471
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/5 | step 13/25 | loss=1.2577
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/5 | step 14/25 | loss=1.2849
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3207 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/5 | step 16/25 | loss=1.2572
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/5 | step 17/25 | loss=1.2170
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/5 | step 18/25 | loss=1.1742
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/5 | step 19/25 | loss=1.1163
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.1880 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/5 | step 21/25 | loss=1.1585
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/5 | step 22/25 | loss=1.1052
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/5 | step 23/25 | loss=1.1195
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/5 | step 24/25 | loss=1.1369
-2026-10-13 03:30:00 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.1396 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:30:02 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | generating 428 rows (condition_yx, temperature 0.70)
-2026-10-13 03:30:02 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 471, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 428, 'gen_batch_size_final': 128, 'gen_seconds': 0.4}
-2026-10-13 03:30:02 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.5965, 'mean_dist_heldout_real_to_nearest_synth': 0.733, 'coverage_k2': 0.2632, 'mean_dist_synth_to_train_minority(DCR)': 1.1207, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:30:02 | INFO    | blood | seed 44 | ImbLLM-IAFP        | train=912 (min 456 / maj 456) | F1=0.1500 Acc=0.7733 G=0.2874 AUC=0.6118 PR-AUC=0.4053
-2026-10-13 03:30:02 | INFO    | blood | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m05s
-2026-10-13 03:30:02 | INFO    | blood | seed 44 | stage plots              | RUNNING [6/22] blood seed 44 (3/3)
-2026-10-13 03:30:04 | INFO    | [6/22] blood seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 03:30:05 | INFO    | blood | seed 44 | stage plots              | DONE in 0h00m02s
-2026-10-13 03:30:05 | INFO    | [6/22] blood seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 13:49:39 | INFO    | ====================================================================================================
+2026-10-13 13:49:39 | INFO    | [6/22] blood seed 44 (3/3) | START
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage split              | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:39 | INFO    | [6/22] blood seed 44 (3/3) | split: train=598 test=150 | full-train minority=142 -> retained=28 (held-out ref=114) | reduced imbalance 16.3:1 | test minority=36 | test_fingerprint=ff13ea02a20d
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage importance         | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:39 | INFO    | [6/22] blood seed 44 (3/3) | top features: V4=0.1155, V1=0.1105, V3=0.0033, V2=0.0000
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage Original           | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | Original           | train=598 (min 142 / maj 456) | F1=0.3333 Acc=0.7600 G=0.4799 AUC=0.7052 PR-AUC=0.4946
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage Imbalanced         | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | Imbalanced         | train=484 (min 28 / maj 456) | F1=0.1500 Acc=0.7733 G=0.2874 AUC=0.5804 PR-AUC=0.3679
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 13:49:39 | INFO    | blood | seed 44 | stage RandomOverSampler  | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | RandomOverSampler  | train=912 (min 456 / maj 456) | F1=0.2264 Acc=0.7267 G=0.3881 AUC=0.5621 PR-AUC=0.3604
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage SMOTE              | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | SMOTE              | train=912 (min 456 / maj 456) | F1=0.2128 Acc=0.7533 G=0.3627 AUC=0.5478 PR-AUC=0.3204
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage ADASYN             | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | ADASYN             | train=902 (min 446 / maj 456) | F1=0.2041 Acc=0.7400 G=0.3594 AUC=0.5395 PR-AUC=0.2970
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 13:49:40 | INFO    | [6/22] blood seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 13:49:40 | INFO    | blood | seed 44 | stage ImbLLM-random      | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:49:40 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | fine-tune set = 28 retained minority + 114 interpolated rows | synthetic to generate = 228 (CAPPED from 428; classes will not be perfectly balanced)
+2026-10-13 13:50:26 | INFO    | [blood/s44/ImbLLM-random] fine-tuning rows=142 | tokens/row: mean=26 max(probe)=26 -> max_len=37 | device=cuda
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 1/20 | step 1/100 | loss=3.5528
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 1/20 | step 2/100 | loss=3.4835
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 1/20 | step 3/100 | loss=3.4173
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 1/20 | step 4/100 | loss=3.1602
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=3.2981 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 2/20 | step 6/100 | loss=2.5221
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 2/20 | step 7/100 | loss=2.2024
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 2/20 | step 8/100 | loss=1.9656
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 2/20 | step 9/100 | loss=1.7941
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=2.0305 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 3/20 | step 11/100 | loss=1.5801
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 3/20 | step 12/100 | loss=1.4247
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 3/20 | step 13/100 | loss=1.4065
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 3/20 | step 14/100 | loss=1.3396
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.4389 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 4/20 | step 16/100 | loss=1.3193
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 4/20 | step 17/100 | loss=1.2986
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 4/20 | step 18/100 | loss=1.2559
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 4/20 | step 19/100 | loss=1.2194
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.2479 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 5/20 | step 21/100 | loss=1.2035
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 5/20 | step 22/100 | loss=1.1612
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 5/20 | step 23/100 | loss=1.1533
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 5/20 | step 24/100 | loss=1.1461
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.1595 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 6/20 | step 26/100 | loss=1.1080
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 6/20 | step 27/100 | loss=1.1064
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 6/20 | step 28/100 | loss=1.1114
+2026-10-13 13:50:27 | INFO    | [blood/s44/ImbLLM-random] epoch 6/20 | step 29/100 | loss=1.0239
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.0900 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 7/20 | step 31/100 | loss=1.0800
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 7/20 | step 32/100 | loss=1.0904
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 7/20 | step 33/100 | loss=1.0561
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 7/20 | step 34/100 | loss=1.0249
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.0661 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 8/20 | step 36/100 | loss=1.0408
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 8/20 | step 37/100 | loss=1.0204
+2026-10-13 13:50:28 | INFO    | [blood/s44/ImbLLM-random] epoch 8/20 | step 38/100 | loss=1.0589
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 8/20 | step 39/100 | loss=1.0333
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.0224 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 9/20 | step 41/100 | loss=0.9866
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 9/20 | step 42/100 | loss=1.0490
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 9/20 | step 43/100 | loss=1.0232
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 9/20 | step 44/100 | loss=1.0036
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.0127 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 10/20 | step 46/100 | loss=0.9588
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 10/20 | step 47/100 | loss=0.9702
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 10/20 | step 48/100 | loss=0.9835
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 10/20 | step 49/100 | loss=0.9558
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=0.9727 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 11/20 | step 51/100 | loss=1.0057
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 11/20 | step 52/100 | loss=0.9308
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 11/20 | step 53/100 | loss=0.9144
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 11/20 | step 54/100 | loss=0.9578
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=0.9518 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 12/20 | step 56/100 | loss=0.9389
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 12/20 | step 57/100 | loss=0.9169
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 12/20 | step 58/100 | loss=0.9155
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 12/20 | step 59/100 | loss=0.9489
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=0.9192 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 13/20 | step 61/100 | loss=0.8970
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 13/20 | step 62/100 | loss=0.9006
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 13/20 | step 63/100 | loss=0.9162
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 13/20 | step 64/100 | loss=0.9072
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=0.8958 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 14/20 | step 66/100 | loss=0.9047
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 14/20 | step 67/100 | loss=0.8666
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 14/20 | step 68/100 | loss=0.9225
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 14/20 | step 69/100 | loss=0.8766
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=0.9099 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 15/20 | step 71/100 | loss=0.8940
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 15/20 | step 72/100 | loss=0.8602
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 15/20 | step 73/100 | loss=0.9083
+2026-10-13 13:50:29 | INFO    | [blood/s44/ImbLLM-random] epoch 15/20 | step 74/100 | loss=0.8623
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=0.8797 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 16/20 | step 76/100 | loss=0.8799
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 16/20 | step 77/100 | loss=0.8928
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 16/20 | step 78/100 | loss=0.8614
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 16/20 | step 79/100 | loss=0.8824
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=0.8742 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 17/20 | step 81/100 | loss=0.8733
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 17/20 | step 82/100 | loss=0.8877
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 17/20 | step 83/100 | loss=0.8448
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 17/20 | step 84/100 | loss=0.8607
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=0.8765 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 18/20 | step 86/100 | loss=0.8220
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 18/20 | step 87/100 | loss=0.8666
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 18/20 | step 88/100 | loss=0.9054
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 18/20 | step 89/100 | loss=0.8805
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=0.8677 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 19/20 | step 91/100 | loss=0.8639
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 19/20 | step 92/100 | loss=0.8553
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 19/20 | step 93/100 | loss=0.8563
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 19/20 | step 94/100 | loss=0.8257
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=0.8500 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 20/20 | step 96/100 | loss=0.8625
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 20/20 | step 97/100 | loss=0.8443
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 20/20 | step 98/100 | loss=0.8680
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] epoch 20/20 | step 99/100 | loss=0.8655
+2026-10-13 13:50:30 | INFO    | [blood/s44/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=0.8481 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:50:31 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | generating 228 rows (condition_yx, temperature 0.70)
+2026-10-13 13:50:32 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 251, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 228, 'gen_batch_size_final': 128, 'gen_seconds': 0.3}
+2026-10-13 13:50:32 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.6404, 'mean_dist_heldout_real_to_nearest_synth': 0.6187, 'coverage_k2': 0.3333, 'mean_dist_synth_to_train_minority(DCR)': 0.6824, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:50:32 | INFO    | blood | seed 44 | ImbLLM-random      | train=712 (min 256 / maj 456) | F1=0.2326 Acc=0.7800 G=0.3694 AUC=0.6625 PR-AUC=0.4557
+2026-10-13 13:50:32 | INFO    | blood | seed 44 | stage ImbLLM-random      | DONE in 0h00m52s
+2026-10-13 13:50:32 | INFO    | blood | seed 44 | stage ImbLLM-IAFP        | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:50:32 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 28 retained minority + 114 interpolated rows | synthetic to generate = 228 (CAPPED from 428; classes will not be perfectly balanced)
+2026-10-13 13:51:18 | INFO    | [blood/s44/ImbLLM-IAFP] fine-tuning rows=142 | tokens/row: mean=26 max(probe)=26 -> max_len=37 | device=cuda
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/20 | step 1/100 | loss=3.5555
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/20 | step 2/100 | loss=3.4969
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/20 | step 3/100 | loss=3.4134
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 1/20 | step 4/100 | loss=3.1738
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=3.3041 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/20 | step 6/100 | loss=2.5054
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/20 | step 7/100 | loss=2.1782
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/20 | step 8/100 | loss=1.9110
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 2/20 | step 9/100 | loss=1.7162
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.9901 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/20 | step 11/100 | loss=1.4885
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/20 | step 12/100 | loss=1.4006
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/20 | step 13/100 | loss=1.3092
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 3/20 | step 14/100 | loss=1.3030
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.3666 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/20 | step 16/100 | loss=1.2391
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/20 | step 17/100 | loss=1.1878
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/20 | step 18/100 | loss=1.1380
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 4/20 | step 19/100 | loss=1.0787
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.1516 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/20 | step 21/100 | loss=1.0892
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/20 | step 22/100 | loss=1.0443
+2026-10-13 13:51:19 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/20 | step 23/100 | loss=1.0374
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 5/20 | step 24/100 | loss=1.0544
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.0600 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 6/20 | step 26/100 | loss=0.9649
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 6/20 | step 27/100 | loss=0.9585
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 6/20 | step 28/100 | loss=1.0184
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 6/20 | step 29/100 | loss=0.9756
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=0.9641 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 7/20 | step 31/100 | loss=0.9370
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 7/20 | step 32/100 | loss=0.9850
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 7/20 | step 33/100 | loss=0.9473
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 7/20 | step 34/100 | loss=0.9042
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=0.9542 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 8/20 | step 36/100 | loss=0.9408
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 8/20 | step 37/100 | loss=0.9387
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 8/20 | step 38/100 | loss=0.9778
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 8/20 | step 39/100 | loss=0.8867
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=0.9272 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 9/20 | step 41/100 | loss=0.8967
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 9/20 | step 42/100 | loss=0.9272
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 9/20 | step 43/100 | loss=0.8939
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 9/20 | step 44/100 | loss=0.8904
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=0.9002 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 10/20 | step 46/100 | loss=0.8418
+2026-10-13 13:51:20 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 10/20 | step 47/100 | loss=0.8953
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 10/20 | step 48/100 | loss=0.8926
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 10/20 | step 49/100 | loss=0.8595
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=0.8647 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 11/20 | step 51/100 | loss=0.8663
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 11/20 | step 52/100 | loss=0.8817
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 11/20 | step 53/100 | loss=0.8151
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 11/20 | step 54/100 | loss=0.8670
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=0.8581 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 12/20 | step 56/100 | loss=0.8410
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 12/20 | step 57/100 | loss=0.8273
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 12/20 | step 58/100 | loss=0.8303
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 12/20 | step 59/100 | loss=0.8330
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=0.8243 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 13/20 | step 61/100 | loss=0.8197
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 13/20 | step 62/100 | loss=0.8583
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 13/20 | step 63/100 | loss=0.7676
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 13/20 | step 64/100 | loss=0.8170
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=0.8133 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 14/20 | step 66/100 | loss=0.8185
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 14/20 | step 67/100 | loss=0.8236
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 14/20 | step 68/100 | loss=0.8299
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 14/20 | step 69/100 | loss=0.8004
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=0.8238 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:51:21 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 15/20 | step 71/100 | loss=0.8411
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 15/20 | step 72/100 | loss=0.7812
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 15/20 | step 73/100 | loss=0.7948
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 15/20 | step 74/100 | loss=0.7776
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=0.8070 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 16/20 | step 76/100 | loss=0.7696
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 16/20 | step 77/100 | loss=0.7642
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 16/20 | step 78/100 | loss=0.8226
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 16/20 | step 79/100 | loss=0.8008
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=0.7877 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 17/20 | step 81/100 | loss=0.7948
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 17/20 | step 82/100 | loss=0.7982
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 17/20 | step 83/100 | loss=0.7824
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 17/20 | step 84/100 | loss=0.7843
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=0.8081 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 18/20 | step 86/100 | loss=0.7995
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 18/20 | step 87/100 | loss=0.8262
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 18/20 | step 88/100 | loss=0.8022
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 18/20 | step 89/100 | loss=0.8283
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=0.8091 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 19/20 | step 91/100 | loss=0.8029
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 19/20 | step 92/100 | loss=0.7761
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 19/20 | step 93/100 | loss=0.8710
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 19/20 | step 94/100 | loss=0.7899
+2026-10-13 13:51:22 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=0.7983 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:51:23 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 20/20 | step 96/100 | loss=0.8460
+2026-10-13 13:51:23 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 20/20 | step 97/100 | loss=0.8154
+2026-10-13 13:51:23 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 20/20 | step 98/100 | loss=0.8299
+2026-10-13 13:51:23 | INFO    | [blood/s44/ImbLLM-IAFP] epoch 20/20 | step 99/100 | loss=0.8063
+2026-10-13 13:51:23 | INFO    | [blood/s44/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=0.8191 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:51:24 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | generating 228 rows (condition_yx, temperature 0.70)
+2026-10-13 13:51:24 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 251, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 228, 'gen_batch_size_final': 128, 'gen_seconds': 0.5}
+2026-10-13 13:51:25 | INFO    | [6/22] blood seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.614, 'mean_dist_heldout_real_to_nearest_synth': 0.6011, 'coverage_k2': 0.4123, 'mean_dist_synth_to_train_minority(DCR)': 0.6061, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:51:25 | INFO    | blood | seed 44 | ImbLLM-IAFP        | train=712 (min 256 / maj 456) | F1=0.2326 Acc=0.7800 G=0.3694 AUC=0.6389 PR-AUC=0.4277
+2026-10-13 13:51:25 | INFO    | blood | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m52s
+2026-10-13 13:51:25 | INFO    | blood | seed 44 | stage plots              | RUNNING [6/22] blood seed 44 (3/3)
+2026-10-13 13:51:27 | INFO    | [6/22] blood seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 13:51:27 | INFO    | blood | seed 44 | stage plots              | DONE in 0h00m01s
+2026-10-13 13:51:27 | INFO    | [6/22] blood seed 44 (3/3) | FINISHED (7/8 methods have metrics)

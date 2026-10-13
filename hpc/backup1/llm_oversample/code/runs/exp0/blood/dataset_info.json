@@ -1,0 +1,19 @@
+{
+  "dataset": "blood",
+  "rows": 748,
+  "n_numerical": 4,
+  "n_categorical": 0,
+  "target": "Class",
+  "class_counts": {
+    "1": 570,
+    "2": 178
+  },
+  "n_classes": 2,
+  "minority_label": "2",
+  "minority_count": 178,
+  "majority_count": 570,
+  "minority_fraction": 0.23796791443850268,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

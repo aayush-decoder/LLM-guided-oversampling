@@ -1,6 +1,6 @@
-2026-10-13 03:26:30 | INFO    | ====================================================================================================
-2026-10-13 03:26:30 | INFO    | [5/22] DATASET australian | elapsed so far 0h17m31s
-2026-10-13 03:26:30 | INFO    | 
+2026-10-13 13:39:26 | INFO    | ====================================================================================================
+2026-10-13 13:39:26 | INFO    | [5/22] DATASET australian | elapsed so far 0h28m48s
+2026-10-13 13:39:26 | INFO    | 
 STATUS  datasets: 28 total | done=3 | partial=1 | pending=17 | running=1 | skipped=6
   [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
   [DONE] kc2              seeds_done=3/3
@@ -30,288 +30,737 @@ STATUS  datasets: 28 total | done=3 | partial=1 | pending=17 | running=1 | skipp
   [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
   [SKIP] housing          seeds_done=0/3  (known regression dataset)
   [SKIP] insurance        seeds_done=0/3  (known regression dataset)
-2026-10-13 03:26:30 | INFO    | australian | rows=690 | 6 numeric + 8 categorical features | classes=2 | minority='1': 307 rows (44.49%)
-2026-10-13 03:26:30 | INFO    | ====================================================================================================
-2026-10-13 03:26:30 | INFO    | [5/22] australian seed 42 (1/3) | START
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage split              | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:30 | INFO    | [5/22] australian seed 42 (1/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=7d5fde994da2
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage split              | DONE in 0h00m00s
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage importance         | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:30 | INFO    | [5/22] australian seed 42 (1/3) | top features: A8=0.3376, A14=0.0781, A5=0.0642, A7=0.0410, A2=0.0330
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage importance         | DONE in 0h00m00s
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage Original           | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | Original           | train=552 (min 246 / maj 306) | F1=0.8226 Acc=0.8406 G=0.8401 AUC=0.9336 PR-AUC=0.8821
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage Original           | DONE in 0h00m00s
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage Imbalanced         | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.7573 Acc=0.8188 G=0.7839 AUC=0.9253 PR-AUC=0.8864
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 03:26:30 | INFO    | australian | seed 42 | stage RandomOverSampler  | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.8073 Acc=0.8478 G=0.8269 AUC=0.9276 PR-AUC=0.8987
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 03:26:31 | INFO    | [5/22] australian seed 42 (1/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:26:31 | INFO    | [5/22] australian seed 42 (1/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | stage SMOTE-NC           | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.8246 Acc=0.8551 G=0.8429 AUC=0.9236 PR-AUC=0.8783
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | stage SMOTE-NC           | DONE in 0h00m00s
-2026-10-13 03:26:31 | INFO    | australian | seed 42 | stage ImbLLM-random      | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:26:31 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:26:34 | INFO    | [australian/s42/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:26:35 | INFO    | [australian/s42/ImbLLM-random] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:26:36 | INFO    | [australian/s42/ImbLLM-random] epoch 1/5 | step 1/25 | loss=2.3512
-2026-10-13 03:26:36 | INFO    | [australian/s42/ImbLLM-random] epoch 1/5 | step 2/25 | loss=2.3727
-2026-10-13 03:26:36 | INFO    | [australian/s42/ImbLLM-random] epoch 1/5 | step 3/25 | loss=2.0907
-2026-10-13 03:26:36 | INFO    | [australian/s42/ImbLLM-random] epoch 1/5 | step 4/25 | loss=1.9404
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.1155 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m07s
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 2/5 | step 6/25 | loss=1.7120
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 2/5 | step 7/25 | loss=1.6231
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 2/5 | step 8/25 | loss=1.5634
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 2/5 | step 9/25 | loss=1.5080
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5763 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 3/5 | step 11/25 | loss=1.4363
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 3/5 | step 12/25 | loss=1.3932
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 3/5 | step 13/25 | loss=1.3608
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 3/5 | step 14/25 | loss=1.3309
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.3740 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 4/5 | step 16/25 | loss=1.3304
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 4/5 | step 17/25 | loss=1.2998
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 4/5 | step 18/25 | loss=1.3302
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 4/5 | step 19/25 | loss=1.2917
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3050 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 5/5 | step 21/25 | loss=1.2967
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 5/5 | step 22/25 | loss=1.2716
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 5/5 | step 23/25 | loss=1.3134
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] epoch 5/5 | step 24/25 | loss=1.2749
-2026-10-13 03:26:37 | INFO    | [australian/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2794 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
-2026-10-13 03:26:39 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:27:24 | INFO    | [australian/s42/ImbLLM-random] generated 17/17 (round 2) | valid parse 86.0% | accepted 258/257 | elapsed 0h00m45s
-2026-10-13 03:27:24 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 300, 'valid_parse_rate': 0.86, 'rounds': 2, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 45.2}
-2026-10-13 03:27:24 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 3.6383, 'coverage_k2': 0.132, 'mean_dist_synth_to_train_minority(DCR)': 3.9356, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:27:24 | INFO    | australian | seed 42 | ImbLLM-random      | train=612 (min 306 / maj 306) | F1=0.7327 Acc=0.8043 G=0.7635 AUC=0.9361 PR-AUC=0.9126
-2026-10-13 03:27:24 | INFO    | australian | seed 42 | stage ImbLLM-random      | DONE in 0h00m53s
-2026-10-13 03:27:24 | INFO    | australian | seed 42 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:27:24 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/5 | step 1/25 | loss=2.3336
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/5 | step 2/25 | loss=2.3664
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/5 | step 3/25 | loss=2.0780
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/5 | step 4/25 | loss=1.9285
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.1009 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/5 | step 6/25 | loss=1.7143
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/5 | step 7/25 | loss=1.6191
-2026-10-13 03:27:27 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/5 | step 8/25 | loss=1.5432
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/5 | step 9/25 | loss=1.4637
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5597 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/5 | step 11/25 | loss=1.4094
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/5 | step 12/25 | loss=1.3802
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/5 | step 13/25 | loss=1.3235
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/5 | step 14/25 | loss=1.3187
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3499 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/5 | step 16/25 | loss=1.2799
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/5 | step 17/25 | loss=1.2715
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/5 | step 18/25 | loss=1.2660
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/5 | step 19/25 | loss=1.2707
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2710 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/5 | step 21/25 | loss=1.2374
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/5 | step 22/25 | loss=1.2343
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/5 | step 23/25 | loss=1.2649
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/5 | step 24/25 | loss=1.2508
-2026-10-13 03:27:28 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2472 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:29 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:27:30 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 283, 'valid_parse_rate': 0.9187279151943463, 'rounds': 1, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 1.0}
-2026-10-13 03:27:30 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 3.6776, 'coverage_k2': 0.1168, 'mean_dist_synth_to_train_minority(DCR)': 3.9544, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:27:31 | INFO    | australian | seed 42 | ImbLLM-IAFP        | train=612 (min 306 / maj 306) | F1=0.7547 Acc=0.8116 G=0.7830 AUC=0.9272 PR-AUC=0.8983
-2026-10-13 03:27:31 | INFO    | australian | seed 42 | stage ImbLLM-IAFP        | DONE in 0h00m06s
-2026-10-13 03:27:31 | INFO    | australian | seed 42 | stage plots              | RUNNING [5/22] australian seed 42 (1/3)
-2026-10-13 03:27:32 | INFO    | [5/22] australian seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 03:27:33 | INFO    | australian | seed 42 | stage plots              | DONE in 0h00m01s
-2026-10-13 03:27:33 | INFO    | [5/22] australian seed 42 (1/3) | FINISHED (6/8 methods have metrics)
-2026-10-13 03:27:33 | INFO    | ====================================================================================================
-2026-10-13 03:27:33 | INFO    | [5/22] australian seed 43 (2/3) | START
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage split              | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:33 | INFO    | [5/22] australian seed 43 (2/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=ed11bee1e077
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage split              | DONE in 0h00m00s
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage importance         | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:33 | INFO    | [5/22] australian seed 43 (2/3) | top features: A8=0.3511, A10=0.1834, A14=0.0705, A11=0.0629, A13=0.0181
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage importance         | DONE in 0h00m00s
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage Original           | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | Original           | train=552 (min 246 / maj 306) | F1=0.8852 Acc=0.8986 G=0.8971 AUC=0.9449 PR-AUC=0.9440
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage Original           | DONE in 0h00m00s
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage Imbalanced         | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.6939 Acc=0.7826 G=0.7319 AUC=0.9116 PR-AUC=0.9020
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 03:27:33 | INFO    | australian | seed 43 | stage RandomOverSampler  | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.7925 Acc=0.8406 G=0.8134 AUC=0.9148 PR-AUC=0.9066
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 03:27:34 | INFO    | [5/22] australian seed 43 (2/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:27:34 | INFO    | [5/22] australian seed 43 (2/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | stage SMOTE-NC           | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.7850 Acc=0.8333 G=0.8079 AUC=0.9055 PR-AUC=0.8901
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | stage SMOTE-NC           | DONE in 0h00m00s
-2026-10-13 03:27:34 | INFO    | australian | seed 43 | stage ImbLLM-random      | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:34 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:27:36 | INFO    | [australian/s43/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 1/5 | step 1/25 | loss=2.3871
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 1/5 | step 2/25 | loss=2.3684
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 1/5 | step 3/25 | loss=2.1282
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 1/5 | step 4/25 | loss=1.9743
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.1406 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 2/5 | step 6/25 | loss=1.7250
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 2/5 | step 7/25 | loss=1.6436
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 2/5 | step 8/25 | loss=1.5794
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 2/5 | step 9/25 | loss=1.5283
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5950 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 3/5 | step 11/25 | loss=1.4492
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 3/5 | step 12/25 | loss=1.4097
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 3/5 | step 13/25 | loss=1.3867
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 3/5 | step 14/25 | loss=1.3690
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.3962 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 4/5 | step 16/25 | loss=1.3413
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 4/5 | step 17/25 | loss=1.3447
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 4/5 | step 18/25 | loss=1.3109
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 4/5 | step 19/25 | loss=1.3236
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3284 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 5/5 | step 21/25 | loss=1.3054
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 5/5 | step 22/25 | loss=1.3087
-2026-10-13 03:27:37 | INFO    | [australian/s43/ImbLLM-random] epoch 5/5 | step 23/25 | loss=1.3083
-2026-10-13 03:27:38 | INFO    | [australian/s43/ImbLLM-random] epoch 5/5 | step 24/25 | loss=1.3048
-2026-10-13 03:27:38 | INFO    | [australian/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.3062 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:39 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:27:55 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 299, 'valid_parse_rate': 0.8662207357859532, 'rounds': 2, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 15.8}
-2026-10-13 03:27:55 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 3.2889, 'coverage_k2': 0.1929, 'mean_dist_synth_to_train_minority(DCR)': 3.7021, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:27:55 | INFO    | australian | seed 43 | ImbLLM-random      | train=612 (min 306 / maj 306) | F1=0.7692 Acc=0.8261 G=0.7938 AUC=0.9340 PR-AUC=0.9280
-2026-10-13 03:27:55 | INFO    | australian | seed 43 | stage ImbLLM-random      | DONE in 0h00m21s
-2026-10-13 03:27:55 | INFO    | australian | seed 43 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:27:55 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/5 | step 1/25 | loss=2.3714
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/5 | step 2/25 | loss=2.3546
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/5 | step 3/25 | loss=2.0978
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/5 | step 4/25 | loss=1.9625
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.1221 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/5 | step 6/25 | loss=1.6992
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/5 | step 7/25 | loss=1.6253
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/5 | step 8/25 | loss=1.5764
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/5 | step 9/25 | loss=1.5098
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5754 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/5 | step 11/25 | loss=1.4325
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/5 | step 12/25 | loss=1.3869
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/5 | step 13/25 | loss=1.3704
-2026-10-13 03:27:58 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/5 | step 14/25 | loss=1.3386
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3632 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/5 | step 16/25 | loss=1.2990
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/5 | step 17/25 | loss=1.2782
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/5 | step 18/25 | loss=1.3052
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/5 | step 19/25 | loss=1.2743
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2872 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/5 | step 21/25 | loss=1.2906
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/5 | step 22/25 | loss=1.2652
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/5 | step 23/25 | loss=1.2476
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/5 | step 24/25 | loss=1.2382
-2026-10-13 03:27:59 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2638 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:00 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:28:01 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 283, 'valid_parse_rate': 0.9434628975265018, 'rounds': 1, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 1.0}
-2026-10-13 03:28:01 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 3.5006, 'coverage_k2': 0.1371, 'mean_dist_synth_to_train_minority(DCR)': 3.7711, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:28:02 | INFO    | australian | seed 43 | ImbLLM-IAFP        | train=612 (min 306 / maj 306) | F1=0.7573 Acc=0.8188 G=0.7839 AUC=0.9310 PR-AUC=0.9253
-2026-10-13 03:28:02 | INFO    | australian | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m06s
-2026-10-13 03:28:02 | INFO    | australian | seed 43 | stage plots              | RUNNING [5/22] australian seed 43 (2/3)
-2026-10-13 03:28:03 | INFO    | [5/22] australian seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 03:28:03 | INFO    | australian | seed 43 | stage plots              | DONE in 0h00m01s
-2026-10-13 03:28:03 | INFO    | [5/22] australian seed 43 (2/3) | FINISHED (6/8 methods have metrics)
-2026-10-13 03:28:03 | INFO    | ====================================================================================================
-2026-10-13 03:28:03 | INFO    | [5/22] australian seed 44 (3/3) | START
-2026-10-13 03:28:03 | INFO    | australian | seed 44 | stage split              | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:03 | INFO    | [5/22] australian seed 44 (3/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=ecd98df85542
-2026-10-13 03:28:03 | INFO    | australian | seed 44 | stage split              | DONE in 0h00m00s
-2026-10-13 03:28:03 | INFO    | australian | seed 44 | stage importance         | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:04 | INFO    | [5/22] australian seed 44 (3/3) | top features: A8=0.4833, A10=0.1005, A13=0.0764, A2=0.0556, A6=0.0364
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage importance         | DONE in 0h00m00s
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage Original           | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | Original           | train=552 (min 246 / maj 306) | F1=0.8305 Acc=0.8551 G=0.8484 AUC=0.9359 PR-AUC=0.9187
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage Original           | DONE in 0h00m00s
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage Imbalanced         | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.6809 Acc=0.7826 G=0.7196 AUC=0.9325 PR-AUC=0.9113
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage Imbalanced         | DONE in 0h00m00s
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | stage RandomOverSampler  | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:04 | INFO    | australian | seed 44 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.7810 Acc=0.8333 G=0.8037 AUC=0.9302 PR-AUC=0.9086
-2026-10-13 03:28:05 | INFO    | australian | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
-2026-10-13 03:28:05 | INFO    | [5/22] australian seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:28:05 | INFO    | [5/22] australian seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
-2026-10-13 03:28:05 | INFO    | australian | seed 44 | stage SMOTE-NC           | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:05 | INFO    | australian | seed 44 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.7477 Acc=0.8043 G=0.7776 AUC=0.9057 PR-AUC=0.8658
-2026-10-13 03:28:05 | INFO    | australian | seed 44 | stage SMOTE-NC           | DONE in 0h00m00s
-2026-10-13 03:28:05 | INFO    | australian | seed 44 | stage ImbLLM-random      | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:05 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:28:07 | INFO    | [australian/s44/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 1/5 | step 1/25 | loss=2.3249
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 1/5 | step 2/25 | loss=2.3320
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 1/5 | step 3/25 | loss=2.1091
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 1/5 | step 4/25 | loss=1.9465
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.1002 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 2/5 | step 6/25 | loss=1.7013
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 2/5 | step 7/25 | loss=1.6324
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 2/5 | step 8/25 | loss=1.5569
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 2/5 | step 9/25 | loss=1.5120
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5703 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 3/5 | step 11/25 | loss=1.4394
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 3/5 | step 12/25 | loss=1.3876
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 3/5 | step 13/25 | loss=1.3613
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 3/5 | step 14/25 | loss=1.3554
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.3769 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 4/5 | step 16/25 | loss=1.3340
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 4/5 | step 17/25 | loss=1.3121
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 4/5 | step 18/25 | loss=1.3177
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 4/5 | step 19/25 | loss=1.2921
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3075 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 5/5 | step 21/25 | loss=1.2855
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 5/5 | step 22/25 | loss=1.3003
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 5/5 | step 23/25 | loss=1.2963
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] epoch 5/5 | step 24/25 | loss=1.2711
-2026-10-13 03:28:08 | INFO    | [australian/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2880 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:10 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:28:25 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 334, 'valid_parse_rate': 0.7754491017964071, 'rounds': 2, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 15.8}
-2026-10-13 03:28:26 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 3.2244, 'coverage_k2': 0.2893, 'mean_dist_synth_to_train_minority(DCR)': 4.0017, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:28:26 | INFO    | australian | seed 44 | ImbLLM-random      | train=612 (min 306 / maj 306) | F1=0.7429 Acc=0.8043 G=0.7732 AUC=0.9114 PR-AUC=0.8841
-2026-10-13 03:28:26 | INFO    | australian | seed 44 | stage ImbLLM-random      | DONE in 0h00m21s
-2026-10-13 03:28:26 | INFO    | australian | seed 44 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:28:26 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 257
-2026-10-13 03:28:28 | INFO    | [australian/s44/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/5 | step 1/25 | loss=2.3258
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/5 | step 2/25 | loss=2.3510
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/5 | step 3/25 | loss=2.1050
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/5 | step 4/25 | loss=1.9461
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.1042 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/5 | step 6/25 | loss=1.7091
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/5 | step 7/25 | loss=1.6190
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/5 | step 8/25 | loss=1.5464
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/5 | step 9/25 | loss=1.5135
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5668 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/5 | step 11/25 | loss=1.4065
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/5 | step 12/25 | loss=1.3662
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/5 | step 13/25 | loss=1.3516
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/5 | step 14/25 | loss=1.3560
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3563 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/5 | step 16/25 | loss=1.3002
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/5 | step 17/25 | loss=1.2833
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/5 | step 18/25 | loss=1.2614
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/5 | step 19/25 | loss=1.2632
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2756 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/5 | step 21/25 | loss=1.2524
-2026-10-13 03:28:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/5 | step 22/25 | loss=1.2482
-2026-10-13 03:28:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/5 | step 23/25 | loss=1.2683
-2026-10-13 03:28:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/5 | step 24/25 | loss=1.2463
-2026-10-13 03:28:30 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2503 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
-2026-10-13 03:28:31 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | generating 257 rows (condition_yx, temperature 0.70)
-2026-10-13 03:28:58 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 321, 'valid_parse_rate': 0.8006230529595015, 'rounds': 3, 'rows_returned': 257, 'gen_batch_size_final': 128, 'gen_seconds': 27.4}
-2026-10-13 03:28:58 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 3.2672, 'coverage_k2': 0.2538, 'mean_dist_synth_to_train_minority(DCR)': 4.0784, 'frac_synth_exact_copy_of_train_minority': 0.0}
-2026-10-13 03:28:59 | INFO    | australian | seed 44 | ImbLLM-IAFP        | train=612 (min 306 / maj 306) | F1=0.7327 Acc=0.8043 G=0.7635 AUC=0.9116 PR-AUC=0.8901
-2026-10-13 03:28:59 | INFO    | australian | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m32s
-2026-10-13 03:28:59 | INFO    | australian | seed 44 | stage plots              | RUNNING [5/22] australian seed 44 (3/3)
-2026-10-13 03:29:00 | INFO    | [5/22] australian seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
-2026-10-13 03:29:01 | INFO    | australian | seed 44 | stage plots              | DONE in 0h00m01s
-2026-10-13 03:29:01 | INFO    | [5/22] australian seed 44 (3/3) | FINISHED (6/8 methods have metrics)
-2026-10-13 03:29:01 | INFO    | australian | DATASET COMPLETE in 0h02m31s -> runs/exp1/australian
+2026-10-13 13:39:26 | INFO    | australian | rows=690 | 6 numeric + 8 categorical features | classes=2 | minority='1': 307 rows (44.49%)
+2026-10-13 13:39:26 | INFO    | ====================================================================================================
+2026-10-13 13:39:26 | INFO    | [5/22] australian seed 42 (1/3) | START
+2026-10-13 13:39:26 | INFO    | australian | seed 42 | stage split              | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:26 | INFO    | [5/22] australian seed 42 (1/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=7d5fde994da2
+2026-10-13 13:39:26 | INFO    | australian | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 13:39:26 | INFO    | australian | seed 42 | stage importance         | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:27 | INFO    | [5/22] australian seed 42 (1/3) | top features: A8=0.3376, A14=0.0781, A5=0.0642, A7=0.0410, A2=0.0330
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage Original           | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | Original           | train=552 (min 246 / maj 306) | F1=0.8226 Acc=0.8406 G=0.8401 AUC=0.9336 PR-AUC=0.8821
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage Imbalanced         | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.7573 Acc=0.8188 G=0.7839 AUC=0.9253 PR-AUC=0.8864
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage RandomOverSampler  | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.8073 Acc=0.8478 G=0.8269 AUC=0.9276 PR-AUC=0.8987
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 13:39:27 | INFO    | [5/22] australian seed 42 (1/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:39:27 | INFO    | [5/22] australian seed 42 (1/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:39:27 | INFO    | australian | seed 42 | stage SMOTE-NC           | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:28 | INFO    | australian | seed 42 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.8246 Acc=0.8551 G=0.8429 AUC=0.9236 PR-AUC=0.8783
+2026-10-13 13:39:28 | INFO    | australian | seed 42 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 13:39:28 | INFO    | australian | seed 42 | stage ImbLLM-random      | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:39:28 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:40:14 | INFO    | [australian/s42/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:40:14 | INFO    | [australian/s42/ImbLLM-random] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:40:15 | INFO    | [australian/s42/ImbLLM-random] epoch 1/20 | step 1/100 | loss=2.3512
+2026-10-13 13:40:15 | INFO    | [australian/s42/ImbLLM-random] epoch 1/20 | step 2/100 | loss=2.3727
+2026-10-13 13:40:15 | INFO    | [australian/s42/ImbLLM-random] epoch 1/20 | step 3/100 | loss=2.2661
+2026-10-13 13:40:15 | INFO    | [australian/s42/ImbLLM-random] epoch 1/20 | step 4/100 | loss=2.1473
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.2334 | epoch_time=0h00m02s | elapsed=0h00m02s | ETA=0h00m39s
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 2/20 | step 6/100 | loss=1.9064
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 2/20 | step 7/100 | loss=1.7688
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 2/20 | step 8/100 | loss=1.6598
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 2/20 | step 9/100 | loss=1.5830
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.6897 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m20s
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 3/20 | step 11/100 | loss=1.4731
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 3/20 | step 12/100 | loss=1.4144
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 3/20 | step 13/100 | loss=1.3682
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] epoch 3/20 | step 14/100 | loss=1.3278
+2026-10-13 13:40:16 | INFO    | [australian/s42/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.3845 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m13s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 4/20 | step 16/100 | loss=1.3154
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 4/20 | step 17/100 | loss=1.2832
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 4/20 | step 18/100 | loss=1.3082
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 4/20 | step 19/100 | loss=1.2636
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.2838 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m10s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 5/20 | step 21/100 | loss=1.2617
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 5/20 | step 22/100 | loss=1.2378
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 5/20 | step 23/100 | loss=1.2746
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 5/20 | step 24/100 | loss=1.2384
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.2416 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m08s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 6/20 | step 26/100 | loss=1.2271
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 6/20 | step 27/100 | loss=1.2196
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 6/20 | step 28/100 | loss=1.2125
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 6/20 | step 29/100 | loss=1.2135
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.2186 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m07s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 7/20 | step 31/100 | loss=1.1968
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 7/20 | step 32/100 | loss=1.2129
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 7/20 | step 33/100 | loss=1.1901
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 7/20 | step 34/100 | loss=1.2013
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.1982 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m05s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 8/20 | step 36/100 | loss=1.1919
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 8/20 | step 37/100 | loss=1.1974
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 8/20 | step 38/100 | loss=1.1794
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 8/20 | step 39/100 | loss=1.1830
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.1836 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m05s
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 9/20 | step 41/100 | loss=1.1682
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 9/20 | step 42/100 | loss=1.1638
+2026-10-13 13:40:17 | INFO    | [australian/s42/ImbLLM-random] epoch 9/20 | step 43/100 | loss=1.1962
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 9/20 | step 44/100 | loss=1.1905
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.1791 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m04s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 10/20 | step 46/100 | loss=1.1791
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 10/20 | step 47/100 | loss=1.1720
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 10/20 | step 48/100 | loss=1.1773
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 10/20 | step 49/100 | loss=1.1834
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.1765 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m03s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 11/20 | step 51/100 | loss=1.1747
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 11/20 | step 52/100 | loss=1.1747
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 11/20 | step 53/100 | loss=1.1495
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 11/20 | step 54/100 | loss=1.1660
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.1687 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m03s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 12/20 | step 56/100 | loss=1.1645
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 12/20 | step 57/100 | loss=1.1546
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 12/20 | step 58/100 | loss=1.1658
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 12/20 | step 59/100 | loss=1.1759
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.1625 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m02s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 13/20 | step 61/100 | loss=1.1436
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 13/20 | step 62/100 | loss=1.1512
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 13/20 | step 63/100 | loss=1.1421
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 13/20 | step 64/100 | loss=1.1770
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.1535 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m02s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 14/20 | step 66/100 | loss=1.1579
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 14/20 | step 67/100 | loss=1.1431
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 14/20 | step 68/100 | loss=1.1633
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 14/20 | step 69/100 | loss=1.1245
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.1482 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:40:18 | INFO    | [australian/s42/ImbLLM-random] epoch 15/20 | step 71/100 | loss=1.1295
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 15/20 | step 72/100 | loss=1.1539
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 15/20 | step 73/100 | loss=1.1242
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 15/20 | step 74/100 | loss=1.1282
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.1321 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 16/20 | step 76/100 | loss=1.1224
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 16/20 | step 77/100 | loss=1.1318
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 16/20 | step 78/100 | loss=1.1173
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 16/20 | step 79/100 | loss=1.1043
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.1153 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 17/20 | step 81/100 | loss=1.0995
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 17/20 | step 82/100 | loss=1.0942
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 17/20 | step 83/100 | loss=1.1033
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 17/20 | step 84/100 | loss=1.1192
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.1016 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 18/20 | step 86/100 | loss=1.0943
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 18/20 | step 87/100 | loss=1.0929
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 18/20 | step 88/100 | loss=1.0925
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 18/20 | step 89/100 | loss=1.0858
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.0911 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 19/20 | step 91/100 | loss=1.0892
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 19/20 | step 92/100 | loss=1.0903
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 19/20 | step 93/100 | loss=1.0741
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 19/20 | step 94/100 | loss=1.0787
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.0833 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 20/20 | step 96/100 | loss=1.1002
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 20/20 | step 97/100 | loss=1.0944
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 20/20 | step 98/100 | loss=1.0715
+2026-10-13 13:40:19 | INFO    | [australian/s42/ImbLLM-random] epoch 20/20 | step 99/100 | loss=1.0640
+2026-10-13 13:40:20 | INFO    | [australian/s42/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.0832 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:40:21 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:40:46 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9763313609467456, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 25.3}
+2026-10-13 13:40:46 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 2.8654, 'coverage_k2': 0.3604, 'mean_dist_synth_to_train_minority(DCR)': 3.168, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:40:46 | INFO    | australian | seed 42 | ImbLLM-random      | train=508 (min 202 / maj 306) | F1=0.8288 Acc=0.8623 G=0.8455 AUC=0.9159 PR-AUC=0.8551
+2026-10-13 13:40:46 | INFO    | australian | seed 42 | stage ImbLLM-random      | DONE in 0h01m18s
+2026-10-13 13:40:46 | INFO    | australian | seed 42 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:40:47 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/20 | step 1/100 | loss=2.3336
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/20 | step 2/100 | loss=2.3664
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/20 | step 3/100 | loss=2.2681
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 1/20 | step 4/100 | loss=2.1460
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.2246 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/20 | step 6/100 | loss=1.9120
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/20 | step 7/100 | loss=1.7627
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/20 | step 8/100 | loss=1.6483
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 2/20 | step 9/100 | loss=1.5397
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.6746 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/20 | step 11/100 | loss=1.4429
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/20 | step 12/100 | loss=1.4031
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/20 | step 13/100 | loss=1.3294
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 3/20 | step 14/100 | loss=1.3187
+2026-10-13 13:41:33 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.3597 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/20 | step 16/100 | loss=1.2629
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/20 | step 17/100 | loss=1.2509
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/20 | step 18/100 | loss=1.2434
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 4/20 | step 19/100 | loss=1.2459
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.2502 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/20 | step 21/100 | loss=1.2020
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/20 | step 22/100 | loss=1.2081
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/20 | step 23/100 | loss=1.2190
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 5/20 | step 24/100 | loss=1.2077
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.2082 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 6/20 | step 26/100 | loss=1.1775
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 6/20 | step 27/100 | loss=1.1889
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 6/20 | step 28/100 | loss=1.1622
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 6/20 | step 29/100 | loss=1.1733
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.1726 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 7/20 | step 31/100 | loss=1.1756
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 7/20 | step 32/100 | loss=1.1529
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 7/20 | step 33/100 | loss=1.1517
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 7/20 | step 34/100 | loss=1.1328
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.1467 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 8/20 | step 36/100 | loss=1.1588
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 8/20 | step 37/100 | loss=1.1515
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 8/20 | step 38/100 | loss=1.1351
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 8/20 | step 39/100 | loss=1.1244
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.1418 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 9/20 | step 41/100 | loss=1.1240
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 9/20 | step 42/100 | loss=1.1164
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 9/20 | step 43/100 | loss=1.1308
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 9/20 | step 44/100 | loss=1.1490
+2026-10-13 13:41:34 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.1274 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 10/20 | step 46/100 | loss=1.1158
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 10/20 | step 47/100 | loss=1.1297
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 10/20 | step 48/100 | loss=1.1394
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 10/20 | step 49/100 | loss=1.1214
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.1250 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 11/20 | step 51/100 | loss=1.1110
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 11/20 | step 52/100 | loss=1.1196
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 11/20 | step 53/100 | loss=1.1116
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 11/20 | step 54/100 | loss=1.1420
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.1131 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 12/20 | step 56/100 | loss=1.1073
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 12/20 | step 57/100 | loss=1.0978
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 12/20 | step 58/100 | loss=1.1164
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 12/20 | step 59/100 | loss=1.1201
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.1098 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 13/20 | step 61/100 | loss=1.1030
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 13/20 | step 62/100 | loss=1.1111
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 13/20 | step 63/100 | loss=1.1180
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 13/20 | step 64/100 | loss=1.0863
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.0985 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 14/20 | step 66/100 | loss=1.0844
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 14/20 | step 67/100 | loss=1.0898
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 14/20 | step 68/100 | loss=1.0966
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 14/20 | step 69/100 | loss=1.0815
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.0926 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 15/20 | step 71/100 | loss=1.0751
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 15/20 | step 72/100 | loss=1.0768
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 15/20 | step 73/100 | loss=1.0693
+2026-10-13 13:41:35 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 15/20 | step 74/100 | loss=1.0648
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.0633 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 16/20 | step 76/100 | loss=1.0563
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 16/20 | step 77/100 | loss=1.0450
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 16/20 | step 78/100 | loss=1.0553
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 16/20 | step 79/100 | loss=1.0603
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.0567 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 17/20 | step 81/100 | loss=1.0475
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 17/20 | step 82/100 | loss=1.0503
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 17/20 | step 83/100 | loss=1.0355
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 17/20 | step 84/100 | loss=1.0469
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.0399 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 18/20 | step 86/100 | loss=1.0386
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 18/20 | step 87/100 | loss=1.0290
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 18/20 | step 88/100 | loss=1.0354
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 18/20 | step 89/100 | loss=1.0203
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.0237 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 19/20 | step 91/100 | loss=1.0118
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 19/20 | step 92/100 | loss=1.0182
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 19/20 | step 93/100 | loss=1.0163
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 19/20 | step 94/100 | loss=1.0080
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.0139 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 20/20 | step 96/100 | loss=1.0523
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 20/20 | step 97/100 | loss=0.9920
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 20/20 | step 98/100 | loss=1.0240
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] epoch 20/20 | step 99/100 | loss=1.0235
+2026-10-13 13:41:36 | INFO    | [australian/s42/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.0228 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 13:41:39 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:41:40 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9881656804733728, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 1.2}
+2026-10-13 13:41:40 | INFO    | [5/22] australian seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 2.773, 'coverage_k2': 0.4061, 'mean_dist_synth_to_train_minority(DCR)': 2.9217, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:41:40 | INFO    | australian | seed 42 | ImbLLM-IAFP        | train=508 (min 202 / maj 306) | F1=0.7788 Acc=0.8188 G=0.8040 AUC=0.9187 PR-AUC=0.8661
+2026-10-13 13:41:40 | INFO    | australian | seed 42 | stage ImbLLM-IAFP        | DONE in 0h00m53s
+2026-10-13 13:41:40 | INFO    | australian | seed 42 | stage plots              | RUNNING [5/22] australian seed 42 (1/3)
+2026-10-13 13:41:42 | INFO    | [5/22] australian seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 13:41:42 | INFO    | australian | seed 42 | stage plots              | DONE in 0h00m01s
+2026-10-13 13:41:42 | INFO    | [5/22] australian seed 42 (1/3) | FINISHED (6/8 methods have metrics)
+2026-10-13 13:41:42 | INFO    | ====================================================================================================
+2026-10-13 13:41:42 | INFO    | [5/22] australian seed 43 (2/3) | START
+2026-10-13 13:41:42 | INFO    | australian | seed 43 | stage split              | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:42 | INFO    | [5/22] australian seed 43 (2/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=ed11bee1e077
+2026-10-13 13:41:42 | INFO    | australian | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 13:41:42 | INFO    | australian | seed 43 | stage importance         | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:42 | INFO    | [5/22] australian seed 43 (2/3) | top features: A8=0.3511, A10=0.1834, A14=0.0705, A11=0.0629, A13=0.0181
+2026-10-13 13:41:42 | INFO    | australian | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 13:41:42 | INFO    | australian | seed 43 | stage Original           | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | Original           | train=552 (min 246 / maj 306) | F1=0.8852 Acc=0.8986 G=0.8971 AUC=0.9449 PR-AUC=0.9440
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage Imbalanced         | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.6939 Acc=0.7826 G=0.7319 AUC=0.9116 PR-AUC=0.9020
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage RandomOverSampler  | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.7925 Acc=0.8406 G=0.8134 AUC=0.9148 PR-AUC=0.9066
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 13:41:43 | INFO    | [5/22] australian seed 43 (2/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:41:43 | INFO    | [5/22] australian seed 43 (2/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage SMOTE-NC           | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.7850 Acc=0.8333 G=0.8079 AUC=0.9055 PR-AUC=0.8901
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 13:41:43 | INFO    | australian | seed 43 | stage ImbLLM-random      | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:41:43 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 1/20 | step 1/100 | loss=2.3871
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 1/20 | step 2/100 | loss=2.3684
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 1/20 | step 3/100 | loss=2.3072
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 1/20 | step 4/100 | loss=2.1860
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.2626 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m06s
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 2/20 | step 6/100 | loss=1.9237
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 2/20 | step 7/100 | loss=1.7866
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 2/20 | step 8/100 | loss=1.6866
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] epoch 2/20 | step 9/100 | loss=1.6024
+2026-10-13 13:42:35 | INFO    | [australian/s43/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.7107 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 3/20 | step 11/100 | loss=1.4875
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 3/20 | step 12/100 | loss=1.4321
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 3/20 | step 13/100 | loss=1.3992
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 3/20 | step 14/100 | loss=1.3678
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.4092 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 4/20 | step 16/100 | loss=1.3339
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 4/20 | step 17/100 | loss=1.3221
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 4/20 | step 18/100 | loss=1.3022
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 4/20 | step 19/100 | loss=1.3038
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.3121 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 5/20 | step 21/100 | loss=1.2928
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 5/20 | step 22/100 | loss=1.2748
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 5/20 | step 23/100 | loss=1.2728
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 5/20 | step 24/100 | loss=1.2691
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.2742 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 6/20 | step 26/100 | loss=1.2590
+2026-10-13 13:42:36 | INFO    | [australian/s43/ImbLLM-random] epoch 6/20 | step 27/100 | loss=1.2401
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 6/20 | step 28/100 | loss=1.2421
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 6/20 | step 29/100 | loss=1.2155
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.2391 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 7/20 | step 31/100 | loss=1.2217
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 7/20 | step 32/100 | loss=1.2325
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 7/20 | step 33/100 | loss=1.2234
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 7/20 | step 34/100 | loss=1.2143
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.2210 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 8/20 | step 36/100 | loss=1.2127
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 8/20 | step 37/100 | loss=1.1954
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 8/20 | step 38/100 | loss=1.2193
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 8/20 | step 39/100 | loss=1.2101
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.2078 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 9/20 | step 41/100 | loss=1.2105
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 9/20 | step 42/100 | loss=1.1961
+2026-10-13 13:42:37 | INFO    | [australian/s43/ImbLLM-random] epoch 9/20 | step 43/100 | loss=1.1995
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 9/20 | step 44/100 | loss=1.1989
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.2013 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 10/20 | step 46/100 | loss=1.2071
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 10/20 | step 47/100 | loss=1.1653
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 10/20 | step 48/100 | loss=1.2009
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 10/20 | step 49/100 | loss=1.1861
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.1888 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m03s
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 11/20 | step 51/100 | loss=1.1848
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 11/20 | step 52/100 | loss=1.1598
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 11/20 | step 53/100 | loss=1.1895
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 11/20 | step 54/100 | loss=1.1891
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.1826 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 12/20 | step 56/100 | loss=1.1680
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 12/20 | step 57/100 | loss=1.1829
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 12/20 | step 58/100 | loss=1.1667
+2026-10-13 13:42:38 | INFO    | [australian/s43/ImbLLM-random] epoch 12/20 | step 59/100 | loss=1.1655
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.1737 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 13/20 | step 61/100 | loss=1.1738
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 13/20 | step 62/100 | loss=1.1707
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 13/20 | step 63/100 | loss=1.1630
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 13/20 | step 64/100 | loss=1.1564
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.1650 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 14/20 | step 66/100 | loss=1.1602
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 14/20 | step 67/100 | loss=1.1286
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 14/20 | step 68/100 | loss=1.1461
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 14/20 | step 69/100 | loss=1.1503
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.1473 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 15/20 | step 71/100 | loss=1.1378
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 15/20 | step 72/100 | loss=1.1414
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 15/20 | step 73/100 | loss=1.1445
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 15/20 | step 74/100 | loss=1.1219
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.1340 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:42:39 | INFO    | [australian/s43/ImbLLM-random] epoch 16/20 | step 76/100 | loss=1.1264
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 16/20 | step 77/100 | loss=1.1316
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 16/20 | step 78/100 | loss=1.1095
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 16/20 | step 79/100 | loss=1.1187
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.1191 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 17/20 | step 81/100 | loss=1.1140
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 17/20 | step 82/100 | loss=1.1146
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 17/20 | step 83/100 | loss=1.1012
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 17/20 | step 84/100 | loss=1.0889
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.0987 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 18/20 | step 86/100 | loss=1.1003
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 18/20 | step 87/100 | loss=1.0756
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 18/20 | step 88/100 | loss=1.0711
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 18/20 | step 89/100 | loss=1.0766
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.0778 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 19/20 | step 91/100 | loss=1.0895
+2026-10-13 13:42:40 | INFO    | [australian/s43/ImbLLM-random] epoch 19/20 | step 92/100 | loss=1.0803
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 19/20 | step 93/100 | loss=1.0880
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 19/20 | step 94/100 | loss=1.0699
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.0781 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 20/20 | step 96/100 | loss=1.0664
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 20/20 | step 97/100 | loss=1.0656
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 20/20 | step 98/100 | loss=1.0694
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] epoch 20/20 | step 99/100 | loss=1.0716
+2026-10-13 13:42:41 | INFO    | [australian/s43/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.0663 | epoch_time=0h00m00s | elapsed=0h00m06s | ETA=0h00m00s
+2026-10-13 13:42:42 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:42:44 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9881656804733728, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 1.8}
+2026-10-13 13:42:44 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 3.0035, 'coverage_k2': 0.2893, 'mean_dist_synth_to_train_minority(DCR)': 3.1023, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:42:44 | INFO    | australian | seed 43 | ImbLLM-random      | train=508 (min 202 / maj 306) | F1=0.7573 Acc=0.8188 G=0.7839 AUC=0.9153 PR-AUC=0.9062
+2026-10-13 13:42:44 | INFO    | australian | seed 43 | stage ImbLLM-random      | DONE in 0h01m01s
+2026-10-13 13:42:44 | INFO    | australian | seed 43 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:42:44 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/20 | step 1/100 | loss=2.3714
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/20 | step 2/100 | loss=2.3546
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/20 | step 3/100 | loss=2.2788
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 1/20 | step 4/100 | loss=2.1778
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.2448 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/20 | step 6/100 | loss=1.8971
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/20 | step 7/100 | loss=1.7698
+2026-10-13 13:43:31 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/20 | step 8/100 | loss=1.6853
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 2/20 | step 9/100 | loss=1.5863
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.6937 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/20 | step 11/100 | loss=1.4742
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/20 | step 12/100 | loss=1.4131
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/20 | step 13/100 | loss=1.3862
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 3/20 | step 14/100 | loss=1.3357
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.3776 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/20 | step 16/100 | loss=1.2901
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/20 | step 17/100 | loss=1.2556
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/20 | step 18/100 | loss=1.2899
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 4/20 | step 19/100 | loss=1.2471
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.2680 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/20 | step 21/100 | loss=1.2616
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/20 | step 22/100 | loss=1.2300
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/20 | step 23/100 | loss=1.2164
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 5/20 | step 24/100 | loss=1.2015
+2026-10-13 13:43:32 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.2282 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 6/20 | step 26/100 | loss=1.2136
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 6/20 | step 27/100 | loss=1.2009
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 6/20 | step 28/100 | loss=1.1851
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 6/20 | step 29/100 | loss=1.1921
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.1964 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 7/20 | step 31/100 | loss=1.1825
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 7/20 | step 32/100 | loss=1.1874
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 7/20 | step 33/100 | loss=1.1810
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 7/20 | step 34/100 | loss=1.1767
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.1795 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 8/20 | step 36/100 | loss=1.1613
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 8/20 | step 37/100 | loss=1.1684
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 8/20 | step 38/100 | loss=1.1742
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 8/20 | step 39/100 | loss=1.1548
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.1655 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:43:33 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 9/20 | step 41/100 | loss=1.1420
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 9/20 | step 42/100 | loss=1.1481
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 9/20 | step 43/100 | loss=1.1687
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 9/20 | step 44/100 | loss=1.1495
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.1537 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 10/20 | step 46/100 | loss=1.1579
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 10/20 | step 47/100 | loss=1.1212
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 10/20 | step 48/100 | loss=1.1381
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 10/20 | step 49/100 | loss=1.1289
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.1440 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m03s
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 11/20 | step 51/100 | loss=1.1250
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 11/20 | step 52/100 | loss=1.1388
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 11/20 | step 53/100 | loss=1.1358
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 11/20 | step 54/100 | loss=1.1483
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.1394 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 12/20 | step 56/100 | loss=1.1153
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 12/20 | step 57/100 | loss=1.1177
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 12/20 | step 58/100 | loss=1.1511
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 12/20 | step 59/100 | loss=1.1117
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.1273 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:43:34 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 13/20 | step 61/100 | loss=1.1005
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 13/20 | step 62/100 | loss=1.1070
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 13/20 | step 63/100 | loss=1.1261
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 13/20 | step 64/100 | loss=1.1274
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.1125 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 14/20 | step 66/100 | loss=1.1184
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 14/20 | step 67/100 | loss=1.1208
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 14/20 | step 68/100 | loss=1.1197
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 14/20 | step 69/100 | loss=1.0938
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.1053 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 15/20 | step 71/100 | loss=1.0999
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 15/20 | step 72/100 | loss=1.0723
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 15/20 | step 73/100 | loss=1.0912
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 15/20 | step 74/100 | loss=1.0835
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.0851 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 16/20 | step 76/100 | loss=1.0934
+2026-10-13 13:43:35 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 16/20 | step 77/100 | loss=1.0669
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 16/20 | step 78/100 | loss=1.0697
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 16/20 | step 79/100 | loss=1.0634
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.0714 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 17/20 | step 81/100 | loss=1.0543
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 17/20 | step 82/100 | loss=1.0693
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 17/20 | step 83/100 | loss=1.0483
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 17/20 | step 84/100 | loss=1.0617
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.0609 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 18/20 | step 86/100 | loss=1.0626
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 18/20 | step 87/100 | loss=1.0587
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 18/20 | step 88/100 | loss=1.0248
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 18/20 | step 89/100 | loss=1.0483
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.0438 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 19/20 | step 91/100 | loss=1.0492
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 19/20 | step 92/100 | loss=1.0296
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 19/20 | step 93/100 | loss=1.0479
+2026-10-13 13:43:36 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 19/20 | step 94/100 | loss=1.0477
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.0403 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 20/20 | step 96/100 | loss=1.0485
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 20/20 | step 97/100 | loss=1.0401
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 20/20 | step 98/100 | loss=1.0295
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] epoch 20/20 | step 99/100 | loss=1.0309
+2026-10-13 13:43:37 | INFO    | [australian/s43/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.0375 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:43:38 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:43:40 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9704142011834319, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 1.8}
+2026-10-13 13:43:40 | INFO    | [5/22] australian seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 2.872, 'coverage_k2': 0.2995, 'mean_dist_synth_to_train_minority(DCR)': 2.9382, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:43:40 | INFO    | australian | seed 43 | ImbLLM-IAFP        | train=508 (min 202 / maj 306) | F1=0.7573 Acc=0.8188 G=0.7839 AUC=0.9116 PR-AUC=0.9010
+2026-10-13 13:43:40 | INFO    | australian | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m55s
+2026-10-13 13:43:40 | INFO    | australian | seed 43 | stage plots              | RUNNING [5/22] australian seed 43 (2/3)
+2026-10-13 13:43:42 | INFO    | [5/22] australian seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 13:43:42 | INFO    | australian | seed 43 | stage plots              | DONE in 0h00m01s
+2026-10-13 13:43:42 | INFO    | [5/22] australian seed 43 (2/3) | FINISHED (6/8 methods have metrics)
+2026-10-13 13:43:42 | INFO    | ====================================================================================================
+2026-10-13 13:43:42 | INFO    | [5/22] australian seed 44 (3/3) | START
+2026-10-13 13:43:42 | INFO    | australian | seed 44 | stage split              | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:42 | INFO    | [5/22] australian seed 44 (3/3) | split: train=552 test=138 | full-train minority=246 -> retained=49 (held-out ref=197) | reduced imbalance 6.2:1 | test minority=61 | test_fingerprint=ecd98df85542
+2026-10-13 13:43:42 | INFO    | australian | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 13:43:42 | INFO    | australian | seed 44 | stage importance         | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:42 | INFO    | [5/22] australian seed 44 (3/3) | top features: A8=0.4833, A10=0.1005, A13=0.0764, A2=0.0556, A6=0.0364
+2026-10-13 13:43:42 | INFO    | australian | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 13:43:42 | INFO    | australian | seed 44 | stage Original           | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | Original           | train=552 (min 246 / maj 306) | F1=0.8305 Acc=0.8551 G=0.8484 AUC=0.9359 PR-AUC=0.9187
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage Imbalanced         | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | Imbalanced         | train=355 (min 49 / maj 306) | F1=0.6809 Acc=0.7826 G=0.7196 AUC=0.9325 PR-AUC=0.9113
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage RandomOverSampler  | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | RandomOverSampler  | train=612 (min 306 / maj 306) | F1=0.7810 Acc=0.8333 G=0.8037 AUC=0.9302 PR-AUC=0.9086
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 13:43:43 | INFO    | [5/22] australian seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:43:43 | INFO    | [5/22] australian seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage SMOTE-NC           | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | SMOTE-NC           | train=612 (min 306 / maj 306) | F1=0.7477 Acc=0.8043 G=0.7776 AUC=0.9057 PR-AUC=0.8658
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 13:43:43 | INFO    | australian | seed 44 | stage ImbLLM-random      | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:43:43 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 1/20 | step 1/100 | loss=2.3249
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 1/20 | step 2/100 | loss=2.3320
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 1/20 | step 3/100 | loss=2.2946
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 1/20 | step 4/100 | loss=2.1654
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.2263 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 2/20 | step 6/100 | loss=1.8937
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 2/20 | step 7/100 | loss=1.7779
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 2/20 | step 8/100 | loss=1.6662
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] epoch 2/20 | step 9/100 | loss=1.5888
+2026-10-13 13:44:30 | INFO    | [australian/s44/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.6862 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 3/20 | step 11/100 | loss=1.4748
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 3/20 | step 12/100 | loss=1.4132
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 3/20 | step 13/100 | loss=1.3677
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 3/20 | step 14/100 | loss=1.3506
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.3877 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 4/20 | step 16/100 | loss=1.3194
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 4/20 | step 17/100 | loss=1.2930
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 4/20 | step 18/100 | loss=1.2917
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 4/20 | step 19/100 | loss=1.2739
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.2857 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 5/20 | step 21/100 | loss=1.2516
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 5/20 | step 22/100 | loss=1.2695
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 5/20 | step 23/100 | loss=1.2570
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 5/20 | step 24/100 | loss=1.2261
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.2472 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:44:31 | INFO    | [australian/s44/ImbLLM-random] epoch 6/20 | step 26/100 | loss=1.2262
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 6/20 | step 27/100 | loss=1.2271
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 6/20 | step 28/100 | loss=1.2174
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 6/20 | step 29/100 | loss=1.2081
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.2246 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 7/20 | step 31/100 | loss=1.2130
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 7/20 | step 32/100 | loss=1.2100
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 7/20 | step 33/100 | loss=1.2081
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 7/20 | step 34/100 | loss=1.1954
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.2055 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 8/20 | step 36/100 | loss=1.1949
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 8/20 | step 37/100 | loss=1.2093
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 8/20 | step 38/100 | loss=1.1895
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 8/20 | step 39/100 | loss=1.1831
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.1980 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 9/20 | step 41/100 | loss=1.1984
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 9/20 | step 42/100 | loss=1.1734
+2026-10-13 13:44:32 | INFO    | [australian/s44/ImbLLM-random] epoch 9/20 | step 43/100 | loss=1.1942
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 9/20 | step 44/100 | loss=1.1910
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.1890 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 10/20 | step 46/100 | loss=1.1716
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 10/20 | step 47/100 | loss=1.1759
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 10/20 | step 48/100 | loss=1.1657
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 10/20 | step 49/100 | loss=1.1751
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.1754 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m03s
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 11/20 | step 51/100 | loss=1.1661
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 11/20 | step 52/100 | loss=1.1650
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 11/20 | step 53/100 | loss=1.1766
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 11/20 | step 54/100 | loss=1.1729
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.1702 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 12/20 | step 56/100 | loss=1.1690
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 12/20 | step 57/100 | loss=1.1569
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 12/20 | step 58/100 | loss=1.1510
+2026-10-13 13:44:33 | INFO    | [australian/s44/ImbLLM-random] epoch 12/20 | step 59/100 | loss=1.1619
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.1640 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 13/20 | step 61/100 | loss=1.1596
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 13/20 | step 62/100 | loss=1.1559
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 13/20 | step 63/100 | loss=1.1430
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 13/20 | step 64/100 | loss=1.1664
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.1585 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 14/20 | step 66/100 | loss=1.1585
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 14/20 | step 67/100 | loss=1.1374
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 14/20 | step 68/100 | loss=1.1355
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 14/20 | step 69/100 | loss=1.1421
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.1447 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 15/20 | step 71/100 | loss=1.1445
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 15/20 | step 72/100 | loss=1.1223
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 15/20 | step 73/100 | loss=1.1099
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 15/20 | step 74/100 | loss=1.1278
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.1268 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:44:34 | INFO    | [australian/s44/ImbLLM-random] epoch 16/20 | step 76/100 | loss=1.1168
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 16/20 | step 77/100 | loss=1.1118
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 16/20 | step 78/100 | loss=1.2050
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 16/20 | step 79/100 | loss=1.1047
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.1265 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 17/20 | step 81/100 | loss=1.1021
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 17/20 | step 82/100 | loss=1.0898
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 17/20 | step 83/100 | loss=1.1031
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 17/20 | step 84/100 | loss=1.0800
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.0940 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 18/20 | step 86/100 | loss=1.0931
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 18/20 | step 87/100 | loss=1.0773
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 18/20 | step 88/100 | loss=1.0962
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 18/20 | step 89/100 | loss=1.0784
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.0842 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 19/20 | step 91/100 | loss=1.0654
+2026-10-13 13:44:35 | INFO    | [australian/s44/ImbLLM-random] epoch 19/20 | step 92/100 | loss=1.0695
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 19/20 | step 93/100 | loss=1.0673
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 19/20 | step 94/100 | loss=1.0665
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.0648 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 20/20 | step 96/100 | loss=1.0548
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 20/20 | step 97/100 | loss=1.0547
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 20/20 | step 98/100 | loss=1.0823
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] epoch 20/20 | step 99/100 | loss=1.0820
+2026-10-13 13:44:36 | INFO    | [australian/s44/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.0671 | epoch_time=0h00m00s | elapsed=0h00m06s | ETA=0h00m00s
+2026-10-13 13:44:37 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:44:39 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9644970414201184, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 1.9}
+2026-10-13 13:44:39 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 2.7437, 'coverage_k2': 0.4264, 'mean_dist_synth_to_train_minority(DCR)': 3.0707, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:44:40 | INFO    | australian | seed 44 | ImbLLM-random      | train=508 (min 202 / maj 306) | F1=0.7890 Acc=0.8333 G=0.8119 AUC=0.9155 PR-AUC=0.8602
+2026-10-13 13:44:40 | INFO    | australian | seed 44 | stage ImbLLM-random      | DONE in 0h00m56s
+2026-10-13 13:44:40 | INFO    | australian | seed 44 | stage ImbLLM-IAFP        | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:44:40 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 49 retained minority + 100 interpolated rows | synthetic to generate = 153 (CAPPED from 257; classes will not be perfectly balanced)
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] fine-tuning rows=149 | tokens/row: mean=75 max(probe)=75 -> max_len=94 | device=cuda
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/20 | step 1/100 | loss=2.3258
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/20 | step 2/100 | loss=2.3510
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/20 | step 3/100 | loss=2.2881
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 1/20 | step 4/100 | loss=2.1624
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.2300 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/20 | step 6/100 | loss=1.9059
+2026-10-13 13:45:26 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/20 | step 7/100 | loss=1.7679
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/20 | step 8/100 | loss=1.6575
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 2/20 | step 9/100 | loss=1.5876
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.6850 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/20 | step 11/100 | loss=1.4478
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/20 | step 12/100 | loss=1.3910
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/20 | step 13/100 | loss=1.3650
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 3/20 | step 14/100 | loss=1.3464
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.3682 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/20 | step 16/100 | loss=1.2845
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/20 | step 17/100 | loss=1.2592
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/20 | step 18/100 | loss=1.2363
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 4/20 | step 19/100 | loss=1.2401
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.2526 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/20 | step 21/100 | loss=1.2214
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/20 | step 22/100 | loss=1.2074
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/20 | step 23/100 | loss=1.2285
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 5/20 | step 24/100 | loss=1.2027
+2026-10-13 13:45:27 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.2100 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 6/20 | step 26/100 | loss=1.2125
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 6/20 | step 27/100 | loss=1.1751
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 6/20 | step 28/100 | loss=1.1939
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 6/20 | step 29/100 | loss=1.1906
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.1906 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 7/20 | step 31/100 | loss=1.1798
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 7/20 | step 32/100 | loss=1.1794
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 7/20 | step 33/100 | loss=1.1710
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 7/20 | step 34/100 | loss=1.1627
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.1722 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 8/20 | step 36/100 | loss=1.1610
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 8/20 | step 37/100 | loss=1.1713
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 8/20 | step 38/100 | loss=1.1554
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 8/20 | step 39/100 | loss=1.1512
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.1578 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 9/20 | step 41/100 | loss=1.1606
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 9/20 | step 42/100 | loss=1.1473
+2026-10-13 13:45:28 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 9/20 | step 43/100 | loss=1.1247
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 9/20 | step 44/100 | loss=1.1361
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.1425 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 10/20 | step 46/100 | loss=1.1492
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 10/20 | step 47/100 | loss=1.1148
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 10/20 | step 48/100 | loss=1.1293
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 10/20 | step 49/100 | loss=1.1400
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.1344 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 11/20 | step 51/100 | loss=1.1214
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 11/20 | step 52/100 | loss=1.1111
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 11/20 | step 53/100 | loss=1.1465
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 11/20 | step 54/100 | loss=1.1357
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.1226 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 12/20 | step 56/100 | loss=1.1483
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 12/20 | step 57/100 | loss=1.1033
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 12/20 | step 58/100 | loss=1.1243
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 12/20 | step 59/100 | loss=1.0948
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.1167 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 13/20 | step 61/100 | loss=1.1179
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 13/20 | step 62/100 | loss=1.1005
+2026-10-13 13:45:29 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 13/20 | step 63/100 | loss=1.0968
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 13/20 | step 64/100 | loss=1.1141
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.1047 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 14/20 | step 66/100 | loss=1.0988
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 14/20 | step 67/100 | loss=1.0760
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 14/20 | step 68/100 | loss=1.0888
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 14/20 | step 69/100 | loss=1.0966
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.0891 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 15/20 | step 71/100 | loss=1.0569
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 15/20 | step 72/100 | loss=1.0508
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 15/20 | step 73/100 | loss=1.0860
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 15/20 | step 74/100 | loss=1.0693
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.0603 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 16/20 | step 76/100 | loss=1.0557
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 16/20 | step 77/100 | loss=1.0416
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 16/20 | step 78/100 | loss=1.1337
+2026-10-13 13:45:30 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 16/20 | step 79/100 | loss=1.0463
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.0636 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 17/20 | step 81/100 | loss=1.0379
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 17/20 | step 82/100 | loss=1.0188
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 17/20 | step 83/100 | loss=1.0355
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 17/20 | step 84/100 | loss=1.0225
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.0286 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 18/20 | step 86/100 | loss=1.0196
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 18/20 | step 87/100 | loss=1.0266
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 18/20 | step 88/100 | loss=1.0135
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 18/20 | step 89/100 | loss=1.0257
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.0188 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 19/20 | step 91/100 | loss=1.0140
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 19/20 | step 92/100 | loss=1.0041
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 19/20 | step 93/100 | loss=0.9885
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 19/20 | step 94/100 | loss=0.9982
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.0060 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:45:31 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 20/20 | step 96/100 | loss=1.0170
+2026-10-13 13:45:32 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 20/20 | step 97/100 | loss=0.9941
+2026-10-13 13:45:32 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 20/20 | step 98/100 | loss=1.0214
+2026-10-13 13:45:32 | INFO    | [australian/s44/ImbLLM-IAFP] epoch 20/20 | step 99/100 | loss=1.0038
+2026-10-13 13:45:32 | INFO    | [australian/s44/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.0068 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:45:33 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | generating 153 rows (condition_yx, temperature 0.70)
+2026-10-13 13:45:35 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 169, 'valid_parse_rate': 0.9940828402366864, 'rounds': 1, 'rows_returned': 153, 'gen_batch_size_final': 128, 'gen_seconds': 1.8}
+2026-10-13 13:45:35 | INFO    | [5/22] australian seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0051, 'mean_dist_heldout_real_to_nearest_synth': 2.7656, 'coverage_k2': 0.401, 'mean_dist_synth_to_train_minority(DCR)': 2.6754, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:45:35 | INFO    | australian | seed 44 | ImbLLM-IAFP        | train=508 (min 202 / maj 306) | F1=0.7963 Acc=0.8406 G=0.8175 AUC=0.9042 PR-AUC=0.8564
+2026-10-13 13:45:35 | INFO    | australian | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m55s
+2026-10-13 13:45:35 | INFO    | australian | seed 44 | stage plots              | RUNNING [5/22] australian seed 44 (3/3)
+2026-10-13 13:45:37 | INFO    | [5/22] australian seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 13:45:37 | INFO    | australian | seed 44 | stage plots              | DONE in 0h00m01s
+2026-10-13 13:45:37 | INFO    | [5/22] australian seed 44 (3/3) | FINISHED (6/8 methods have metrics)
+2026-10-13 13:45:38 | INFO    | australian | DATASET COMPLETE in 0h06m11s -> runs/exp1/australian

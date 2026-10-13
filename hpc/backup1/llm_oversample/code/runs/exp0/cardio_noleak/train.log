@@ -1,0 +1,322 @@
+2026-10-13 04:02:27 | INFO    | ====================================================================================================
+2026-10-13 04:02:27 | INFO    | [14/22] DATASET cardio_noleak | elapsed so far 0h53m28s
+2026-10-13 04:02:27 | INFO    | 
+STATUS  datasets: 28 total | done=11 | partial=2 | pending=8 | running=1 | skipped=6
+  [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
+  [DONE] kc2              seeds_done=3/3
+  [DONE] breast           seeds_done=3/3
+  [DONE] balance          seeds_done=3/3
+  [DONE] australian       seeds_done=3/3
+  [DONE] blood            seeds_done=3/3
+  [DONE] diabetes         seeds_done=3/3
+  [DONE] german           seeds_done=3/3
+  [DONE] qsar             seeds_done=3/3
+  [PART] car              seeds_done=0/3 seed 42 [SMOTE-NC:failed] seed 43 [SMOTE-NC:failed] seed 44 [SMOTE-NC:failed]  (failed stages: [('42', 'SMOTE-NC'), ('43', 'SMOTE-NC'), ('44', 'SMOTE-NC')])
+  [DONE] steel            seeds_done=3/3
+  [DONE] kc1              seeds_done=3/3
+  [DONE] cardio           seeds_done=3/3
+  [RUN ] cardio_noleak    seeds_done=0/3
+  [PEND] sick             seeds_done=0/3
+  [PEND] compas           seeds_done=0/3
+  [PEND] bank             seeds_done=0/3
+  [PEND] churn            seeds_done=0/3
+  [PEND] waveform         seeds_done=0/3
+  [PEND] phoneme          seeds_done=0/3
+  [PEND] credit_card      seeds_done=0/3
+  [PEND] adult            seeds_done=0/3
+  [SKIP] abalone          seeds_done=0/3  (target looks continuous (28 unique values) -> regression)
+  [SKIP] california       seeds_done=0/3  (known regression dataset)
+  [SKIP] fuel             seeds_done=0/3  (known regression dataset)
+  [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
+  [SKIP] housing          seeds_done=0/3  (known regression dataset)
+  [SKIP] insurance        seeds_done=0/3  (known regression dataset)
+2026-10-13 04:02:27 | INFO    | cardio_noleak | rows=2126 | 35 numeric + 0 categorical features | classes=10 (smallest class = minority, others merged) | minority='3': 53 rows (2.49%)
+2026-10-13 04:02:27 | INFO    | ====================================================================================================
+2026-10-13 04:02:27 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | START
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage split              | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | split: train=1700 test=426 | full-train minority=42 -> retained=8 (held-out ref=34) | reduced imbalance 207.2:1 | test minority=11 | test_fingerprint=1bf864fe4ad6
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage importance         | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | top features: V12=0.4757, V28=0.1230, V24=0.0169, V16=0.0159, V18=0.0073
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage Original           | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | Original           | train=1700 (min 42 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage Imbalanced         | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | Imbalanced         | train=1666 (min 8 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage RandomOverSampler  | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | RandomOverSampler  | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage SMOTE              | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | SMOTE              | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:02:27 | INFO    | cardio_noleak | seed 42 | stage ADASYN             | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:28 | INFO    | cardio_noleak | seed 42 | ADASYN             | train=3317 (min 1659 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:02:28 | INFO    | cardio_noleak | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:02:28 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:02:28 | INFO    | cardio_noleak | seed 42 | stage ImbLLM-random      | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:28 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-random | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:02:30 | INFO    | [cardio_noleak/s42/ImbLLM-random] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 04:02:30 | INFO    | [cardio_noleak/s42/ImbLLM-random] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:02:31 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 1/5 | step 3/70 | loss=2.1658
+2026-10-13 04:02:31 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 1/5 | step 6/70 | loss=1.9172
+2026-10-13 04:02:31 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 1/5 | step 9/70 | loss=1.7475
+2026-10-13 04:02:31 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 1/5 | step 12/70 | loss=1.6465
+2026-10-13 04:02:31 | INFO    | [cardio_noleak/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.8292 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:02:32 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 2/5 | step 17/70 | loss=1.5559
+2026-10-13 04:02:32 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 2/5 | step 20/70 | loss=1.5240
+2026-10-13 04:02:32 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 2/5 | step 23/70 | loss=1.4962
+2026-10-13 04:02:32 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 2/5 | step 26/70 | loss=1.4727
+2026-10-13 04:02:32 | INFO    | [cardio_noleak/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5052 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:02:33 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 3/5 | step 31/70 | loss=1.4401
+2026-10-13 04:02:33 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 3/5 | step 34/70 | loss=1.4205
+2026-10-13 04:02:33 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 3/5 | step 37/70 | loss=1.3967
+2026-10-13 04:02:33 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 3/5 | step 40/70 | loss=1.3805
+2026-10-13 04:02:33 | INFO    | [cardio_noleak/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4036 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:02:34 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 4/5 | step 45/70 | loss=1.3525
+2026-10-13 04:02:34 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 4/5 | step 48/70 | loss=1.3506
+2026-10-13 04:02:34 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 4/5 | step 51/70 | loss=1.3261
+2026-10-13 04:02:35 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 4/5 | step 54/70 | loss=1.3117
+2026-10-13 04:02:35 | INFO    | [cardio_noleak/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3308 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 04:02:35 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 5/5 | step 59/70 | loss=1.3016
+2026-10-13 04:02:35 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 5/5 | step 62/70 | loss=1.2884
+2026-10-13 04:02:35 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 5/5 | step 65/70 | loss=1.2847
+2026-10-13 04:02:36 | INFO    | [cardio_noleak/s42/ImbLLM-random] epoch 5/5 | step 68/70 | loss=1.2816
+2026-10-13 04:02:36 | INFO    | [cardio_noleak/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2893 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 04:02:37 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-random | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:02:57 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9928414096916299, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 19.5}
+2026-10-13 04:02:57 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.4864, 'coverage_k2': 0.5588, 'mean_dist_synth_to_train_minority(DCR)': 23.4609, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:02:57 | INFO    | cardio_noleak | seed 42 | ImbLLM-random      | train=3316 (min 1658 / maj 1658) | F1=0.8421 Acc=0.9930 G=0.8528 AUC=0.9998 PR-AUC=0.9924
+2026-10-13 04:02:57 | INFO    | cardio_noleak | seed 42 | stage ImbLLM-random      | DONE in 0h00m29s
+2026-10-13 04:02:57 | INFO    | cardio_noleak | seed 42 | stage ImbLLM-IAFP        | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:02:57 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:03:00 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 04:03:01 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:03:01 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 1/5 | step 3/70 | loss=2.1595
+2026-10-13 04:03:01 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 1/5 | step 6/70 | loss=1.9094
+2026-10-13 04:03:02 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 1/5 | step 9/70 | loss=1.7382
+2026-10-13 04:03:02 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 1/5 | step 12/70 | loss=1.6267
+2026-10-13 04:03:02 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.8169 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 04:03:02 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 2/5 | step 17/70 | loss=1.5360
+2026-10-13 04:03:03 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 2/5 | step 20/70 | loss=1.4906
+2026-10-13 04:03:03 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 2/5 | step 23/70 | loss=1.4685
+2026-10-13 04:03:03 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 2/5 | step 26/70 | loss=1.4375
+2026-10-13 04:03:03 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.4742 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 04:03:04 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 3/5 | step 31/70 | loss=1.3914
+2026-10-13 04:03:04 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 3/5 | step 34/70 | loss=1.3753
+2026-10-13 04:03:04 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 3/5 | step 37/70 | loss=1.3542
+2026-10-13 04:03:04 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 3/5 | step 40/70 | loss=1.3328
+2026-10-13 04:03:04 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3579 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:03:05 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 4/5 | step 45/70 | loss=1.3111
+2026-10-13 04:03:05 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 4/5 | step 48/70 | loss=1.2953
+2026-10-13 04:03:05 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 4/5 | step 51/70 | loss=1.2881
+2026-10-13 04:03:06 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 4/5 | step 54/70 | loss=1.2774
+2026-10-13 04:03:06 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2904 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 04:03:06 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 5/5 | step 59/70 | loss=1.2624
+2026-10-13 04:03:06 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 5/5 | step 62/70 | loss=1.2578
+2026-10-13 04:03:06 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 5/5 | step 65/70 | loss=1.2534
+2026-10-13 04:03:07 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] epoch 5/5 | step 68/70 | loss=1.2497
+2026-10-13 04:03:07 | INFO    | [cardio_noleak/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2565 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 04:03:08 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-IAFP | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:03:28 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9966960352422908, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 20.0}
+2026-10-13 04:03:28 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.505, 'coverage_k2': 0.5588, 'mean_dist_synth_to_train_minority(DCR)': 22.2261, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:03:29 | INFO    | cardio_noleak | seed 42 | ImbLLM-IAFP        | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:29 | INFO    | cardio_noleak | seed 42 | stage ImbLLM-IAFP        | DONE in 0h00m31s
+2026-10-13 04:03:29 | INFO    | cardio_noleak | seed 42 | stage plots              | RUNNING [14/22] cardio_noleak seed 42 (1/3)
+2026-10-13 04:03:34 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 42 | stage plots              | DONE in 0h00m05s
+2026-10-13 04:03:34 | INFO    | [14/22] cardio_noleak seed 42 (1/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:03:34 | INFO    | ====================================================================================================
+2026-10-13 04:03:34 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | START
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage split              | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:34 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | split: train=1700 test=426 | full-train minority=42 -> retained=8 (held-out ref=34) | reduced imbalance 207.2:1 | test minority=11 | test_fingerprint=bfaabb49e8a8
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage importance         | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:34 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | top features: V28=0.8104, V12=0.4989, V1=0.0000, V3=0.0000, V2=0.0000
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage Original           | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | Original           | train=1700 (min 42 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage Imbalanced         | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | Imbalanced         | train=1666 (min 8 / maj 1658) | F1=0.9524 Acc=0.9977 G=0.9535 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:03:34 | INFO    | cardio_noleak | seed 43 | stage RandomOverSampler  | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | RandomOverSampler  | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage SMOTE              | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | SMOTE              | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage ADASYN             | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | ADASYN             | train=3314 (min 1656 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:03:35 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:03:35 | INFO    | cardio_noleak | seed 43 | stage ImbLLM-random      | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:03:35 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-random | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:03:38 | INFO    | [cardio_noleak/s43/ImbLLM-random] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 04:03:39 | INFO    | [cardio_noleak/s43/ImbLLM-random] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:03:39 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 1/5 | step 3/70 | loss=2.1522
+2026-10-13 04:03:39 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 1/5 | step 6/70 | loss=1.9030
+2026-10-13 04:03:40 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 1/5 | step 9/70 | loss=1.7420
+2026-10-13 04:03:40 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 1/5 | step 12/70 | loss=1.6290
+2026-10-13 04:03:40 | INFO    | [cardio_noleak/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.8178 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 04:03:40 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 2/5 | step 17/70 | loss=1.5332
+2026-10-13 04:03:40 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 2/5 | step 20/70 | loss=1.4972
+2026-10-13 04:03:41 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 2/5 | step 23/70 | loss=1.4729
+2026-10-13 04:03:41 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 2/5 | step 26/70 | loss=1.4497
+2026-10-13 04:03:41 | INFO    | [cardio_noleak/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.4819 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 04:03:41 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 3/5 | step 31/70 | loss=1.4077
+2026-10-13 04:03:42 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 3/5 | step 34/70 | loss=1.3924
+2026-10-13 04:03:42 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 3/5 | step 37/70 | loss=1.3788
+2026-10-13 04:03:42 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 3/5 | step 40/70 | loss=1.3599
+2026-10-13 04:03:42 | INFO    | [cardio_noleak/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.3767 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:03:42 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 4/5 | step 45/70 | loss=1.3268
+2026-10-13 04:03:43 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 4/5 | step 48/70 | loss=1.3092
+2026-10-13 04:03:43 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 4/5 | step 51/70 | loss=1.2991
+2026-10-13 04:03:43 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 4/5 | step 54/70 | loss=1.2752
+2026-10-13 04:03:43 | INFO    | [cardio_noleak/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.2996 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 04:03:44 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 5/5 | step 59/70 | loss=1.2689
+2026-10-13 04:03:44 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 5/5 | step 62/70 | loss=1.2596
+2026-10-13 04:03:44 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 5/5 | step 65/70 | loss=1.2611
+2026-10-13 04:03:44 | INFO    | [cardio_noleak/s43/ImbLLM-random] epoch 5/5 | step 68/70 | loss=1.2483
+2026-10-13 04:03:45 | INFO    | [cardio_noleak/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2604 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 04:03:46 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-random | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:04:03 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9939427312775331, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 16.9}
+2026-10-13 04:04:03 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.4889, 'coverage_k2': 0.4118, 'mean_dist_synth_to_train_minority(DCR)': 18.1542, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:04:03 | INFO    | cardio_noleak | seed 43 | ImbLLM-random      | train=3316 (min 1658 / maj 1658) | F1=0.3077 Acc=0.9789 G=0.4264 AUC=0.9998 PR-AUC=0.9924
+2026-10-13 04:04:03 | INFO    | cardio_noleak | seed 43 | stage ImbLLM-random      | DONE in 0h00m28s
+2026-10-13 04:04:03 | INFO    | cardio_noleak | seed 43 | stage ImbLLM-IAFP        | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:04:03 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:04:05 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 04:04:06 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:04:06 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 1/5 | step 3/70 | loss=2.1506
+2026-10-13 04:04:06 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 1/5 | step 6/70 | loss=1.9003
+2026-10-13 04:04:06 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 1/5 | step 9/70 | loss=1.7369
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 1/5 | step 12/70 | loss=1.6300
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.8163 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 2/5 | step 17/70 | loss=1.5245
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 2/5 | step 20/70 | loss=1.4955
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 2/5 | step 23/70 | loss=1.4562
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 2/5 | step 26/70 | loss=1.4234
+2026-10-13 04:04:07 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.4648 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 3/5 | step 31/70 | loss=1.3761
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 3/5 | step 34/70 | loss=1.3509
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 3/5 | step 37/70 | loss=1.3271
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 3/5 | step 40/70 | loss=1.3149
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3377 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:04:08 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 4/5 | step 45/70 | loss=1.2839
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 4/5 | step 48/70 | loss=1.2745
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 4/5 | step 51/70 | loss=1.2594
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 4/5 | step 54/70 | loss=1.2440
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2627 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 5/5 | step 59/70 | loss=1.2359
+2026-10-13 04:04:09 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 5/5 | step 62/70 | loss=1.2257
+2026-10-13 04:04:10 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 5/5 | step 65/70 | loss=1.2304
+2026-10-13 04:04:10 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] epoch 5/5 | step 68/70 | loss=1.2072
+2026-10-13 04:04:10 | INFO    | [cardio_noleak/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2229 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:04:11 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-IAFP | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:04:25 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9922907488986784, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 13.7}
+2026-10-13 04:04:25 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.2247, 'coverage_k2': 0.5294, 'mean_dist_synth_to_train_minority(DCR)': 18.4732, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:04:25 | INFO    | cardio_noleak | seed 43 | ImbLLM-IAFP        | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:25 | INFO    | cardio_noleak | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m22s
+2026-10-13 04:04:25 | INFO    | cardio_noleak | seed 43 | stage plots              | RUNNING [14/22] cardio_noleak seed 43 (2/3)
+2026-10-13 04:04:30 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 43 | stage plots              | DONE in 0h00m05s
+2026-10-13 04:04:31 | INFO    | [14/22] cardio_noleak seed 43 (2/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:04:31 | INFO    | ====================================================================================================
+2026-10-13 04:04:31 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | START
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage split              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:31 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | split: train=1700 test=426 | full-train minority=42 -> retained=8 (held-out ref=34) | reduced imbalance 207.2:1 | test minority=11 | test_fingerprint=c7f34a81ce83
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage importance         | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:31 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | top features: V28=0.7994, V12=0.3083, V6=0.2833, V1=0.1667, V18=0.1000
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage Original           | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | Original           | train=1700 (min 42 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage Imbalanced         | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | Imbalanced         | train=1666 (min 8 / maj 1658) | F1=0.6250 Acc=0.9859 G=0.6742 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage RandomOverSampler  | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | RandomOverSampler  | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:04:31 | INFO    | cardio_noleak | seed 44 | stage SMOTE              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | SMOTE              | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | stage ADASYN             | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | ADASYN             | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:04:32 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:04:32 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-random      | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:32 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:04:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] fine-tuning rows=422 | tokens/row: mean=186 max(probe)=189 -> max_len=225 | device=cuda
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/5 | step 3/70 | loss=2.1530
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/5 | step 6/70 | loss=1.9082
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/5 | step 9/70 | loss=1.7339
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/5 | step 12/70 | loss=1.6358
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.8155 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 04:04:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/5 | step 17/70 | loss=1.5474
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/5 | step 20/70 | loss=1.5074
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/5 | step 23/70 | loss=1.4873
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/5 | step 26/70 | loss=1.4628
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.4957 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/5 | step 31/70 | loss=1.4355
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/5 | step 34/70 | loss=1.4097
+2026-10-13 04:04:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/5 | step 37/70 | loss=1.3951
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/5 | step 40/70 | loss=1.3682
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.3980 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m01s
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/5 | step 45/70 | loss=1.3477
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/5 | step 48/70 | loss=1.3363
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/5 | step 51/70 | loss=1.3220
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/5 | step 54/70 | loss=1.3113
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3271 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 04:04:37 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/5 | step 59/70 | loss=1.3008
+2026-10-13 04:04:38 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/5 | step 62/70 | loss=1.2887
+2026-10-13 04:04:38 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/5 | step 65/70 | loss=1.2782
+2026-10-13 04:04:38 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/5 | step 68/70 | loss=1.2808
+2026-10-13 04:04:38 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2850 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:04:39 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:04:53 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9933920704845814, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 13.3}
+2026-10-13 04:04:53 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.6452, 'coverage_k2': 0.4118, 'mean_dist_synth_to_train_minority(DCR)': 24.1906, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:04:53 | INFO    | cardio_noleak | seed 44 | ImbLLM-random      | train=3316 (min 1658 / maj 1658) | F1=0.6250 Acc=0.9859 G=0.6742 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:04:53 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-random      | DONE in 0h00m21s
+2026-10-13 04:04:53 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-IAFP        | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:04:53 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 04:04:55 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] fine-tuning rows=422 | tokens/row: mean=186 max(probe)=189 -> max_len=225 | device=cuda
+2026-10-13 04:04:56 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:04:56 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/5 | step 3/70 | loss=2.1475
+2026-10-13 04:04:56 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/5 | step 6/70 | loss=1.9004
+2026-10-13 04:04:56 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/5 | step 9/70 | loss=1.7298
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/5 | step 12/70 | loss=1.6274
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.8082 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m02s
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/5 | step 17/70 | loss=1.5306
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/5 | step 20/70 | loss=1.4849
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/5 | step 23/70 | loss=1.4706
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/5 | step 26/70 | loss=1.4499
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.4760 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:04:57 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/5 | step 31/70 | loss=1.3931
+2026-10-13 04:04:58 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/5 | step 34/70 | loss=1.3936
+2026-10-13 04:04:58 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/5 | step 37/70 | loss=1.3596
+2026-10-13 04:04:58 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/5 | step 40/70 | loss=1.3437
+2026-10-13 04:04:58 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3664 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:04:58 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/5 | step 45/70 | loss=1.3168
+2026-10-13 04:04:59 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/5 | step 48/70 | loss=1.3086
+2026-10-13 04:04:59 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/5 | step 51/70 | loss=1.3003
+2026-10-13 04:04:59 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/5 | step 54/70 | loss=1.2955
+2026-10-13 04:04:59 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.3008 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:04:59 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/5 | step 59/70 | loss=1.2716
+2026-10-13 04:05:00 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/5 | step 62/70 | loss=1.2617
+2026-10-13 04:05:00 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/5 | step 65/70 | loss=1.2642
+2026-10-13 04:05:00 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/5 | step 68/70 | loss=1.2594
+2026-10-13 04:05:00 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2620 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:05:01 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 04:05:15 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9933920704845814, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 13.4}
+2026-10-13 04:05:15 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.5628, 'coverage_k2': 0.3824, 'mean_dist_synth_to_train_minority(DCR)': 26.437, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:05:15 | INFO    | cardio_noleak | seed 44 | ImbLLM-IAFP        | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 04:05:15 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m22s
+2026-10-13 04:05:15 | INFO    | cardio_noleak | seed 44 | stage plots              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 04:05:20 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:05:20 | INFO    | cardio_noleak | seed 44 | stage plots              | DONE in 0h00m05s
+2026-10-13 04:05:20 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:05:21 | INFO    | cardio_noleak | DATASET COMPLETE in 0h02m54s -> runs/exp1/cardio_noleak

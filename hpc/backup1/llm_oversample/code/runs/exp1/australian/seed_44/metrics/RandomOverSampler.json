@@ -22,5 +22,5 @@
   "test_minority": 61,
   "test_fingerprint": "ecd98df85542",
   "threshold": 0.5,
-  "eval_seconds": 0.3
+  "eval_seconds": 0.2
 }

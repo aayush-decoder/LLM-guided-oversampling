@@ -1,0 +1,19 @@
+{
+  "dataset": "qsar",
+  "rows": 1055,
+  "n_numerical": 41,
+  "n_categorical": 0,
+  "target": "Class",
+  "class_counts": {
+    "1": 699,
+    "2": 356
+  },
+  "n_classes": 2,
+  "minority_label": "2",
+  "minority_count": 356,
+  "majority_count": 699,
+  "minority_fraction": 0.33744075829383885,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

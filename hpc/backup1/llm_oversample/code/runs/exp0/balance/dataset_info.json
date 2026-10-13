@@ -1,0 +1,20 @@
+{
+  "dataset": "balance",
+  "rows": 625,
+  "n_numerical": 4,
+  "n_categorical": 0,
+  "target": "class",
+  "class_counts": {
+    "R": 288,
+    "L": 288,
+    "B": 49
+  },
+  "n_classes": 3,
+  "minority_label": "B",
+  "minority_count": 49,
+  "majority_count": 576,
+  "minority_fraction": 0.0784,
+  "multiclass_merged": true,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

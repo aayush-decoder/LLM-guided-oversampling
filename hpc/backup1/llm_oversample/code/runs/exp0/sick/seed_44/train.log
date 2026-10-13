@@ -1,0 +1,84 @@
+2026-10-13 04:09:26 | INFO    | ====================================================================================================
+2026-10-13 04:09:26 | INFO    | [15/22] sick seed 44 (3/3) | START
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage split              | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:26 | INFO    | [15/22] sick seed 44 (3/3) | split: train=3017 test=755 | full-train minority=185 -> retained=37 (held-out ref=148) | reduced imbalance 76.5:1 | test minority=46 | test_fingerprint=4f7d284d0d09
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage importance         | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:26 | INFO    | [15/22] sick seed 44 (3/3) | top features: T3=0.5255, TT4=0.1383, TSH=0.1193, referral_source=0.0483, age=0.0000
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage Original           | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | Original           | train=3017 (min 185 / maj 2832) | F1=0.8696 Acc=0.9841 G=0.9286 AUC=0.9971 PR-AUC=0.9600
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage Imbalanced         | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | Imbalanced         | train=2869 (min 37 / maj 2832) | F1=0.7467 Acc=0.9748 G=0.7796 AUC=0.9814 PR-AUC=0.8928
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:09:26 | INFO    | sick | seed 44 | stage RandomOverSampler  | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:27 | INFO    | sick | seed 44 | RandomOverSampler  | train=5664 (min 2832 / maj 2832) | F1=0.8506 Acc=0.9828 G=0.8943 AUC=0.9781 PR-AUC=0.8893
+2026-10-13 04:09:27 | INFO    | sick | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:09:27 | INFO    | [15/22] sick seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:09:27 | INFO    | [15/22] sick seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:09:27 | INFO    | sick | seed 44 | stage SMOTE-NC           | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:28 | INFO    | sick | seed 44 | SMOTE-NC           | train=5664 (min 2832 / maj 2832) | F1=0.8372 Acc=0.9815 G=0.8822 AUC=0.9838 PR-AUC=0.8921
+2026-10-13 04:09:28 | INFO    | sick | seed 44 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 04:09:28 | INFO    | sick | seed 44 | stage ImbLLM-random      | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:09:28 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-random | fine-tune set = 37 retained minority + 708 interpolated rows | synthetic to generate = 2795
+2026-10-13 04:09:31 | INFO    | [sick/s44/ImbLLM-random] fine-tuning rows=745 | tokens/row: mean=206 max(probe)=210 -> max_len=249 | device=cuda
+2026-10-13 04:09:31 | INFO    | [sick/s44/ImbLLM-random] training: epochs=5 | steps/epoch=24 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:09:32 | INFO    | [sick/s44/ImbLLM-random] epoch 1/5 | step 6/120 | loss=3.4282
+2026-10-13 04:09:32 | INFO    | [sick/s44/ImbLLM-random] epoch 1/5 | step 12/120 | loss=2.4853
+2026-10-13 04:09:32 | INFO    | [sick/s44/ImbLLM-random] epoch 1/5 | step 18/120 | loss=1.7763
+2026-10-13 04:09:33 | INFO    | [sick/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.2510 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 04:09:33 | INFO    | [sick/s44/ImbLLM-random] epoch 2/5 | step 30/120 | loss=1.0987
+2026-10-13 04:09:33 | INFO    | [sick/s44/ImbLLM-random] epoch 2/5 | step 36/120 | loss=0.9955
+2026-10-13 04:09:34 | INFO    | [sick/s44/ImbLLM-random] epoch 2/5 | step 42/120 | loss=0.9323
+2026-10-13 04:09:34 | INFO    | [sick/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=0.9817 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 04:09:34 | INFO    | [sick/s44/ImbLLM-random] epoch 3/5 | step 54/120 | loss=0.8766
+2026-10-13 04:09:35 | INFO    | [sick/s44/ImbLLM-random] epoch 3/5 | step 60/120 | loss=0.8560
+2026-10-13 04:09:35 | INFO    | [sick/s44/ImbLLM-random] epoch 3/5 | step 66/120 | loss=0.8505
+2026-10-13 04:09:35 | INFO    | [sick/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=0.8559 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:09:36 | INFO    | [sick/s44/ImbLLM-random] epoch 4/5 | step 78/120 | loss=0.8332
+2026-10-13 04:09:36 | INFO    | [sick/s44/ImbLLM-random] epoch 4/5 | step 84/120 | loss=0.8231
+2026-10-13 04:09:37 | INFO    | [sick/s44/ImbLLM-random] epoch 4/5 | step 90/120 | loss=0.8162
+2026-10-13 04:09:37 | INFO    | [sick/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=0.8207 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m01s
+2026-10-13 04:09:37 | INFO    | [sick/s44/ImbLLM-random] epoch 5/5 | step 102/120 | loss=0.8089
+2026-10-13 04:09:38 | INFO    | [sick/s44/ImbLLM-random] epoch 5/5 | step 108/120 | loss=0.8102
+2026-10-13 04:09:38 | INFO    | [sick/s44/ImbLLM-random] epoch 5/5 | step 114/120 | loss=0.8061
+2026-10-13 04:09:39 | INFO    | [sick/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=0.8077 | epoch_time=0h00m01s | elapsed=0h00m07s | ETA=0h00m00s
+2026-10-13 04:09:40 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-random | generating 2795 rows (condition_yx, temperature 0.70)
+2026-10-13 04:10:08 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 3075, 'valid_parse_rate': 0.9996747967479674, 'rounds': 1, 'rows_returned': 2795, 'gen_batch_size_final': 128, 'gen_seconds': 28.1}
+2026-10-13 04:10:08 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.6081, 'mean_dist_heldout_real_to_nearest_synth': 2.1388, 'coverage_k2': 0.7703, 'mean_dist_synth_to_train_minority(DCR)': 1.5707, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:10:08 | INFO    | sick | seed 44 | ImbLLM-random      | train=5664 (min 2832 / maj 2832) | F1=0.7470 Acc=0.9722 G=0.8174 AUC=0.9624 PR-AUC=0.8252
+2026-10-13 04:10:08 | INFO    | sick | seed 44 | stage ImbLLM-random      | DONE in 0h00m40s
+2026-10-13 04:10:08 | INFO    | sick | seed 44 | stage ImbLLM-IAFP        | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:10:08 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 37 retained minority + 708 interpolated rows | synthetic to generate = 2795
+2026-10-13 04:10:11 | INFO    | [sick/s44/ImbLLM-IAFP] fine-tuning rows=745 | tokens/row: mean=206 max(probe)=210 -> max_len=249 | device=cuda
+2026-10-13 04:10:11 | INFO    | [sick/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=24 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:10:12 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 1/5 | step 6/120 | loss=3.4533
+2026-10-13 04:10:12 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 1/5 | step 12/120 | loss=2.4983
+2026-10-13 04:10:12 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 1/5 | step 18/120 | loss=1.7829
+2026-10-13 04:10:13 | INFO    | [sick/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.2625 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m05s
+2026-10-13 04:10:13 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 2/5 | step 30/120 | loss=1.0913
+2026-10-13 04:10:14 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 2/5 | step 36/120 | loss=0.9901
+2026-10-13 04:10:14 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 2/5 | step 42/120 | loss=0.9324
+2026-10-13 04:10:15 | INFO    | [sick/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=0.9772 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m05s
+2026-10-13 04:10:15 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 3/5 | step 54/120 | loss=0.8719
+2026-10-13 04:10:16 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 3/5 | step 60/120 | loss=0.8536
+2026-10-13 04:10:16 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 3/5 | step 66/120 | loss=0.8358
+2026-10-13 04:10:17 | INFO    | [sick/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=0.8458 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m03s
+2026-10-13 04:10:17 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 4/5 | step 78/120 | loss=0.8169
+2026-10-13 04:10:18 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 4/5 | step 84/120 | loss=0.8127
+2026-10-13 04:10:18 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 4/5 | step 90/120 | loss=0.8032
+2026-10-13 04:10:19 | INFO    | [sick/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=0.8083 | epoch_time=0h00m02s | elapsed=0h00m07s | ETA=0h00m01s
+2026-10-13 04:10:19 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 5/5 | step 102/120 | loss=0.7969
+2026-10-13 04:10:20 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 5/5 | step 108/120 | loss=0.7980
+2026-10-13 04:10:20 | INFO    | [sick/s44/ImbLLM-IAFP] epoch 5/5 | step 114/120 | loss=0.7963
+2026-10-13 04:10:21 | INFO    | [sick/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=0.7955 | epoch_time=0h00m02s | elapsed=0h00m09s | ETA=0h00m00s
+2026-10-13 04:10:22 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-IAFP | generating 2795 rows (condition_yx, temperature 0.70)
+2026-10-13 04:10:51 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 3075, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2795, 'gen_batch_size_final': 128, 'gen_seconds': 28.4}
+2026-10-13 04:10:51 | INFO    | [15/22] sick seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.5811, 'mean_dist_heldout_real_to_nearest_synth': 2.4889, 'coverage_k2': 0.6757, 'mean_dist_synth_to_train_minority(DCR)': 1.7958, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:10:51 | INFO    | sick | seed 44 | ImbLLM-IAFP        | train=5664 (min 2832 / maj 2832) | F1=0.7333 Acc=0.9682 G=0.8404 AUC=0.9579 PR-AUC=0.8070
+2026-10-13 04:10:51 | INFO    | sick | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m42s
+2026-10-13 04:10:51 | INFO    | sick | seed 44 | stage plots              | RUNNING [15/22] sick seed 44 (3/3)
+2026-10-13 04:10:56 | INFO    | [15/22] sick seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:10:57 | INFO    | sick | seed 44 | stage plots              | DONE in 0h00m05s
+2026-10-13 04:10:57 | INFO    | [15/22] sick seed 44 (3/3) | FINISHED (6/8 methods have metrics)

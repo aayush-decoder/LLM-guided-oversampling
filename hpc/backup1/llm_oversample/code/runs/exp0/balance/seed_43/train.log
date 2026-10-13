@@ -1,0 +1,86 @@
+2026-10-13 03:25:56 | INFO    | ====================================================================================================
+2026-10-13 03:25:56 | INFO    | [4/22] balance seed 43 (2/3) | START
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage split              | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:56 | INFO    | [4/22] balance seed 43 (2/3) | split: train=500 test=125 | full-train minority=39 -> retained=8 (held-out ref=31) | reduced imbalance 57.6:1 | test minority=10 | test_fingerprint=92fd87f9ef37
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage importance         | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:56 | INFO    | [4/22] balance seed 43 (2/3) | top features: left-weight=0.4572, right-weight=0.3902, right-distance=0.3714, left-distance=0.3335
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage Original           | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | Original           | train=500 (min 39 / maj 461) | F1=0.0000 Acc=0.8960 G=0.0000 AUC=0.5783 PR-AUC=0.0957
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:25:56 | INFO    | balance | seed 43 | stage Imbalanced         | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | Imbalanced         | train=469 (min 8 / maj 461) | F1=0.0000 Acc=0.9200 G=0.0000 AUC=0.6670 PR-AUC=0.1877
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage RandomOverSampler  | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | RandomOverSampler  | train=922 (min 461 / maj 461) | F1=0.0000 Acc=0.8800 G=0.0000 AUC=0.6722 PR-AUC=0.1211
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage SMOTE              | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | SMOTE              | train=922 (min 461 / maj 461) | F1=0.0000 Acc=0.9040 G=0.0000 AUC=0.6913 PR-AUC=0.1809
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage ADASYN             | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | ADASYN             | train=925 (min 464 / maj 461) | F1=0.0000 Acc=0.9120 G=0.0000 AUC=0.6930 PR-AUC=0.1785
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:25:57 | INFO    | [4/22] balance seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:25:57 | INFO    | balance | seed 43 | stage ImbLLM-random      | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:25:57 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-random | fine-tune set = 8 retained minority + 115 interpolated rows | synthetic to generate = 453
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] fine-tuning rows=123 | tokens/row: mean=29 max(probe)=29 -> max_len=41 | device=cuda
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] training: epochs=5 | steps/epoch=4 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 1/5 | step 1/20 | loss=2.8679
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 1/5 | step 2/20 | loss=2.8680
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 1/5 | step 3/20 | loss=2.2756
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.4871 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 2/5 | step 5/20 | loss=1.5937
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 2/5 | step 6/20 | loss=1.3085
+2026-10-13 03:26:00 | INFO    | [balance/s43/ImbLLM-random] epoch 2/5 | step 7/20 | loss=1.1420
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.2524 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 3/5 | step 9/20 | loss=0.8676
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 3/5 | step 10/20 | loss=0.7777
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 3/5 | step 11/20 | loss=0.7623
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=0.7796 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 4/5 | step 13/20 | loss=0.6819
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 4/5 | step 14/20 | loss=0.6613
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 4/5 | step 15/20 | loss=0.6470
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=0.6595 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 5/5 | step 17/20 | loss=0.6551
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 5/5 | step 18/20 | loss=0.6045
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] epoch 5/5 | step 19/20 | loss=0.5861
+2026-10-13 03:26:01 | INFO    | [balance/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=0.6090 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:02 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-random | generating 453 rows (condition_yx, temperature 0.70)
+2026-10-13 03:26:02 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 499, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 453, 'gen_batch_size_final': 128, 'gen_seconds': 0.5}
+2026-10-13 03:26:03 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.3871, 'mean_dist_heldout_real_to_nearest_synth': 0.6358, 'coverage_k2': 0.9032, 'mean_dist_synth_to_train_minority(DCR)': 0.8227, 'frac_synth_exact_copy_of_train_minority': 0.2539}
+2026-10-13 03:26:03 | INFO    | balance | seed 43 | ImbLLM-random      | train=922 (min 461 / maj 461) | F1=0.2381 Acc=0.7440 G=0.6186 AUC=0.7443 PR-AUC=0.2136
+2026-10-13 03:26:03 | INFO    | balance | seed 43 | stage ImbLLM-random      | DONE in 0h00m05s
+2026-10-13 03:26:03 | INFO    | balance | seed 43 | stage ImbLLM-IAFP        | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:26:03 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 115 interpolated rows | synthetic to generate = 453
+2026-10-13 03:26:05 | INFO    | [balance/s43/ImbLLM-IAFP] fine-tuning rows=123 | tokens/row: mean=29 max(probe)=29 -> max_len=41 | device=cuda
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=4 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 1/5 | step 1/20 | loss=2.9070
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 1/5 | step 2/20 | loss=2.9374
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 1/5 | step 3/20 | loss=2.2889
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.5158 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 2/5 | step 5/20 | loss=1.6238
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 2/5 | step 6/20 | loss=1.3698
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 2/5 | step 7/20 | loss=1.1350
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.2819 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 3/5 | step 9/20 | loss=0.8710
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 3/5 | step 10/20 | loss=0.7765
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 3/5 | step 11/20 | loss=0.7355
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=0.7750 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 4/5 | step 13/20 | loss=0.6939
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 4/5 | step 14/20 | loss=0.6690
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 4/5 | step 15/20 | loss=0.6445
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=0.6572 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 5/5 | step 17/20 | loss=0.6526
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 5/5 | step 18/20 | loss=0.5872
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] epoch 5/5 | step 19/20 | loss=0.6058
+2026-10-13 03:26:06 | INFO    | [balance/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=0.6132 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:26:08 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-IAFP | generating 453 rows (condition_yx, temperature 0.70)
+2026-10-13 03:26:08 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 499, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 453, 'gen_batch_size_final': 128, 'gen_seconds': 0.5}
+2026-10-13 03:26:08 | INFO    | [4/22] balance seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.4194, 'mean_dist_heldout_real_to_nearest_synth': 0.6087, 'coverage_k2': 0.9032, 'mean_dist_synth_to_train_minority(DCR)': 0.8286, 'frac_synth_exact_copy_of_train_minority': 0.2561}
+2026-10-13 03:26:09 | INFO    | balance | seed 43 | ImbLLM-IAFP        | train=922 (min 461 / maj 461) | F1=0.2000 Acc=0.7440 G=0.5564 AUC=0.6957 PR-AUC=0.1639
+2026-10-13 03:26:09 | INFO    | balance | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m05s
+2026-10-13 03:26:09 | INFO    | balance | seed 43 | stage plots              | RUNNING [4/22] balance seed 43 (2/3)
+2026-10-13 03:26:11 | INFO    | [4/22] balance seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:26:11 | INFO    | balance | seed 43 | stage plots              | DONE in 0h00m02s
+2026-10-13 03:26:11 | INFO    | [4/22] balance seed 43 (2/3) | FINISHED (7/8 methods have metrics)

@@ -1,0 +1,97 @@
+2026-10-13 03:57:11 | INFO    | ====================================================================================================
+2026-10-13 03:57:11 | INFO    | [13/22] cardio seed 42 (1/3) | START
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage split              | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:11 | INFO    | [13/22] cardio seed 42 (1/3) | split: train=1700 test=426 | full-train minority=42 -> retained=8 (held-out ref=34) | reduced imbalance 207.2:1 | test minority=11 | test_fingerprint=1bf864fe4ad6
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage importance         | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:11 | INFO    | [13/22] cardio seed 42 (1/3) | top features: V12=0.4757, V28=0.1230, V24=0.0169, V16=0.0159, V18=0.0073
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage Original           | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | Original           | train=1700 (min 42 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:57:11 | INFO    | cardio | seed 42 | stage Imbalanced         | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | Imbalanced         | train=1666 (min 8 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage RandomOverSampler  | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | RandomOverSampler  | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage SMOTE              | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | SMOTE              | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage ADASYN             | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | ADASYN             | train=3317 (min 1659 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 03:57:12 | INFO    | [13/22] cardio seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 03:57:12 | INFO    | cardio | seed 42 | stage ImbLLM-random      | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:57:12 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-random | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 03:57:15 | INFO    | [cardio/s42/ImbLLM-random] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 03:57:16 | INFO    | [cardio/s42/ImbLLM-random] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:57:18 | INFO    | [cardio/s42/ImbLLM-random] epoch 1/5 | step 3/70 | loss=2.1658
+2026-10-13 03:57:18 | INFO    | [cardio/s42/ImbLLM-random] epoch 1/5 | step 6/70 | loss=1.9172
+2026-10-13 03:57:18 | INFO    | [cardio/s42/ImbLLM-random] epoch 1/5 | step 9/70 | loss=1.7475
+2026-10-13 03:57:18 | INFO    | [cardio/s42/ImbLLM-random] epoch 1/5 | step 12/70 | loss=1.6465
+2026-10-13 03:57:20 | INFO    | [cardio/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.8292 | epoch_time=0h00m03s | elapsed=0h00m03s | ETA=0h00m15s
+2026-10-13 03:57:20 | INFO    | [cardio/s42/ImbLLM-random] epoch 2/5 | step 17/70 | loss=1.5559
+2026-10-13 03:57:20 | INFO    | [cardio/s42/ImbLLM-random] epoch 2/5 | step 20/70 | loss=1.5240
+2026-10-13 03:57:22 | INFO    | [cardio/s42/ImbLLM-random] epoch 2/5 | step 23/70 | loss=1.4962
+2026-10-13 03:57:22 | INFO    | [cardio/s42/ImbLLM-random] epoch 2/5 | step 26/70 | loss=1.4727
+2026-10-13 03:57:23 | INFO    | [cardio/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5052 | epoch_time=0h00m03s | elapsed=0h00m07s | ETA=0h00m11s
+2026-10-13 03:57:24 | INFO    | [cardio/s42/ImbLLM-random] epoch 3/5 | step 31/70 | loss=1.4401
+2026-10-13 03:57:24 | INFO    | [cardio/s42/ImbLLM-random] epoch 3/5 | step 34/70 | loss=1.4205
+2026-10-13 03:57:24 | INFO    | [cardio/s42/ImbLLM-random] epoch 3/5 | step 37/70 | loss=1.3967
+2026-10-13 03:57:24 | INFO    | [cardio/s42/ImbLLM-random] epoch 3/5 | step 40/70 | loss=1.3805
+2026-10-13 03:57:25 | INFO    | [cardio/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4036 | epoch_time=0h00m01s | elapsed=0h00m08s | ETA=0h00m05s
+2026-10-13 03:57:25 | INFO    | [cardio/s42/ImbLLM-random] epoch 4/5 | step 45/70 | loss=1.3525
+2026-10-13 03:57:25 | INFO    | [cardio/s42/ImbLLM-random] epoch 4/5 | step 48/70 | loss=1.3506
+2026-10-13 03:57:25 | INFO    | [cardio/s42/ImbLLM-random] epoch 4/5 | step 51/70 | loss=1.3261
+2026-10-13 03:57:26 | INFO    | [cardio/s42/ImbLLM-random] epoch 4/5 | step 54/70 | loss=1.3117
+2026-10-13 03:57:26 | INFO    | [cardio/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.3308 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m02s
+2026-10-13 03:57:26 | INFO    | [cardio/s42/ImbLLM-random] epoch 5/5 | step 59/70 | loss=1.3016
+2026-10-13 03:57:26 | INFO    | [cardio/s42/ImbLLM-random] epoch 5/5 | step 62/70 | loss=1.2884
+2026-10-13 03:57:26 | INFO    | [cardio/s42/ImbLLM-random] epoch 5/5 | step 65/70 | loss=1.2847
+2026-10-13 03:57:27 | INFO    | [cardio/s42/ImbLLM-random] epoch 5/5 | step 68/70 | loss=1.2816
+2026-10-13 03:57:27 | INFO    | [cardio/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.2893 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m00s
+2026-10-13 03:57:28 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-random | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 03:58:47 | INFO    | [cardio/s42/ImbLLM-random] generated 1816/1816 (round 1) | valid parse 99.4% | accepted 1805/1650 | elapsed 0h01m19s
+2026-10-13 03:58:47 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9939427312775331, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 79.2}
+2026-10-13 03:58:47 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.4113, 'coverage_k2': 0.5588, 'mean_dist_synth_to_train_minority(DCR)': 23.4713, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:58:48 | INFO    | cardio | seed 42 | ImbLLM-random      | train=3316 (min 1658 / maj 1658) | F1=0.9000 Acc=0.9953 G=0.9045 AUC=0.9998 PR-AUC=0.9924
+2026-10-13 03:58:48 | INFO    | cardio | seed 42 | stage ImbLLM-random      | DONE in 0h01m35s
+2026-10-13 03:58:48 | INFO    | cardio | seed 42 | stage ImbLLM-IAFP        | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:58:48 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 1650
+2026-10-13 03:58:50 | INFO    | [cardio/s42/ImbLLM-IAFP] fine-tuning rows=422 | tokens/row: mean=187 max(probe)=188 -> max_len=224 | device=cuda
+2026-10-13 03:58:51 | INFO    | [cardio/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:58:51 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 1/5 | step 3/70 | loss=2.1595
+2026-10-13 03:58:51 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 1/5 | step 6/70 | loss=1.9094
+2026-10-13 03:58:51 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 1/5 | step 9/70 | loss=1.7382
+2026-10-13 03:58:51 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 1/5 | step 12/70 | loss=1.6267
+2026-10-13 03:58:52 | INFO    | [cardio/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.8169 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 03:58:52 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 2/5 | step 17/70 | loss=1.5360
+2026-10-13 03:58:52 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 2/5 | step 20/70 | loss=1.4906
+2026-10-13 03:58:52 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 2/5 | step 23/70 | loss=1.4685
+2026-10-13 03:58:52 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 2/5 | step 26/70 | loss=1.4375
+2026-10-13 03:58:53 | INFO    | [cardio/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.4742 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 03:58:53 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 3/5 | step 31/70 | loss=1.3914
+2026-10-13 03:58:53 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 3/5 | step 34/70 | loss=1.3753
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 3/5 | step 37/70 | loss=1.3542
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 3/5 | step 40/70 | loss=1.3328
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.3579 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 4/5 | step 45/70 | loss=1.3111
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 4/5 | step 48/70 | loss=1.2953
+2026-10-13 03:58:54 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 4/5 | step 51/70 | loss=1.2881
+2026-10-13 03:58:55 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 4/5 | step 54/70 | loss=1.2774
+2026-10-13 03:58:55 | INFO    | [cardio/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.2904 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 03:58:55 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 5/5 | step 59/70 | loss=1.2624
+2026-10-13 03:58:55 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 5/5 | step 62/70 | loss=1.2578
+2026-10-13 03:58:56 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 5/5 | step 65/70 | loss=1.2534
+2026-10-13 03:58:56 | INFO    | [cardio/s42/ImbLLM-IAFP] epoch 5/5 | step 68/70 | loss=1.2497
+2026-10-13 03:58:56 | INFO    | [cardio/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.2565 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 03:58:57 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-IAFP | generating 1650 rows (condition_yx, temperature 0.70)
+2026-10-13 03:59:17 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 1816, 'valid_parse_rate': 0.9933920704845814, 'rounds': 1, 'rows_returned': 1650, 'gen_batch_size_final': 128, 'gen_seconds': 20.1}
+2026-10-13 03:59:18 | INFO    | [13/22] cardio seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.5209, 'coverage_k2': 0.5294, 'mean_dist_synth_to_train_minority(DCR)': 23.0962, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:59:18 | INFO    | cardio | seed 42 | ImbLLM-IAFP        | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 03:59:18 | INFO    | cardio | seed 42 | stage ImbLLM-IAFP        | DONE in 0h00m30s
+2026-10-13 03:59:18 | INFO    | cardio | seed 42 | stage plots              | RUNNING [13/22] cardio seed 42 (1/3)
+2026-10-13 03:59:23 | INFO    | [13/22] cardio seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:59:23 | INFO    | cardio | seed 42 | stage plots              | DONE in 0h00m05s
+2026-10-13 03:59:23 | INFO    | [13/22] cardio seed 42 (1/3) | FINISHED (7/8 methods have metrics)
