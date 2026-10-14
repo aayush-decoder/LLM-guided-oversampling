@@ -8,3 +8,5 @@ data/raw/
 *.bin
 *.pt
 *.pth
+reports/data_viz/
+.hf_cache/

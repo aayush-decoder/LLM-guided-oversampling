@@ -1,0 +1,19 @@
+{
+  "dataset": "phoneme",
+  "rows": 5404,
+  "n_numerical": 5,
+  "n_categorical": 0,
+  "target": "Class",
+  "class_counts": {
+    "1": 3818,
+    "2": 1586
+  },
+  "n_classes": 2,
+  "minority_label": "2",
+  "minority_count": 1586,
+  "majority_count": 3818,
+  "minority_fraction": 0.2934863064396743,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

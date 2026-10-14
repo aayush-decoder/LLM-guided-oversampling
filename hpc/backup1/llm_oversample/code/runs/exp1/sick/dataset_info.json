@@ -1,0 +1,19 @@
+{
+  "dataset": "sick",
+  "rows": 3772,
+  "n_numerical": 7,
+  "n_categorical": 22,
+  "target": "Class",
+  "class_counts": {
+    "negative": 3541,
+    "sick": 231
+  },
+  "n_classes": 2,
+  "minority_label": "sick",
+  "minority_count": 231,
+  "majority_count": 3541,
+  "minority_fraction": 0.0612407211028632,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

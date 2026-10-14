@@ -1,0 +1,20 @@
+{
+  "dataset": "iris",
+  "rows": 150,
+  "n_numerical": 4,
+  "n_categorical": 0,
+  "target": "target",
+  "class_counts": {
+    "0": 50,
+    "1": 50,
+    "2": 50
+  },
+  "n_classes": 3,
+  "minority_label": "0",
+  "minority_count": 50,
+  "majority_count": 100,
+  "minority_fraction": 0.3333333333333333,
+  "multiclass_merged": true,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

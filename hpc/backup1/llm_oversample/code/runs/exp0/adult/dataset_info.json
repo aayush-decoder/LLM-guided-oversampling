@@ -1,0 +1,22 @@
+{
+  "dataset": "adult",
+  "rows": 30162,
+  "n_numerical": 5,
+  "n_categorical": 6,
+  "target": "income-per-year",
+  "class_counts": {
+    "<=50K": 22654,
+    ">50K": 7508
+  },
+  "n_classes": 2,
+  "minority_label": ">50K",
+  "minority_count": 7508,
+  "majority_count": 22654,
+  "minority_fraction": 0.24892248524633645,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [
+    "education",
+    "native-country"
+  ],
+  "meta_columns_missing_in_csv": []
+}

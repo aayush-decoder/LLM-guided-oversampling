@@ -1,0 +1,94 @@
+2026-10-13 04:12:28 | INFO    | ====================================================================================================
+2026-10-13 04:12:28 | INFO    | [16/22] compas seed 44 (3/3) | START
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage split              | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:28 | INFO    | [16/22] compas seed 44 (3/3) | split: train=3208 test=802 | full-train minority=522 -> retained=104 (held-out ref=418) | reduced imbalance 25.8:1 | test minority=130 | test_fingerprint=3d948a82ba2f
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage importance         | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:28 | INFO    | [16/22] compas seed 44 (3/3) | top features: age=0.0474, priors_count=0.0242, race=0.0050, juv_misd_count=0.0016, juv_other_count=0.0000
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage Original           | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | Original           | train=3208 (min 522 / maj 2686) | F1=0.2447 Acc=0.8229 G=0.4095 AUC=0.6910 PR-AUC=0.3243
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage Imbalanced         | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | Imbalanced         | train=2790 (min 104 / maj 2686) | F1=0.1143 Acc=0.8454 G=0.2477 AUC=0.6624 PR-AUC=0.3417
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:12:28 | INFO    | compas | seed 44 | stage RandomOverSampler  | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | RandomOverSampler  | train=5372 (min 2686 / maj 2686) | F1=0.2586 Acc=0.7855 G=0.4539 AUC=0.6228 PR-AUC=0.2746
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:12:29 | INFO    | [16/22] compas seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:12:29 | INFO    | [16/22] compas seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | stage SMOTE-NC           | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | SMOTE-NC           | train=5372 (min 2686 / maj 2686) | F1=0.1798 Acc=0.8180 G=0.3424 AUC=0.6444 PR-AUC=0.2717
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 04:12:29 | INFO    | compas | seed 44 | stage ImbLLM-random      | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:29 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-random | fine-tune set = 104 retained minority + 671 interpolated rows | synthetic to generate = 2582
+2026-10-13 04:12:32 | INFO    | [compas/s44/ImbLLM-random] fine-tuning rows=775 | tokens/row: mean=62 max(probe)=63 -> max_len=80 | device=cuda
+2026-10-13 04:12:33 | INFO    | [compas/s44/ImbLLM-random] training: epochs=5 | steps/epoch=25 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:12:33 | INFO    | [compas/s44/ImbLLM-random] epoch 1/5 | step 6/125 | loss=3.5705
+2026-10-13 04:12:34 | INFO    | [compas/s44/ImbLLM-random] epoch 1/5 | step 12/125 | loss=1.9776
+2026-10-13 04:12:34 | INFO    | [compas/s44/ImbLLM-random] epoch 1/5 | step 18/125 | loss=0.9802
+2026-10-13 04:12:34 | INFO    | [compas/s44/ImbLLM-random] epoch 1/5 | step 24/125 | loss=0.6484
+2026-10-13 04:12:35 | INFO    | [compas/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=1.7451 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m06s
+2026-10-13 04:12:35 | INFO    | [compas/s44/ImbLLM-random] epoch 2/5 | step 31/125 | loss=0.5476
+2026-10-13 04:12:35 | INFO    | [compas/s44/ImbLLM-random] epoch 2/5 | step 37/125 | loss=0.4922
+2026-10-13 04:12:35 | INFO    | [compas/s44/ImbLLM-random] epoch 2/5 | step 43/125 | loss=0.4531
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 2/5 | step 49/125 | loss=0.4459
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=0.4822 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 3/5 | step 56/125 | loss=0.4226
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 3/5 | step 62/125 | loss=0.4129
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 3/5 | step 68/125 | loss=0.4193
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 3/5 | step 74/125 | loss=0.4021
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=0.4153 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:12:36 | INFO    | [compas/s44/ImbLLM-random] epoch 4/5 | step 81/125 | loss=0.3972
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 4/5 | step 87/125 | loss=0.3910
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 4/5 | step 93/125 | loss=0.3916
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 4/5 | step 99/125 | loss=0.4044
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=0.3949 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 5/5 | step 106/125 | loss=0.3819
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 5/5 | step 112/125 | loss=0.3823
+2026-10-13 04:12:37 | INFO    | [compas/s44/ImbLLM-random] epoch 5/5 | step 118/125 | loss=0.3822
+2026-10-13 04:12:38 | INFO    | [compas/s44/ImbLLM-random] epoch 5/5 | step 124/125 | loss=0.3770
+2026-10-13 04:12:38 | INFO    | [compas/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=0.3802 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:12:39 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-random | generating 2582 rows (condition_yx, temperature 0.70)
+2026-10-13 04:12:48 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 2841, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2582, 'gen_batch_size_final': 128, 'gen_seconds': 8.9}
+2026-10-13 04:12:48 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.7081, 'mean_dist_heldout_real_to_nearest_synth': 0.5406, 'coverage_k2': 0.7751, 'mean_dist_synth_to_train_minority(DCR)': 0.3338, 'frac_synth_exact_copy_of_train_minority': 0.1266}
+2026-10-13 04:12:48 | INFO    | compas | seed 44 | ImbLLM-random      | train=5372 (min 2686 / maj 2686) | F1=0.3107 Acc=0.7344 G=0.5452 AUC=0.6373 PR-AUC=0.2609
+2026-10-13 04:12:48 | INFO    | compas | seed 44 | stage ImbLLM-random      | DONE in 0h00m19s
+2026-10-13 04:12:48 | INFO    | compas | seed 44 | stage ImbLLM-IAFP        | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:12:48 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 104 retained minority + 671 interpolated rows | synthetic to generate = 2582
+2026-10-13 04:12:51 | INFO    | [compas/s44/ImbLLM-IAFP] fine-tuning rows=775 | tokens/row: mean=62 max(probe)=63 -> max_len=80 | device=cuda
+2026-10-13 04:12:52 | INFO    | [compas/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=25 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:12:52 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 1/5 | step 6/125 | loss=3.5585
+2026-10-13 04:12:52 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 1/5 | step 12/125 | loss=1.9279
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 1/5 | step 18/125 | loss=0.9543
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 1/5 | step 24/125 | loss=0.6072
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=1.7136 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 2/5 | step 31/125 | loss=0.4988
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 2/5 | step 37/125 | loss=0.4481
+2026-10-13 04:12:53 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 2/5 | step 43/125 | loss=0.4266
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 2/5 | step 49/125 | loss=0.3990
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=0.4393 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 3/5 | step 56/125 | loss=0.3818
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 3/5 | step 62/125 | loss=0.3656
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 3/5 | step 68/125 | loss=0.3649
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 3/5 | step 74/125 | loss=0.3481
+2026-10-13 04:12:54 | INFO    | [compas/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=0.3639 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:12:55 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 4/5 | step 81/125 | loss=0.3449
+2026-10-13 04:12:55 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 4/5 | step 87/125 | loss=0.3305
+2026-10-13 04:12:55 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 4/5 | step 93/125 | loss=0.3442
+2026-10-13 04:12:55 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 4/5 | step 99/125 | loss=0.3535
+2026-10-13 04:12:55 | INFO    | [compas/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=0.3427 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:12:56 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 5/5 | step 106/125 | loss=0.3317
+2026-10-13 04:12:56 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 5/5 | step 112/125 | loss=0.3404
+2026-10-13 04:12:56 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 5/5 | step 118/125 | loss=0.3384
+2026-10-13 04:12:56 | INFO    | [compas/s44/ImbLLM-IAFP] epoch 5/5 | step 124/125 | loss=0.3394
+2026-10-13 04:12:56 | INFO    | [compas/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=0.3357 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:12:57 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-IAFP | generating 2582 rows (condition_yx, temperature 0.70)
+2026-10-13 04:13:07 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 2841, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2582, 'gen_batch_size_final': 128, 'gen_seconds': 9.9}
+2026-10-13 04:13:07 | INFO    | [16/22] compas seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.6842, 'mean_dist_heldout_real_to_nearest_synth': 0.8101, 'coverage_k2': 0.7081, 'mean_dist_synth_to_train_minority(DCR)': 0.3543, 'frac_synth_exact_copy_of_train_minority': 0.1092}
+2026-10-13 04:13:08 | INFO    | compas | seed 44 | ImbLLM-IAFP        | train=5372 (min 2686 / maj 2686) | F1=0.2932 Acc=0.7294 G=0.5274 AUC=0.6101 PR-AUC=0.2390
+2026-10-13 04:13:08 | INFO    | compas | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m19s
+2026-10-13 04:13:08 | INFO    | compas | seed 44 | stage plots              | RUNNING [16/22] compas seed 44 (3/3)
+2026-10-13 04:13:13 | INFO    | [16/22] compas seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:13:13 | INFO    | compas | seed 44 | stage plots              | DONE in 0h00m05s
+2026-10-13 04:13:13 | INFO    | [16/22] compas seed 44 (3/3) | FINISHED (6/8 methods have metrics)

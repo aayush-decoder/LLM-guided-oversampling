@@ -1,0 +1,12 @@
+{
+  "target": "class",
+  "numerical": [],
+  "categorical": [
+    "buying",
+    "maint",
+    "doors",
+    "persons",
+    "lug_boot",
+    "safety"
+  ]
+}

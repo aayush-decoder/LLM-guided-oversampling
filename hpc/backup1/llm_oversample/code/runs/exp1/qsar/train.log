@@ -1,0 +1,1013 @@
+2026-10-13 14:05:35 | INFO    | ====================================================================================================
+2026-10-13 14:05:35 | INFO    | [9/22] DATASET qsar | elapsed so far 0h54m57s
+2026-10-13 14:05:35 | INFO    | 
+STATUS  datasets: 28 total | done=7 | partial=1 | pending=13 | running=1 | skipped=6
+  [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
+  [DONE] kc2              seeds_done=3/3
+  [DONE] breast           seeds_done=3/3
+  [DONE] balance          seeds_done=3/3
+  [DONE] australian       seeds_done=3/3
+  [DONE] blood            seeds_done=3/3
+  [DONE] diabetes         seeds_done=3/3
+  [DONE] german           seeds_done=3/3
+  [RUN ] qsar             seeds_done=0/3
+  [PEND] car              seeds_done=0/3
+  [PEND] steel            seeds_done=0/3
+  [PEND] kc1              seeds_done=0/3
+  [PEND] cardio           seeds_done=0/3
+  [PEND] cardio_noleak    seeds_done=0/3
+  [PEND] sick             seeds_done=0/3
+  [PEND] compas           seeds_done=0/3
+  [PEND] bank             seeds_done=0/3
+  [PEND] churn            seeds_done=0/3
+  [PEND] waveform         seeds_done=0/3
+  [PEND] phoneme          seeds_done=0/3
+  [PEND] credit_card      seeds_done=0/3
+  [PEND] adult            seeds_done=0/3
+  [SKIP] abalone          seeds_done=0/3  (target looks continuous (28 unique values) -> regression)
+  [SKIP] california       seeds_done=0/3  (known regression dataset)
+  [SKIP] fuel             seeds_done=0/3  (known regression dataset)
+  [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
+  [SKIP] housing          seeds_done=0/3  (known regression dataset)
+  [SKIP] insurance        seeds_done=0/3  (known regression dataset)
+2026-10-13 14:05:35 | INFO    | qsar | rows=1055 | 41 numeric + 0 categorical features | classes=2 | minority='2': 356 rows (33.74%)
+2026-10-13 14:05:35 | INFO    | ====================================================================================================
+2026-10-13 14:05:35 | INFO    | [9/22] qsar seed 42 (1/3) | START
+2026-10-13 14:05:35 | INFO    | qsar | seed 42 | stage split              | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:35 | INFO    | [9/22] qsar seed 42 (1/3) | split: train=844 test=211 | full-train minority=285 -> retained=57 (held-out ref=228) | reduced imbalance 9.8:1 | test minority=71 | test_fingerprint=54ec371a2f60
+2026-10-13 14:05:35 | INFO    | qsar | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 14:05:35 | INFO    | qsar | seed 42 | stage importance         | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:35 | INFO    | [9/22] qsar seed 42 (1/3) | top features: V22=0.1277, V10=0.1052, V8=0.0980, V12=0.0664, V1=0.0656
+2026-10-13 14:05:35 | INFO    | qsar | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 14:05:35 | INFO    | qsar | seed 42 | stage Original           | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | Original           | train=844 (min 285 / maj 559) | F1=0.8321 Acc=0.8910 G=0.8667 AUC=0.9376 PR-AUC=0.9076
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage Imbalanced         | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | Imbalanced         | train=616 (min 57 / maj 559) | F1=0.4842 Acc=0.7678 G=0.5671 AUC=0.8840 PR-AUC=0.8324
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage RandomOverSampler  | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | RandomOverSampler  | train=1118 (min 559 / maj 559) | F1=0.6226 Acc=0.8104 G=0.6769 AUC=0.8822 PR-AUC=0.8356
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage SMOTE              | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | SMOTE              | train=1118 (min 559 / maj 559) | F1=0.6355 Acc=0.8152 G=0.6870 AUC=0.8989 PR-AUC=0.8597
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 14:05:36 | INFO    | qsar | seed 42 | stage ADASYN             | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:37 | INFO    | qsar | seed 42 | ADASYN             | train=1117 (min 558 / maj 559) | F1=0.6038 Acc=0.8009 G=0.6641 AUC=0.9018 PR-AUC=0.8539
+2026-10-13 14:05:37 | INFO    | qsar | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 14:05:37 | INFO    | [9/22] qsar seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 14:05:37 | INFO    | qsar | seed 42 | stage ImbLLM-random      | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:05:37 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-random | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:06:23 | INFO    | [qsar/s42/ImbLLM-random] fine-tuning rows=196 | tokens/row: mean=256 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:06:23 | INFO    | [qsar/s42/ImbLLM-random] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:06:25 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 1/140 | loss=2.1466
+2026-10-13 14:06:25 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 2/140 | loss=2.1380
+2026-10-13 14:06:25 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 3/140 | loss=2.0911
+2026-10-13 14:06:27 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 4/140 | loss=2.0382
+2026-10-13 14:06:27 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 5/140 | loss=1.9815
+2026-10-13 14:06:27 | INFO    | [qsar/s42/ImbLLM-random] epoch 1/20 | step 6/140 | loss=1.9192
+2026-10-13 14:06:28 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0397 | epoch_time=0h00m04s | elapsed=0h00m04s | ETA=0h01m30s
+2026-10-13 14:06:28 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 8/140 | loss=1.8519
+2026-10-13 14:06:28 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 9/140 | loss=1.8317
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 10/140 | loss=1.7875
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 11/140 | loss=1.7689
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 12/140 | loss=1.7135
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 2/20 | step 13/140 | loss=1.7080
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.7739 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m51s
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 15/140 | loss=1.6636
+2026-10-13 14:06:29 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 16/140 | loss=1.6606
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 17/140 | loss=1.6749
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 18/140 | loss=1.6457
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 19/140 | loss=1.6376
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 3/20 | step 20/140 | loss=1.6218
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.6517 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m38s
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 22/140 | loss=1.6277
+2026-10-13 14:06:30 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 23/140 | loss=1.5908
+2026-10-13 14:06:31 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 24/140 | loss=1.6146
+2026-10-13 14:06:31 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 25/140 | loss=1.6089
+2026-10-13 14:06:31 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 26/140 | loss=1.6087
+2026-10-13 14:06:31 | INFO    | [qsar/s42/ImbLLM-random] epoch 4/20 | step 27/140 | loss=1.6058
+2026-10-13 14:06:32 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.6069 | epoch_time=0h00m02s | elapsed=0h00m09s | ETA=0h00m36s
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 29/140 | loss=1.5928
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 30/140 | loss=1.5882
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 31/140 | loss=1.5699
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 32/140 | loss=1.5905
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 33/140 | loss=1.5745
+2026-10-13 14:06:33 | INFO    | [qsar/s42/ImbLLM-random] epoch 5/20 | step 34/140 | loss=1.5846
+2026-10-13 14:06:35 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.5809 | epoch_time=0h00m02s | elapsed=0h00m11s | ETA=0h00m34s
+2026-10-13 14:06:35 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 36/140 | loss=1.5659
+2026-10-13 14:06:35 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 37/140 | loss=1.5625
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 38/140 | loss=1.5735
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 39/140 | loss=1.5535
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 40/140 | loss=1.5565
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] epoch 6/20 | step 41/140 | loss=1.5674
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.5694 | epoch_time=0h00m02s | elapsed=0h00m13s | ETA=0h00m32s
+2026-10-13 14:06:37 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 43/140 | loss=1.5762
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 44/140 | loss=1.5292
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 45/140 | loss=1.5463
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 46/140 | loss=1.5610
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 47/140 | loss=1.5580
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 7/20 | step 48/140 | loss=1.5491
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.5552 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m27s
+2026-10-13 14:06:38 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 50/140 | loss=1.5390
+2026-10-13 14:06:39 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 51/140 | loss=1.5371
+2026-10-13 14:06:39 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 52/140 | loss=1.5487
+2026-10-13 14:06:39 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 53/140 | loss=1.5407
+2026-10-13 14:06:39 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 54/140 | loss=1.5373
+2026-10-13 14:06:39 | INFO    | [qsar/s42/ImbLLM-random] epoch 8/20 | step 55/140 | loss=1.5255
+2026-10-13 14:06:41 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.5402 | epoch_time=0h00m02s | elapsed=0h00m17s | ETA=0h00m26s
+2026-10-13 14:06:41 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 57/140 | loss=1.5433
+2026-10-13 14:06:41 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 58/140 | loss=1.5186
+2026-10-13 14:06:41 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 59/140 | loss=1.5095
+2026-10-13 14:06:41 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 60/140 | loss=1.5269
+2026-10-13 14:06:42 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 61/140 | loss=1.4881
+2026-10-13 14:06:42 | INFO    | [qsar/s42/ImbLLM-random] epoch 9/20 | step 62/140 | loss=1.5155
+2026-10-13 14:06:43 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.5128 | epoch_time=0h00m02s | elapsed=0h00m19s | ETA=0h00m24s
+2026-10-13 14:06:43 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 64/140 | loss=1.4837
+2026-10-13 14:06:43 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 65/140 | loss=1.4975
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 66/140 | loss=1.4957
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 67/140 | loss=1.4687
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 68/140 | loss=1.4917
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 10/20 | step 69/140 | loss=1.4926
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.4908 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m20s
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 71/140 | loss=1.4698
+2026-10-13 14:06:44 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 72/140 | loss=1.4738
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 73/140 | loss=1.4497
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 74/140 | loss=1.4669
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 75/140 | loss=1.4277
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 11/20 | step 76/140 | loss=1.4481
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.4479 | epoch_time=0h00m01s | elapsed=0h00m21s | ETA=0h00m17s
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 78/140 | loss=1.4309
+2026-10-13 14:06:45 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 79/140 | loss=1.4442
+2026-10-13 14:06:46 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 80/140 | loss=1.4081
+2026-10-13 14:06:46 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 81/140 | loss=1.4164
+2026-10-13 14:06:46 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 82/140 | loss=1.4127
+2026-10-13 14:06:46 | INFO    | [qsar/s42/ImbLLM-random] epoch 12/20 | step 83/140 | loss=1.4014
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.4231 | epoch_time=0h00m02s | elapsed=0h00m24s | ETA=0h00m16s
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 85/140 | loss=1.4085
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 86/140 | loss=1.3956
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 87/140 | loss=1.3972
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 88/140 | loss=1.3805
+2026-10-13 14:06:48 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 89/140 | loss=1.3982
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] epoch 13/20 | step 90/140 | loss=1.3849
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.3913 | epoch_time=0h00m01s | elapsed=0h00m25s | ETA=0h00m13s
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 92/140 | loss=1.3850
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 93/140 | loss=1.3767
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 94/140 | loss=1.3894
+2026-10-13 14:06:49 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 95/140 | loss=1.3640
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 96/140 | loss=1.3651
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 14/20 | step 97/140 | loss=1.3596
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.3763 | epoch_time=0h00m01s | elapsed=0h00m26s | ETA=0h00m11s
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 99/140 | loss=1.3647
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 100/140 | loss=1.3740
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 101/140 | loss=1.3483
+2026-10-13 14:06:50 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 102/140 | loss=1.3740
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 103/140 | loss=1.3476
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 15/20 | step 104/140 | loss=1.3533
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.3645 | epoch_time=0h00m01s | elapsed=0h00m27s | ETA=0h00m09s
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 106/140 | loss=1.3625
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 107/140 | loss=1.3569
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 108/140 | loss=1.3654
+2026-10-13 14:06:51 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 109/140 | loss=1.3531
+2026-10-13 14:06:52 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 110/140 | loss=1.3375
+2026-10-13 14:06:52 | INFO    | [qsar/s42/ImbLLM-random] epoch 16/20 | step 111/140 | loss=1.3466
+2026-10-13 14:06:53 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.3464 | epoch_time=0h00m02s | elapsed=0h00m29s | ETA=0h00m07s
+2026-10-13 14:06:53 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 113/140 | loss=1.3454
+2026-10-13 14:06:53 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 114/140 | loss=1.3595
+2026-10-13 14:06:53 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 115/140 | loss=1.3381
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 116/140 | loss=1.3522
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 117/140 | loss=1.3320
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] epoch 17/20 | step 118/140 | loss=1.3325
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.3438 | epoch_time=0h00m01s | elapsed=0h00m30s | ETA=0h00m05s
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 120/140 | loss=1.3340
+2026-10-13 14:06:54 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 121/140 | loss=1.3555
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 122/140 | loss=1.3306
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 123/140 | loss=1.3320
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 124/140 | loss=1.3326
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 18/20 | step 125/140 | loss=1.3435
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.3386 | epoch_time=0h00m01s | elapsed=0h00m31s | ETA=0h00m03s
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 127/140 | loss=1.3271
+2026-10-13 14:06:55 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 128/140 | loss=1.3238
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 129/140 | loss=1.3449
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 130/140 | loss=1.3466
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 131/140 | loss=1.3385
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 19/20 | step 132/140 | loss=1.3488
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.3375 | epoch_time=0h00m01s | elapsed=0h00m32s | ETA=0h00m01s
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 134/140 | loss=1.3319
+2026-10-13 14:06:56 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 135/140 | loss=1.3361
+2026-10-13 14:06:57 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 136/140 | loss=1.3283
+2026-10-13 14:06:57 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 137/140 | loss=1.3519
+2026-10-13 14:06:57 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 138/140 | loss=1.3286
+2026-10-13 14:06:57 | INFO    | [qsar/s42/ImbLLM-random] epoch 20/20 | step 139/140 | loss=1.3491
+2026-10-13 14:06:57 | INFO    | [qsar/s42/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.3385 | epoch_time=0h00m01s | elapsed=0h00m33s | ETA=0h00m00s
+2026-10-13 14:06:58 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-random | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:07:45 | INFO    | [qsar/s42/ImbLLM-random] generated 308/308 (round 1) | valid parse 100.0% | accepted 308/280 | elapsed 0h00m46s
+2026-10-13 14:07:45 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 308, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 46.4}
+2026-10-13 14:07:45 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0395, 'mean_dist_heldout_real_to_nearest_synth': 5.1819, 'coverage_k2': 0.0088, 'mean_dist_synth_to_train_minority(DCR)': 5.6251, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:07:45 | INFO    | qsar | seed 42 | ImbLLM-random      | train=896 (min 337 / maj 559) | F1=0.5714 Acc=0.7867 G=0.6407 AUC=0.8924 PR-AUC=0.8415
+2026-10-13 14:07:45 | INFO    | qsar | seed 42 | stage ImbLLM-random      | DONE in 0h02m08s
+2026-10-13 14:07:45 | INFO    | qsar | seed 42 | stage ImbLLM-IAFP        | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:07:45 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:08:32 | INFO    | [qsar/s42/ImbLLM-IAFP] fine-tuning rows=196 | tokens/row: mean=256 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:08:32 | INFO    | [qsar/s42/ImbLLM-IAFP] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:08:32 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 1/140 | loss=2.1373
+2026-10-13 14:08:32 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 2/140 | loss=2.1504
+2026-10-13 14:08:32 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 3/140 | loss=2.0937
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 4/140 | loss=2.0341
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 5/140 | loss=1.9829
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 1/20 | step 6/140 | loss=1.9102
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0348 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m18s
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 8/140 | loss=1.8564
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 9/140 | loss=1.8016
+2026-10-13 14:08:33 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 10/140 | loss=1.7770
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 11/140 | loss=1.7280
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 12/140 | loss=1.7224
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 2/20 | step 13/140 | loss=1.7267
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7608 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m17s
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 15/140 | loss=1.6876
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 16/140 | loss=1.6581
+2026-10-13 14:08:34 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 17/140 | loss=1.6453
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 18/140 | loss=1.6335
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 19/140 | loss=1.5973
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 3/20 | step 20/140 | loss=1.6239
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.6385 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m17s
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 22/140 | loss=1.5897
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 23/140 | loss=1.6033
+2026-10-13 14:08:35 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 24/140 | loss=1.5992
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 25/140 | loss=1.5642
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 26/140 | loss=1.5876
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 4/20 | step 27/140 | loss=1.5933
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.5874 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m16s
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 29/140 | loss=1.5458
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 30/140 | loss=1.5580
+2026-10-13 14:08:36 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 31/140 | loss=1.5449
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 32/140 | loss=1.5850
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 33/140 | loss=1.5470
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 5/20 | step 34/140 | loss=1.5595
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.5582 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m15s
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 36/140 | loss=1.5370
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 37/140 | loss=1.5419
+2026-10-13 14:08:37 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 38/140 | loss=1.5300
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 39/140 | loss=1.5316
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 40/140 | loss=1.5296
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 6/20 | step 41/140 | loss=1.5294
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.5348 | epoch_time=0h00m00s | elapsed=0h00m06s | ETA=0h00m14s
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 43/140 | loss=1.5043
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 44/140 | loss=1.5208
+2026-10-13 14:08:38 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 45/140 | loss=1.5289
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 46/140 | loss=1.5199
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 47/140 | loss=1.5031
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 7/20 | step 48/140 | loss=1.5087
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.5074 | epoch_time=0h00m00s | elapsed=0h00m07s | ETA=0h00m13s
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 50/140 | loss=1.4979
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 51/140 | loss=1.5089
+2026-10-13 14:08:39 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 52/140 | loss=1.4959
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 53/140 | loss=1.5114
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 54/140 | loss=1.4645
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 8/20 | step 55/140 | loss=1.4740
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.4880 | epoch_time=0h00m00s | elapsed=0h00m08s | ETA=0h00m12s
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 57/140 | loss=1.4907
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 58/140 | loss=1.4485
+2026-10-13 14:08:40 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 59/140 | loss=1.4611
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 60/140 | loss=1.4477
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 61/140 | loss=1.4806
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 9/20 | step 62/140 | loss=1.4556
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.4608 | epoch_time=0h00m00s | elapsed=0h00m09s | ETA=0h00m11s
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 64/140 | loss=1.4473
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 65/140 | loss=1.4440
+2026-10-13 14:08:41 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 66/140 | loss=1.4357
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 67/140 | loss=1.4272
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 68/140 | loss=1.4284
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 10/20 | step 69/140 | loss=1.4023
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.4267 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m10s
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 71/140 | loss=1.4157
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 72/140 | loss=1.3893
+2026-10-13 14:08:42 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 73/140 | loss=1.3978
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 74/140 | loss=1.3884
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 75/140 | loss=1.3881
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 11/20 | step 76/140 | loss=1.3680
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.3889 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m09s
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 78/140 | loss=1.3912
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 79/140 | loss=1.3675
+2026-10-13 14:08:43 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 80/140 | loss=1.3455
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 81/140 | loss=1.3586
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 82/140 | loss=1.3528
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 12/20 | step 83/140 | loss=1.3330
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.3577 | epoch_time=0h00m00s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 85/140 | loss=1.3375
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 86/140 | loss=1.3511
+2026-10-13 14:08:44 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 87/140 | loss=1.3477
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 88/140 | loss=1.3364
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 89/140 | loss=1.3482
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 13/20 | step 90/140 | loss=1.3124
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.3497 | epoch_time=0h00m01s | elapsed=0h00m13s | ETA=0h00m07s
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 92/140 | loss=1.3287
+2026-10-13 14:08:45 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 93/140 | loss=1.3285
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 94/140 | loss=1.3259
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 95/140 | loss=1.3218
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 96/140 | loss=1.3124
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 14/20 | step 97/140 | loss=1.3273
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.3193 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m06s
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 99/140 | loss=1.3244
+2026-10-13 14:08:46 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 100/140 | loss=1.3184
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 101/140 | loss=1.3295
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 102/140 | loss=1.3203
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 103/140 | loss=1.3065
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 15/20 | step 104/140 | loss=1.3052
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.3151 | epoch_time=0h00m00s | elapsed=0h00m15s | ETA=0h00m05s
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 106/140 | loss=1.3093
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 107/140 | loss=1.3165
+2026-10-13 14:08:47 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 108/140 | loss=1.3045
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 109/140 | loss=1.3166
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 110/140 | loss=1.3032
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 16/20 | step 111/140 | loss=1.3198
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.3146 | epoch_time=0h00m00s | elapsed=0h00m16s | ETA=0h00m04s
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 113/140 | loss=1.2923
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 114/140 | loss=1.3035
+2026-10-13 14:08:48 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 115/140 | loss=1.3073
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 116/140 | loss=1.3091
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 117/140 | loss=1.2950
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 17/20 | step 118/140 | loss=1.3307
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.3133 | epoch_time=0h00m01s | elapsed=0h00m17s | ETA=0h00m03s
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 120/140 | loss=1.2941
+2026-10-13 14:08:49 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 121/140 | loss=1.3286
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 122/140 | loss=1.2916
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 123/140 | loss=1.2863
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 124/140 | loss=1.2860
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 18/20 | step 125/140 | loss=1.3074
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.2987 | epoch_time=0h00m01s | elapsed=0h00m18s | ETA=0h00m02s
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 127/140 | loss=1.2929
+2026-10-13 14:08:50 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 128/140 | loss=1.3036
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 129/140 | loss=1.2991
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 130/140 | loss=1.2712
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 131/140 | loss=1.3038
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 19/20 | step 132/140 | loss=1.3169
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.2969 | epoch_time=0h00m00s | elapsed=0h00m19s | ETA=0h00m01s
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 134/140 | loss=1.3114
+2026-10-13 14:08:51 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 135/140 | loss=1.3184
+2026-10-13 14:08:52 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 136/140 | loss=1.3005
+2026-10-13 14:08:52 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 137/140 | loss=1.2860
+2026-10-13 14:08:52 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 138/140 | loss=1.3003
+2026-10-13 14:08:52 | INFO    | [qsar/s42/ImbLLM-IAFP] epoch 20/20 | step 139/140 | loss=1.2809
+2026-10-13 14:08:52 | INFO    | [qsar/s42/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.3014 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m00s
+2026-10-13 14:08:53 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-IAFP | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:09:06 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 308, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 12.3}
+2026-10-13 14:09:06 | INFO    | [9/22] qsar seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0219, 'mean_dist_heldout_real_to_nearest_synth': 5.1941, 'coverage_k2': 0.0088, 'mean_dist_synth_to_train_minority(DCR)': 4.9799, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:09:06 | INFO    | qsar | seed 42 | ImbLLM-IAFP        | train=896 (min 337 / maj 559) | F1=0.5849 Acc=0.7915 G=0.6513 AUC=0.8891 PR-AUC=0.8399
+2026-10-13 14:09:06 | INFO    | qsar | seed 42 | stage ImbLLM-IAFP        | DONE in 0h01m20s
+2026-10-13 14:09:06 | INFO    | qsar | seed 42 | stage plots              | RUNNING [9/22] qsar seed 42 (1/3)
+2026-10-13 14:09:08 | INFO    | [9/22] qsar seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 14:09:09 | INFO    | qsar | seed 42 | stage plots              | DONE in 0h00m02s
+2026-10-13 14:09:09 | INFO    | [9/22] qsar seed 42 (1/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 14:09:09 | INFO    | ====================================================================================================
+2026-10-13 14:09:09 | INFO    | [9/22] qsar seed 43 (2/3) | START
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage split              | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:09 | INFO    | [9/22] qsar seed 43 (2/3) | split: train=844 test=211 | full-train minority=285 -> retained=57 (held-out ref=228) | reduced imbalance 9.8:1 | test minority=71 | test_fingerprint=09c07c2f3f9c
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage importance         | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:09 | INFO    | [9/22] qsar seed 43 (2/3) | top features: V1=0.1777, V38=0.1712, V22=0.0980, V13=0.0971, V28=0.0768
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage Original           | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | Original           | train=844 (min 285 / maj 559) | F1=0.8088 Acc=0.8768 G=0.8481 AUC=0.9573 PR-AUC=0.9243
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 14:09:09 | INFO    | qsar | seed 43 | stage Imbalanced         | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | Imbalanced         | train=616 (min 57 / maj 559) | F1=0.5962 Acc=0.8009 G=0.6560 AUC=0.9095 PR-AUC=0.8565
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage RandomOverSampler  | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | RandomOverSampler  | train=1118 (min 559 / maj 559) | F1=0.6071 Acc=0.7915 G=0.6745 AUC=0.8977 PR-AUC=0.8354
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage SMOTE              | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | SMOTE              | train=1118 (min 559 / maj 559) | F1=0.7179 Acc=0.8436 G=0.7581 AUC=0.9283 PR-AUC=0.8830
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 14:09:10 | INFO    | qsar | seed 43 | stage ADASYN             | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:11 | INFO    | qsar | seed 43 | ADASYN             | train=1132 (min 573 / maj 559) | F1=0.7130 Acc=0.8436 G=0.7517 AUC=0.9232 PR-AUC=0.8752
+2026-10-13 14:09:11 | INFO    | qsar | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 14:09:11 | INFO    | [9/22] qsar seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 14:09:11 | INFO    | qsar | seed 43 | stage ImbLLM-random      | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:09:11 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-random | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] fine-tuning rows=196 | tokens/row: mean=255 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 1/140 | loss=2.1311
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 2/140 | loss=2.1583
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 3/140 | loss=2.1045
+2026-10-13 14:10:02 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 4/140 | loss=2.0290
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 5/140 | loss=1.9949
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 1/20 | step 6/140 | loss=1.9401
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0409 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m12s
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 8/140 | loss=1.8829
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 9/140 | loss=1.8439
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 10/140 | loss=1.7782
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 11/140 | loss=1.7328
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 12/140 | loss=1.7383
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 2/20 | step 13/140 | loss=1.7129
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.7710 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m11s
+2026-10-13 14:10:03 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 15/140 | loss=1.6860
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 16/140 | loss=1.6661
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 17/140 | loss=1.6502
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 18/140 | loss=1.6414
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 19/140 | loss=1.6454
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 3/20 | step 20/140 | loss=1.6400
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.6556 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m10s
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 22/140 | loss=1.6096
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 23/140 | loss=1.6278
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 24/140 | loss=1.6174
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 25/140 | loss=1.6169
+2026-10-13 14:10:04 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 26/140 | loss=1.5982
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 4/20 | step 27/140 | loss=1.5886
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.6065 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m10s
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 29/140 | loss=1.5989
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 30/140 | loss=1.5905
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 31/140 | loss=1.5898
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 32/140 | loss=1.5944
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 33/140 | loss=1.5765
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 5/20 | step 34/140 | loss=1.5781
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.5876 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m09s
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 36/140 | loss=1.5704
+2026-10-13 14:10:05 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 37/140 | loss=1.5675
+2026-10-13 14:10:06 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 38/140 | loss=1.5631
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 39/140 | loss=1.5757
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 40/140 | loss=1.5702
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 6/20 | step 41/140 | loss=1.5719
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.5737 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m11s
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 43/140 | loss=1.5656
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 44/140 | loss=1.5371
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 45/140 | loss=1.5316
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 46/140 | loss=1.5670
+2026-10-13 14:10:07 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 47/140 | loss=1.5528
+2026-10-13 14:10:08 | INFO    | [qsar/s43/ImbLLM-random] epoch 7/20 | step 48/140 | loss=1.5728
+2026-10-13 14:10:09 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.5517 | epoch_time=0h00m02s | elapsed=0h00m07s | ETA=0h00m13s
+2026-10-13 14:10:09 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 50/140 | loss=1.5428
+2026-10-13 14:10:09 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 51/140 | loss=1.5401
+2026-10-13 14:10:09 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 52/140 | loss=1.5576
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 53/140 | loss=1.5388
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 54/140 | loss=1.5269
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 8/20 | step 55/140 | loss=1.5456
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.5270 | epoch_time=0h00m00s | elapsed=0h00m07s | ETA=0h00m11s
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 57/140 | loss=1.5249
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 58/140 | loss=1.5193
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 59/140 | loss=1.5376
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 60/140 | loss=1.5088
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 61/140 | loss=1.4820
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] epoch 9/20 | step 62/140 | loss=1.5170
+2026-10-13 14:10:10 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.5102 | epoch_time=0h00m00s | elapsed=0h00m08s | ETA=0h00m10s
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 64/140 | loss=1.4891
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 65/140 | loss=1.5121
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 66/140 | loss=1.4749
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 67/140 | loss=1.4783
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 68/140 | loss=1.4796
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 10/20 | step 69/140 | loss=1.4809
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.4859 | epoch_time=0h00m00s | elapsed=0h00m09s | ETA=0h00m09s
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 71/140 | loss=1.4623
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 72/140 | loss=1.4515
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 73/140 | loss=1.4694
+2026-10-13 14:10:11 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 74/140 | loss=1.4507
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 75/140 | loss=1.4508
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 11/20 | step 76/140 | loss=1.4188
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.4625 | epoch_time=0h00m00s | elapsed=0h00m09s | ETA=0h00m07s
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 78/140 | loss=1.4182
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 79/140 | loss=1.4199
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 80/140 | loss=1.4295
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 81/140 | loss=1.4098
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 82/140 | loss=1.4025
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 12/20 | step 83/140 | loss=1.4155
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.4095 | epoch_time=0h00m00s | elapsed=0h00m10s | ETA=0h00m06s
+2026-10-13 14:10:12 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 85/140 | loss=1.3854
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 86/140 | loss=1.3912
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 87/140 | loss=1.3974
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 88/140 | loss=1.3877
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 89/140 | loss=1.3899
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 13/20 | step 90/140 | loss=1.3872
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.3926 | epoch_time=0h00m00s | elapsed=0h00m10s | ETA=0h00m05s
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 92/140 | loss=1.3908
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 93/140 | loss=1.3857
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 94/140 | loss=1.3769
+2026-10-13 14:10:13 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 95/140 | loss=1.3525
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 96/140 | loss=1.3683
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 14/20 | step 97/140 | loss=1.3915
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.3749 | epoch_time=0h00m00s | elapsed=0h00m11s | ETA=0h00m04s
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 99/140 | loss=1.3765
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 100/140 | loss=1.3721
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 101/140 | loss=1.3638
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 102/140 | loss=1.3719
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 103/140 | loss=1.3490
+2026-10-13 14:10:14 | INFO    | [qsar/s43/ImbLLM-random] epoch 15/20 | step 104/140 | loss=1.3509
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.3616 | epoch_time=0h00m02s | elapsed=0h00m13s | ETA=0h00m04s
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 106/140 | loss=1.3700
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 107/140 | loss=1.3449
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 108/140 | loss=1.3482
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 109/140 | loss=1.3637
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 110/140 | loss=1.3402
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] epoch 16/20 | step 111/140 | loss=1.3642
+2026-10-13 14:10:16 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.3508 | epoch_time=0h00m00s | elapsed=0h00m14s | ETA=0h00m03s
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 113/140 | loss=1.3485
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 114/140 | loss=1.3327
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 115/140 | loss=1.3640
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 116/140 | loss=1.3627
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 117/140 | loss=1.3307
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 17/20 | step 118/140 | loss=1.3536
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.3554 | epoch_time=0h00m00s | elapsed=0h00m15s | ETA=0h00m02s
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 120/140 | loss=1.3531
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 121/140 | loss=1.3483
+2026-10-13 14:10:17 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 122/140 | loss=1.3459
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 123/140 | loss=1.3457
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 124/140 | loss=1.3441
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 18/20 | step 125/140 | loss=1.3341
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.3461 | epoch_time=0h00m00s | elapsed=0h00m15s | ETA=0h00m01s
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 127/140 | loss=1.3395
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 128/140 | loss=1.3391
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 129/140 | loss=1.3289
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 130/140 | loss=1.3532
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 131/140 | loss=1.3475
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] epoch 19/20 | step 132/140 | loss=1.3465
+2026-10-13 14:10:18 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.3424 | epoch_time=0h00m00s | elapsed=0h00m16s | ETA=0h00m00s
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 134/140 | loss=1.3359
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 135/140 | loss=1.3372
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 136/140 | loss=1.3439
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 137/140 | loss=1.3467
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 138/140 | loss=1.3428
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] epoch 20/20 | step 139/140 | loss=1.3294
+2026-10-13 14:10:19 | INFO    | [qsar/s43/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.3453 | epoch_time=0h00m00s | elapsed=0h00m17s | ETA=0h00m00s
+2026-10-13 14:10:20 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-random | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:10:26 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 308, 'valid_parse_rate': 0.9967532467532467, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 6.2}
+2026-10-13 14:10:27 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0088, 'mean_dist_heldout_real_to_nearest_synth': 5.154, 'coverage_k2': 0.0175, 'mean_dist_synth_to_train_minority(DCR)': 6.0755, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:10:27 | INFO    | qsar | seed 43 | ImbLLM-random      | train=896 (min 337 / maj 559) | F1=0.6545 Acc=0.8199 G=0.7044 AUC=0.9211 PR-AUC=0.8770
+2026-10-13 14:10:27 | INFO    | qsar | seed 43 | stage ImbLLM-random      | DONE in 0h01m16s
+2026-10-13 14:10:27 | INFO    | qsar | seed 43 | stage ImbLLM-IAFP        | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:10:27 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:11:13 | INFO    | [qsar/s43/ImbLLM-IAFP] fine-tuning rows=196 | tokens/row: mean=255 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 1/140 | loss=2.1171
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 2/140 | loss=2.1581
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 3/140 | loss=2.0960
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 4/140 | loss=2.0218
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 5/140 | loss=1.9882
+2026-10-13 14:11:14 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 1/20 | step 6/140 | loss=1.9309
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0339 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m18s
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 8/140 | loss=1.8476
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 9/140 | loss=1.8106
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 10/140 | loss=1.7858
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 11/140 | loss=1.7724
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 12/140 | loss=1.7166
+2026-10-13 14:11:15 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 2/20 | step 13/140 | loss=1.6794
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7642 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m17s
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 15/140 | loss=1.6418
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 16/140 | loss=1.6795
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 17/140 | loss=1.6491
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 18/140 | loss=1.6455
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 19/140 | loss=1.6225
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 3/20 | step 20/140 | loss=1.6336
+2026-10-13 14:11:16 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.6383 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m16s
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 22/140 | loss=1.6092
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 23/140 | loss=1.6074
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 24/140 | loss=1.5914
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 25/140 | loss=1.5870
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 26/140 | loss=1.5818
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 4/20 | step 27/140 | loss=1.5978
+2026-10-13 14:11:17 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.5944 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m15s
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 29/140 | loss=1.5722
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 30/140 | loss=1.5517
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 31/140 | loss=1.5517
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 32/140 | loss=1.5950
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 33/140 | loss=1.5773
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 5/20 | step 34/140 | loss=1.5451
+2026-10-13 14:11:18 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.5759 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m14s
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 36/140 | loss=1.5838
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 37/140 | loss=1.5547
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 38/140 | loss=1.5172
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 39/140 | loss=1.5480
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 40/140 | loss=1.5340
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 6/20 | step 41/140 | loss=1.5332
+2026-10-13 14:11:19 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.5454 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m13s
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 43/140 | loss=1.5389
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 44/140 | loss=1.5261
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 45/140 | loss=1.5258
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 46/140 | loss=1.5343
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 47/140 | loss=1.5254
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 7/20 | step 48/140 | loss=1.5168
+2026-10-13 14:11:20 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.5212 | epoch_time=0h00m00s | elapsed=0h00m06s | ETA=0h00m12s
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 50/140 | loss=1.5137
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 51/140 | loss=1.5113
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 52/140 | loss=1.4935
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 53/140 | loss=1.5060
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 54/140 | loss=1.5012
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 8/20 | step 55/140 | loss=1.5257
+2026-10-13 14:11:21 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.5034 | epoch_time=0h00m00s | elapsed=0h00m07s | ETA=0h00m11s
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 57/140 | loss=1.4990
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 58/140 | loss=1.4958
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 59/140 | loss=1.4962
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 60/140 | loss=1.4771
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 61/140 | loss=1.4748
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 9/20 | step 62/140 | loss=1.4653
+2026-10-13 14:11:22 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.4899 | epoch_time=0h00m00s | elapsed=0h00m08s | ETA=0h00m10s
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 64/140 | loss=1.4815
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 65/140 | loss=1.4454
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 66/140 | loss=1.4440
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 67/140 | loss=1.4693
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 68/140 | loss=1.4635
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 10/20 | step 69/140 | loss=1.4443
+2026-10-13 14:11:23 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.4592 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m09s
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 71/140 | loss=1.4499
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 72/140 | loss=1.4398
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 73/140 | loss=1.4434
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 74/140 | loss=1.4347
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 75/140 | loss=1.3960
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 11/20 | step 76/140 | loss=1.4112
+2026-10-13 14:11:24 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.4291 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m08s
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 78/140 | loss=1.4106
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 79/140 | loss=1.3883
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 80/140 | loss=1.4066
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 81/140 | loss=1.3914
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 82/140 | loss=1.4214
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 12/20 | step 83/140 | loss=1.3860
+2026-10-13 14:11:25 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.4004 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m07s
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 85/140 | loss=1.3692
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 86/140 | loss=1.3819
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 87/140 | loss=1.3734
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 88/140 | loss=1.3781
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 89/140 | loss=1.3854
+2026-10-13 14:11:26 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 13/20 | step 90/140 | loss=1.3851
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.3685 | epoch_time=0h00m02s | elapsed=0h00m14s | ETA=0h00m07s
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 92/140 | loss=1.3761
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 93/140 | loss=1.3710
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 94/140 | loss=1.3588
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 95/140 | loss=1.3579
+2026-10-13 14:11:28 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 96/140 | loss=1.3509
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 14/20 | step 97/140 | loss=1.3570
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.3582 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m06s
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 99/140 | loss=1.3479
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 100/140 | loss=1.3673
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 101/140 | loss=1.3363
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 102/140 | loss=1.3413
+2026-10-13 14:11:29 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 103/140 | loss=1.3531
+2026-10-13 14:11:30 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 15/20 | step 104/140 | loss=1.3455
+2026-10-13 14:11:31 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.3388 | epoch_time=0h00m02s | elapsed=0h00m17s | ETA=0h00m05s
+2026-10-13 14:11:31 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 106/140 | loss=1.3344
+2026-10-13 14:11:31 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 107/140 | loss=1.3427
+2026-10-13 14:11:31 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 108/140 | loss=1.3378
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 109/140 | loss=1.3309
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 110/140 | loss=1.3349
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 16/20 | step 111/140 | loss=1.3472
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.3233 | epoch_time=0h00m01s | elapsed=0h00m18s | ETA=0h00m04s
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 113/140 | loss=1.3358
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 114/140 | loss=1.3302
+2026-10-13 14:11:32 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 115/140 | loss=1.3172
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 116/140 | loss=1.3335
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 117/140 | loss=1.3228
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 17/20 | step 118/140 | loss=1.3307
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.3332 | epoch_time=0h00m01s | elapsed=0h00m19s | ETA=0h00m03s
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 120/140 | loss=1.3242
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 121/140 | loss=1.3115
+2026-10-13 14:11:33 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 122/140 | loss=1.3415
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 123/140 | loss=1.3268
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 124/140 | loss=1.3360
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 18/20 | step 125/140 | loss=1.2978
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.3275 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m02s
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 127/140 | loss=1.3215
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 128/140 | loss=1.3292
+2026-10-13 14:11:34 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 129/140 | loss=1.3061
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 130/140 | loss=1.3287
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 131/140 | loss=1.3147
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 19/20 | step 132/140 | loss=1.3094
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.3091 | epoch_time=0h00m01s | elapsed=0h00m21s | ETA=0h00m01s
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 134/140 | loss=1.3326
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 135/140 | loss=1.3295
+2026-10-13 14:11:35 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 136/140 | loss=1.3122
+2026-10-13 14:11:36 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 137/140 | loss=1.3115
+2026-10-13 14:11:36 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 138/140 | loss=1.3197
+2026-10-13 14:11:36 | INFO    | [qsar/s43/ImbLLM-IAFP] epoch 20/20 | step 139/140 | loss=1.3120
+2026-10-13 14:11:36 | INFO    | [qsar/s43/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.3181 | epoch_time=0h00m00s | elapsed=0h00m22s | ETA=0h00m00s
+2026-10-13 14:11:37 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-IAFP | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:11:48 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 308, 'valid_parse_rate': 0.9967532467532467, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 10.5}
+2026-10-13 14:11:48 | INFO    | [9/22] qsar seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0044, 'mean_dist_heldout_real_to_nearest_synth': 5.3349, 'coverage_k2': 0.0044, 'mean_dist_synth_to_train_minority(DCR)': 6.731, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:11:48 | INFO    | qsar | seed 43 | ImbLLM-IAFP        | train=896 (min 337 / maj 559) | F1=0.6422 Acc=0.8152 G=0.6945 AUC=0.9127 PR-AUC=0.8631
+2026-10-13 14:11:48 | INFO    | qsar | seed 43 | stage ImbLLM-IAFP        | DONE in 0h01m21s
+2026-10-13 14:11:48 | INFO    | qsar | seed 43 | stage plots              | RUNNING [9/22] qsar seed 43 (2/3)
+2026-10-13 14:11:51 | INFO    | [9/22] qsar seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 14:11:51 | INFO    | qsar | seed 43 | stage plots              | DONE in 0h00m02s
+2026-10-13 14:11:51 | INFO    | [9/22] qsar seed 43 (2/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 14:11:51 | INFO    | ====================================================================================================
+2026-10-13 14:11:51 | INFO    | [9/22] qsar seed 44 (3/3) | START
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage split              | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:51 | INFO    | [9/22] qsar seed 44 (3/3) | split: train=844 test=211 | full-train minority=285 -> retained=57 (held-out ref=228) | reduced imbalance 9.8:1 | test minority=71 | test_fingerprint=ae568d252f7f
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage importance         | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:51 | INFO    | [9/22] qsar seed 44 (3/3) | top features: V1=0.1976, V37=0.1285, V22=0.0770, V38=0.0762, V41=0.0413
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage Original           | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | Original           | train=844 (min 285 / maj 559) | F1=0.7770 Acc=0.8531 G=0.8273 AUC=0.9128 PR-AUC=0.8649
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 14:11:51 | INFO    | qsar | seed 44 | stage Imbalanced         | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | Imbalanced         | train=616 (min 57 / maj 559) | F1=0.6168 Acc=0.8057 G=0.6744 AUC=0.8871 PR-AUC=0.8431
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage RandomOverSampler  | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | RandomOverSampler  | train=1118 (min 559 / maj 559) | F1=0.6724 Acc=0.8199 G=0.7251 AUC=0.8822 PR-AUC=0.8391
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage SMOTE              | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | SMOTE              | train=1118 (min 559 / maj 559) | F1=0.6949 Acc=0.8294 G=0.7434 AUC=0.8857 PR-AUC=0.8372
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 14:11:52 | INFO    | qsar | seed 44 | stage ADASYN             | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:53 | INFO    | qsar | seed 44 | ADASYN             | train=1114 (min 555 / maj 559) | F1=0.7059 Acc=0.8341 G=0.7525 AUC=0.8855 PR-AUC=0.8397
+2026-10-13 14:11:53 | INFO    | qsar | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 14:11:53 | INFO    | [9/22] qsar seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 14:11:53 | INFO    | qsar | seed 44 | stage ImbLLM-random      | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:11:53 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-random | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:12:39 | INFO    | [qsar/s44/ImbLLM-random] fine-tuning rows=196 | tokens/row: mean=255 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:12:39 | INFO    | [qsar/s44/ImbLLM-random] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 1/140 | loss=2.1646
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 2/140 | loss=2.1250
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 3/140 | loss=2.1002
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 4/140 | loss=2.0247
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 5/140 | loss=1.9903
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] epoch 1/20 | step 6/140 | loss=1.9209
+2026-10-13 14:12:40 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=2.0320 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m18s
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 8/140 | loss=1.8610
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 9/140 | loss=1.8019
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 10/140 | loss=1.7640
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 11/140 | loss=1.7590
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 12/140 | loss=1.7405
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 2/20 | step 13/140 | loss=1.7165
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.7648 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m17s
+2026-10-13 14:12:41 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 15/140 | loss=1.6800
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 16/140 | loss=1.6752
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 17/140 | loss=1.6645
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 18/140 | loss=1.6308
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 19/140 | loss=1.6460
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] epoch 3/20 | step 20/140 | loss=1.6290
+2026-10-13 14:12:42 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.6450 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m17s
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 22/140 | loss=1.6245
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 23/140 | loss=1.6097
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 24/140 | loss=1.6161
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 25/140 | loss=1.5852
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 26/140 | loss=1.6003
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] epoch 4/20 | step 27/140 | loss=1.5950
+2026-10-13 14:12:43 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.6065 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m16s
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 29/140 | loss=1.6032
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 30/140 | loss=1.5831
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 31/140 | loss=1.5940
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 32/140 | loss=1.5870
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 33/140 | loss=1.5733
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] epoch 5/20 | step 34/140 | loss=1.5576
+2026-10-13 14:12:44 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.5823 | epoch_time=0h00m01s | elapsed=0h00m05s | ETA=0h00m15s
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 36/140 | loss=1.5655
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 37/140 | loss=1.5512
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 38/140 | loss=1.5700
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 39/140 | loss=1.5744
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 40/140 | loss=1.5540
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] epoch 6/20 | step 41/140 | loss=1.5621
+2026-10-13 14:12:45 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.5656 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m14s
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 43/140 | loss=1.5473
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 44/140 | loss=1.5338
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 45/140 | loss=1.5484
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 46/140 | loss=1.5506
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 47/140 | loss=1.5509
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 7/20 | step 48/140 | loss=1.5506
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.5479 | epoch_time=0h00m00s | elapsed=0h00m06s | ETA=0h00m12s
+2026-10-13 14:12:46 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 50/140 | loss=1.5207
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 51/140 | loss=1.5409
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 52/140 | loss=1.5228
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 53/140 | loss=1.5394
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 54/140 | loss=1.5158
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] epoch 8/20 | step 55/140 | loss=1.5123
+2026-10-13 14:12:47 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.5220 | epoch_time=0h00m01s | elapsed=0h00m08s | ETA=0h00m12s
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 57/140 | loss=1.5064
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 58/140 | loss=1.5056
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 59/140 | loss=1.5028
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 60/140 | loss=1.4852
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 61/140 | loss=1.4694
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] epoch 9/20 | step 62/140 | loss=1.4770
+2026-10-13 14:12:48 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.4955 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m11s
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 64/140 | loss=1.4833
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 65/140 | loss=1.4620
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 66/140 | loss=1.4629
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 67/140 | loss=1.4661
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 68/140 | loss=1.4549
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] epoch 10/20 | step 69/140 | loss=1.4367
+2026-10-13 14:12:49 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.4590 | epoch_time=0h00m00s | elapsed=0h00m10s | ETA=0h00m10s
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 71/140 | loss=1.4350
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 72/140 | loss=1.4407
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 73/140 | loss=1.4287
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 74/140 | loss=1.4436
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 75/140 | loss=1.3976
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] epoch 11/20 | step 76/140 | loss=1.4088
+2026-10-13 14:12:50 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.4264 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m09s
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 78/140 | loss=1.4242
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 79/140 | loss=1.4183
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 80/140 | loss=1.3889
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 81/140 | loss=1.3826
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 82/140 | loss=1.4172
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] epoch 12/20 | step 83/140 | loss=1.3992
+2026-10-13 14:12:51 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.4031 | epoch_time=0h00m00s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 85/140 | loss=1.3627
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 86/140 | loss=1.4129
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 87/140 | loss=1.3711
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 88/140 | loss=1.3755
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 89/140 | loss=1.3906
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] epoch 13/20 | step 90/140 | loss=1.3685
+2026-10-13 14:12:52 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.3767 | epoch_time=0h00m00s | elapsed=0h00m13s | ETA=0h00m07s
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 92/140 | loss=1.3778
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 93/140 | loss=1.3703
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 94/140 | loss=1.3563
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 95/140 | loss=1.3645
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 96/140 | loss=1.3589
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] epoch 14/20 | step 97/140 | loss=1.3570
+2026-10-13 14:12:53 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.3672 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m06s
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 99/140 | loss=1.3666
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 100/140 | loss=1.3392
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 101/140 | loss=1.3508
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 102/140 | loss=1.3537
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 103/140 | loss=1.3443
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] epoch 15/20 | step 104/140 | loss=1.3488
+2026-10-13 14:12:54 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.3521 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m05s
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 106/140 | loss=1.3291
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 107/140 | loss=1.3557
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 108/140 | loss=1.3479
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 109/140 | loss=1.3271
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 110/140 | loss=1.3425
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] epoch 16/20 | step 111/140 | loss=1.3500
+2026-10-13 14:12:55 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.3393 | epoch_time=0h00m01s | elapsed=0h00m16s | ETA=0h00m04s
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 113/140 | loss=1.3610
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 114/140 | loss=1.3383
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 115/140 | loss=1.3262
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 116/140 | loss=1.3297
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 117/140 | loss=1.3251
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] epoch 17/20 | step 118/140 | loss=1.3409
+2026-10-13 14:12:56 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.3363 | epoch_time=0h00m01s | elapsed=0h00m17s | ETA=0h00m03s
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 120/140 | loss=1.3469
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 121/140 | loss=1.3152
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 122/140 | loss=1.3174
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 123/140 | loss=1.3380
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 124/140 | loss=1.3369
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] epoch 18/20 | step 125/140 | loss=1.3434
+2026-10-13 14:12:57 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.3360 | epoch_time=0h00m01s | elapsed=0h00m18s | ETA=0h00m02s
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 127/140 | loss=1.3002
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 128/140 | loss=1.3229
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 129/140 | loss=1.3451
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 130/140 | loss=1.3360
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 131/140 | loss=1.3332
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] epoch 19/20 | step 132/140 | loss=1.3349
+2026-10-13 14:12:58 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.3320 | epoch_time=0h00m01s | elapsed=0h00m19s | ETA=0h00m01s
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 134/140 | loss=1.3231
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 135/140 | loss=1.3180
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 136/140 | loss=1.3320
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 137/140 | loss=1.3428
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 138/140 | loss=1.3345
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] epoch 20/20 | step 139/140 | loss=1.3336
+2026-10-13 14:12:59 | INFO    | [qsar/s44/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.3425 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m00s
+2026-10-13 14:13:01 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-random | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:13:13 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 308, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 12.8}
+2026-10-13 14:13:14 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0088, 'mean_dist_heldout_real_to_nearest_synth': 5.2466, 'coverage_k2': 0.0307, 'mean_dist_synth_to_train_minority(DCR)': 5.1172, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:13:14 | INFO    | qsar | seed 44 | ImbLLM-random      | train=896 (min 337 / maj 559) | F1=0.6111 Acc=0.8009 G=0.6719 AUC=0.8748 PR-AUC=0.8223
+2026-10-13 14:13:14 | INFO    | qsar | seed 44 | stage ImbLLM-random      | DONE in 0h01m21s
+2026-10-13 14:13:14 | INFO    | qsar | seed 44 | stage ImbLLM-IAFP        | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:13:14 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 57 retained minority + 139 interpolated rows | synthetic to generate = 280 (CAPPED from 502; classes will not be perfectly balanced)
+2026-10-13 14:14:00 | INFO    | [qsar/s44/ImbLLM-IAFP] fine-tuning rows=196 | tokens/row: mean=255 max(probe)=264 -> max_len=311 | device=cuda
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] training: epochs=20 | steps/epoch=7 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 1/140 | loss=2.1485
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 2/140 | loss=2.1143
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 3/140 | loss=2.0901
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 4/140 | loss=2.0153
+2026-10-13 14:14:01 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 5/140 | loss=1.9783
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 1/20 | step 6/140 | loss=1.9162
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=2.0223 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m19s
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 8/140 | loss=1.8351
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 9/140 | loss=1.8283
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 10/140 | loss=1.7840
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 11/140 | loss=1.7567
+2026-10-13 14:14:02 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 12/140 | loss=1.7221
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 2/20 | step 13/140 | loss=1.6879
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.7547 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m18s
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 15/140 | loss=1.6835
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 16/140 | loss=1.6651
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 17/140 | loss=1.6267
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 18/140 | loss=1.6147
+2026-10-13 14:14:03 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 19/140 | loss=1.6245
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 3/20 | step 20/140 | loss=1.6216
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.6404 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m16s
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 22/140 | loss=1.5722
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 23/140 | loss=1.5864
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 24/140 | loss=1.6021
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 25/140 | loss=1.6081
+2026-10-13 14:14:04 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 26/140 | loss=1.5866
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 4/20 | step 27/140 | loss=1.5828
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.5872 | epoch_time=0h00m01s | elapsed=0h00m04s | ETA=0h00m16s
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 29/140 | loss=1.5614
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 30/140 | loss=1.5620
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 31/140 | loss=1.5708
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 32/140 | loss=1.5712
+2026-10-13 14:14:05 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 33/140 | loss=1.5638
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 5/20 | step 34/140 | loss=1.5628
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.5607 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m15s
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 36/140 | loss=1.5388
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 37/140 | loss=1.5531
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 38/140 | loss=1.5524
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 39/140 | loss=1.5671
+2026-10-13 14:14:06 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 40/140 | loss=1.5523
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 6/20 | step 41/140 | loss=1.5195
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.5507 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m14s
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 43/140 | loss=1.5250
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 44/140 | loss=1.5254
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 45/140 | loss=1.5366
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 46/140 | loss=1.5388
+2026-10-13 14:14:07 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 47/140 | loss=1.5195
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 7/20 | step 48/140 | loss=1.5338
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.5330 | epoch_time=0h00m01s | elapsed=0h00m07s | ETA=0h00m13s
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 50/140 | loss=1.5246
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 51/140 | loss=1.5166
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 52/140 | loss=1.5139
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 53/140 | loss=1.4940
+2026-10-13 14:14:08 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 54/140 | loss=1.5174
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 8/20 | step 55/140 | loss=1.5288
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.5190 | epoch_time=0h00m01s | elapsed=0h00m08s | ETA=0h00m12s
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 57/140 | loss=1.4934
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 58/140 | loss=1.5061
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 59/140 | loss=1.5050
+2026-10-13 14:14:09 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 60/140 | loss=1.4776
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 61/140 | loss=1.4950
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 9/20 | step 62/140 | loss=1.4803
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.4843 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m11s
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 64/140 | loss=1.4585
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 65/140 | loss=1.4588
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 66/140 | loss=1.4727
+2026-10-13 14:14:10 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 67/140 | loss=1.4366
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 68/140 | loss=1.4465
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 10/20 | step 69/140 | loss=1.4539
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.4538 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m10s
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 71/140 | loss=1.4292
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 72/140 | loss=1.4343
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 73/140 | loss=1.4196
+2026-10-13 14:14:11 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 74/140 | loss=1.4202
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 75/140 | loss=1.4184
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 11/20 | step 76/140 | loss=1.3933
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.4194 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m09s
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 78/140 | loss=1.4072
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 79/140 | loss=1.3941
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 80/140 | loss=1.3970
+2026-10-13 14:14:12 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 81/140 | loss=1.3779
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 82/140 | loss=1.3677
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 12/20 | step 83/140 | loss=1.3872
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.3864 | epoch_time=0h00m01s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 85/140 | loss=1.3668
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 86/140 | loss=1.3777
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 87/140 | loss=1.3792
+2026-10-13 14:14:13 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 88/140 | loss=1.3877
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 89/140 | loss=1.3518
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 13/20 | step 90/140 | loss=1.3528
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.3684 | epoch_time=0h00m01s | elapsed=0h00m13s | ETA=0h00m07s
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 92/140 | loss=1.3479
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 93/140 | loss=1.3523
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 94/140 | loss=1.3394
+2026-10-13 14:14:14 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 95/140 | loss=1.3625
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 96/140 | loss=1.3514
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 14/20 | step 97/140 | loss=1.3503
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.3459 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m06s
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 99/140 | loss=1.3510
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 100/140 | loss=1.3293
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 101/140 | loss=1.3402
+2026-10-13 14:14:15 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 102/140 | loss=1.3522
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 103/140 | loss=1.3362
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 15/20 | step 104/140 | loss=1.3202
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.3417 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m05s
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 106/140 | loss=1.3339
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 107/140 | loss=1.3379
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 108/140 | loss=1.3298
+2026-10-13 14:14:16 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 109/140 | loss=1.3134
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 110/140 | loss=1.3273
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 16/20 | step 111/140 | loss=1.3339
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.3359 | epoch_time=0h00m01s | elapsed=0h00m16s | ETA=0h00m04s
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 113/140 | loss=1.3306
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 114/140 | loss=1.3175
+2026-10-13 14:14:17 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 115/140 | loss=1.3234
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 116/140 | loss=1.3142
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 117/140 | loss=1.3335
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 17/20 | step 118/140 | loss=1.3071
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.3265 | epoch_time=0h00m00s | elapsed=0h00m17s | ETA=0h00m03s
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 120/140 | loss=1.3350
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 121/140 | loss=1.3224
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 122/140 | loss=1.3048
+2026-10-13 14:14:18 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 123/140 | loss=1.3238
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 124/140 | loss=1.3237
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 18/20 | step 125/140 | loss=1.3252
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.3175 | epoch_time=0h00m00s | elapsed=0h00m18s | ETA=0h00m02s
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 127/140 | loss=1.3235
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 128/140 | loss=1.3321
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 129/140 | loss=1.3216
+2026-10-13 14:14:19 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 130/140 | loss=1.3002
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 131/140 | loss=1.3078
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 19/20 | step 132/140 | loss=1.2943
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.3200 | epoch_time=0h00m00s | elapsed=0h00m19s | ETA=0h00m01s
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 134/140 | loss=1.3295
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 135/140 | loss=1.3047
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 136/140 | loss=1.3102
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 137/140 | loss=1.3138
+2026-10-13 14:14:20 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 138/140 | loss=1.3091
+2026-10-13 14:14:21 | INFO    | [qsar/s44/ImbLLM-IAFP] epoch 20/20 | step 139/140 | loss=1.3041
+2026-10-13 14:14:21 | INFO    | [qsar/s44/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.3121 | epoch_time=0h00m00s | elapsed=0h00m19s | ETA=0h00m00s
+2026-10-13 14:14:22 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-IAFP | generating 280 rows (condition_yx, temperature 0.70)
+2026-10-13 14:14:33 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 308, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 280, 'gen_batch_size_final': 128, 'gen_seconds': 11.1}
+2026-10-13 14:14:33 | INFO    | [9/22] qsar seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 5.3857, 'coverage_k2': 0.0219, 'mean_dist_synth_to_train_minority(DCR)': 6.0382, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:14:33 | INFO    | qsar | seed 44 | ImbLLM-IAFP        | train=896 (min 337 / maj 559) | F1=0.6168 Acc=0.8057 G=0.6744 AUC=0.8773 PR-AUC=0.8348
+2026-10-13 14:14:33 | INFO    | qsar | seed 44 | stage ImbLLM-IAFP        | DONE in 0h01m19s
+2026-10-13 14:14:33 | INFO    | qsar | seed 44 | stage plots              | RUNNING [9/22] qsar seed 44 (3/3)
+2026-10-13 14:14:36 | INFO    | [9/22] qsar seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 14:14:36 | INFO    | qsar | seed 44 | stage plots              | DONE in 0h00m02s
+2026-10-13 14:14:36 | INFO    | [9/22] qsar seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 14:14:37 | INFO    | qsar | DATASET COMPLETE in 0h09m01s -> runs/exp1/qsar

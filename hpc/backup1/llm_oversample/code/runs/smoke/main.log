@@ -1,0 +1,12 @@
+2026-10-13 02:15:41 | INFO    | ####################################################################################################
+2026-10-13 02:15:41 | INFO    | RUN smoke  ->  /home/tanmoyhazra/llm_oversample/code/runs/smoke
+2026-10-13 02:15:41 | INFO    | python 3.11.16 | pandas 2.2.3 | numpy 2.4.6
+2026-10-13 02:15:41 | INFO    | sklearn 1.9.1 | xgboost 3.2.0 | imblearn 0.14.2
+2026-10-13 02:15:41 | WARNING | torch/transformers not importable: No module named 'torch'
+2026-10-13 02:15:41 | INFO    | config: seeds=[42] q=0.20 epochs=1 batch=32 temp=0.70 max_interp=200 max_synth=200 cpus=128 model=distilgpt2
+2026-10-13 02:15:41 | INFO    | DATASET PLAN (smallest first, so more datasets finish early):
+2026-10-13 02:15:41 | WARNING | ImbLLM stages will be SKIPPED: torch/transformers unavailable: No module named 'torch'
+2026-10-13 02:15:41 | INFO    | ALL DONE in 0h00m00s
+2026-10-13 02:15:41 | INFO    | 
+STATUS  datasets: 0 total | 
+2026-10-13 02:15:41 | INFO    | cross-dataset charts/tables: runs/smoke/aggregate

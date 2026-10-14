@@ -1,0 +1,15 @@
+{
+  "target": "Age",
+  "numerical": [
+    "Length",
+    "Diameter",
+    "Height",
+    "Shucked_Weight",
+    "Viscera_Weight",
+    "Shell_Weight",
+    "Rings"
+  ],
+  "categorical": [
+    "Sex"
+  ]
+}

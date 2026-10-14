@@ -1,0 +1,19 @@
+{
+  "dataset": "kc2",
+  "rows": 522,
+  "n_numerical": 21,
+  "n_categorical": 0,
+  "target": "problems",
+  "class_counts": {
+    "no": 415,
+    "yes": 107
+  },
+  "n_classes": 2,
+  "minority_label": "yes",
+  "minority_count": 107,
+  "majority_count": 415,
+  "minority_fraction": 0.2049808429118774,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

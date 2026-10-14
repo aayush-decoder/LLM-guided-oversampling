@@ -1,0 +1,41 @@
+_text,_n_parsed
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.2, petal width (cm) is 0.2, sepal width (cm) is 3.5",4
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 4.6, petal width (cm) is 0.2, sepal width (cm) is 3.8",4
+"target_class is 1, petal length (cm) is 1.4, petal width (cm) is 0.2, sepal width (cm) is 3.074, sepal length (cm) is 5.9588",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.5686, sepal width (cm) is 3.5686",3
+"target_class is 1, petal length (cm) is 1.5, sepal width (cm) is 3.9656, sepal length (cm) is 5.4656",3
+"target_class is 1, petal length (cm) is 1.4, sepal width (cm) is 3.3, sepal length (cm) is 5.9",3
+"target_class is 1, petal length (cm) is 1.6, sepal length (cm) is 4.9, petal width (cm) is 0.2, sepal width (cm) is 3.9",4
+"target_class is 1, petal length (cm) is 1.6, sepal length (cm) is 5.2, sepal width (cm) is 3.2, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.3, sepal width (cm) is 3.2886, sepal length (cm) is 4.5858",3
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 4.9, petal width (cm) is 0.2, sepal width (cm) is 3.4",4
+"target_class is 1, petal length (cm) is 1.5, sepal width (cm) is 3.4, sepal length (cm) is 5.4",3
+"target_class is 1, petal length (cm) is 1.4, petal width (cm) is 0.2, sepal length (cm) is 5.7, sepal width (cm) is 3.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.2, sepal width (cm) is 3.5, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.4, sepal width (cm) is 3.2, sepal length (cm) is 4.2",3
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 4.3, sepal width (cm) is 3.9, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.4, petal width (cm) is 0.2, sepal width (cm) is 3.6",4
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.4461, sepal width (cm) is 3.3957, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal width (cm) is 3.2, sepal length (cm) is 5.4",3
+"target_class is 1, petal length (cm) is 1.4, sepal width (cm) is 3.4, sepal length (cm) is 5.4",3
+"target_class is 1, petal length (cm) is 1.6, sepal length (cm) is 5.4, sepal width (cm) is 3.2, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 4.9599, sepal width (cm) is 3.079, sepal length (cm) is 5.0558",3
+"target_class is 1, petal length (cm) is 1.3, sepal length (cm) is 5.2, sepal width (cm) is 3.4, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.4, sepal width (cm) is 3.4669, sepal length (cm) is 5.0607, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.6, sepal length (cm) is 4.1, petal width (cm) is 0.2, sepal width (cm) is 3.4",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.0382, sepal width (cm) is 3.9657, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.2, sepal width (cm) is 3.2",3
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.056, sepal width (cm) is 3.2881, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.4, sepal width (cm) is 3.2",3
+"target_class is 1, petal length (cm) is 1.6, sepal width (cm) is 3.2, sepal length (cm) is 5.2",3
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.2, petal width (cm) is 0.2, sepal width (cm) is 3.4",4
+"target_class is 1, petal length (cm) is 1.6, sepal width (cm) is 3.4, sepal length (cm) is 5.4821, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.5, sepal width (cm) is 3.7, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 4.5, sepal width (cm) is 3.2, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.3, sepal width (cm) is 3.2",3
+"target_class is 1, petal length (cm) is 1.4, sepal width (cm) is 3.9574, sepal length (cm) is 5.5, petal width (cm) is 0.4",4
+"target_class is 1, petal length (cm) is 1.3, sepal length (cm) is 5.2, petal width (cm) is 0.2, sepal width (cm) is 3.4",4
+"target_class is 1, petal length (cm) is 1.5, sepal length (cm) is 5.5, petal width (cm) is 0.2, sepal width (cm) is 3.4",4
+"target_class is 1, petal length (cm) is 1.5, sepal width (cm) is 3.4, sepal length (cm) is 5.48",3
+"target_class is 1, petal length (cm) is 1.4, sepal length (cm) is 5.4, sepal width (cm) is 3.4, petal width (cm) is 0.2",4
+"target_class is 1, petal length (cm) is 1.5, sepal width (cm) is 3.5, sepal length (cm) is 5.1",3

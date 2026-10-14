@@ -1,0 +1,19 @@
+{
+  "dataset": "breast",
+  "rows": 569,
+  "n_numerical": 30,
+  "n_categorical": 0,
+  "target": "target",
+  "class_counts": {
+    "1": 357,
+    "0": 212
+  },
+  "n_classes": 2,
+  "minority_label": "0",
+  "minority_count": 212,
+  "majority_count": 357,
+  "minority_fraction": 0.37258347978910367,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

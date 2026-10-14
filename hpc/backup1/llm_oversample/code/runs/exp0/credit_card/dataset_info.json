@@ -1,0 +1,23 @@
+{
+  "dataset": "credit_card",
+  "rows": 10127,
+  "n_numerical": 14,
+  "n_categorical": 5,
+  "target": "Attrition_Flag",
+  "class_counts": {
+    "Existing Customer": 8500,
+    "Attrited Customer": 1627
+  },
+  "n_classes": 2,
+  "minority_label": "Attrited Customer",
+  "minority_count": 1627,
+  "majority_count": 8500,
+  "minority_fraction": 0.1606596227905599,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [
+    "CLIENTNUM",
+    "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+    "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+  ],
+  "meta_columns_missing_in_csv": []
+}

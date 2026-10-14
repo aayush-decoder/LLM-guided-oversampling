@@ -1,0 +1,106 @@
+2026-10-13 03:40:25 | INFO    | ====================================================================================================
+2026-10-13 03:40:25 | INFO    | [8/22] german seed 44 (3/3) | START
+2026-10-13 03:40:25 | INFO    | german | seed 44 | stage split              | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:25 | INFO    | [8/22] german seed 44 (3/3) | split: train=800 test=200 | full-train minority=240 -> retained=48 (held-out ref=192) | reduced imbalance 11.7:1 | test minority=60 | test_fingerprint=ca634964e6c3
+2026-10-13 03:40:25 | INFO    | german | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 03:40:25 | INFO    | german | seed 44 | stage importance         | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:26 | INFO    | [8/22] german seed 44 (3/3) | top features: checking_status=0.1808, duration=0.1439, credit_history=0.0690, purpose=0.0648, property_magnitude=0.0585
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage Original           | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:26 | INFO    | german | seed 44 | Original           | train=800 (min 240 / maj 560) | F1=0.5143 Acc=0.7450 G=0.6262 AUC=0.7238 PR-AUC=0.5326
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage Imbalanced         | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:26 | INFO    | german | seed 44 | Imbalanced         | train=608 (min 48 / maj 560) | F1=0.0923 Acc=0.7050 G=0.2220 AUC=0.6974 PR-AUC=0.4827
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 03:40:26 | INFO    | german | seed 44 | stage RandomOverSampler  | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:27 | INFO    | german | seed 44 | RandomOverSampler  | train=1120 (min 560 / maj 560) | F1=0.1449 Acc=0.7050 G=0.2845 AUC=0.6921 PR-AUC=0.4636
+2026-10-13 03:40:27 | INFO    | german | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 03:40:27 | INFO    | [8/22] german seed 44 (3/3) | stage SMOTE              | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 03:40:27 | INFO    | [8/22] german seed 44 (3/3) | stage ADASYN             | SKIPPED: dataset has categorical features (SMOTE/ADASYN need numeric-only)
+2026-10-13 03:40:27 | INFO    | german | seed 44 | stage SMOTE-NC           | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:27 | INFO    | german | seed 44 | SMOTE-NC           | train=1120 (min 560 / maj 560) | F1=0.2254 Acc=0.7250 G=0.3612 AUC=0.6960 PR-AUC=0.4784
+2026-10-13 03:40:27 | INFO    | german | seed 44 | stage SMOTE-NC           | DONE in 0h00m00s
+2026-10-13 03:40:27 | INFO    | german | seed 44 | stage ImbLLM-random      | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:40:27 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-random | fine-tune set = 48 retained minority + 140 interpolated rows | synthetic to generate = 512
+2026-10-13 03:40:29 | INFO    | [german/s44/ImbLLM-random] fine-tuning rows=188 | tokens/row: mean=139 max(probe)=151 -> max_len=181 | device=cuda
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] training: epochs=5 | steps/epoch=6 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 1/5 | step 1/30 | loss=4.4899
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 1/5 | step 2/30 | loss=4.4828
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 1/5 | step 3/30 | loss=4.1156
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 1/5 | step 4/30 | loss=3.8267
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 1/5 | step 5/30 | loss=3.6043
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=3.9957 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:40:30 | INFO    | [german/s44/ImbLLM-random] epoch 2/5 | step 7/30 | loss=3.2736
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 2/5 | step 8/30 | loss=3.1154
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 2/5 | step 9/30 | loss=2.9582
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 2/5 | step 10/30 | loss=2.8640
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 2/5 | step 11/30 | loss=2.7445
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=2.9221 | epoch_time=0h00m01s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 3/5 | step 13/30 | loss=2.4899
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 3/5 | step 14/30 | loss=2.3882
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 3/5 | step 15/30 | loss=2.3187
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 3/5 | step 16/30 | loss=2.1991
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 3/5 | step 17/30 | loss=2.1241
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=2.2618 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 4/5 | step 19/30 | loss=1.9988
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 4/5 | step 20/30 | loss=1.9307
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 4/5 | step 21/30 | loss=1.8972
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 4/5 | step 22/30 | loss=1.8716
+2026-10-13 03:40:32 | INFO    | [german/s44/ImbLLM-random] epoch 4/5 | step 23/30 | loss=1.7616
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.8689 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m00s
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] epoch 5/5 | step 25/30 | loss=1.7470
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] epoch 5/5 | step 26/30 | loss=1.7176
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] epoch 5/5 | step 27/30 | loss=1.6912
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] epoch 5/5 | step 28/30 | loss=1.6576
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] epoch 5/5 | step 29/30 | loss=1.6272
+2026-10-13 03:40:33 | INFO    | [german/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.6831 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 03:40:34 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-random | generating 512 rows (condition_yx, temperature 0.70)
+2026-10-13 03:41:00 | WARNING | [german/s44/ImbLLM-random] only 6 valid rows after 4 rounds; topping up with 506 low-quality rows
+2026-10-13 03:41:00 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 2555, 'valid_parse_rate': 0.0023483365949119373, 'rounds': 4, 'rows_returned': 512, 'gen_batch_size_final': 128, 'gen_seconds': 26.1}
+2026-10-13 03:41:00 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0104, 'mean_dist_heldout_real_to_nearest_synth': 4.0276, 'coverage_k2': 0.3281, 'mean_dist_synth_to_train_minority(DCR)': 2.8318, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:41:01 | INFO    | german | seed 44 | ImbLLM-random      | train=1120 (min 560 / maj 560) | F1=0.1143 Acc=0.6900 G=0.2526 AUC=0.6869 PR-AUC=0.4359
+2026-10-13 03:41:01 | INFO    | german | seed 44 | stage ImbLLM-random      | DONE in 0h00m33s
+2026-10-13 03:41:01 | INFO    | german | seed 44 | stage ImbLLM-IAFP        | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:41:01 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 48 retained minority + 140 interpolated rows | synthetic to generate = 512
+2026-10-13 03:41:03 | INFO    | [german/s44/ImbLLM-IAFP] fine-tuning rows=188 | tokens/row: mean=139 max(probe)=151 -> max_len=181 | device=cuda
+2026-10-13 03:41:03 | INFO    | [german/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=6 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 03:41:03 | INFO    | [german/s44/ImbLLM-IAFP] epoch 1/5 | step 1/30 | loss=4.5249
+2026-10-13 03:41:03 | INFO    | [german/s44/ImbLLM-IAFP] epoch 1/5 | step 2/30 | loss=4.5392
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 1/5 | step 3/30 | loss=4.1483
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 1/5 | step 4/30 | loss=3.8489
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 1/5 | step 5/30 | loss=3.6497
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=4.0290 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m01s
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 2/5 | step 7/30 | loss=3.2910
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 2/5 | step 8/30 | loss=3.1127
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 2/5 | step 9/30 | loss=2.9917
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 2/5 | step 10/30 | loss=2.8563
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 2/5 | step 11/30 | loss=2.7013
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=2.9309 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 3/5 | step 13/30 | loss=2.4815
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 3/5 | step 14/30 | loss=2.3855
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 3/5 | step 15/30 | loss=2.3055
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 3/5 | step 16/30 | loss=2.1975
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 3/5 | step 17/30 | loss=2.1264
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=2.2562 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m00s
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 4/5 | step 19/30 | loss=1.9814
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 4/5 | step 20/30 | loss=1.9620
+2026-10-13 03:41:04 | INFO    | [german/s44/ImbLLM-IAFP] epoch 4/5 | step 21/30 | loss=1.8690
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 4/5 | step 22/30 | loss=1.7718
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 4/5 | step 23/30 | loss=1.7700
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.8449 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 5/5 | step 25/30 | loss=1.7176
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 5/5 | step 26/30 | loss=1.7162
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 5/5 | step 27/30 | loss=1.6562
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 5/5 | step 28/30 | loss=1.6577
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] epoch 5/5 | step 29/30 | loss=1.6101
+2026-10-13 03:41:05 | INFO    | [german/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.6525 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m00s
+2026-10-13 03:41:06 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-IAFP | generating 512 rows (condition_yx, temperature 0.70)
+2026-10-13 03:41:32 | WARNING | [german/s44/ImbLLM-IAFP] only 1 valid rows after 4 rounds; topping up with 511 low-quality rows
+2026-10-13 03:41:32 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 2562, 'valid_parse_rate': 0.00039032006245121, 'rounds': 4, 'rows_returned': 512, 'gen_batch_size_final': 128, 'gen_seconds': 25.9}
+2026-10-13 03:41:32 | INFO    | [8/22] german seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0104, 'mean_dist_heldout_real_to_nearest_synth': 4.1388, 'coverage_k2': 0.2708, 'mean_dist_synth_to_train_minority(DCR)': 2.9207, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 03:41:32 | INFO    | german | seed 44 | ImbLLM-IAFP        | train=1120 (min 560 / maj 560) | F1=0.1408 Acc=0.6950 G=0.2824 AUC=0.6818 PR-AUC=0.4379
+2026-10-13 03:41:32 | INFO    | german | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m31s
+2026-10-13 03:41:32 | INFO    | german | seed 44 | stage plots              | RUNNING [8/22] german seed 44 (3/3)
+2026-10-13 03:41:35 | INFO    | [8/22] german seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 03:41:35 | INFO    | german | seed 44 | stage plots              | DONE in 0h00m03s
+2026-10-13 03:41:36 | INFO    | [8/22] german seed 44 (3/3) | FINISHED (6/8 methods have metrics)

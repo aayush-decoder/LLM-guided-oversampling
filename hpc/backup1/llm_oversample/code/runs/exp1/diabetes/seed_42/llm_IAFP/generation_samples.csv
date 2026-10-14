@@ -1,0 +1,201 @@
+_text,_n_parsed
+"target_class is 1, pedi is 0.383, plas is 133, age is 28, pres is 82, mass is 42.2, skin is 8, preg is 3, mass is 29.7",7
+"target_class is 1, pedi is 0.443, plas is 182, insu is 0, preg is 1, mass is 34.5, age is 44, pres is 66, insu is 181",7
+"target_class is 1, plas is 144, age is 33, pedi is 0.5754, pres is 73, insu is 0, skin is 31, mass is 29.742",7
+"target_class is 1, pedi is 2.137, age is 25, plas is 148, mass is 33.9, insu is 208, preg is 4, skin is 33, pres is 66",8
+"target_class is 1, plas is 168, pedi is 0.871, pres is 65, skin is 37, age is 24, insu is 0, mass is 33.816",7
+"target_class is 1, plas is 181, pedi is 0.9085, pres is 84, skin is 31, mass is 32.9, insu is 132, pres is 71",6
+"target_class is 1, plas is 135, pedi is 1.46656, skin is 32, pres is 66, age is 35, preg is 3, mass is 28.091",7
+"target_class is 1, plas is 179, pedi is 0.6554, pres is 66, age is 28, skin is 26, mass is 41.8, insu is 119",7
+"target_class is 1, plas is 181, pedi is 0.44764, pres is 66, age is 30, preg is 7, mass is 37.7, skin is 23",7
+"target_class is 1, pedi is 0.447, plas is 155, age is 37, pres is 73, skin is 30, preg is 2, mass is 33.9, insu is 0",8
+"target_class is 1, plas is 97, pedi is 0.73843, pres is 82, age is 35, skin is 26, mass is 34.9, insu is 65",7
+"target_class is 1, plas is 101, pedi is 0.564, pres is 66, mass is 34.8, skin is 32, insu is 64, age is 30",7
+"target_class is 1, pedi is 0.361, plas is 164, age is 28, insu is 0, mass is 31.7, pres is 73, skin is 26",7
+"target_class is 1, pedi is 0.137, plas is 158, mass is 32.844, preg is 8, skin is 12, pres is 74, insu is 0",7
+"target_class is 1, plas is 117, pedi is 0.6468, age is 33, pres is 66, mass is 31.9, preg is 3, skin is 0",7
+"target_class is 1, age is 43, pedi is 0.788, insu is 0, mass is 41.6, preg is 3, skin is 31, pres is 90",7
+"target_class is 1, plas is 137, pedi is 0.637, age is 49, insu is 0, pres is 70, skin is 33, preg is 4, mass is 34.7",8
+"target_class is 1, plas is 146, pedi is 0.4779, age is 41, insu is 2, preg is 7, mass is 32.9, pres is 70, skin is 33",8
+"target_class is 1, skin is 23, plas is 181, pedi is 0.93898, pres is 65, insu is 0, age is 32, mass is 35.6, preg is 3",8
+"target_class is 1, pedi is 2.137, plas is 188, age is 33, mass is 30.6, pres is 77, skin is 25, insu is 130",7
+"target_class is 1, plas is 137, pedi is 0.962, age is 39, preg is 8, skin is 0, insu is 0, mass is 34.4",7
+"target_class is 1, plas is 171, pedi is 0.967, insu is 1, age is 36, pres is 70, mass is 34.5, skin is 21",7
+"target_class is 1, pedi is 0.962, plas is 160, preg is 7, skin is 0, pres is 73, insu is 167, mass is 42.6",7
+"target_class is 1, pedi is 0.451, plas is 160, skin is 34, mass is 35.8, preg is 2, pres is 65, insu is 117",7
+"target_class is 1, plas is 176, pedi is 0.637, age is 34, insu is 0, pres is 70, skin is 12, mass is 36.4",7
+"target_class is 1, plas is 128, pedi is 0.947, preg is 7, skin is 34, pres is 74, mass is 35.8, preg is 2",6
+"target_class is 1, pedi is 0.586, plas is 168, age is 25, mass is 38.0, insu is 1, pres is 90, skin is 0, preg is 4",8
+"target_class is 1, pedi is 0.422, plas is 158, age is 37, skin is 29, mass is 34.6, preg is 8, insu is 0, pres is 76",8
+"target_class is 1, plas is 113, pedi is 0.424, skin is 0, age is 27, insu is 148, mass is 32.7, pres is 74, insu is 135",7
+"target_class is 1, pedi is 0.451, plas is 159, insu is 117, skin is 25, pres is 65, age is 36, mass is 38.9, preg is 8",8
+"target_class is 1, plas is 146, pedi is 0.7159, preg is 2, pres is 65, skin is 12, mass is 33.7, insu is 0",7
+"target_class is 1, plas is 196, pedi is 0.8255, age is 27, insu is 158, preg is 9, skin is 5, mass is 31.934, pres is 66",8
+"target_class is 1, pedi is 0.328, plas is 169, skin is 32, insu is 2, age is 28, mass is 33.8, preg is 4, pres is 64",8
+"target_class is 1, plas is 148, pedi is 0.963, age is 32, mass is 33.096, insu is 0, pres is 77, skin is 0",7
+"target_class is 1, plas is 154, pedi is 0.49284, insu is 0, mass is 32.7, skin is 24, pres is 80, age is 31, preg is 6",8
+"target_class is 1, plas is 137, pedi is 0.3454, preg is 2, age is 32, pres is 65, mass is 33.6, skin is 33, insu is 0",8
+"target_class is 1, plas is 148, pedi is 0.1606, insu is 0, age is 34, mass is 28.8, preg is 5, skin is 27",7
+"target_class is 1, pedi is 1.391, plas is 169, mass is 27.3, pres is 69, skin is 26, pres is 68, insu is 0",6
+"target_class is 1, pedi is 0.433, plas is 135, pres is 77, skin is 24, mass is 32.844, preg is 5, insu is 6",7
+"target_class is 1, plas is 134, pedi is 1.8854, preg is 6, insu is 0, mass is 34.8, preg is 0",5
+"target_class is 1, pedi is 0.569, plas is 139, age is 51, insu is 135, mass is 35.5, pres is 66, skin is 32",7
+"target_class is 1, plas is 117, pedi is 0.746, age is 31, preg is 7, insu is 0, mass is 34.9, skin is 31",7
+"target_class is 1, age is 24, pedi is 0.4637, pres is 90, mass is 38.5, insu is 0, skin is 11, preg is 10, skin is 3",7
+"target_class is 1, pedi is 0.652, plas is 134, skin is 25, mass is 36.7, age is 29, preg is 3, pres is 68, insu is 0",8
+"target_class is 1, plas is 181, pedi is 0.447, age is 35, preg is 1, insu is 0, mass is 26.7, skin is 32, pres is 76",8
+"target_class is 1, plas is 181, pedi is 0.4761, mass is 33.466, pres is 65, preg is 8, skin is 22, pres is 65",6
+"target_class is 1, plas is 161, pedi is 1.642, insu is 121, skin is 25, age is 40, mass is 33.6, pres is 74",7
+"target_class is 1, plas is 179, pedi is 1.567, mass is 35.467, age is 31, skin is 31, pres is 70, preg is 2",7
+"target_class is 1, plas is 97, pedi is 0.632, preg is 4, insu is 168, age is 37, preg is 3, skin is 24",6
+"target_class is 1, plas is 97, pedi is 0.7386, preg is 5, age is 41, insu is 130, mass is 42.5, pres is 65",7
+"target_class is 1, plas is 128, pedi is 0.4252, pres is 70, mass is 33.575, insu is 140, age is 40, skin is 0, preg is 3",8
+"target_class is 1, age is 62, pedi is 0.9382, preg is 1, insu is 0, mass is 35.9, pres is 68, preg is 4",6
+"target_class is 1, plas is 181, pedi is 1.5469, preg is 1, age is 35, insu is 4, mass is 32.9, preg is 4",6
+"target_class is 1, pedi is 0.345, plas is 164, preg is 7, age is 30, skin is 24, pres is 80, mass is 33.7, pres is 90",7
+"target_class is 1, plas is 139, pedi is 0.6734, skin is 31, age is 45, pres is 64, insu is 1, mass is 38.9, pres is 65",7
+"target_class is 1, pedi is 0.135, plas is 171, skin is 34, age is 33, mass is 36.5, pres is 90, insu is 0, preg is 8",8
+"target_class is 1, plas is 137, pedi is 0.4944, skin is 30, pres is 80, insu is 0, preg is 7, mass is 33.7",7
+"target_class is 1, plas is 113, pedi is 0.639, age is 28, preg is 7, pres is 64, skin is 41, mass is 37.6",7
+"target_class is 1, plas is 179, age is 31, pedi is 0.42254, mass is 34.9, pres is 70, insu is 0, preg is 2",7
+"target_class is 1, pedi is 1.136, plas is 160, age is 32, insu is 0, skin is 21, mass is 42.7, pres is 64, preg is 6",8
+"target_class is 1, pedi is 0.345, plas is 182, age is 33, pedi is 0.4682, pres is 70, preg is 3, mass is 33.9",6
+"target_class is 1, pedi is 2.137, plas is 127, mass is 33.7, skin is 21, pres is 64, insu is 2, age is 34, preg is 7",8
+"target_class is 1, pedi is 0.328, plas is 148, age is 37, insu is 0, mass is 34.9, pres is 74, skin is 31, preg is 4",8
+"target_class is 1, plas is 171, age is 42, pedi is 0.9063, pres is 65, mass is 32.9, insu is 130, preg is 2",7
+"target_class is 1, plas is 113, pedi is 0.2776, pres is 70, mass is 32.0, skin is 33, insu is 181, preg is 6",7
+"target_class is 1, preg is 10, pedi is 0.4674, insu is 0, pres is 64, age is 30, skin is 33, mass is 33.725, pres is 71",7
+"target_class is 1, age is 35, pedi is 0.6161, plas is 148, insu is 0, pres is 66, skin is 0, mass is 33.6",7
+"target_class is 1, plas is 144, pedi is 0.44958, preg is 8, insu is 0, age is 43, pres is 77, skin is 32",7
+"target_class is 1, pedi is 0.502, plas is 139, age is 26, mass is 31.2, preg is 8, insu is 0, preg is 9",6
+"target_class is 1, pedi is 0.578, plas is 133, age is 35, pres is 65, skin is 12, mass is 33.5, preg is 3, skin is 33",7
+"target_class is 1, skin is 0, pedi is 0.4467, mass is 42.433, pres is 89, insu is 0, preg is 0, skin is 34",6
+"target_class is 1, plas is 139, pedi is 0.44034, mass is 35.318, pres is 82, age is 35, preg is 7, insu is 0",7
+"target_class is 1, plas is 80, pedi is 0.32972, preg is 8, skin is 30, pres is 70, age is 47, insu is 0, mass is 34.9",8
+"target_class is 1, age is 56, plas is 134, pedi is 0.49284, pres is 76, skin is 34, mass is 34.053, insu is 0",7
+"target_class is 1, plas is 159, pedi is 0.6159, age is 47, preg is 8, mass is 34.5, skin is 0, insu is 134",7
+"target_class is 1, plas is 196, age is 25, pedi is 0.4656, skin is 0, mass is 32.6, insu is 130, pres is 84",7
+"target_class is 1, pedi is 0.502, plas is 139, age is 32, skin is 47, pres is 75, preg is 7, mass is 34.8, insu is 64",8
+"target_class is 1, plas is 154, pedi is 0.496744, preg is 0, age is 25, mass is 42.7, insu is 0, skin is 32",7
+"target_class is 1, pedi is 0.586, plas is 129, age is 30, mass is 34.8, insu is 0, pres is 75, skin is 47, preg is 8",8
+"target_class is 1, plas is 181, pedi is 0.466, age is 35, preg is 7, mass is 32.4, skin is 21, insu is 119",7
+"target_class is 1, pedi is 2.137, plas is 171, insu is 1, age is 35, mass is 34.9, skin is 28, pres is 68, insu is 0",7
+"target_class is 1, pedi is 0.575, plas is 159, age is 53, preg is 3, mass is 37.6, pres is 74, skin is 31, insu is 132",8
+"target_class is 1, pedi is 0.719, plas is 181, age is 30, skin is 29, preg is 5, mass is 39.9, insu is 208",7
+"target_class is 1, plas is 80, pedi is 0.8597, preg is 7, skin is 31, insu is 0, age is 28, pres is 74, insu is 0",7
+"target_class is 1, pedi is 0.135, plas is 137, preg is 5, age is 26, skin is 22, insu is 0, mass is 33.5, insu is 0",7
+"target_class is 1, age is 25, pedi is 0.4462, plas is 182, mass is 31.7, pres is 61, skin is 36, insu is 0",7
+"target_class is 1, pedi is 0.761, plas is 167, pres is 66, age is 35, skin is 33, insu is 0, mass is 32.5",7
+"target_class is 1, pedi is 0.569, plas is 137, age is 25, mass is 38.8, skin is 31, preg is 8, insu is 0",7
+"target_class is 1, age is 38, pedi is 0.4679, plas is 169, preg is 1, pres is 74, insu is 119, mass is 39.9",7
+"target_class is 1, plas is 80, pedi is 0.4767, skin is 26, mass is 34.5, pres is 65, insu is 80, preg is 5",7
+"target_class is 1, plas is 154, pedi is 0.4944, age is 37, insu is 0, mass is 35.8, pres is 75, skin is 32",7
+"target_class is 1, plas is 188, pedi is 0.6355, insu is 0, age is 34, mass is 32.7, skin is 32, preg is 3",7
+"target_class is 1, preg is 8, pedi is 0.43344, plas is 137, age is 30, pres is 77, skin is 34, insu is 8, pres is 77",7
+"target_class is 1, plas is 128, pedi is 0.31857, age is 33, skin is 26, pres is 70, insu is 111, mass is 35.6",7
+"target_class is 1, preg is 10, plas is 196, pedi is 0.566, age is 27, pres is 65, skin is 8, mass is 34.5",7
+"target_class is 1, plas is 176, pedi is 0.32669, preg is 7, skin is 21, age is 42, pres is 82, mass is 36.424, insu is 268",8
+"target_class is 1, age is 43, pedi is 0.87943, insu is 0, preg is 7, skin is 4, mass is 33.872, pres is 64",7
+"target_class is 1, plas is 154, pedi is 0.719, mass is 35.7, skin is 24, insu is 181, age is 30, pres is 65, mass is 33.9",7
+"target_class is 1, plas is 181, pedi is 0.38429, age is 30, preg is 7, skin is 32, pres is 70, mass is 35.9",7
+"target_class is 1, plas is 197, pedi is 0.967, age is 26, insu is 0, mass is 36.9, preg is 3, skin is 41",7
+"target_class is 1, pedi is 0.431, plas is 134, pres is 84, age is 27, preg is 9, skin is 25, mass is 32.2, pres is 74",7
+"target_class is 1, plas is 154, pedi is 0.6496, pres is 82, age is 26, preg is 3, skin is 37, mass is 34.8, insu is 0",8
+"target_class is 1, pedi is 0.447, plas is 193, preg is 7, skin is 32, mass is 34.8, pres is 64, preg is 0",6
+"target_class is 1, plas is 144, pedi is 0.46838, skin is 8, pres is 68, insu is 0, age is 44, mass is 34.9",7
+"target_class is 1, pedi is 0.334, plas is 181, age is 39, insu is 8, mass is 33.6, pres is 70, insu is 71",6
+"target_class is 1, plas is 113, pedi is 0.4681, preg is 6, age is 27, pres is 79, skin is 20, mass is 34.5, insu is 167",8
+"target_class is 1, pedi is 0.433, plas is 135, age is 33, preg is 1, mass is 32.9, pres is 64, insu is 131",7
+"target_class is 1, pedi is 0.328, plas is 137, skin is 31, pres is 84, age is 24, preg is 8, mass is 28.6, pres is 82",7
+"target_class is 1, plas is 129, pedi is 0.3458, insu is 0, age is 35, mass is 35.9, pres is 74, insu is 0",6
+"target_class is 1, pedi is 0.422, plas is 111, pres is 74, age is 34, preg is 5, skin is 21, mass is 34.2, insu is 0",8
+"target_class is 1, plas is 141, pedi is 0.44979, age is 29, mass is 39.3, pres is 64, insu is 0, pres is 67",6
+"target_class is 1, plas is 197, pedi is 0.318087, age is 35, mass is 34.529, pres is 68, insu is 117, preg is 3",7
+"target_class is 1, plas is 196, pedi is 0.49063, skin is 32, pres is 84, mass is 26.6, insu is 131, preg is 7",7
+"target_class is 1, plas is 176, pedi is 0.9096, insu is 0, age is 33, mass is 34.9, skin is 30, pres is 82",7
+"target_class is 1, plas is 179, pedi is 0.4284, skin is 26, age is 32, insu is 0, pres is 71, preg is 3, mass is 34.7",8
+"target_class is 1, plas is 181, age is 38, pedi is 0.49056, skin is 4, insu is 0, mass is 29.9, pres is 65",7
+"target_class is 1, age is 38, pedi is 0.64656, skin is 33, pres is 74, mass is 39.9, insu is 130, pres is 71",6
+"target_class is 1, age is 45, pedi is 0.721, plas is 154, mass is 37.7, skin is 26, pres is 82, preg is 7",7
+"target_class is 1, plas is 181, pedi is 0.31867, skin is 37, mass is 35.9, age is 27, preg is 8, insu is 8",7
+"target_class is 1, plas is 129, pedi is 0.3456, pres is 65, age is 30, skin is 30, preg is 8, mass is 32.052",7
+"target_class is 1, age is 25, pedi is 0.4299, plas is 180, mass is 37.6, pres is 66, skin is 22, insu is 49",7
+"target_class is 1, plas is 137, pedi is 0.49094, mass is 37.6, pres is 65, preg is 8, skin is 35, insu is 134",7
+"target_class is 1, plas is 113, age is 30, pedi is 0.3137, mass is 33.1, preg is 4, pres is 65, insu is 0",7
+"target_class is 1, plas is 179, pedi is 0.742, pres is 73, mass is 32.0, skin is 16, insu is 0, pres is 82",6
+"target_class is 1, pedi is 0.615, plas is 131, preg is 5, age is 29, pres is 84, insu is 130, skin is 32, mass is 32.4",8
+"target_class is 1, plas is 171, pedi is 0.05, skin is 24, pres is 90, age is 31, insu is 0, mass is 34.6, skin is 31",7
+"target_class is 1, plas is 155, pedi is 0.31436, mass is 34.382, age is 25, pres is 70, preg is 1, insu is 180",7
+"target_class is 1, plas is 173, pedi is 0.634, age is 33, skin is 32, insu is 111, pres is 66, mass is 36.9",7
+"target_class is 1, plas is 130, pedi is 0.4096, age is 30, insu is 130, mass is 38.429, pres is 65, preg is 6, skin is 0",8
+"target_class is 1, plas is 97, pedi is 0.42237, pres is 65, skin is 32, preg is 2, mass is 34.9, pres is 70",6
+"target_class is 1, plas is 80, pedi is 0.4371, mass is 32.9, preg is 3, insu is 180, age is 33, pres is 65, mass is 33.7",7
+"target_class is 1, plas is 135, pedi is 0.4934, mass is 34.7, preg is 1, insu is 70, skin is 32, pres is 82",7
+"target_class is 1, plas is 180, pedi is 0.3458, preg is 4, skin is 32, age is 25, insu is 0, mass is 33.449",7
+"target_class is 1, plas is 176, pedi is 1.547, insu is 90, age is 29, mass is 32.06, skin is 21, pres is 66",7
+"target_class is 1, pedi is 0.443, plas is 134, age is 45, insu is 0, skin is 32, mass is 33.9, pres is 70, insu is 0",7
+"target_class is 1, plas is 140, pedi is 0.3854, pres is 80, preg is 1, mass is 34.466, skin is 39, insu is 134",7
+"target_class is 1, plas is 90, pedi is 0.327, skin is 33, preg is 8, pres is 70, age is 35, mass is 34.8, insu is 0",8
+"target_class is 1, plas is 181, age is 32, pedi is 0.67392, pres is 77, mass is 34.9, skin is 21, insu is 0",7
+"target_class is 1, plas is 97, pedi is 0.879, skin is 33, pres is 82, age is 41, mass is 34.1, preg is 6",7
+"target_class is 1, plas is 130, pedi is 0.936, preg is 3, skin is 33, insu is 140, age is 36, mass is 32.6",7
+"target_class is 1, age is 30, plas is 156, pedi is 0.65838, pres is 90, insu is 137, mass is 33.7, skin is 34, pres is 64",7
+"target_class is 1, pedi is 0.652, plas is 155, preg is 7, insu is 0, age is 30, mass is 33.6, skin is 8, pres is 65",8
+"target_class is 1, plas is 129, pedi is 0.49137, age is 35, preg is 7, mass is 34.5, skin is 32, insu is 0",7
+"target_class is 1, plas is 181, pedi is 0.3869, insu is 128, pres is 64, preg is 7, skin is 40, age is 33, mass is 33.6",8
+"target_class is 1, plas is 130, pedi is 0.2769, age is 35, skin is 41, preg is 3, insu is 0, mass is 35.8",7
+"target_class is 1, age is 58, plas is 161, pedi is 0.34567, skin is 38, insu is 0, preg is 11, mass is 36.06, pres is 65",8
+"target_class is 1, preg is 1, pedi is 0.788, age is 53, mass is 32.7, pres is 90, skin is 28, insu is 0, mass is 34.5",7
+"target_class is 1, age is 25, plas is 180, pedi is 0.3896, skin is 30, insu is 0, mass is 33.9, insu is 0",6
+"target_class is 1, plas is 117, pedi is 0.7916, pres is 66, skin is 33, mass is 37.0, preg is 4, age is 25",7
+"target_class is 1, plas is 197, age is 41, pedi is 1.6798, skin is 34, preg is 5, mass is 30.6, insu is 8",7
+"target_class is 1, age is 58, preg is 3, pedi is 0.3647, mass is 38.7, skin is 31, insu is 119, pres is 70",7
+"target_class is 1, pedi is 0.451, plas is 130, age is 39, preg is 6, skin is 34, insu is 0, mass is 32.5, pres is 74",8
+"target_class is 1, plas is 155, pedi is 0.49586, pres is 66, mass is 33.6, preg is 4, insu is 0, skin is 32",7
+"target_class is 1, pedi is 0.502, plas is 173, age is 51, preg is 2, mass is 32.4, pres is 66, skin is 35, insu is 0",8
+"target_class is 1, skin is 30, insu is 169, pedi is 0.32638, pres is 70, age is 44, mass is 35.7, preg is 7",7
+"target_class is 1, plas is 184, pedi is 0.632, age is 37, skin is 32, insu is 0, mass is 32.9, preg is 2",7
+"target_class is 1, pedi is 0.502, plas is 180, preg is 3, skin is 0, age is 27, pres is 68, mass is 34.9, insu is 173",8
+"target_class is 1, age is 25, plas is 169, pedi is 0.972, pres is 68, mass is 33.9, skin is 29, pres is 62",6
+"target_class is 1, age is 62, pedi is 0.966, skin is 25, mass is 34.9, preg is 4, insu is 0, pres is 70, insu is 0",7
+"target_class is 1, plas is 144, pedi is 0.94432, mass is 33.7, pres is 62, age is 30, insu is 0, preg is 8",7
+"target_class is 1, pedi is 0.741, plas is 193, age is 33, preg is 1, mass is 34.9, pres is 89, skin is 0",7
+"target_class is 1, plas is 90, pedi is 0.542, insu is 0, skin is 41, pres is 73, age is 49, mass is 32.9, pres is 74",7
+"target_class is 1, plas is 188, pedi is 0.32869, insu is 0, preg is 9, skin is 33, age is 25, mass is 31.656, preg is 8",7
+"target_class is 1, plas is 148, pedi is 0.44943, preg is 3, skin is 11, age is 26, pres is 84, mass is 30.9, insu is 7",8
+"target_class is 1, pedi is 0.578, plas is 131, preg is 6, skin is 31, insu is 0, age is 32, mass is 36.6, pres is 79",8
+"target_class is 1, plas is 155, pedi is 0.6416, mass is 31.468, preg is 7, insu is 0, skin is 32, pres is 82",7
+"target_class is 1, plas is 168, pedi is 0.4343, age is 35, pres is 75, preg is 2, mass is 32.816, insu is 158",7
+"target_class is 1, pedi is 0.542, plas is 189, age is 33, pres is 61, skin is 35, preg is 6, mass is 35.9, insu is 138",8
+"target_class is 1, preg is 2, pedi is 0.46637, mass is 34.379, pres is 66, age is 33, insu is 181, skin is 36, preg is 1",7
+"target_class is 1, pedi is 0.326, plas is 127, age is 37, pres is 84, preg is 3, skin is 22, mass is 33.8, pres is 83",7
+"target_class is 1, plas is 155, pedi is 0.5753, skin is 33, pres is 70, preg is 6, insu is 0, mass is 34.7",7
+"target_class is 1, plas is 168, pedi is 0.4616, age is 33, pres is 65, mass is 37.421, insu is 0, skin is 31",7
+"target_class is 1, plas is 182, age is 30, pedi is 0.4685, insu is 0, mass is 34.6, pres is 74, skin is 30",7
+"target_class is 1, plas is 105, pedi is 0.5656, preg is 1, age is 33, pres is 70, skin is 16, insu is 158",7
+"target_class is 1, plas is 196, pedi is 0.42791, pres is 66, insu is 80, age is 38, mass is 34.326, preg is 4",7
+"target_class is 1, plas is 105, age is 51, pedi is 0.6816, skin is 35, insu is 0, preg is 7, mass is 33.466",7
+"target_class is 1, plas is 134, pedi is 0.3646, pres is 74, age is 35, skin is 0, mass is 37.575, pres is 74",6
+"target_class is 1, plas is 134, pedi is 0.6496, age is 48, insu is 0, mass is 36.5, pres is 90, insu is 0",6
+"target_class is 1, age is 30, plas is 180, pedi is 0.6171, skin is 8, pres is 73, insu is 130, mass is 30.905, preg is 1",8
+"target_class is 1, pedi is 0.355, plas is 191, age is 33, preg is 3, mass is 30.6, insu is 0, pres is 70, skin is 38",8
+"target_class is 1, plas is 179, pedi is 0.6241, pres is 64, age is 43, mass is 35.3, skin is 0, insu is 0",7
+"target_class is 1, pedi is 0.447, plas is 182, insu is 0, pres is 65, age is 32, mass is 42.1, pres is 68",6
+"target_class is 1, age is 62, pedi is 0.3769, insu is 0, preg is 5, skin is 30, mass is 35.364, pres is 74, skin is 29",7
+"target_class is 1, age is 45, pedi is 0.40302, insu is 0, mass is 39.0, preg is 2, pres is 90, skin is 0, insu is 0",7
+"target_class is 1, pedi is 0.314, plas is 180, insu is 161, mass is 35.6, age is 26, pres is 65, skin is 31, pres is 68",7
+"target_class is 1, pedi is 0.383, plas is 161, insu is 0, preg is 11, age is 29, mass is 32.9, pres is 65, skin is 33",8
+"target_class is 1, plas is 188, pedi is 0.7409, age is 34, pres is 81, mass is 34.9, insu is 131, skin is 25",7
+"target_class is 1, pedi is 0.447, plas is 143, age is 31, mass is 33.5, pres is 70, skin is 26, insu is 171",7
+"target_class is 1, pedi is 0.443, plas is 137, preg is 3, age is 30, insu is 0, skin is 0, mass is 31.7, pres is 66",8
+"target_class is 1, plas is 144, pedi is 0.8255, age is 35, insu is 0, mass is 33.6, pres is 78, skin is 30",7
+"target_class is 1, plas is 134, age is 26, pedi is 0.6171, preg is 3, mass is 34.468, insu is 0, pres is 66",7
+"target_class is 1, pedi is 1.391, plas is 181, insu is 168, age is 32, mass is 35.3, pres is 90, preg is 1, skin is 9",8
+"target_class is 1, plas is 113, pedi is 0.6332, age is 33, preg is 3, insu is 1, mass is 31.7, skin is 26",7
+"target_class is 1, plas is 128, pedi is 0.6796, preg is 7, insu is 0, age is 30, skin is 32, mass is 29.725, pres is 68",8
+"target_class is 1, plas is 184, pedi is 0.468, age is 28, preg is 5, insu is 0, pres is 70, mass is 26.8, skin is 0",8
+"target_class is 1, plas is 188, pedi is 0.9081, mass is 31.9, preg is 3, age is 31, insu is 140, skin is 32",7
+"target_class is 1, plas is 176, pedi is 0.42956, preg is 4, age is 24, insu is 119, mass is 32.6, skin is 26, pres is 82",8
+"target_class is 1, age is 29, pedi is 0.355, plas is 137, mass is 33.9, skin is 24, pres is 68, preg is 5, insu is 0",8
+"target_class is 1, plas is 135, pedi is 0.43566, pres is 90, mass is 34.4, age is 36, insu is 0, skin is 30",7
+"target_class is 1, plas is 173, pedi is 0.466, skin is 17, insu is 0, preg is 2, mass is 33.6, pres is 70",7

@@ -1,0 +1,10 @@
+{
+  "target": "class",
+  "numerical": [
+    "left-weight",
+    "left-distance",
+    "right-weight",
+    "right-distance"
+  ],
+  "categorical": []
+}

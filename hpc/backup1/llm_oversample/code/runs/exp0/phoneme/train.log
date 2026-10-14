@@ -1,0 +1,292 @@
+2026-10-13 04:36:56 | INFO    | ====================================================================================================
+2026-10-13 04:36:56 | INFO    | [20/22] DATASET phoneme | elapsed so far 1h27m57s
+2026-10-13 04:36:56 | INFO    | 
+STATUS  datasets: 28 total | done=17 | partial=2 | pending=2 | running=1 | skipped=6
+  [PART] iris             seeds_done=0/3 seed 42 [ADASYN:failed] seed 43 [ADASYN:failed] seed 44 [ADASYN:failed]  (failed stages: [('42', 'ADASYN'), ('43', 'ADASYN'), ('44', 'ADASYN')])
+  [DONE] kc2              seeds_done=3/3
+  [DONE] breast           seeds_done=3/3
+  [DONE] balance          seeds_done=3/3
+  [DONE] australian       seeds_done=3/3
+  [DONE] blood            seeds_done=3/3
+  [DONE] diabetes         seeds_done=3/3
+  [DONE] german           seeds_done=3/3
+  [DONE] qsar             seeds_done=3/3
+  [PART] car              seeds_done=0/3 seed 42 [SMOTE-NC:failed] seed 43 [SMOTE-NC:failed] seed 44 [SMOTE-NC:failed]  (failed stages: [('42', 'SMOTE-NC'), ('43', 'SMOTE-NC'), ('44', 'SMOTE-NC')])
+  [DONE] steel            seeds_done=3/3
+  [DONE] kc1              seeds_done=3/3
+  [DONE] cardio           seeds_done=3/3
+  [DONE] cardio_noleak    seeds_done=3/3
+  [DONE] sick             seeds_done=3/3
+  [DONE] compas           seeds_done=3/3
+  [DONE] bank             seeds_done=3/3
+  [DONE] churn            seeds_done=3/3
+  [DONE] waveform         seeds_done=3/3
+  [RUN ] phoneme          seeds_done=0/3
+  [PEND] credit_card      seeds_done=0/3
+  [PEND] adult            seeds_done=0/3
+  [SKIP] abalone          seeds_done=0/3  (target looks continuous (28 unique values) -> regression)
+  [SKIP] california       seeds_done=0/3  (known regression dataset)
+  [SKIP] fuel             seeds_done=0/3  (known regression dataset)
+  [SKIP] gem_price        seeds_done=0/3  (known regression dataset)
+  [SKIP] housing          seeds_done=0/3  (known regression dataset)
+  [SKIP] insurance        seeds_done=0/3  (known regression dataset)
+2026-10-13 04:36:56 | INFO    | phoneme | rows=5404 | 5 numeric + 0 categorical features | classes=2 | minority='2': 1586 rows (29.35%)
+2026-10-13 04:36:56 | INFO    | ====================================================================================================
+2026-10-13 04:36:56 | INFO    | [20/22] phoneme seed 42 (1/3) | START
+2026-10-13 04:36:56 | INFO    | phoneme | seed 42 | stage split              | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:56 | INFO    | [20/22] phoneme seed 42 (1/3) | split: train=4323 test=1081 | full-train minority=1269 -> retained=254 (held-out ref=1015) | reduced imbalance 12.0:1 | test minority=317 | test_fingerprint=8d5fb291e862
+2026-10-13 04:36:56 | INFO    | phoneme | seed 42 | stage split              | DONE in 0h00m00s
+2026-10-13 04:36:56 | INFO    | phoneme | seed 42 | stage importance         | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:56 | INFO    | [20/22] phoneme seed 42 (1/3) | top features: V1=0.2920, V4=0.2494, V3=0.2374, V2=0.2057, V5=0.1859
+2026-10-13 04:36:56 | INFO    | phoneme | seed 42 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:36:56 | INFO    | phoneme | seed 42 | stage Original           | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | Original           | train=4323 (min 1269 / maj 3054) | F1=0.7727 Acc=0.8677 G=0.8351 AUC=0.9361 PR-AUC=0.8548
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage Imbalanced         | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | Imbalanced         | train=3308 (min 254 / maj 3054) | F1=0.5301 Acc=0.8048 G=0.6075 AUC=0.9133 PR-AUC=0.8214
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage RandomOverSampler  | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | RandomOverSampler  | train=6108 (min 3054 / maj 3054) | F1=0.6879 Acc=0.8455 G=0.7447 AUC=0.9088 PR-AUC=0.8232
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:36:57 | INFO    | phoneme | seed 42 | stage SMOTE              | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | SMOTE              | train=6108 (min 3054 / maj 3054) | F1=0.7201 Acc=0.8483 G=0.7843 AUC=0.9111 PR-AUC=0.8203
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | stage ADASYN             | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | ADASYN             | train=6153 (min 3099 / maj 3054) | F1=0.7205 Acc=0.8464 G=0.7870 AUC=0.9144 PR-AUC=0.8251
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:36:58 | INFO    | [20/22] phoneme seed 42 (1/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:36:58 | INFO    | phoneme | seed 42 | stage ImbLLM-random      | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:36:58 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-random | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:37:01 | INFO    | [phoneme/s42/ImbLLM-random] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=53 -> max_len=68 | device=cuda
+2026-10-13 04:37:01 | INFO    | [phoneme/s42/ImbLLM-random] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:37:04 | INFO    | [phoneme/s42/ImbLLM-random] epoch 1/5 | step 8/160 | loss=2.9221
+2026-10-13 04:37:06 | INFO    | [phoneme/s42/ImbLLM-random] epoch 1/5 | step 16/160 | loss=1.9853
+2026-10-13 04:37:06 | INFO    | [phoneme/s42/ImbLLM-random] epoch 1/5 | step 24/160 | loss=1.7051
+2026-10-13 04:37:08 | INFO    | [phoneme/s42/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.0570 | epoch_time=0h00m06s | elapsed=0h00m06s | ETA=0h00m25s
+2026-10-13 04:37:08 | INFO    | [phoneme/s42/ImbLLM-random] epoch 2/5 | step 40/160 | loss=1.5510
+2026-10-13 04:37:08 | INFO    | [phoneme/s42/ImbLLM-random] epoch 2/5 | step 48/160 | loss=1.5219
+2026-10-13 04:37:10 | INFO    | [phoneme/s42/ImbLLM-random] epoch 2/5 | step 56/160 | loss=1.4922
+2026-10-13 04:37:11 | INFO    | [phoneme/s42/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5138 | epoch_time=0h00m03s | elapsed=0h00m10s | ETA=0h00m15s
+2026-10-13 04:37:11 | INFO    | [phoneme/s42/ImbLLM-random] epoch 3/5 | step 72/160 | loss=1.4602
+2026-10-13 04:37:12 | INFO    | [phoneme/s42/ImbLLM-random] epoch 3/5 | step 80/160 | loss=1.4544
+2026-10-13 04:37:12 | INFO    | [phoneme/s42/ImbLLM-random] epoch 3/5 | step 88/160 | loss=1.4560
+2026-10-13 04:37:12 | INFO    | [phoneme/s42/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4528 | epoch_time=0h00m00s | elapsed=0h00m11s | ETA=0h00m07s
+2026-10-13 04:37:12 | INFO    | [phoneme/s42/ImbLLM-random] epoch 4/5 | step 104/160 | loss=1.4268
+2026-10-13 04:37:13 | INFO    | [phoneme/s42/ImbLLM-random] epoch 4/5 | step 112/160 | loss=1.4350
+2026-10-13 04:37:13 | INFO    | [phoneme/s42/ImbLLM-random] epoch 4/5 | step 120/160 | loss=1.4357
+2026-10-13 04:37:13 | INFO    | [phoneme/s42/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.4325 | epoch_time=0h00m00s | elapsed=0h00m11s | ETA=0h00m02s
+2026-10-13 04:37:13 | INFO    | [phoneme/s42/ImbLLM-random] epoch 5/5 | step 136/160 | loss=1.4212
+2026-10-13 04:37:14 | INFO    | [phoneme/s42/ImbLLM-random] epoch 5/5 | step 144/160 | loss=1.4197
+2026-10-13 04:37:14 | INFO    | [phoneme/s42/ImbLLM-random] epoch 5/5 | step 152/160 | loss=1.4208
+2026-10-13 04:37:15 | INFO    | [phoneme/s42/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.4208 | epoch_time=0h00m02s | elapsed=0h00m14s | ETA=0h00m00s
+2026-10-13 04:37:16 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-random | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:37:24 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-random | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 7.1}
+2026-10-13 04:37:24 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.1557, 'mean_dist_heldout_real_to_nearest_synth': 0.606, 'coverage_k2': 0.3458, 'mean_dist_synth_to_train_minority(DCR)': 0.733, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:37:24 | INFO    | phoneme | seed 42 | ImbLLM-random      | train=6108 (min 3054 / maj 3054) | F1=0.6524 Acc=0.8196 G=0.7288 AUC=0.8869 PR-AUC=0.7687
+2026-10-13 04:37:24 | INFO    | phoneme | seed 42 | stage ImbLLM-random      | DONE in 0h00m26s
+2026-10-13 04:37:24 | INFO    | phoneme | seed 42 | stage ImbLLM-IAFP        | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:37:24 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-IAFP | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:37:26 | INFO    | [phoneme/s42/ImbLLM-IAFP] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=53 -> max_len=68 | device=cuda
+2026-10-13 04:37:27 | INFO    | [phoneme/s42/ImbLLM-IAFP] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:37:27 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 1/5 | step 8/160 | loss=2.9212
+2026-10-13 04:37:28 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 1/5 | step 16/160 | loss=1.9861
+2026-10-13 04:37:28 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 1/5 | step 24/160 | loss=1.6945
+2026-10-13 04:37:28 | INFO    | [phoneme/s42/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.0514 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:37:28 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 2/5 | step 40/160 | loss=1.5386
+2026-10-13 04:37:29 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 2/5 | step 48/160 | loss=1.5097
+2026-10-13 04:37:29 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 2/5 | step 56/160 | loss=1.4931
+2026-10-13 04:37:29 | INFO    | [phoneme/s42/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5035 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:37:29 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 3/5 | step 72/160 | loss=1.4592
+2026-10-13 04:37:30 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 3/5 | step 80/160 | loss=1.4463
+2026-10-13 04:37:30 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 3/5 | step 88/160 | loss=1.4403
+2026-10-13 04:37:30 | INFO    | [phoneme/s42/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.4437 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:37:30 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 4/5 | step 104/160 | loss=1.4258
+2026-10-13 04:37:31 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 4/5 | step 112/160 | loss=1.4193
+2026-10-13 04:37:31 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 4/5 | step 120/160 | loss=1.4217
+2026-10-13 04:37:31 | INFO    | [phoneme/s42/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.4205 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:37:31 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 5/5 | step 136/160 | loss=1.4047
+2026-10-13 04:37:32 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 5/5 | step 144/160 | loss=1.4142
+2026-10-13 04:37:32 | INFO    | [phoneme/s42/ImbLLM-IAFP] epoch 5/5 | step 152/160 | loss=1.4110
+2026-10-13 04:37:32 | INFO    | [phoneme/s42/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.4107 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:37:33 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-IAFP | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:37:41 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-IAFP | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 7.5}
+2026-10-13 04:37:41 | INFO    | [20/22] phoneme seed 42 (1/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.1379, 'mean_dist_heldout_real_to_nearest_synth': 0.5914, 'coverage_k2': 0.3655, 'mean_dist_synth_to_train_minority(DCR)': 0.7255, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:37:41 | INFO    | phoneme | seed 42 | ImbLLM-IAFP        | train=6108 (min 3054 / maj 3054) | F1=0.6585 Acc=0.8205 G=0.7352 AUC=0.8923 PR-AUC=0.7685
+2026-10-13 04:37:41 | INFO    | phoneme | seed 42 | stage ImbLLM-IAFP        | DONE in 0h00m17s
+2026-10-13 04:37:41 | INFO    | phoneme | seed 42 | stage plots              | RUNNING [20/22] phoneme seed 42 (1/3)
+2026-10-13 04:37:48 | INFO    | [20/22] phoneme seed 42 (1/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:37:48 | INFO    | phoneme | seed 42 | stage plots              | DONE in 0h00m06s
+2026-10-13 04:37:48 | INFO    | [20/22] phoneme seed 42 (1/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:37:48 | INFO    | ====================================================================================================
+2026-10-13 04:37:48 | INFO    | [20/22] phoneme seed 43 (2/3) | START
+2026-10-13 04:37:48 | INFO    | phoneme | seed 43 | stage split              | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:48 | INFO    | [20/22] phoneme seed 43 (2/3) | split: train=4323 test=1081 | full-train minority=1269 -> retained=254 (held-out ref=1015) | reduced imbalance 12.0:1 | test minority=317 | test_fingerprint=19adf5034c82
+2026-10-13 04:37:48 | INFO    | phoneme | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 04:37:48 | INFO    | phoneme | seed 43 | stage importance         | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:49 | INFO    | [20/22] phoneme seed 43 (2/3) | top features: V1=0.3245, V2=0.2786, V3=0.1811, V4=0.1269, V5=0.0730
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage Original           | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | Original           | train=4323 (min 1269 / maj 3054) | F1=0.8081 Acc=0.8862 G=0.8646 AUC=0.9480 PR-AUC=0.8707
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage Imbalanced         | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | Imbalanced         | train=3308 (min 254 / maj 3054) | F1=0.6054 Acc=0.8252 G=0.6688 AUC=0.9209 PR-AUC=0.8307
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage RandomOverSampler  | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | RandomOverSampler  | train=6108 (min 3054 / maj 3054) | F1=0.7308 Acc=0.8575 G=0.7872 AUC=0.9159 PR-AUC=0.8171
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:37:49 | INFO    | phoneme | seed 43 | stage SMOTE              | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | SMOTE              | train=6108 (min 3054 / maj 3054) | F1=0.7607 Acc=0.8649 G=0.8206 AUC=0.9210 PR-AUC=0.8321
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | stage ADASYN             | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | ADASYN             | train=6136 (min 3082 / maj 3054) | F1=0.7618 Acc=0.8640 G=0.8236 AUC=0.9212 PR-AUC=0.8251
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:37:50 | INFO    | [20/22] phoneme seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:37:50 | INFO    | phoneme | seed 43 | stage ImbLLM-random      | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:37:50 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-random | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:37:53 | INFO    | [phoneme/s43/ImbLLM-random] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=53 -> max_len=68 | device=cuda
+2026-10-13 04:37:53 | INFO    | [phoneme/s43/ImbLLM-random] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:37:53 | INFO    | [phoneme/s43/ImbLLM-random] epoch 1/5 | step 8/160 | loss=2.9144
+2026-10-13 04:37:54 | INFO    | [phoneme/s43/ImbLLM-random] epoch 1/5 | step 16/160 | loss=2.0094
+2026-10-13 04:37:54 | INFO    | [phoneme/s43/ImbLLM-random] epoch 1/5 | step 24/160 | loss=1.7085
+2026-10-13 04:37:54 | INFO    | [phoneme/s43/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.0630 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:37:54 | INFO    | [phoneme/s43/ImbLLM-random] epoch 2/5 | step 40/160 | loss=1.5454
+2026-10-13 04:37:55 | INFO    | [phoneme/s43/ImbLLM-random] epoch 2/5 | step 48/160 | loss=1.5178
+2026-10-13 04:37:55 | INFO    | [phoneme/s43/ImbLLM-random] epoch 2/5 | step 56/160 | loss=1.5074
+2026-10-13 04:37:55 | INFO    | [phoneme/s43/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5169 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:37:55 | INFO    | [phoneme/s43/ImbLLM-random] epoch 3/5 | step 72/160 | loss=1.4628
+2026-10-13 04:37:55 | INFO    | [phoneme/s43/ImbLLM-random] epoch 3/5 | step 80/160 | loss=1.4578
+2026-10-13 04:37:56 | INFO    | [phoneme/s43/ImbLLM-random] epoch 3/5 | step 88/160 | loss=1.4549
+2026-10-13 04:37:56 | INFO    | [phoneme/s43/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4593 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:37:56 | INFO    | [phoneme/s43/ImbLLM-random] epoch 4/5 | step 104/160 | loss=1.4380
+2026-10-13 04:37:56 | INFO    | [phoneme/s43/ImbLLM-random] epoch 4/5 | step 112/160 | loss=1.4410
+2026-10-13 04:37:57 | INFO    | [phoneme/s43/ImbLLM-random] epoch 4/5 | step 120/160 | loss=1.4380
+2026-10-13 04:37:57 | INFO    | [phoneme/s43/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.4400 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:37:57 | INFO    | [phoneme/s43/ImbLLM-random] epoch 5/5 | step 136/160 | loss=1.4322
+2026-10-13 04:37:57 | INFO    | [phoneme/s43/ImbLLM-random] epoch 5/5 | step 144/160 | loss=1.4338
+2026-10-13 04:37:58 | INFO    | [phoneme/s43/ImbLLM-random] epoch 5/5 | step 152/160 | loss=1.4221
+2026-10-13 04:37:58 | INFO    | [phoneme/s43/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.4303 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:37:59 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-random | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:38:06 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 6.7}
+2026-10-13 04:38:06 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.1241, 'mean_dist_heldout_real_to_nearest_synth': 0.6191, 'coverage_k2': 0.3596, 'mean_dist_synth_to_train_minority(DCR)': 0.72, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:38:06 | INFO    | phoneme | seed 43 | ImbLLM-random      | train=6108 (min 3054 / maj 3054) | F1=0.7152 Acc=0.8409 G=0.7862 AUC=0.9060 PR-AUC=0.8104
+2026-10-13 04:38:06 | INFO    | phoneme | seed 43 | stage ImbLLM-random      | DONE in 0h00m16s
+2026-10-13 04:38:06 | INFO    | phoneme | seed 43 | stage ImbLLM-IAFP        | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:38:06 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:38:09 | INFO    | [phoneme/s43/ImbLLM-IAFP] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=53 -> max_len=68 | device=cuda
+2026-10-13 04:38:09 | INFO    | [phoneme/s43/ImbLLM-IAFP] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:38:10 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 1/5 | step 8/160 | loss=2.8885
+2026-10-13 04:38:10 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 1/5 | step 16/160 | loss=1.9561
+2026-10-13 04:38:10 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 1/5 | step 24/160 | loss=1.6642
+2026-10-13 04:38:10 | INFO    | [phoneme/s43/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.0197 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:38:11 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 2/5 | step 40/160 | loss=1.4989
+2026-10-13 04:38:11 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 2/5 | step 48/160 | loss=1.4803
+2026-10-13 04:38:11 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 2/5 | step 56/160 | loss=1.4518
+2026-10-13 04:38:11 | INFO    | [phoneme/s43/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.4690 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:38:12 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 3/5 | step 72/160 | loss=1.4341
+2026-10-13 04:38:12 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 3/5 | step 80/160 | loss=1.4320
+2026-10-13 04:38:12 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 3/5 | step 88/160 | loss=1.4223
+2026-10-13 04:38:12 | INFO    | [phoneme/s43/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.4257 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:38:13 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 4/5 | step 104/160 | loss=1.4112
+2026-10-13 04:38:13 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 4/5 | step 112/160 | loss=1.4093
+2026-10-13 04:38:13 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 4/5 | step 120/160 | loss=1.3947
+2026-10-13 04:38:13 | INFO    | [phoneme/s43/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.4103 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:38:13 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 5/5 | step 136/160 | loss=1.4034
+2026-10-13 04:38:14 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 5/5 | step 144/160 | loss=1.3999
+2026-10-13 04:38:14 | INFO    | [phoneme/s43/ImbLLM-IAFP] epoch 5/5 | step 152/160 | loss=1.3878
+2026-10-13 04:38:14 | INFO    | [phoneme/s43/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.3945 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:38:15 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-IAFP | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:38:22 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 6.9}
+2026-10-13 04:38:22 | INFO    | [20/22] phoneme seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.1084, 'mean_dist_heldout_real_to_nearest_synth': 0.5922, 'coverage_k2': 0.3606, 'mean_dist_synth_to_train_minority(DCR)': 0.7525, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:38:23 | INFO    | phoneme | seed 43 | ImbLLM-IAFP        | train=6108 (min 3054 / maj 3054) | F1=0.7358 Acc=0.8538 G=0.7991 AUC=0.9072 PR-AUC=0.8151
+2026-10-13 04:38:23 | INFO    | phoneme | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m16s
+2026-10-13 04:38:23 | INFO    | phoneme | seed 43 | stage plots              | RUNNING [20/22] phoneme seed 43 (2/3)
+2026-10-13 04:38:30 | INFO    | [20/22] phoneme seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:38:30 | INFO    | phoneme | seed 43 | stage plots              | DONE in 0h00m07s
+2026-10-13 04:38:30 | INFO    | [20/22] phoneme seed 43 (2/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:38:30 | INFO    | ====================================================================================================
+2026-10-13 04:38:30 | INFO    | [20/22] phoneme seed 44 (3/3) | START
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage split              | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:30 | INFO    | [20/22] phoneme seed 44 (3/3) | split: train=4323 test=1081 | full-train minority=1269 -> retained=254 (held-out ref=1015) | reduced imbalance 12.0:1 | test minority=317 | test_fingerprint=a4fa4808fef1
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage importance         | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:30 | INFO    | [20/22] phoneme seed 44 (3/3) | top features: V5=0.2582, V2=0.2567, V1=0.2542, V3=0.2129, V4=0.1665
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage Original           | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | Original           | train=4323 (min 1269 / maj 3054) | F1=0.8110 Acc=0.8918 G=0.8596 AUC=0.9504 PR-AUC=0.8888
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 04:38:30 | INFO    | phoneme | seed 44 | stage Imbalanced         | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | Imbalanced         | train=3308 (min 254 / maj 3054) | F1=0.5875 Acc=0.8233 G=0.6507 AUC=0.9292 PR-AUC=0.8580
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage RandomOverSampler  | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | RandomOverSampler  | train=6108 (min 3054 / maj 3054) | F1=0.7132 Acc=0.8557 G=0.7652 AUC=0.9209 PR-AUC=0.8445
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage SMOTE              | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | SMOTE              | train=6108 (min 3054 / maj 3054) | F1=0.7658 Acc=0.8733 G=0.8160 AUC=0.9168 PR-AUC=0.8376
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 04:38:31 | INFO    | phoneme | seed 44 | stage ADASYN             | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:32 | INFO    | phoneme | seed 44 | ADASYN             | train=6171 (min 3117 / maj 3054) | F1=0.7586 Acc=0.8705 G=0.8093 AUC=0.9120 PR-AUC=0.8288
+2026-10-13 04:38:32 | INFO    | phoneme | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 04:38:32 | INFO    | [20/22] phoneme seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 04:38:32 | INFO    | phoneme | seed 44 | stage ImbLLM-random      | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:32 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-random | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:38:34 | INFO    | [phoneme/s44/ImbLLM-random] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=52 -> max_len=67 | device=cuda
+2026-10-13 04:38:35 | INFO    | [phoneme/s44/ImbLLM-random] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:38:35 | INFO    | [phoneme/s44/ImbLLM-random] epoch 1/5 | step 8/160 | loss=2.9232
+2026-10-13 04:38:35 | INFO    | [phoneme/s44/ImbLLM-random] epoch 1/5 | step 16/160 | loss=1.9964
+2026-10-13 04:38:36 | INFO    | [phoneme/s44/ImbLLM-random] epoch 1/5 | step 24/160 | loss=1.7042
+2026-10-13 04:38:36 | INFO    | [phoneme/s44/ImbLLM-random] EPOCH 1/5 DONE | mean_loss=2.0601 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m03s
+2026-10-13 04:38:36 | INFO    | [phoneme/s44/ImbLLM-random] epoch 2/5 | step 40/160 | loss=1.5366
+2026-10-13 04:38:36 | INFO    | [phoneme/s44/ImbLLM-random] epoch 2/5 | step 48/160 | loss=1.5257
+2026-10-13 04:38:37 | INFO    | [phoneme/s44/ImbLLM-random] epoch 2/5 | step 56/160 | loss=1.5085
+2026-10-13 04:38:37 | INFO    | [phoneme/s44/ImbLLM-random] EPOCH 2/5 DONE | mean_loss=1.5132 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m02s
+2026-10-13 04:38:37 | INFO    | [phoneme/s44/ImbLLM-random] epoch 3/5 | step 72/160 | loss=1.4663
+2026-10-13 04:38:37 | INFO    | [phoneme/s44/ImbLLM-random] epoch 3/5 | step 80/160 | loss=1.4571
+2026-10-13 04:38:37 | INFO    | [phoneme/s44/ImbLLM-random] epoch 3/5 | step 88/160 | loss=1.4577
+2026-10-13 04:38:38 | INFO    | [phoneme/s44/ImbLLM-random] EPOCH 3/5 DONE | mean_loss=1.4595 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m01s
+2026-10-13 04:38:38 | INFO    | [phoneme/s44/ImbLLM-random] epoch 4/5 | step 104/160 | loss=1.4326
+2026-10-13 04:38:38 | INFO    | [phoneme/s44/ImbLLM-random] epoch 4/5 | step 112/160 | loss=1.4520
+2026-10-13 04:38:38 | INFO    | [phoneme/s44/ImbLLM-random] epoch 4/5 | step 120/160 | loss=1.4348
+2026-10-13 04:38:39 | INFO    | [phoneme/s44/ImbLLM-random] EPOCH 4/5 DONE | mean_loss=1.4383 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:38:39 | INFO    | [phoneme/s44/ImbLLM-random] epoch 5/5 | step 136/160 | loss=1.4349
+2026-10-13 04:38:39 | INFO    | [phoneme/s44/ImbLLM-random] epoch 5/5 | step 144/160 | loss=1.4213
+2026-10-13 04:38:39 | INFO    | [phoneme/s44/ImbLLM-random] epoch 5/5 | step 152/160 | loss=1.4326
+2026-10-13 04:38:40 | INFO    | [phoneme/s44/ImbLLM-random] EPOCH 5/5 DONE | mean_loss=1.4269 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:38:41 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-random | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:38:48 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 6.9}
+2026-10-13 04:38:48 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0828, 'mean_dist_heldout_real_to_nearest_synth': 0.5851, 'coverage_k2': 0.3882, 'mean_dist_synth_to_train_minority(DCR)': 0.7152, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:38:48 | INFO    | phoneme | seed 44 | ImbLLM-random      | train=6108 (min 3054 / maj 3054) | F1=0.6980 Acc=0.8455 G=0.7580 AUC=0.9129 PR-AUC=0.8369
+2026-10-13 04:38:48 | INFO    | phoneme | seed 44 | stage ImbLLM-random      | DONE in 0h00m16s
+2026-10-13 04:38:48 | INFO    | phoneme | seed 44 | stage ImbLLM-IAFP        | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:38:48 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 254 retained minority + 763 interpolated rows | synthetic to generate = 2800
+2026-10-13 04:38:51 | INFO    | [phoneme/s44/ImbLLM-IAFP] fine-tuning rows=1017 | tokens/row: mean=48 max(probe)=52 -> max_len=67 | device=cuda
+2026-10-13 04:38:51 | INFO    | [phoneme/s44/ImbLLM-IAFP] training: epochs=5 | steps/epoch=32 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 04:38:52 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 1/5 | step 8/160 | loss=2.9301
+2026-10-13 04:38:52 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 1/5 | step 16/160 | loss=1.9925
+2026-10-13 04:38:52 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 1/5 | step 24/160 | loss=1.6971
+2026-10-13 04:38:52 | INFO    | [phoneme/s44/ImbLLM-IAFP] EPOCH 1/5 DONE | mean_loss=2.0555 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 04:38:53 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 2/5 | step 40/160 | loss=1.5368
+2026-10-13 04:38:53 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 2/5 | step 48/160 | loss=1.5042
+2026-10-13 04:38:53 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 2/5 | step 56/160 | loss=1.4886
+2026-10-13 04:38:53 | INFO    | [phoneme/s44/ImbLLM-IAFP] EPOCH 2/5 DONE | mean_loss=1.5010 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 04:38:54 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 3/5 | step 72/160 | loss=1.4597
+2026-10-13 04:38:54 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 3/5 | step 80/160 | loss=1.4479
+2026-10-13 04:38:54 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 3/5 | step 88/160 | loss=1.4421
+2026-10-13 04:38:54 | INFO    | [phoneme/s44/ImbLLM-IAFP] EPOCH 3/5 DONE | mean_loss=1.4468 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 04:38:55 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 4/5 | step 104/160 | loss=1.4262
+2026-10-13 04:38:55 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 4/5 | step 112/160 | loss=1.4230
+2026-10-13 04:38:55 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 4/5 | step 120/160 | loss=1.4288
+2026-10-13 04:38:55 | INFO    | [phoneme/s44/ImbLLM-IAFP] EPOCH 4/5 DONE | mean_loss=1.4246 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m00s
+2026-10-13 04:38:55 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 5/5 | step 136/160 | loss=1.4190
+2026-10-13 04:38:56 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 5/5 | step 144/160 | loss=1.4176
+2026-10-13 04:38:56 | INFO    | [phoneme/s44/ImbLLM-IAFP] epoch 5/5 | step 152/160 | loss=1.4234
+2026-10-13 04:38:56 | INFO    | [phoneme/s44/ImbLLM-IAFP] EPOCH 5/5 DONE | mean_loss=1.4187 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 04:38:57 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-IAFP | generating 2800 rows (condition_yx, temperature 0.70)
+2026-10-13 04:39:03 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 3081, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 2800, 'gen_batch_size_final': 128, 'gen_seconds': 5.7}
+2026-10-13 04:39:03 | INFO    | [20/22] phoneme seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.1232, 'mean_dist_heldout_real_to_nearest_synth': 0.6118, 'coverage_k2': 0.3921, 'mean_dist_synth_to_train_minority(DCR)': 0.7303, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 04:39:04 | INFO    | phoneme | seed 44 | ImbLLM-IAFP        | train=6108 (min 3054 / maj 3054) | F1=0.6957 Acc=0.8446 G=0.7560 AUC=0.9065 PR-AUC=0.8216
+2026-10-13 04:39:04 | INFO    | phoneme | seed 44 | stage ImbLLM-IAFP        | DONE in 0h00m15s
+2026-10-13 04:39:04 | INFO    | phoneme | seed 44 | stage plots              | RUNNING [20/22] phoneme seed 44 (3/3)
+2026-10-13 04:39:10 | INFO    | [20/22] phoneme seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 04:39:10 | INFO    | phoneme | seed 44 | stage plots              | DONE in 0h00m06s
+2026-10-13 04:39:10 | INFO    | [20/22] phoneme seed 44 (3/3) | FINISHED (7/8 methods have metrics)
+2026-10-13 04:39:11 | INFO    | phoneme | DATASET COMPLETE in 0h02m15s -> runs/exp1/phoneme

@@ -1,0 +1,246 @@
+2026-10-13 13:53:42 | INFO    | ====================================================================================================
+2026-10-13 13:53:42 | INFO    | [7/22] diabetes seed 43 (2/3) | START
+2026-10-13 13:53:42 | INFO    | diabetes | seed 43 | stage split              | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:42 | INFO    | [7/22] diabetes seed 43 (2/3) | split: train=614 test=154 | full-train minority=214 -> retained=43 (held-out ref=171) | reduced imbalance 9.3:1 | test minority=54 | test_fingerprint=780da10bb5a9
+2026-10-13 13:53:42 | INFO    | diabetes | seed 43 | stage split              | DONE in 0h00m00s
+2026-10-13 13:53:42 | INFO    | diabetes | seed 43 | stage importance         | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:43 | INFO    | [7/22] diabetes seed 43 (2/3) | top features: plas=0.0593, pedi=0.0434, age=0.0391, mass=0.0349, skin=0.0000
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage importance         | DONE in 0h00m00s
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage Original           | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | Original           | train=614 (min 214 / maj 400) | F1=0.6598 Acc=0.7857 G=0.7262 AUC=0.8589 PR-AUC=0.7333
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage Original           | DONE in 0h00m00s
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage Imbalanced         | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | Imbalanced         | train=443 (min 43 / maj 400) | F1=0.2985 Acc=0.6948 G=0.4238 AUC=0.8313 PR-AUC=0.7117
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage RandomOverSampler  | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | RandomOverSampler  | train=800 (min 400 / maj 400) | F1=0.4533 Acc=0.7338 G=0.5497 AUC=0.8146 PR-AUC=0.7016
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 13:53:43 | INFO    | diabetes | seed 43 | stage SMOTE              | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | SMOTE              | train=800 (min 400 / maj 400) | F1=0.5060 Acc=0.7338 G=0.5981 AUC=0.8483 PR-AUC=0.6937
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | stage ADASYN             | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | ADASYN             | train=799 (min 399 / maj 400) | F1=0.4691 Acc=0.7208 G=0.5689 AUC=0.8426 PR-AUC=0.7203
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 13:53:44 | INFO    | [7/22] diabetes seed 43 (2/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 13:53:44 | INFO    | diabetes | seed 43 | stage ImbLLM-random      | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:53:44 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-random | fine-tune set = 43 retained minority + 100 interpolated rows | synthetic to generate = 200 (CAPPED from 357; classes will not be perfectly balanced)
+2026-10-13 13:54:30 | INFO    | [diabetes/s43/ImbLLM-random] fine-tuning rows=143 | tokens/row: mean=46 max(probe)=48 -> max_len=63 | device=cuda
+2026-10-13 13:54:30 | INFO    | [diabetes/s43/ImbLLM-random] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:54:30 | INFO    | [diabetes/s43/ImbLLM-random] epoch 1/20 | step 1/100 | loss=4.7165
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 1/20 | step 2/100 | loss=4.7660
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 1/20 | step 3/100 | loss=4.5686
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 1/20 | step 4/100 | loss=4.3757
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=4.5092 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m05s
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 2/20 | step 6/100 | loss=3.7770
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 2/20 | step 7/100 | loss=3.5050
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 2/20 | step 8/100 | loss=3.2057
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 2/20 | step 9/100 | loss=2.9300
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=3.2216 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 3/20 | step 11/100 | loss=2.6046
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 3/20 | step 12/100 | loss=2.4273
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 3/20 | step 13/100 | loss=2.2715
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 3/20 | step 14/100 | loss=2.1829
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=2.3043 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 4/20 | step 16/100 | loss=2.0003
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 4/20 | step 17/100 | loss=1.9098
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 4/20 | step 18/100 | loss=1.8659
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 4/20 | step 19/100 | loss=1.8341
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.8700 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:54:31 | INFO    | [diabetes/s43/ImbLLM-random] epoch 5/20 | step 21/100 | loss=1.7214
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 5/20 | step 22/100 | loss=1.7271
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 5/20 | step 23/100 | loss=1.6600
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 5/20 | step 24/100 | loss=1.6012
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.6611 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 6/20 | step 26/100 | loss=1.5976
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 6/20 | step 27/100 | loss=1.5485
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 6/20 | step 28/100 | loss=1.5718
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 6/20 | step 29/100 | loss=1.5263
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.5502 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 7/20 | step 31/100 | loss=1.4851
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 7/20 | step 32/100 | loss=1.4916
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 7/20 | step 33/100 | loss=1.4416
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 7/20 | step 34/100 | loss=1.4575
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.4654 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 8/20 | step 36/100 | loss=1.4209
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 8/20 | step 37/100 | loss=1.4105
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 8/20 | step 38/100 | loss=1.4331
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] epoch 8/20 | step 39/100 | loss=1.3997
+2026-10-13 13:54:32 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.4015 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 9/20 | step 41/100 | loss=1.3862
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 9/20 | step 42/100 | loss=1.4208
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 9/20 | step 43/100 | loss=1.3653
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 9/20 | step 44/100 | loss=1.3730
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.3828 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 10/20 | step 46/100 | loss=1.3438
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 10/20 | step 47/100 | loss=1.3575
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 10/20 | step 48/100 | loss=1.3885
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 10/20 | step 49/100 | loss=1.3225
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.3491 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 11/20 | step 51/100 | loss=1.3232
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 11/20 | step 52/100 | loss=1.3365
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 11/20 | step 53/100 | loss=1.3401
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 11/20 | step 54/100 | loss=1.3526
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.3402 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 12/20 | step 56/100 | loss=1.3103
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 12/20 | step 57/100 | loss=1.3123
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 12/20 | step 58/100 | loss=1.3355
+2026-10-13 13:54:33 | INFO    | [diabetes/s43/ImbLLM-random] epoch 12/20 | step 59/100 | loss=1.3558
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.3191 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 13/20 | step 61/100 | loss=1.3086
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 13/20 | step 62/100 | loss=1.2734
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 13/20 | step 63/100 | loss=1.3077
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 13/20 | step 64/100 | loss=1.3412
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.3070 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 14/20 | step 66/100 | loss=1.3156
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 14/20 | step 67/100 | loss=1.3000
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 14/20 | step 68/100 | loss=1.3073
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 14/20 | step 69/100 | loss=1.2884
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.2961 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 15/20 | step 71/100 | loss=1.2662
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 15/20 | step 72/100 | loss=1.2974
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 15/20 | step 73/100 | loss=1.2861
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 15/20 | step 74/100 | loss=1.3086
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.2858 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 16/20 | step 76/100 | loss=1.3033
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 16/20 | step 77/100 | loss=1.2870
+2026-10-13 13:54:34 | INFO    | [diabetes/s43/ImbLLM-random] epoch 16/20 | step 78/100 | loss=1.2599
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 16/20 | step 79/100 | loss=1.2780
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.2768 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 17/20 | step 81/100 | loss=1.2484
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 17/20 | step 82/100 | loss=1.2806
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 17/20 | step 83/100 | loss=1.3023
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 17/20 | step 84/100 | loss=1.3109
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.2704 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 18/20 | step 86/100 | loss=1.2691
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 18/20 | step 87/100 | loss=1.2670
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 18/20 | step 88/100 | loss=1.3009
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 18/20 | step 89/100 | loss=1.2512
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.2773 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 19/20 | step 91/100 | loss=1.2749
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 19/20 | step 92/100 | loss=1.3275
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 19/20 | step 93/100 | loss=1.2598
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 19/20 | step 94/100 | loss=1.2773
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.2797 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 20/20 | step 96/100 | loss=1.2947
+2026-10-13 13:54:35 | INFO    | [diabetes/s43/ImbLLM-random] epoch 20/20 | step 97/100 | loss=1.2539
+2026-10-13 13:54:36 | INFO    | [diabetes/s43/ImbLLM-random] epoch 20/20 | step 98/100 | loss=1.2549
+2026-10-13 13:54:36 | INFO    | [diabetes/s43/ImbLLM-random] epoch 20/20 | step 99/100 | loss=1.2532
+2026-10-13 13:54:36 | INFO    | [diabetes/s43/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.2717 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:54:37 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-random | generating 200 rows (condition_yx, temperature 0.70)
+2026-10-13 13:54:38 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-random | generation done: {'generated_total': 221, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 200, 'gen_batch_size_final': 128, 'gen_seconds': 1.0}
+2026-10-13 13:54:38 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 1.7397, 'coverage_k2': 0.4561, 'mean_dist_synth_to_train_minority(DCR)': 1.5263, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:54:38 | INFO    | diabetes | seed 43 | ImbLLM-random      | train=643 (min 243 / maj 400) | F1=0.3836 Acc=0.7078 G=0.4963 AUC=0.8315 PR-AUC=0.7037
+2026-10-13 13:54:38 | INFO    | diabetes | seed 43 | stage ImbLLM-random      | DONE in 0h00m54s
+2026-10-13 13:54:38 | INFO    | diabetes | seed 43 | stage ImbLLM-IAFP        | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:54:38 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-IAFP | fine-tune set = 43 retained minority + 100 interpolated rows | synthetic to generate = 200 (CAPPED from 357; classes will not be perfectly balanced)
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] fine-tuning rows=143 | tokens/row: mean=46 max(probe)=48 -> max_len=63 | device=cuda
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] training: epochs=20 | steps/epoch=5 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 1/20 | step 1/100 | loss=4.7693
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 1/20 | step 2/100 | loss=4.8025
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 1/20 | step 3/100 | loss=4.6451
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 1/20 | step 4/100 | loss=4.4112
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=4.5606 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 2/20 | step 6/100 | loss=3.8561
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 2/20 | step 7/100 | loss=3.5348
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 2/20 | step 8/100 | loss=3.2477
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 2/20 | step 9/100 | loss=2.9598
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=3.2726 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:55:25 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 3/20 | step 11/100 | loss=2.5844
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 3/20 | step 12/100 | loss=2.4347
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 3/20 | step 13/100 | loss=2.2747
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 3/20 | step 14/100 | loss=2.2050
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=2.3113 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m04s
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 4/20 | step 16/100 | loss=2.0229
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 4/20 | step 17/100 | loss=1.9074
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 4/20 | step 18/100 | loss=1.7618
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 4/20 | step 19/100 | loss=1.7637
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.8337 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m04s
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 5/20 | step 21/100 | loss=1.6743
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 5/20 | step 22/100 | loss=1.6373
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 5/20 | step 23/100 | loss=1.6145
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 5/20 | step 24/100 | loss=1.5091
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.6005 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 6/20 | step 26/100 | loss=1.5095
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 6/20 | step 27/100 | loss=1.4894
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 6/20 | step 28/100 | loss=1.4533
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 6/20 | step 29/100 | loss=1.4829
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.4811 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:55:26 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 7/20 | step 31/100 | loss=1.4377
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 7/20 | step 32/100 | loss=1.3778
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 7/20 | step 33/100 | loss=1.3957
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 7/20 | step 34/100 | loss=1.3410
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.3828 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m03s
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 8/20 | step 36/100 | loss=1.3641
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 8/20 | step 37/100 | loss=1.3414
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 8/20 | step 38/100 | loss=1.3217
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 8/20 | step 39/100 | loss=1.3222
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.3363 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m03s
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 9/20 | step 41/100 | loss=1.2562
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 9/20 | step 42/100 | loss=1.3108
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 9/20 | step 43/100 | loss=1.2760
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 9/20 | step 44/100 | loss=1.2960
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.2884 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 10/20 | step 46/100 | loss=1.2543
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 10/20 | step 47/100 | loss=1.2617
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 10/20 | step 48/100 | loss=1.2734
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 10/20 | step 49/100 | loss=1.2918
+2026-10-13 13:55:27 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.2680 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 11/20 | step 51/100 | loss=1.2064
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 11/20 | step 52/100 | loss=1.2731
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 11/20 | step 53/100 | loss=1.2489
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 11/20 | step 54/100 | loss=1.1942
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.2422 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m02s
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 12/20 | step 56/100 | loss=1.1920
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 12/20 | step 57/100 | loss=1.2283
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 12/20 | step 58/100 | loss=1.2292
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 12/20 | step 59/100 | loss=1.2353
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.2283 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m02s
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 13/20 | step 61/100 | loss=1.2508
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 13/20 | step 62/100 | loss=1.2143
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 13/20 | step 63/100 | loss=1.2358
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 13/20 | step 64/100 | loss=1.1752
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.2214 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 14/20 | step 66/100 | loss=1.2130
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 14/20 | step 67/100 | loss=1.2132
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 14/20 | step 68/100 | loss=1.1927
+2026-10-13 13:55:28 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 14/20 | step 69/100 | loss=1.1872
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.1909 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 15/20 | step 71/100 | loss=1.1482
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 15/20 | step 72/100 | loss=1.1762
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 15/20 | step 73/100 | loss=1.2076
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 15/20 | step 74/100 | loss=1.1818
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.1927 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m01s
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 16/20 | step 76/100 | loss=1.2284
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 16/20 | step 77/100 | loss=1.1935
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 16/20 | step 78/100 | loss=1.1763
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 16/20 | step 79/100 | loss=1.1457
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.1780 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m01s
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 17/20 | step 81/100 | loss=1.2102
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 17/20 | step 82/100 | loss=1.1798
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 17/20 | step 83/100 | loss=1.1615
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 17/20 | step 84/100 | loss=1.1813
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.1927 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 18/20 | step 86/100 | loss=1.1876
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 18/20 | step 87/100 | loss=1.1432
+2026-10-13 13:55:29 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 18/20 | step 88/100 | loss=1.2133
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 18/20 | step 89/100 | loss=1.1729
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.1753 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 19/20 | step 91/100 | loss=1.1671
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 19/20 | step 92/100 | loss=1.1502
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 19/20 | step 93/100 | loss=1.1622
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 19/20 | step 94/100 | loss=1.1807
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.1687 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m00s
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 20/20 | step 96/100 | loss=1.1798
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 20/20 | step 97/100 | loss=1.2077
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 20/20 | step 98/100 | loss=1.1437
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] epoch 20/20 | step 99/100 | loss=1.1563
+2026-10-13 13:55:30 | INFO    | [diabetes/s43/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.1682 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m00s
+2026-10-13 13:55:31 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-IAFP | generating 200 rows (condition_yx, temperature 0.70)
+2026-10-13 13:55:32 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-IAFP | generation done: {'generated_total': 221, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 200, 'gen_batch_size_final': 128, 'gen_seconds': 0.9}
+2026-10-13 13:55:33 | INFO    | [7/22] diabetes seed 43 (2/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0468, 'mean_dist_heldout_real_to_nearest_synth': 1.7386, 'coverage_k2': 0.4444, 'mean_dist_synth_to_train_minority(DCR)': 1.5019, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 13:55:33 | INFO    | diabetes | seed 43 | ImbLLM-IAFP        | train=643 (min 243 / maj 400) | F1=0.3947 Acc=0.7013 G=0.5083 AUC=0.8256 PR-AUC=0.6777
+2026-10-13 13:55:33 | INFO    | diabetes | seed 43 | stage ImbLLM-IAFP        | DONE in 0h00m54s
+2026-10-13 13:55:33 | INFO    | diabetes | seed 43 | stage plots              | RUNNING [7/22] diabetes seed 43 (2/3)
+2026-10-13 13:55:34 | INFO    | [7/22] diabetes seed 43 (2/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 13:55:35 | INFO    | diabetes | seed 43 | stage plots              | DONE in 0h00m01s
+2026-10-13 13:55:35 | INFO    | [7/22] diabetes seed 43 (2/3) | FINISHED (7/8 methods have metrics)

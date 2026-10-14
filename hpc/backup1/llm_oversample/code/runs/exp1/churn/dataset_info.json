@@ -1,0 +1,19 @@
+{
+  "dataset": "churn",
+  "rows": 5000,
+  "n_numerical": 16,
+  "n_categorical": 4,
+  "target": "class",
+  "class_counts": {
+    "0": 4293,
+    "1": 707
+  },
+  "n_classes": 2,
+  "minority_label": "1",
+  "minority_count": 707,
+  "majority_count": 4293,
+  "minority_fraction": 0.1414,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

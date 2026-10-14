@@ -1,0 +1,5 @@
+CUDA available: True
+GPU: NVIDIA H100 NVL | 99.9 GB visible
+main.py exit code: 1
+Status board:  cat runs/exp1/status.txt
+Not finished? Just resubmit this same script: finished datasets are skipped.

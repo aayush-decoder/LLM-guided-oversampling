@@ -1,0 +1,19 @@
+{
+  "dataset": "german",
+  "rows": 1000,
+  "n_numerical": 7,
+  "n_categorical": 13,
+  "target": "class",
+  "class_counts": {
+    "good": 700,
+    "bad": 300
+  },
+  "n_classes": 2,
+  "minority_label": "bad",
+  "minority_count": 300,
+  "majority_count": 700,
+  "minority_fraction": 0.3,
+  "multiclass_merged": false,
+  "csv_columns_not_in_meta_schema(ignored)": [],
+  "meta_columns_missing_in_csv": []
+}

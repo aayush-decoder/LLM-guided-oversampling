@@ -1,0 +1,15 @@
+{
+  "target": "CONSUMPTION",
+  "numerical": [
+    "ENGINE_SIZE",
+    "CYLINDERS",
+    "COEMISSIONS"
+  ],
+  "categorical": [
+    "MAKE",
+    "MODEL",
+    "VEHICLE_CLASS",
+    "TRANSMISSION",
+    "FUEL"
+  ]
+}

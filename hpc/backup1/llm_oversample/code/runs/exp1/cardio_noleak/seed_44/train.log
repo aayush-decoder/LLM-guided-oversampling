@@ -1,0 +1,246 @@
+2026-10-13 14:56:27 | INFO    | ====================================================================================================
+2026-10-13 14:56:27 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | START
+2026-10-13 14:56:27 | INFO    | cardio_noleak | seed 44 | stage split              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | split: train=1700 test=426 | full-train minority=42 -> retained=8 (held-out ref=34) | reduced imbalance 207.2:1 | test minority=11 | test_fingerprint=c7f34a81ce83
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage split              | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage importance         | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | top features: V28=0.7994, V12=0.3083, V6=0.2833, V1=0.1667, V18=0.1000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage importance         | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage Original           | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | Original           | train=1700 (min 42 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage Original           | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage Imbalanced         | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | Imbalanced         | train=1666 (min 8 / maj 1658) | F1=0.6250 Acc=0.9859 G=0.6742 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage Imbalanced         | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage RandomOverSampler  | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | RandomOverSampler  | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage RandomOverSampler  | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage SMOTE              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | SMOTE              | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage SMOTE              | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage ADASYN             | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | ADASYN             | train=3316 (min 1658 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage ADASYN             | DONE in 0h00m00s
+2026-10-13 14:56:28 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | stage SMOTE-NC           | SKIPPED: dataset is numeric-only (SMOTE-NC is for mixed data)
+2026-10-13 14:56:28 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-random      | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:56:29 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 829 (CAPPED from 1650; classes will not be perfectly balanced)
+2026-10-13 14:57:15 | INFO    | [cardio_noleak/s44/ImbLLM-random] fine-tuning rows=422 | tokens/row: mean=186 max(probe)=189 -> max_len=225 | device=cuda
+2026-10-13 14:57:15 | INFO    | [cardio_noleak/s44/ImbLLM-random] training: epochs=20 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:57:15 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/20 | step 3/280 | loss=2.1814
+2026-10-13 14:57:15 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/20 | step 6/280 | loss=2.0571
+2026-10-13 14:57:16 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/20 | step 9/280 | loss=1.9207
+2026-10-13 14:57:16 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 1/20 | step 12/280 | loss=1.8020
+2026-10-13 14:57:16 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 1/20 DONE | mean_loss=1.9464 | epoch_time=0h00m01s | elapsed=0h00m01s | ETA=0h00m19s
+2026-10-13 14:57:16 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/20 | step 17/280 | loss=1.6262
+2026-10-13 14:57:16 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/20 | step 20/280 | loss=1.5558
+2026-10-13 14:57:17 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/20 | step 23/280 | loss=1.5181
+2026-10-13 14:57:17 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 2/20 | step 26/280 | loss=1.4883
+2026-10-13 14:57:17 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 2/20 DONE | mean_loss=1.5373 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m18s
+2026-10-13 14:57:17 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/20 | step 31/280 | loss=1.4516
+2026-10-13 14:57:17 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/20 | step 34/280 | loss=1.4216
+2026-10-13 14:57:18 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/20 | step 37/280 | loss=1.3971
+2026-10-13 14:57:18 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 3/20 | step 40/280 | loss=1.3656
+2026-10-13 14:57:18 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 3/20 DONE | mean_loss=1.4022 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m17s
+2026-10-13 14:57:18 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/20 | step 45/280 | loss=1.3313
+2026-10-13 14:57:18 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/20 | step 48/280 | loss=1.3133
+2026-10-13 14:57:19 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/20 | step 51/280 | loss=1.2868
+2026-10-13 14:57:19 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 4/20 | step 54/280 | loss=1.2685
+2026-10-13 14:57:19 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 4/20 DONE | mean_loss=1.2949 | epoch_time=0h00m00s | elapsed=0h00m03s | ETA=0h00m15s
+2026-10-13 14:57:19 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/20 | step 59/280 | loss=1.2330
+2026-10-13 14:57:19 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/20 | step 62/280 | loss=1.2136
+2026-10-13 14:57:20 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/20 | step 65/280 | loss=1.1930
+2026-10-13 14:57:20 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 5/20 | step 68/280 | loss=1.1754
+2026-10-13 14:57:20 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 5/20 DONE | mean_loss=1.1972 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m14s
+2026-10-13 14:57:20 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 6/20 | step 73/280 | loss=1.1551
+2026-10-13 14:57:20 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 6/20 | step 76/280 | loss=1.1494
+2026-10-13 14:57:21 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 6/20 | step 79/280 | loss=1.1370
+2026-10-13 14:57:21 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 6/20 | step 82/280 | loss=1.1314
+2026-10-13 14:57:21 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 6/20 DONE | mean_loss=1.1423 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m14s
+2026-10-13 14:57:21 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 7/20 | step 87/280 | loss=1.1223
+2026-10-13 14:57:22 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 7/20 | step 90/280 | loss=1.1163
+2026-10-13 14:57:22 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 7/20 | step 93/280 | loss=1.1130
+2026-10-13 14:57:22 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 7/20 | step 96/280 | loss=1.1070
+2026-10-13 14:57:22 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 7/20 DONE | mean_loss=1.1155 | epoch_time=0h00m01s | elapsed=0h00m07s | ETA=0h00m13s
+2026-10-13 14:57:22 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 8/20 | step 101/280 | loss=1.1095
+2026-10-13 14:57:23 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 8/20 | step 104/280 | loss=1.1086
+2026-10-13 14:57:23 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 8/20 | step 107/280 | loss=1.0991
+2026-10-13 14:57:23 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 8/20 | step 110/280 | loss=1.0958
+2026-10-13 14:57:23 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 8/20 DONE | mean_loss=1.1032 | epoch_time=0h00m01s | elapsed=0h00m08s | ETA=0h00m12s
+2026-10-13 14:57:23 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 9/20 | step 115/280 | loss=1.1007
+2026-10-13 14:57:24 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 9/20 | step 118/280 | loss=1.0956
+2026-10-13 14:57:24 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 9/20 | step 121/280 | loss=1.0908
+2026-10-13 14:57:24 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 9/20 | step 124/280 | loss=1.0876
+2026-10-13 14:57:24 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 9/20 DONE | mean_loss=1.0943 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m11s
+2026-10-13 14:57:24 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 10/20 | step 129/280 | loss=1.0928
+2026-10-13 14:57:25 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 10/20 | step 132/280 | loss=1.0874
+2026-10-13 14:57:25 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 10/20 | step 135/280 | loss=1.0873
+2026-10-13 14:57:25 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 10/20 | step 138/280 | loss=1.0834
+2026-10-13 14:57:25 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 10/20 DONE | mean_loss=1.0896 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m10s
+2026-10-13 14:57:25 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 11/20 | step 143/280 | loss=1.0914
+2026-10-13 14:57:26 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 11/20 | step 146/280 | loss=1.0827
+2026-10-13 14:57:26 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 11/20 | step 149/280 | loss=1.0894
+2026-10-13 14:57:26 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 11/20 | step 152/280 | loss=1.0794
+2026-10-13 14:57:26 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 11/20 DONE | mean_loss=1.0851 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m09s
+2026-10-13 14:57:26 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 12/20 | step 157/280 | loss=1.0847
+2026-10-13 14:57:27 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 12/20 | step 160/280 | loss=1.0848
+2026-10-13 14:57:27 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 12/20 | step 163/280 | loss=1.0783
+2026-10-13 14:57:27 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 12/20 | step 166/280 | loss=1.0872
+2026-10-13 14:57:27 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 12/20 DONE | mean_loss=1.0807 | epoch_time=0h00m01s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 14:57:27 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 13/20 | step 171/280 | loss=1.0793
+2026-10-13 14:57:28 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 13/20 | step 174/280 | loss=1.0764
+2026-10-13 14:57:28 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 13/20 | step 177/280 | loss=1.0821
+2026-10-13 14:57:28 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 13/20 | step 180/280 | loss=1.0794
+2026-10-13 14:57:28 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 13/20 DONE | mean_loss=1.0802 | epoch_time=0h00m01s | elapsed=0h00m13s | ETA=0h00m07s
+2026-10-13 14:57:29 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 14/20 | step 185/280 | loss=1.0753
+2026-10-13 14:57:29 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 14/20 | step 188/280 | loss=1.0759
+2026-10-13 14:57:29 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 14/20 | step 191/280 | loss=1.0781
+2026-10-13 14:57:29 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 14/20 | step 194/280 | loss=1.0747
+2026-10-13 14:57:29 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 14/20 DONE | mean_loss=1.0740 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m06s
+2026-10-13 14:57:30 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 15/20 | step 199/280 | loss=1.0772
+2026-10-13 14:57:30 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 15/20 | step 202/280 | loss=1.0702
+2026-10-13 14:57:30 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 15/20 | step 205/280 | loss=1.0742
+2026-10-13 14:57:30 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 15/20 | step 208/280 | loss=1.0713
+2026-10-13 14:57:30 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 15/20 DONE | mean_loss=1.0741 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m05s
+2026-10-13 14:57:31 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 16/20 | step 213/280 | loss=1.0723
+2026-10-13 14:57:31 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 16/20 | step 216/280 | loss=1.0729
+2026-10-13 14:57:31 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 16/20 | step 219/280 | loss=1.0704
+2026-10-13 14:57:31 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 16/20 | step 222/280 | loss=1.0718
+2026-10-13 14:57:31 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 16/20 DONE | mean_loss=1.0706 | epoch_time=0h00m01s | elapsed=0h00m16s | ETA=0h00m04s
+2026-10-13 14:57:32 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 17/20 | step 227/280 | loss=1.0722
+2026-10-13 14:57:32 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 17/20 | step 230/280 | loss=1.0678
+2026-10-13 14:57:32 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 17/20 | step 233/280 | loss=1.0767
+2026-10-13 14:57:32 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 17/20 | step 236/280 | loss=1.0727
+2026-10-13 14:57:33 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 17/20 DONE | mean_loss=1.0709 | epoch_time=0h00m01s | elapsed=0h00m17s | ETA=0h00m03s
+2026-10-13 14:57:33 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 18/20 | step 241/280 | loss=1.0730
+2026-10-13 14:57:33 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 18/20 | step 244/280 | loss=1.0683
+2026-10-13 14:57:33 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 18/20 | step 247/280 | loss=1.0671
+2026-10-13 14:57:33 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 18/20 | step 250/280 | loss=1.0701
+2026-10-13 14:57:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 18/20 DONE | mean_loss=1.0704 | epoch_time=0h00m01s | elapsed=0h00m18s | ETA=0h00m02s
+2026-10-13 14:57:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 19/20 | step 255/280 | loss=1.0773
+2026-10-13 14:57:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 19/20 | step 258/280 | loss=1.0618
+2026-10-13 14:57:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 19/20 | step 261/280 | loss=1.0751
+2026-10-13 14:57:34 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 19/20 | step 264/280 | loss=1.0614
+2026-10-13 14:57:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 19/20 DONE | mean_loss=1.0705 | epoch_time=0h00m01s | elapsed=0h00m19s | ETA=0h00m01s
+2026-10-13 14:57:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 20/20 | step 269/280 | loss=1.0633
+2026-10-13 14:57:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 20/20 | step 272/280 | loss=1.0669
+2026-10-13 14:57:35 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 20/20 | step 275/280 | loss=1.0728
+2026-10-13 14:57:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] epoch 20/20 | step 278/280 | loss=1.0682
+2026-10-13 14:57:36 | INFO    | [cardio_noleak/s44/ImbLLM-random] EPOCH 20/20 DONE | mean_loss=1.0652 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m00s
+2026-10-13 14:57:37 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | generating 829 rows (condition_yx, temperature 0.70)
+2026-10-13 14:57:48 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | generation done: {'generated_total': 912, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 829, 'gen_batch_size_final': 128, 'gen_seconds': 10.8}
+2026-10-13 14:57:48 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-random | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.2256, 'coverage_k2': 0.5588, 'mean_dist_synth_to_train_minority(DCR)': 3.3036, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:57:48 | INFO    | cardio_noleak | seed 44 | ImbLLM-random      | train=2495 (min 837 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:57:48 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-random      | DONE in 0h01m19s
+2026-10-13 14:57:48 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-IAFP        | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:57:48 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | fine-tune set = 8 retained minority + 414 interpolated rows | synthetic to generate = 829 (CAPPED from 1650; classes will not be perfectly balanced)
+2026-10-13 14:58:34 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] fine-tuning rows=422 | tokens/row: mean=186 max(probe)=189 -> max_len=225 | device=cuda
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] training: epochs=20 | steps/epoch=14 | micro-batch=32 x accum=1 (effective 32) | amp=bf16 | lr=5e-05
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/20 | step 3/280 | loss=2.1747
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/20 | step 6/280 | loss=2.0473
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/20 | step 9/280 | loss=1.9171
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 1/20 | step 12/280 | loss=1.7941
+2026-10-13 14:58:35 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 1/20 DONE | mean_loss=1.9393 | epoch_time=0h00m00s | elapsed=0h00m00s | ETA=0h00m18s
+2026-10-13 14:58:36 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/20 | step 17/280 | loss=1.6166
+2026-10-13 14:58:36 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/20 | step 20/280 | loss=1.5427
+2026-10-13 14:58:36 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/20 | step 23/280 | loss=1.5070
+2026-10-13 14:58:36 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 2/20 | step 26/280 | loss=1.4770
+2026-10-13 14:58:36 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 2/20 DONE | mean_loss=1.5227 | epoch_time=0h00m00s | elapsed=0h00m01s | ETA=0h00m17s
+2026-10-13 14:58:37 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/20 | step 31/280 | loss=1.4145
+2026-10-13 14:58:37 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/20 | step 34/280 | loss=1.4072
+2026-10-13 14:58:37 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/20 | step 37/280 | loss=1.3695
+2026-10-13 14:58:37 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 3/20 | step 40/280 | loss=1.3444
+2026-10-13 14:58:37 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 3/20 DONE | mean_loss=1.3758 | epoch_time=0h00m00s | elapsed=0h00m02s | ETA=0h00m16s
+2026-10-13 14:58:38 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/20 | step 45/280 | loss=1.3027
+2026-10-13 14:58:38 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/20 | step 48/280 | loss=1.2876
+2026-10-13 14:58:38 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/20 | step 51/280 | loss=1.2689
+2026-10-13 14:58:38 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 4/20 | step 54/280 | loss=1.2555
+2026-10-13 14:58:38 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 4/20 DONE | mean_loss=1.2709 | epoch_time=0h00m01s | elapsed=0h00m03s | ETA=0h00m15s
+2026-10-13 14:58:39 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/20 | step 59/280 | loss=1.2101
+2026-10-13 14:58:39 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/20 | step 62/280 | loss=1.1916
+2026-10-13 14:58:39 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/20 | step 65/280 | loss=1.1812
+2026-10-13 14:58:39 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 5/20 | step 68/280 | loss=1.1604
+2026-10-13 14:58:39 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 5/20 DONE | mean_loss=1.1791 | epoch_time=0h00m00s | elapsed=0h00m04s | ETA=0h00m14s
+2026-10-13 14:58:40 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 6/20 | step 73/280 | loss=1.1369
+2026-10-13 14:58:40 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 6/20 | step 76/280 | loss=1.1282
+2026-10-13 14:58:40 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 6/20 | step 79/280 | loss=1.1223
+2026-10-13 14:58:40 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 6/20 | step 82/280 | loss=1.1101
+2026-10-13 14:58:40 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 6/20 DONE | mean_loss=1.1219 | epoch_time=0h00m00s | elapsed=0h00m05s | ETA=0h00m13s
+2026-10-13 14:58:41 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 7/20 | step 87/280 | loss=1.0944
+2026-10-13 14:58:41 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 7/20 | step 90/280 | loss=1.1018
+2026-10-13 14:58:41 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 7/20 | step 93/280 | loss=1.1016
+2026-10-13 14:58:41 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 7/20 | step 96/280 | loss=1.0968
+2026-10-13 14:58:41 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 7/20 DONE | mean_loss=1.0976 | epoch_time=0h00m01s | elapsed=0h00m06s | ETA=0h00m12s
+2026-10-13 14:58:42 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 8/20 | step 101/280 | loss=1.0945
+2026-10-13 14:58:42 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 8/20 | step 104/280 | loss=1.0784
+2026-10-13 14:58:42 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 8/20 | step 107/280 | loss=1.0828
+2026-10-13 14:58:42 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 8/20 | step 110/280 | loss=1.0772
+2026-10-13 14:58:42 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 8/20 DONE | mean_loss=1.0835 | epoch_time=0h00m01s | elapsed=0h00m07s | ETA=0h00m11s
+2026-10-13 14:58:43 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 9/20 | step 115/280 | loss=1.0757
+2026-10-13 14:58:43 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 9/20 | step 118/280 | loss=1.0788
+2026-10-13 14:58:43 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 9/20 | step 121/280 | loss=1.0701
+2026-10-13 14:58:43 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 9/20 | step 124/280 | loss=1.0662
+2026-10-13 14:58:44 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 9/20 DONE | mean_loss=1.0727 | epoch_time=0h00m01s | elapsed=0h00m09s | ETA=0h00m11s
+2026-10-13 14:58:44 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 10/20 | step 129/280 | loss=1.0679
+2026-10-13 14:58:44 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 10/20 | step 132/280 | loss=1.0642
+2026-10-13 14:58:44 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 10/20 | step 135/280 | loss=1.0719
+2026-10-13 14:58:44 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 10/20 | step 138/280 | loss=1.0632
+2026-10-13 14:58:45 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 10/20 DONE | mean_loss=1.0682 | epoch_time=0h00m01s | elapsed=0h00m10s | ETA=0h00m10s
+2026-10-13 14:58:45 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 11/20 | step 143/280 | loss=1.0671
+2026-10-13 14:58:45 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 11/20 | step 146/280 | loss=1.0612
+2026-10-13 14:58:45 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 11/20 | step 149/280 | loss=1.0649
+2026-10-13 14:58:45 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 11/20 | step 152/280 | loss=1.0532
+2026-10-13 14:58:46 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 11/20 DONE | mean_loss=1.0607 | epoch_time=0h00m01s | elapsed=0h00m11s | ETA=0h00m09s
+2026-10-13 14:58:46 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 12/20 | step 157/280 | loss=1.0581
+2026-10-13 14:58:46 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 12/20 | step 160/280 | loss=1.0689
+2026-10-13 14:58:46 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 12/20 | step 163/280 | loss=1.0622
+2026-10-13 14:58:47 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 12/20 | step 166/280 | loss=1.0553
+2026-10-13 14:58:47 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 12/20 DONE | mean_loss=1.0592 | epoch_time=0h00m01s | elapsed=0h00m12s | ETA=0h00m08s
+2026-10-13 14:58:47 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 13/20 | step 171/280 | loss=1.0522
+2026-10-13 14:58:47 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 13/20 | step 174/280 | loss=1.0503
+2026-10-13 14:58:47 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 13/20 | step 177/280 | loss=1.0523
+2026-10-13 14:58:48 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 13/20 | step 180/280 | loss=1.0515
+2026-10-13 14:58:48 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 13/20 DONE | mean_loss=1.0522 | epoch_time=0h00m01s | elapsed=0h00m13s | ETA=0h00m07s
+2026-10-13 14:58:48 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 14/20 | step 185/280 | loss=1.0589
+2026-10-13 14:58:48 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 14/20 | step 188/280 | loss=1.0520
+2026-10-13 14:58:48 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 14/20 | step 191/280 | loss=1.0491
+2026-10-13 14:58:49 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 14/20 | step 194/280 | loss=1.0497
+2026-10-13 14:58:49 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 14/20 DONE | mean_loss=1.0518 | epoch_time=0h00m01s | elapsed=0h00m14s | ETA=0h00m06s
+2026-10-13 14:58:49 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 15/20 | step 199/280 | loss=1.0509
+2026-10-13 14:58:49 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 15/20 | step 202/280 | loss=1.0441
+2026-10-13 14:58:49 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 15/20 | step 205/280 | loss=1.0482
+2026-10-13 14:58:50 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 15/20 | step 208/280 | loss=1.0534
+2026-10-13 14:58:50 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 15/20 DONE | mean_loss=1.0480 | epoch_time=0h00m01s | elapsed=0h00m15s | ETA=0h00m05s
+2026-10-13 14:58:50 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 16/20 | step 213/280 | loss=1.0442
+2026-10-13 14:58:50 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 16/20 | step 216/280 | loss=1.0446
+2026-10-13 14:58:50 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 16/20 | step 219/280 | loss=1.0439
+2026-10-13 14:58:51 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 16/20 | step 222/280 | loss=1.0511
+2026-10-13 14:58:51 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 16/20 DONE | mean_loss=1.0471 | epoch_time=0h00m01s | elapsed=0h00m16s | ETA=0h00m04s
+2026-10-13 14:58:51 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 17/20 | step 227/280 | loss=1.0397
+2026-10-13 14:58:51 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 17/20 | step 230/280 | loss=1.0414
+2026-10-13 14:58:52 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 17/20 | step 233/280 | loss=1.0556
+2026-10-13 14:58:52 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 17/20 | step 236/280 | loss=1.0451
+2026-10-13 14:58:52 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 17/20 DONE | mean_loss=1.0453 | epoch_time=0h00m01s | elapsed=0h00m17s | ETA=0h00m03s
+2026-10-13 14:58:52 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 18/20 | step 241/280 | loss=1.0425
+2026-10-13 14:58:52 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 18/20 | step 244/280 | loss=1.0479
+2026-10-13 14:58:53 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 18/20 | step 247/280 | loss=1.0436
+2026-10-13 14:58:53 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 18/20 | step 250/280 | loss=1.0383
+2026-10-13 14:58:53 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 18/20 DONE | mean_loss=1.0402 | epoch_time=0h00m01s | elapsed=0h00m18s | ETA=0h00m02s
+2026-10-13 14:58:53 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 19/20 | step 255/280 | loss=1.0406
+2026-10-13 14:58:53 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 19/20 | step 258/280 | loss=1.0481
+2026-10-13 14:58:54 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 19/20 | step 261/280 | loss=1.0418
+2026-10-13 14:58:54 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 19/20 | step 264/280 | loss=1.0397
+2026-10-13 14:58:54 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 19/20 DONE | mean_loss=1.0403 | epoch_time=0h00m01s | elapsed=0h00m19s | ETA=0h00m01s
+2026-10-13 14:58:54 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 20/20 | step 269/280 | loss=1.0397
+2026-10-13 14:58:54 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 20/20 | step 272/280 | loss=1.0428
+2026-10-13 14:58:55 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 20/20 | step 275/280 | loss=1.0358
+2026-10-13 14:58:55 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] epoch 20/20 | step 278/280 | loss=1.0452
+2026-10-13 14:58:55 | INFO    | [cardio_noleak/s44/ImbLLM-IAFP] EPOCH 20/20 DONE | mean_loss=1.0420 | epoch_time=0h00m01s | elapsed=0h00m20s | ETA=0h00m00s
+2026-10-13 14:58:56 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | generating 829 rows (condition_yx, temperature 0.70)
+2026-10-13 14:59:07 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | generation done: {'generated_total': 912, 'valid_parse_rate': 1.0, 'rounds': 1, 'rows_returned': 829, 'gen_batch_size_final': 128, 'gen_seconds': 10.9}
+2026-10-13 14:59:07 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | ImbLLM-IAFP | synthetic quality: {'close_probability': 0.0, 'mean_dist_heldout_real_to_nearest_synth': 4.21, 'coverage_k2': 0.4412, 'mean_dist_synth_to_train_minority(DCR)': 3.3163, 'frac_synth_exact_copy_of_train_minority': 0.0}
+2026-10-13 14:59:08 | INFO    | cardio_noleak | seed 44 | ImbLLM-IAFP        | train=2495 (min 837 / maj 1658) | F1=1.0000 Acc=1.0000 G=1.0000 AUC=1.0000 PR-AUC=1.0000
+2026-10-13 14:59:08 | INFO    | cardio_noleak | seed 44 | stage ImbLLM-IAFP        | DONE in 0h01m19s
+2026-10-13 14:59:08 | INFO    | cardio_noleak | seed 44 | stage plots              | RUNNING [14/22] cardio_noleak seed 44 (3/3)
+2026-10-13 14:59:12 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | wrote tsne_real_vs_synthetic.png
+2026-10-13 14:59:12 | INFO    | cardio_noleak | seed 44 | stage plots              | DONE in 0h00m04s
+2026-10-13 14:59:12 | INFO    | [14/22] cardio_noleak seed 44 (3/3) | FINISHED (7/8 methods have metrics)
