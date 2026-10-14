@@ -1,0 +1,11 @@
+# H100 80 GB, the headline tables: Qwen3-1.7B-Base on all 10 natural tables, 10 seeds.
+# ~15-30k train tokens/s (docs/COMPUTE.md). Split a week into sessions with --shard / --resume:
+#   tilt run thesis_main --config h100_main --resume
+model: qwen3-1.7b
+hardware: h100_80gb
+epochs: 10
+lr: 2.0e-4
+datasets: natural
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+protocol: clean
+q: 0.8                     # natural imbalance; 20% of the minority is held out as the non-member / fidelity reference (docs/EXPERIMENTS.md)

@@ -1,0 +1,9 @@
+# A100 40 GB (Ampere, cc 8.0). bf16, FlashAttention-2 if installed.
+name: a100_40gb
+device: cuda
+vram_gb: 38.0
+bf16: true
+qlora: true
+full_ft_max_b: 1.8
+flash_attn: true
+gen_batch: 128

@@ -1,0 +1,14 @@
+# The paper's setting (ImbLLM Sec. IV-A2). Use for every reported replication number.
+# LLM settings apply to every LLM arm of whatever experiment you run with --config paper.
+model: distilgpt2          # "distilled version of GPT-2"
+epochs: 50
+effective_batch: 32        # kept on every device via gradient accumulation
+lr: 5.0e-5
+temperature: 0.7
+hardware: auto
+# run defaults (overridable on the command line)
+datasets: paper
+# kept for the ImbLLM replication arms (distilgpt2, as in the paper)
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   # paper used 3; 10 re-splits for any significance claim (review G2)
+protocol: clean            # real validation fold for thresholds; `paper` = no fold
+q: 0.2

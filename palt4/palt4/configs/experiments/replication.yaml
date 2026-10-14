@@ -1,0 +1,10 @@
+# The ImbLLM protocol (10 tables of the paper, q = 0.2 reduction), with the thesis backbone,
+# so TILT is also comparable with palt3's replication numbers.
+model: qwen3-1.7b
+hardware: auto
+epochs: 10
+lr: 2.0e-4
+datasets: paper
+seeds: [0, 1, 2, 3, 4]
+protocol: clean
+q: 0.2
