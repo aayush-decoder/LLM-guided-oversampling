@@ -1,0 +1,9 @@
+# Kaggle P100 (Pascal, cc 6.0, 16 GB). No bf16, no bitsandbytes 4-bit -> full or LoRA only.
+name: p100_16gb
+device: cuda
+vram_gb: 15.0
+bf16: false
+qlora: false
+full_ft_max_b: 0.8
+flash_attn: false
+gen_batch: 64

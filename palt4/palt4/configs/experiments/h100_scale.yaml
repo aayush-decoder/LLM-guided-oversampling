@@ -1,0 +1,9 @@
+# H100 80 GB, the backbone-scale axis (`tilt run scale` overrides the model per arm:
+# qwen3-0.6b .. qwen3-14b, qwen2.5-32b). Few tables and seeds: the big rungs are expensive.
+hardware: h100_80gb
+epochs: 5
+lr: 1.0e-4
+datasets: natural_fast
+seeds: [0, 1, 2]
+protocol: clean
+q: 0.8                     # natural imbalance; 20% of the minority is held out as the non-member / fidelity reference (docs/EXPERIMENTS.md)

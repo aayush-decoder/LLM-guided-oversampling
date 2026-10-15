@@ -1,0 +1,10 @@
+# RTX 4050 6 GB, development loop: smallest Qwen3 Base, 3 naturally imbalanced tables.
+# Minutes per run. Use to debug a change before spending H100 hours.
+model: qwen3-0.6b
+hardware: rtx4050_6gb
+epochs: 10
+lr: 2.0e-4                 # LoRA learning rate
+datasets: natural_fast     # pc1, kc1_nat, wilt
+seeds: [0, 1, 2]
+protocol: clean            # real validation fold: needed for threshold_only and gain_vs_threshold
+q: 0.8                     # natural imbalance; 20% of the minority is held out as the non-member / fidelity reference (docs/EXPERIMENTS.md)

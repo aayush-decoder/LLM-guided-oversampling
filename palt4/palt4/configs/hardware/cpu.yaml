@@ -1,0 +1,8 @@
+# CPU only: full fine-tuning of <= 0.4B models in fp32. Fine for smoke tests and distilgpt2 on tiny data.
+name: cpu
+device: cpu
+vram_gb: 0
+bf16: false
+qlora: false
+full_ft_max_b: 0.4
+gen_batch: 16

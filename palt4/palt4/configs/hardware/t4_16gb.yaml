@@ -1,0 +1,10 @@
+# Colab / Kaggle T4 (Turing, cc 7.5, 16 GB). No bf16 -> fp16 autocast + GradScaler over fp32 trainable params.
+# full FT <= 0.8B, LoRA ~3B, QLoRA 7-8B.
+name: t4_16gb
+device: cuda
+vram_gb: 14.5
+bf16: false
+qlora: true
+full_ft_max_b: 0.8
+flash_attn: false
+gen_batch: 64

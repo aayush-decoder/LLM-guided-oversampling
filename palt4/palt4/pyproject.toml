@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiltgen"
+version = "4.0.0"
+description = "palt4 / TILT: task-informed LLM tilting for imbalanced tabular oversampling (utility-guided generation with a KL budget, twisted SMC, privacy gate), with ImbLLM and baselines"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "xgboost>=2.0",
+    "imbalanced-learn>=0.12",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+# Any ImbLLM / GReaT-style / TapTap-style / Pred-LLM-style run.
+llm = ["torch>=2.2", "transformers>=4.51", "accelerate>=0.30", "peft>=0.11"]
+# 4-bit QLoRA for >=3B backbones on small GPUs (CUDA, compute capability >= 7.0).
+quant = ["bitsandbytes>=0.43"]
+# FlashAttention-2 on A100/H100 (optional; SDPA is used otherwise).
+flash = ["flash-attn>=2.5"]
+# CTGAN / TVAE baselines (the paper's runner-up baseline is CTGAN).
+sdv = ["sdv>=1.12"]
+# TabDDPM / ARF baselines (palt3/docs/RESEARCH_REVIEW.md G5). Heavy; install in its own env
+# if it conflicts with the torch version of the `llm` extra.
+synthcity = ["synthcity>=0.2.11"]
+# Extra downstream learner (palt3 review G1); LR / RF / MLP come from scikit-learn.
+lgbm = ["lightgbm>=4.0"]
+# Kaggle-hosted datasets without a public mirror (credit_card, gem_price).
+kaggle = ["kaggle>=1.6"]
+dev = ["pytest>=8.0", "pytest-timeout>=2.2"]
+
+[project.scripts]
+tilt = "tiltgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"
+markers = [
+    "llm: needs torch + transformers (uses the offline tiny-random backbone, no download)",
+    "slow: downloads a real backbone from the Hugging Face Hub",
+]

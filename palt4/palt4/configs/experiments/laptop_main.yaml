@@ -1,0 +1,9 @@
+# RTX 4050 6 GB, the thesis backbone: Qwen3-1.7B-Base (the planner picks LoRA/QLoRA to fit 5.5 GB).
+model: qwen3-1.7b
+hardware: rtx4050_6gb
+epochs: 10
+lr: 2.0e-4
+datasets: natural_fast
+seeds: [0, 1, 2, 3, 4]
+protocol: clean
+q: 0.8                     # natural imbalance; 20% of the minority is held out as the non-member / fidelity reference (docs/EXPERIMENTS.md)

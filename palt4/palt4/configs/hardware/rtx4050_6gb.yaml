@@ -1,0 +1,10 @@
+# Laptop RTX 4050 (Ada, cc 8.9, 6 GB). PRIMARY target. bf16 native.
+# full FT <= 0.4B (distilgpt2/gpt2/gpt2-medium), LoRA ~1.5B, QLoRA ~3-4B. 7-8B does NOT fit for training.
+name: rtx4050_6gb
+device: cuda
+vram_gb: 5.5
+bf16: true
+qlora: true
+full_ft_max_b: 0.4
+flash_attn: false
+gen_batch: 16

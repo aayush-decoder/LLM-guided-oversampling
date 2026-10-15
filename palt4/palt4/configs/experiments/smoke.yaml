@@ -1,0 +1,10 @@
+# Offline, seconds: random-init tiny backbone built locally (no download).
+model: tiny-random
+epochs: 60
+lr: 2.0e-3
+effective_batch: 16
+max_rounds: 2
+oversample_attempts: 2.0
+interpolation_ratio: 0.3
+datasets: smoke
+seeds: [0]

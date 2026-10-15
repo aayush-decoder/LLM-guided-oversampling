@@ -1,0 +1,11 @@
+# H100 80 GB (Hopper, cc 9.0) -- institute GPU when available. bf16, FlashAttention-2 if installed.
+# full FT up to ~4B, LoRA on 7-8B with large micro-batches, no QLoRA needed.
+# Multi-GPU node: run one process per GPU with --shard i/N (see COMMANDS.md).
+name: h100_80gb
+device: cuda
+vram_gb: 76.0
+bf16: true
+qlora: true
+full_ft_max_b: 4.0
+flash_attn: true
+gen_batch: 256
