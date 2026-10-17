@@ -1,0 +1,129 @@
+{
+  "num_cols": [
+    "balance",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous"
+  ],
+  "cat_cols": [
+    "age",
+    "marital",
+    "job",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "poutcome"
+  ],
+  "features": [
+    "balance",
+    "duration",
+    "campaign",
+    "pdays",
+    "previous",
+    "age",
+    "marital",
+    "job",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "contact",
+    "poutcome"
+  ],
+  "target": "subscribe",
+  "task": "classification",
+  "decimals": 2,
+  "cat_vocab": {
+    "age": [
+      "adult",
+      "youth"
+    ],
+    "marital": [
+      "divorced",
+      "married",
+      "single"
+    ],
+    "job": [
+      "admin.",
+      "blue-collar",
+      "entrepreneur",
+      "housemaid",
+      "management",
+      "retired",
+      "self-employed",
+      "services",
+      "student",
+      "technician",
+      "unemployed",
+      "unknown"
+    ],
+    "education": [
+      "primary",
+      "secondary",
+      "tertiary",
+      "unknown"
+    ],
+    "default": [
+      "no",
+      "yes"
+    ],
+    "housing": [
+      "no",
+      "yes"
+    ],
+    "loan": [
+      "no",
+      "yes"
+    ],
+    "contact": [
+      "cellular",
+      "telephone",
+      "unknown"
+    ],
+    "poutcome": [
+      "failure",
+      "other",
+      "success",
+      "unknown"
+    ]
+  },
+  "mins": {
+    "balance": -3313.0,
+    "duration": 4.0,
+    "campaign": 1.0,
+    "pdays": -1.0,
+    "previous": 0.0,
+    "age": 0.0,
+    "marital": 0.0,
+    "job": 0.0,
+    "education": 0.0,
+    "default": 0.0,
+    "housing": 0.0,
+    "loan": 0.0,
+    "contact": 0.0,
+    "poutcome": 0.0
+  },
+  "maxs": {
+    "balance": 71188.0,
+    "duration": 3025.0,
+    "campaign": 50.0,
+    "pdays": 871.0,
+    "previous": 25.0,
+    "age": 1.0,
+    "marital": 2.0,
+    "job": 11.0,
+    "education": 3.0,
+    "default": 1.0,
+    "housing": 1.0,
+    "loan": 1.0,
+    "contact": 2.0,
+    "poutcome": 3.0
+  },
+  "classes": [
+    "no",
+    "yes"
+  ]
+}

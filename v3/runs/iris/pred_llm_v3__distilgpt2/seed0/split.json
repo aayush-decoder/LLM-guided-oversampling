@@ -1,0 +1,32 @@
+{
+  "dataset": "iris",
+  "task": "classification",
+  "seed": 0,
+  "n_train": 120,
+  "n_test": 30,
+  "n_features": 4,
+  "n_num": 4,
+  "n_cat": 0,
+  "n_classes": 3,
+  "target": "target",
+  "class_names": [
+    "0",
+    "1",
+    "2"
+  ],
+  "train_class_counts": [
+    40,
+    40,
+    40
+  ],
+  "raw_shape": [
+    150,
+    5
+  ],
+  "missing_per_column": {},
+  "rows_dropped_na": 0,
+  "clean_shape": [
+    150,
+    5
+  ]
+}

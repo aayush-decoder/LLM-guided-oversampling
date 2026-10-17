@@ -30,10 +30,14 @@ kaggle = ["kaggle"]
 dev = ["pytest>=7"]
 
 [tool.setuptools.packages.find]
-where = ["common", "v1", "v2"]
-include = ["tabgen*", "predllm_v1*", "predllm_v2*"]
+where = ["common", "v1", "v2", "v3"]
+include = ["tabgen*", "predllm_v1*", "predllm_v2*", "predllm_v3*"]
 
 [tool.pytest.ini_options]
-testpaths = ["common/tests", "v1/tests", "v2/tests"]
+testpaths = ["common/tests", "v1/tests", "v2/tests", "v3/tests"]
 addopts = "--import-mode=importlib -q"
 markers = ["smoke: end-to-end runs that download a small LLM (deselect with -m 'not smoke')"]
+
+[tool.pyright]
+extraPaths = ["common", "v1", "v2", "v3"]
+

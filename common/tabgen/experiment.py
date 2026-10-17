@@ -56,6 +56,11 @@ def evaluate(split: TabularSplit, enc: pd.DataFrame, cfg: dict, seed: int) -> di
     m = {"tstr": tstr(enc, split.test, split.features, split.task, split.n_classes, seed),
          "original": tstr(split.train, split.test, split.features, split.task, split.n_classes, seed),
          "n_synthetic": len(enc)}
+    try:
+        aug_df = pd.concat([split.train, enc], ignore_index=True)
+        m["tstr_augmented"] = tstr(aug_df, split.test, split.features, split.task, split.n_classes, seed)
+    except Exception:
+        pass
     if cfg["eval"].get("fidelity", True) and len(enc) > 5:
         cols = split.features + [TARGET]
         discrete = set(split.cat_cols) | ({TARGET} if split.task == "classification" else set())

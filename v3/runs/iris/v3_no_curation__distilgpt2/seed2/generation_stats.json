@@ -1,0 +1,9 @@
+{
+  "numeric_fallbacks": 0,
+  "validity_rate": 1.0,
+  "n_sampled": 120,
+  "range_mode": "outlier",
+  "posterior_entropy": 0.1196,
+  "preset": "v3_no_curation",
+  "version": "v3"
+}

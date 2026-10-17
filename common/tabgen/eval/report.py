@@ -20,11 +20,12 @@ def collect(versions: list[str], subdir: str | None = None) -> pd.DataFrame:
         root = runs_root(v) / subdir if subdir else runs_root(v)
         for p in root.glob("*/*/seed*/metrics.json"):
             m = load_json(p)
-            key = "accuracy" if m["task"] == "classification" else "mse"
-            row = {"version": v, "dataset": p.parts[-4], "method": m["method"], "llm": m["llm"], "seed": m["seed"],
-                   "task": m["task"], "metric": key, "score": m["tstr"].get(key), "original": m["original"].get(key)}
-            row.update({k: m.get("fidelity", {}).get(k) for k in FIDELITY_KEYS})
-            rows.append(row)
+            keys = ["accuracy", "f1_macro"] if m["task"] == "classification" else ["mse"]
+            for key in keys:
+                row = {"version": v, "dataset": p.parts[-4], "method": m["method"], "llm": m["llm"], "seed": m["seed"],
+                       "task": m["task"], "metric": key, "score": m["tstr"].get(key), "original": m["original"].get(key)}
+                row.update({k: m.get("fidelity", {}).get(k) for k in FIDELITY_KEYS})
+                rows.append(row)
     return pd.DataFrame(rows)
 
 
@@ -41,14 +42,15 @@ def build_tables(versions: list[str], out_dir: Path, subdir: str | None = None) 
     df["col"] = df["version"] + ":" + df["method"] + "@" + df["llm"]
     ref = load_yaml(CONFIGS / "paper_reference.yaml")
     written = {}
-    for metric in ("accuracy", "mse"):
+    for metric in ("accuracy", "f1_macro", "mse"):
         sub = df[df.metric == metric]
         if sub.empty:
             continue
         table = sub.groupby(["dataset", "col"])["score"].apply(_fmt).unstack("col")
         table.insert(0, "Original(ours)", sub.groupby("dataset")["original"].apply(_fmt))
-        for i, name in enumerate(ref["columns"]):
-            table[f"paper:{name}"] = [ref[metric].get(d, [np.nan] * 7)[i] for d in table.index]
+        if metric in ref:
+            for i, name in enumerate(ref["columns"]):
+                table[f"paper:{name}"] = [ref[metric].get(d, [np.nan] * 7)[i] for d in table.index]
         means = sub.groupby("col")["score"].mean()
         path = out_dir / f"table_{metric}.md"
         with open(path, "w", encoding="utf-8") as f:

@@ -1,0 +1,40 @@
+{
+  "dataset": "iris",
+  "method": "original",
+  "seed": 0,
+  "llm": "tiny-gpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
+  "fidelity": {
+    "inverse_kl": 0.9174,
+    "discriminator": 0.0,
+    "discriminator_auc": 0.4136,
+    "discriminator_acc": 0.5556,
+    "discriminator_lr": 0.0,
+    "discriminator_train": 0.0,
+    "density": 0.7333,
+    "coverage": 0.9,
+    "dcr_mean": 0.0,
+    "dcr_median": 0.0,
+    "exact_copy_rate": 1.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {},
+  "generation": {},
+  "seconds_total": 0.0
+}

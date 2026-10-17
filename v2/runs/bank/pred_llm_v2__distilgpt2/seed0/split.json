@@ -1,0 +1,30 @@
+{
+  "dataset": "bank",
+  "task": "classification",
+  "seed": 0,
+  "n_train": 3616,
+  "n_test": 905,
+  "n_features": 14,
+  "n_num": 5,
+  "n_cat": 9,
+  "n_classes": 2,
+  "target": "subscribe",
+  "class_names": [
+    "no",
+    "yes"
+  ],
+  "train_class_counts": [
+    3199,
+    417
+  ],
+  "raw_shape": [
+    4521,
+    15
+  ],
+  "missing_per_column": {},
+  "rows_dropped_na": 0,
+  "clean_shape": [
+    4521,
+    15
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/common",
+    "${workspaceFolder}/v1",
+    "${workspaceFolder}/v2",
+    "${workspaceFolder}/v3"
+  ]
+}

@@ -1,0 +1,79 @@
+# v3 = Pred-LLM with Negative Fine-Tuning + Outlier Range Bounding + Anomaly Gating.
+
+llm: distilgpt2          # any key/alias from configs/llms.yaml
+mode: auto
+device: auto
+serialization: raw       # raw = real categories + real units | encoded = MinMax codes
+range_mode: outlier      # v3: outlier | minority | quantile | empirical
+
+data:
+  test_size: 0.2
+  train_size: 1.0
+  gen_size: 1.0
+  fit_scaler_on: full
+  decimals: 2
+  binarize: null
+  max_rows: null
+  max_value_decimals: 4
+
+outlier:                 # v3: outlier boundary definition
+  mode: iqr              # iqr | minority | quantile | empirical
+  factor: 1.5            # IQR multiplier for outlier envelope
+  contamination: 0.1     # expected outlier rate for Isolation Forest
+
+finetune:
+  epochs: 50
+  batch_size: 32
+  micro_batch_size: null
+  lr: 5.0e-5
+  lr_lora: 2.0e-4
+  weight_decay: 0.0
+  warmup_ratio: 0.03
+  max_grad_norm: 1.0
+  max_steps: null
+  log_every: 50
+  reuse: true
+  perm_copies: 1
+  orig_copies: 1
+  negative_weight: 0.5   # v3: unlikelihood penalty weight on majority samples
+
+loss:
+  target_weight: 3.0     # lambda on target value tokens (+ EOS)
+  scaffold_weight: 0.0   # weight on key tokens ("col is"); decoder writes them, so 0 by default
+
+decoding:
+  batch_size: 64
+  temperature_num: 0.7   # token-level T for digits
+  temperature_cat: 1.0   # sequence-level T over whole categorical values
+  kv_cache: true         # reuse the prefix KV cache
+  max_score_elems: 30000000
+  negative_guidance: 0.0 # CFG logit subtraction away from majority distribution
+
+query:
+  permutations: 4        # R orders averaged
+  label_decode: sample   # sample | argmax
+  temperature_y: 0.7
+  reg_aggregate: mean    # mean | single
+  minority_prior_boost: 0.0
+
+curation:
+  enabled: true
+  pool_factor: 1.5       # generate gamma * n rows, keep n
+  privacy_gate: true
+  privacy_alpha: 0.01
+  max_drop: 0.5
+  anomaly_gate: true     # v3: drop synthetic rows collapsing into majority inlier cluster
+  anomaly_quantile_low: 0.0
+  anomaly_quantile_high: 0.90
+  sir: true
+  beta: 1.0
+  clip: 20.0
+  folds: 5
+
+eval:
+  runs: 3
+  fidelity: true
+  max_fidelity_rows: 5000
+
+baselines:
+  epochs: 300

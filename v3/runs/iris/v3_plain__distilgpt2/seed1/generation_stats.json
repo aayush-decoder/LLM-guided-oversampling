@@ -1,0 +1,14 @@
+{
+  "numeric_fallbacks": 0,
+  "validity_rate": 1.0,
+  "n_sampled": 180,
+  "range_mode": "empirical",
+  "posterior_entropy": 0.1176,
+  "pool_size": 180,
+  "dcr_tau": 0.03606,
+  "privacy_dropped": 16,
+  "sir_ess": 34.7,
+  "disc_mean_pool": 0.3437,
+  "preset": "v3_plain",
+  "version": "v3"
+}

@@ -1,0 +1,61 @@
+{
+  "dataset": "iris",
+  "method": "v3_plain",
+  "seed": 0,
+  "llm": "distilgpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
+  "fidelity": {
+    "inverse_kl": 0.8482,
+    "discriminator": 0.2346,
+    "discriminator_auc": 0.6173,
+    "discriminator_acc": 0.5556,
+    "discriminator_lr": 0.284,
+    "discriminator_train": 0.0841,
+    "density": 0.5208,
+    "coverage": 0.9,
+    "dcr_mean": 0.1,
+    "dcr_median": 0.0883,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "final_step": 400,
+    "epochs": 50,
+    "final_loss": 0.5391,
+    "final_loss_pos": 0.5391,
+    "final_loss_neg": 0.0,
+    "time_s": 43.8,
+    "reused": true
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "range_mode": "empirical",
+    "posterior_entropy": 0.0672,
+    "pool_size": 180,
+    "dcr_tau": 0.03701,
+    "privacy_dropped": 19,
+    "sir_ess": 35.5,
+    "disc_mean_pool": 0.377,
+    "preset": "v3_plain",
+    "version": "v3"
+  },
+  "seconds_total": 11.9
+}
