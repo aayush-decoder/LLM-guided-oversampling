@@ -57,6 +57,16 @@ def test_anomaly_scorer_and_gate():
     )
     assert stats["anomaly_kept_ratio"] > 0.0
 
+    # Test with mixed features where scorer was trained only on numeric subset
+    df_mixed = df.copy()
+    df_mixed["cat_col"] = [0.0] * len(df_mixed)
+    keep_mixed, _ = filter_by_anomaly_score(
+        df_mixed,
+        ["feat1", "feat2", "cat_col"],
+        scorer,
+    )
+    assert len(keep_mixed) == len(df_mixed)
+
 
 def test_v3_negative_unlikelihood_loss():
     # Setup logits: 2 batch elements, length 3, vocab 5

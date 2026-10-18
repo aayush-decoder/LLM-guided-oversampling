@@ -138,6 +138,7 @@ def sample_features(
                 elif sch.kinds[c] == "cat":
                     vals = sample_categorical(model, codec, prefixes, c, d.get("temperature_cat", 1.0), rng, d)
                 else:
+                    neg_pref = [list(codec.bos) for _ in range(b)] if negative_guidance > 0.0 else None
                     vals, fb = sample_numeric(
                         model,
                         codec,
@@ -150,6 +151,7 @@ def sample_features(
                         rng,
                         range_mode=range_mode,
                         negative_guidance=negative_guidance,
+                        neg_prefixes=neg_pref,
                     )
                     fallbacks += fb
 

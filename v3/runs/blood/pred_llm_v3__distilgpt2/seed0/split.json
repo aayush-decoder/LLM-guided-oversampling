@@ -1,0 +1,30 @@
+{
+  "dataset": "blood",
+  "task": "classification",
+  "seed": 0,
+  "n_train": 598,
+  "n_test": 150,
+  "n_features": 4,
+  "n_num": 4,
+  "n_cat": 0,
+  "n_classes": 2,
+  "target": "Class",
+  "class_names": [
+    "1",
+    "2"
+  ],
+  "train_class_counts": [
+    456,
+    142
+  ],
+  "raw_shape": [
+    748,
+    5
+  ],
+  "missing_per_column": {},
+  "rows_dropped_na": 0,
+  "clean_shape": [
+    748,
+    5
+  ]
+}

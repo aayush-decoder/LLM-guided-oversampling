@@ -77,11 +77,11 @@ class V3RowDataset(Dataset):
             f = list(self.feats)
         return f + [self.codec.schema.target]
 
-    def __getitem__(self, idx: int) -> dict:
-        base_idx = idx % (self.n_pos + self.n_neg)
+    def __getitem__(self, index: int) -> dict:
+        base_idx = index % (self.n_pos + self.n_neg)
         is_negative = base_idx >= self.n_pos
         row = self.neg_rows[base_idx - self.n_pos] if is_negative else self.pos_rows[base_idx]
-        order = self._order(idx)
+        order = self._order(index)
         ids, w = self.codec.encode(row, order, self.lam, self.w_scaffold)
         return {
             "input_ids": ids,
@@ -132,20 +132,21 @@ def v3_unlikelihood_loss(
     probs = F.softmax(logits_s, dim=-1)
     p_true = probs.gather(-1, tgt[..., None])[..., 0].clamp(min=eps, max=1.0 - eps)
 
-    # Positive samples: standard cross entropy -log p(x)
-    pos_mask = (is_neg_exp == 0.0) & (w > 0)
+    # Positive loss: cross entropy across all samples with minority class emphasis
+    pos_mask = (w > 0)
+    eff_w = w * torch.where(is_neg_exp == 0.0, 2.0, 1.0)
     if pos_mask.sum() > 0:
-        loss_pos = -(torch.log(p_true) * w * pos_mask.float()).sum() / (w * pos_mask.float()).sum().clamp_min(1e-8)
+        loss_pos = -(torch.log(p_true) * eff_w * pos_mask.float()).sum() / (eff_w * pos_mask.float()).sum().clamp_min(1e-8)
     else:
-        loss_pos = torch.tensor(0.0, device=logits.device, requires_grad=True)
+        loss_pos = (logits_s * 0.0).sum()
 
-    # Negative samples: unlikelihood penalty -log(1 - p(x))
+    # Negative unlikelihood penalty: repels majority tokens away from over-confidence
     neg_mask = (is_neg_exp == 1.0) & (w > 0)
     if neg_mask.sum() > 0 and neg_weight > 0.0:
         p_comp = (1.0 - p_true).clamp(min=eps, max=1.0)
         loss_neg = -(torch.log(p_comp) * w * neg_mask.float()).sum() / (w * neg_mask.float()).sum().clamp_min(1e-8)
     else:
-        loss_neg = torch.tensor(0.0, device=logits.device)
+        loss_neg = (logits_s * 0.0).sum()
 
     total_loss = loss_pos + float(neg_weight) * loss_neg
     stats = {

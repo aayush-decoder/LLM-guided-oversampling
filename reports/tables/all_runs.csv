@@ -71,6 +71,8 @@ v2,iris,v2_plain_loss,distilgpt2,1,classification,accuracy,0.9333,0.9333,0.4568,
 v2,iris,v2_plain_loss,distilgpt2,1,classification,f1_macro,0.9327,0.9332,0.4568,0.1111,0.7291,0.5625,0.8667,0.0971,0.0
 v2,iris,v2_plain_loss,distilgpt2,2,classification,accuracy,0.9333,1.0,0.1852,0.0,0.7955,0.6458,0.9333,0.1086,0.0
 v2,iris,v2_plain_loss,distilgpt2,2,classification,f1_macro,0.9333,1.0,0.1852,0.0,0.7955,0.6458,0.9333,0.1086,0.0
+v3,blood,pred_llm_v3,distilgpt2,0,classification,accuracy,0.3,0.7067,0.6751,0.6642,0.7465,0.6154,0.64,0.0617,0.1171
+v3,blood,pred_llm_v3,distilgpt2,0,classification,f1_macro,0.2909,0.563,0.6751,0.6642,0.7465,0.6154,0.64,0.0617,0.1171
 v3,iris,pred_llm_v3,distilgpt2,0,classification,accuracy,0.9667,0.9333,0.358,0.0,0.8351,0.4583,0.8,0.1079,0.0
 v3,iris,pred_llm_v3,distilgpt2,0,classification,f1_macro,0.9666,0.9327,0.358,0.0,0.8351,0.4583,0.8,0.1079,0.0
 v3,iris,pred_llm_v3,distilgpt2,1,classification,accuracy,0.9667,0.9333,0.0,0.0,0.7171,0.5458,0.9,0.1004,0.0

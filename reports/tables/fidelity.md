@@ -16,7 +16,7 @@ Fidelity (discriminator, discriminator_lr, inverse_kl, density, coverage) is mea
 | v2:pred_llm_v2@qwen3-1.7b         |          0.0206 |             0.107  |       0.8098 |    1.0417 |     0.9222 |     0.042  |            0.6806 |
 | v2:v2_encoded@distilgpt2          |          0.1193 |             0.0453 |       0.8003 |    0.7153 |     0.8889 |     0.0964 |            0      |
 | v2:v2_plain_loss@distilgpt2       |          0.2181 |             0.037  |       0.8049 |    0.593  |     0.8889 |     0.1031 |            0      |
-| v3:pred_llm_v3@distilgpt2         |          0.1193 |             0.0947 |       0.7814 |    0.4889 |     0.8333 |     0.1099 |            0      |
+| v3:pred_llm_v3@distilgpt2         |          0.2583 |             0.237  |       0.7727 |    0.5205 |     0.785  |     0.0978 |            0.0293 |
 | v3:v3_cfg_negative@distilgpt2     |          0.1193 |             0.0947 |       0.7814 |    0.4889 |     0.8333 |     0.1099 |            0      |
 | v3:v3_no_curation@distilgpt2      |          0.1482 |             0.1852 |       0.7839 |    0.6167 |     0.8555 |     0.0989 |            0.0083 |
 | v3:v3_no_negative@distilgpt2      |          0.1193 |             0.0947 |       0.7814 |    0.4889 |     0.8333 |     0.1099 |            0      |

@@ -84,10 +84,14 @@ class AnomalyScorer:
         )
         self.fitted = False
         self.threshold: float = 0.0
+        self.feature_names: list[str] | None = None
 
-    def fit(self, X: np.ndarray | pd.DataFrame) -> "AnomalyScorer":
+    def fit(self, X: np.ndarray | pd.DataFrame, feature_names: list[str] | None = None) -> "AnomalyScorer":
         if isinstance(X, pd.DataFrame):
+            self.feature_names = list(X.columns)
             X = X.to_numpy(float)
+        else:
+            self.feature_names = feature_names
         self.model.fit(X)
         self.fitted = True
         scores = self.model.decision_function(X)
@@ -97,7 +101,8 @@ class AnomalyScorer:
 
     def score(self, X: np.ndarray | pd.DataFrame) -> np.ndarray:
         if isinstance(X, pd.DataFrame):
-            X = X.to_numpy(float)
+            cols = self.feature_names if self.feature_names is not None else list(X.columns)
+            X = X[cols].to_numpy(float)
         return self.model.decision_function(X)
 
     def is_outlier(self, X: np.ndarray | pd.DataFrame) -> np.ndarray:
@@ -116,7 +121,8 @@ def filter_by_anomaly_score(
     Prevents majority mode collapse by dropping synthetic rows that fall deep into
     the dense majority inlier cluster (high decision score).
     """
-    X = pool[features].to_numpy(float)
+    cols = scorer.feature_names if (scorer is not None and scorer.feature_names is not None) else features
+    X = pool[cols].to_numpy(float)
     scores = scorer.score(X)
 
     lo_val = float(np.quantile(scores, target_quantile_low))

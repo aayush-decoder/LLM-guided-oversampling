@@ -80,7 +80,7 @@ def run_all():
                 gen_fn,
                 tag,
                 SEEDS,
-                overwrite=True,
+                overwrite=False,
                 plots=True,
             )
             elapsed = round(time.time() - t0, 1)
@@ -93,11 +93,39 @@ def run_all():
             traceback.print_exc()
 
     print("\n" + "=" * 70)
+    print("BANK BENCHMARK RESULTS SUMMARY:")
+    print("=" * 70)
+    if results:
+        table_rows = []
+        for r in results:
+            table_rows.append([
+                r.get("method"),
+                r.get("mean"),
+                r.get("original_mean"),
+                r.get("discriminator"),
+                r.get("inverse_kl"),
+                r.get("coverage"),
+                r.get("dcr_mean"),
+                r.get("elapsed_s"),
+            ])
+        headers = ["Method", "TSTR Acc", "Orig Acc", "Discrim", "Inv-KL", "Coverage", "DCR Mean", "Time (s)"]
+        print(tabulate(table_rows, headers=headers, tablefmt="github"))
+
+    print("\n" + "=" * 70)
     print("GENERATING CROSS-VERSION COMPARISON REPORTS...")
     print("=" * 70)
     tables = build_tables(["v1", "v2", "v3"], REPORTS / "tables")
     for k, p in tables.items():
         print(f"Artifact {k}: {p}")
+
+    try:
+        from reports.make_comparison_graphs import generate_all_graphs
+        print("\n" + "=" * 70)
+        print("GENERATING VISUAL COMPARISON GRAPHS...")
+        print("=" * 70)
+        generate_all_graphs()
+    except Exception as e:
+        print(f"Warning: could not generate comparison graphs: {e}")
 
     total_time = round(time.time() - t_start, 1)
     print(f"\nAll experiments finished in {total_time}s ({total_time/60:.1f} mins).")

@@ -92,10 +92,10 @@ class PredLLMV3:
         mdir = self.model_dir()
         feats = self.split.features
 
-        # 1. Fit anomaly scorer on numeric features
+        # 1. Fit anomaly scorer on numeric features (or all encoded features if none)
         num_feats = [c for c in feats if self.schema.kinds[c] == "num"]
-        if num_feats:
-            self.anomaly_scorer.fit(self.split.train[num_feats].to_numpy(float))
+        target_feats = num_feats if num_feats else feats
+        self.anomaly_scorer.fit(self.split.train[target_feats].to_numpy(float), feature_names=target_feats)
 
         # 2. Model fine-tuning (or cache reuse)
         if (mdir / "llm_meta.json").exists() and self.cfg["finetune"].get("reuse", True):

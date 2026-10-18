@@ -1,0 +1,21 @@
+{
+  "dataset": "bank",
+  "method": "pred_llm_v2",
+  "llm": "distilgpt2",
+  "seeds": [
+    0
+  ],
+  "metric": "accuracy",
+  "mean": 0.8785,
+  "std": 0.0,
+  "original_mean": 0.8884,
+  "per_seed": [
+    0.8785
+  ],
+  "discriminator": 0.0901,
+  "discriminator_lr": 0.1253,
+  "inverse_kl": 0.9849,
+  "density": 1.0138,
+  "coverage": 0.9569,
+  "dcr_mean": 0.1099
+}
