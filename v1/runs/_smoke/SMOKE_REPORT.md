@@ -8,6 +8,7 @@
 
 Artifacts:
 - accuracy: D:\project\College\ML-project\v1\runs\_smoke\tables\table_accuracy.md
+- f1_macro: D:\project\College\ML-project\v1\runs\_smoke\tables\table_f1_macro.md
 - fidelity: D:\project\College\ML-project\v1\runs\_smoke\tables\fidelity.md
 
 OVERALL: PASS

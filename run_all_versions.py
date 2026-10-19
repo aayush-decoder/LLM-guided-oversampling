@@ -36,22 +36,21 @@ from tabgen.experiment import run_experiment
 from tabgen.llm.registry import resolve_llm
 from tabgen.paths import REPORTS
 
-# Import version generators and default configurations
-from predllm_v1.generator import VERSION as V1_VER, make_generator as v1_gen
-from predllm_v1.cli import CONFIG as V1_CFG
+def get_version_registry():
+    from predllm_v1.generator import VERSION as V1_VER, make_generator as v1_gen
+    from predllm_v1.cli import CONFIG as V1_CFG
 
-from predllm_v2.generator import VERSION as V2_VER, make_generator as v2_gen
-from predllm_v2.cli import CONFIG as V2_CFG
+    from predllm_v2.generator import VERSION as V2_VER, make_generator as v2_gen
+    from predllm_v2.cli import CONFIG as V2_CFG
 
-from predllm_v3.generator import VERSION as V3_VER, make_generator as v3_gen
-from predllm_v3.cli import CONFIG as V3_CFG
+    from predllm_v3.generator import VERSION as V3_VER, make_generator as v3_gen
+    from predllm_v3.cli import CONFIG as V3_CFG
 
-
-VERSION_REGISTRY = {
-    "v1": {"version": V1_VER, "cfg": V1_CFG, "gen": v1_gen, "default_methods": ["pred_llm"], "ablation_methods": ["pred_llm", "great", "taptap"]},
-    "v2": {"version": V2_VER, "cfg": V2_CFG, "gen": v2_gen, "default_methods": ["pred_llm_v2"], "ablation_methods": ["pred_llm_v2", "v2_plain_loss"]},
-    "v3": {"version": V3_VER, "cfg": V3_CFG, "gen": v3_gen, "default_methods": ["pred_llm_v3"], "ablation_methods": ["pred_llm_v3", "v3_no_negative", "v3_no_outlier_range"]},
-}
+    return {
+        "v1": {"version": V1_VER, "cfg": V1_CFG, "gen": v1_gen, "default_methods": ["pred_llm"], "ablation_methods": ["pred_llm", "great", "taptap"]},
+        "v2": {"version": V2_VER, "cfg": V2_CFG, "gen": v2_gen, "default_methods": ["pred_llm_v2"], "ablation_methods": ["pred_llm_v2", "v2_plain_loss"]},
+        "v3": {"version": V3_VER, "cfg": V3_CFG, "gen": v3_gen, "default_methods": ["pred_llm_v3"], "ablation_methods": ["pred_llm_v3", "v3_no_negative", "v3_no_outlier_range"]},
+    }
 
 
 class ArgsWrapper:
@@ -80,6 +79,8 @@ def parse_args():
                         help="Number of training epochs. Default: 35")
     parser.add_argument("--max-steps", type=int, default=None,
                         help="Cap total training steps (useful for fast smoke testing). Default: None")
+    parser.add_argument("--max-rows", type=int, default=None,
+                        help="Cap maximum rows loaded from each dataset (e.g. 1000). Default: None (full dataset)")
     parser.add_argument("--seeds", default="0",
                         help="Comma-separated random seeds. Default: 0")
     parser.add_argument("--device", default="auto",
@@ -104,6 +105,8 @@ def main():
     print("=" * 80)
     print(f"PRED-LLM CROSS-VERSION RUNNER: {','.join(versions_requested).upper()}")
     print(f"Datasets: {datasets} | LLM: {args.llm} | Epochs: {args.epochs} | Seeds: {seeds}")
+    if args.max_rows:
+        print(f"Row Cap: {args.max_rows} rows per dataset")
     print(f"Resume Mode: {'OVERWRITE' if args.overwrite else 'SKIP FINISHED (cached)'}")
     print("=" * 80)
 
@@ -113,11 +116,14 @@ def main():
         device=args.device,
         epochs=args.epochs,
         max_steps=args.max_steps,
+        max_rows=args.max_rows,
     )
     llm_tag = resolve_llm(args.llm, args.device).tag
 
     results = []
     t_global_start = time.time()
+
+    version_registry = get_version_registry()
 
     for ds in datasets:
         print(f"\n######################################################################")
@@ -125,11 +131,11 @@ def main():
         print(f"######################################################################")
 
         for v_key in versions_requested:
-            if v_key not in VERSION_REGISTRY:
-                print(f"[!] Warning: Unknown version '{v_key}'. Allowed: {list(VERSION_REGISTRY.keys())}")
+            if v_key not in version_registry:
+                print(f"[!] Warning: Unknown version '{v_key}'. Allowed: {list(version_registry.keys())}")
                 continue
 
-            v_info = VERSION_REGISTRY[v_key]
+            v_info = version_registry[v_key]
             v_code = v_info["version"]
             v_cfg_path = v_info["cfg"]
             v_gen_fn = v_info["gen"]

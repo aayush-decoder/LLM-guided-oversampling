@@ -15,6 +15,11 @@
     "valid": true
   },
   "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
   "fidelity": {
     "inverse_kl": 0.8178,
     "discriminator": 0.4321,
@@ -33,7 +38,7 @@
     "steps": 150,
     "epochs_run": 19,
     "final_loss": 0.382186159491539,
-    "train_seconds": 23.7,
+    "train_seconds": 26.1,
     "n_sequences": 240
   },
   "generation": {
@@ -50,5 +55,5 @@
       "paper_row": "Pred-LLM (Table III last row)"
     }
   },
-  "seconds_total": 34.8
+  "seconds_total": 39.0
 }

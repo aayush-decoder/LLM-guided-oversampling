@@ -1,0 +1,2 @@
+dataset,Original(ours),v1:ctgan@distilgpt2,v1:great@distilgpt2,v1:original@distilgpt2,v1:pred_llm@distilgpt2,v1:taptap@distilgpt2
+iris,0.9327 (0.000),0.3472 (0.000),0.5326 (0.000),0.9327 (0.000),1.0000 (0.000),0.9327 (0.000)

@@ -1,5 +1,5 @@
 {
-  "run": "v3\\runs\\_smoke\\iris\\v3_no_outlier_range__tiny-gpt2\\seed0",
+  "run": "D:\\project\\College\\ML-project\\v3\\runs\\_smoke\\iris\\v3_no_outlier_range__tiny-gpt2\\seed0",
   "status": "PASS",
   "items": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "level": "PASS",
-      "msg": "label TV distance 0.092"
+      "msg": "label TV distance 0.083"
     },
     {
       "level": "PASS",
@@ -32,7 +32,7 @@
     },
     {
       "level": "PASS",
-      "msg": "TSTR valid: {'accuracy': 0.4667, 'f1_macro': 0.4046, 'valid': True}"
+      "msg": "TSTR valid: {'accuracy': 0.5, 'f1_macro': 0.3961, 'valid': True}"
     },
     {
       "level": "PASS",

@@ -15,6 +15,11 @@
     "valid": true
   },
   "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "valid": true
+  },
   "fidelity": {
     "inverse_kl": 0.5877,
     "discriminator": 1.0,
@@ -33,7 +38,7 @@
     "steps": 30,
     "epochs_run": 4,
     "final_loss": 10.811800765991212,
-    "train_seconds": 2.3,
+    "train_seconds": 0.7,
     "n_sequences": 240
   },
   "generation": {
@@ -48,5 +53,5 @@
     "disc_mean_pool": 0.0205,
     "preset": "v2_encoded"
   },
-  "seconds_total": 8.8
+  "seconds_total": 2.7
 }

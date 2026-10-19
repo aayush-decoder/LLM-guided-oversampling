@@ -3,7 +3,7 @@
 - PASS **original**: accuracy=0.9333 (original 0.9333) audit=WARN
 - PASS **pred_llm_v3**: accuracy=0.6333 (original 0.9333) audit=PASS
 - PASS **v3_no_negative**: accuracy=0.6333 (original 0.9333) audit=PASS
-- PASS **v3_no_outlier_range**: accuracy=0.4667 (original 0.9333) audit=PASS
+- PASS **v3_no_outlier_range**: accuracy=0.5 (original 0.9333) audit=PASS
 
 Artifacts:
 - accuracy: D:\project\College\ML-project\v3\runs\_smoke\tables\table_accuracy.md

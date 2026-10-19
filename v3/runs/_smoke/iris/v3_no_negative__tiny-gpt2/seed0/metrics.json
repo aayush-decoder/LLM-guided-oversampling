@@ -6,7 +6,7 @@
   "task": "classification",
   "tstr": {
     "accuracy": 0.6333,
-    "f1_macro": 0.5308,
+    "f1_macro": 0.5402,
     "valid": true
   },
   "original": {
@@ -21,26 +21,26 @@
     "valid": true
   },
   "fidelity": {
-    "inverse_kl": 0.6281,
-    "discriminator": 0.9506,
-    "discriminator_auc": 0.9753,
-    "discriminator_acc": 0.8889,
-    "discriminator_lr": 0.5062,
-    "discriminator_train": 0.9954,
+    "inverse_kl": 0.6154,
+    "discriminator": 1.0,
+    "discriminator_auc": 1.0,
+    "discriminator_acc": 1.0,
+    "discriminator_lr": 0.8765,
+    "discriminator_train": 1.0,
     "density": 0.0042,
     "coverage": 0.0333,
-    "dcr_mean": 0.4144,
-    "dcr_median": 0.4184,
+    "dcr_mean": 0.4303,
+    "dcr_median": 0.4199,
     "exact_copy_rate": 0.0,
     "fidelity_reference": "heldout_test"
   },
   "train": {
-    "final_step": 20,
-    "epochs": 3,
-    "final_loss": 10.8295,
-    "final_loss_pos": 10.8295,
+    "final_step": 30,
+    "epochs": 4,
+    "final_loss": 10.828,
+    "final_loss_pos": 10.828,
     "final_loss_neg": 0.0,
-    "time_s": 0.7
+    "time_s": 1.0
   },
   "generation": {
     "numeric_fallbacks": 0,
@@ -51,13 +51,13 @@
     "pool_size": 180,
     "dcr_tau": 0.03701,
     "privacy_dropped": 0,
-    "anomaly_mean": -0.1002,
+    "anomaly_mean": -0.0999,
     "anomaly_kept_ratio": 0.9,
     "anomaly_threshold_high": -0.0521,
-    "sir_ess": 4.6,
-    "disc_mean_pool": 0.0492,
+    "sir_ess": 4.5,
+    "disc_mean_pool": 0.0481,
     "preset": "v3_no_negative",
     "version": "v3"
   },
-  "seconds_total": 3.3
+  "seconds_total": 3.2
 }

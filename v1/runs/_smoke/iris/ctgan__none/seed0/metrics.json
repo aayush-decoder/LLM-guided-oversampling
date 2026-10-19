@@ -15,6 +15,11 @@
     "valid": true
   },
   "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
   "fidelity": {
     "inverse_kl": 0.7149,
     "discriminator": 1.0,
@@ -31,5 +36,5 @@
   },
   "train": {},
   "generation": {},
-  "seconds_total": 3.1
+  "seconds_total": 0.8
 }

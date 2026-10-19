@@ -1,0 +1,30 @@
+{
+  "dataset": "breast",
+  "task": "classification",
+  "seed": 0,
+  "n_train": 455,
+  "n_test": 114,
+  "n_features": 30,
+  "n_num": 30,
+  "n_cat": 0,
+  "n_classes": 2,
+  "target": "target",
+  "class_names": [
+    "0",
+    "1"
+  ],
+  "train_class_counts": [
+    170,
+    285
+  ],
+  "raw_shape": [
+    569,
+    31
+  ],
+  "missing_per_column": {},
+  "rows_dropped_na": 0,
+  "clean_shape": [
+    569,
+    31
+  ]
+}

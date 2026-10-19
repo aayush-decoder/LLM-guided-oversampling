@@ -23,7 +23,8 @@ def collect(versions: list[str], subdir: str | None = None) -> pd.DataFrame:
             keys = ["accuracy", "f1_macro"] if m["task"] == "classification" else ["mse"]
             for key in keys:
                 row = {"version": v, "dataset": p.parts[-4], "method": m["method"], "llm": m["llm"], "seed": m["seed"],
-                       "task": m["task"], "metric": key, "score": m["tstr"].get(key), "original": m["original"].get(key)}
+                       "task": m["task"], "metric": key, "score": m["tstr"].get(key), "original": m["original"].get(key),
+                       "augmented": m.get("tstr_augmented", {}).get(key) if m.get("tstr_augmented") else None}
                 row.update({k: m.get("fidelity", {}).get(k) for k in FIDELITY_KEYS})
                 rows.append(row)
     return pd.DataFrame(rows)
@@ -58,6 +59,21 @@ def build_tables(versions: list[str], out_dir: Path, subdir: str | None = None) 
             f.write(table.to_markdown() + "\n\n## Average over datasets\n\n" + means.to_frame("mean").to_markdown())
         table.to_csv(out_dir / f"table_{metric}.csv")
         written[metric] = path
+
+        # Generate Data Augmentation Table: Real Only vs Augmented (Real + Synthetic)
+        if "augmented" in sub.columns and sub["augmented"].notna().any():
+            aug_sub = sub.dropna(subset=["augmented"])
+            if not aug_sub.empty:
+                aug_table = aug_sub.groupby(["dataset", "col"])["augmented"].apply(_fmt).unstack("col")
+                aug_table.insert(0, "Real Only (Original)", aug_sub.groupby("dataset")["original"].apply(_fmt))
+                aug_path = out_dir / f"table_augmented_{metric}.md"
+                with open(aug_path, "w", encoding="utf-8") as f:
+                    f.write(f"# Data Augmentation: Real Only vs. (Real + Synthetic) on Held-Out Test Set\n")
+                    f.write(f"Metric: {metric} (XGBoost) mean (std) over seeds\n\n")
+                    f.write(aug_table.to_markdown() + "\n")
+                aug_table.to_csv(out_dir / f"table_augmented_{metric}.csv")
+                written[f"augmented_{metric}"] = aug_path
+
     fid = df.groupby("col")[list(FIDELITY_KEYS)].mean().round(4)
     note = ("Fidelity (discriminator, discriminator_lr, inverse_kl, density, coverage) is measured against "
             "the HELD-OUT test rows; privacy (dcr_mean, exact_copy_rate) against the training rows. "

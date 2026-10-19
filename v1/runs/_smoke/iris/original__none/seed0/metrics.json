@@ -15,6 +15,11 @@
     "valid": true
   },
   "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 0.9667,
+    "f1_macro": 0.9666,
+    "valid": true
+  },
   "fidelity": {
     "inverse_kl": 0.9174,
     "discriminator": 0.0,
