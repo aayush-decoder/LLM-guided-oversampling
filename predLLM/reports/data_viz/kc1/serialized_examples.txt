@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+loc is 0.01, v(g) is 0, ev(g) is 0, iv(g) is 0, n is 0.01, v is 0, l is 0.2, d is 0.05, i is 0.04, e is 0, b is 0, t is 0, lOCode is 0.01, lOComment is 0, lOBlank is 0, locCodeAndComment is 0, uniq_Op is 0.14, uniq_Opnd is 0.01, total_Op is 0.01, total_Opnd is 0, branchCount is 0, target is 0
+loc is 0.06, v(g) is 0.02, ev(g) is 0, iv(g) is 0.02, n is 0.02, v is 0.01, l is 0.1, d is 0.1, i is 0.07, e is 0, b is 0.01, t is 0, lOCode is 0.04, lOComment is 0, lOBlank is 0.07, locCodeAndComment is 0, uniq_Op is 0.22, uniq_Opnd is 0.05, total_Op is 0.02, total_Opnd is 0.02, branchCount is 0.02, target is 0
+loc is 0.03, v(g) is 0, ev(g) is 0, iv(g) is 0, n is 0, v is 0, l is 1, d is 0.01, i is 0.12, e is 0, b is 0, t is 0, lOCode is 0.02, lOComment is 0, lOBlank is 0, locCodeAndComment is 0, uniq_Op is 0.03, uniq_Opnd is 0.03, total_Op is 0, total_Opnd is 0.01, branchCount is 0, target is 0
+
+# v2 serialization, clean space (real categories and units):
+loc is 4.0, v(g) is 1.0, ev(g) is 1.0, iv(g) is 1.0, n is 7.0, v is 18.09, l is 0.4, d is 2.5, i is 7.24, e is 45.24, b is 0.01, t is 2.51, lOCode is 2.0, lOComment is 0.0, lOBlank is 0.0, locCodeAndComment is 0.0, uniq_Op is 5.0, uniq_Opnd is 1.0, total_Op is 6.0, total_Opnd is 1.0, branchCount is 1.0, defects is False
+loc is 17.0, v(g) is 2.0, ev(g) is 1.0, iv(g) is 2.0, n is 20.0, v is 76.15, l is 0.19, d is 5.33, i is 14.28, e is 406.12, b is 0.03, t is 22.56, lOCode is 11.0, lOComment is 0.0, lOBlank is 4.0, locCodeAndComment is 0.0, uniq_Op is 8.0, uniq_Opnd is 6.0, total_Op is 12.0, total_Opnd is 8.0, branchCount is 3.0, defects is False
+loc is 9.0, v(g) is 1.0, ev(g) is 1.0, iv(g) is 1.0, n is 5.0, v is 11.61, l is 2.0, d is 0.5, i is 23.22, e is 5.8, b is 0.0, t is 0.32, lOCode is 6.0, lOComment is 0.0, lOBlank is 0.0, locCodeAndComment is 0.0, uniq_Op is 1.0, uniq_Opnd is 4.0, total_Op is 1.0, total_Opnd is 4.0, branchCount is 1.0, defects is False

@@ -1,4 +1,0 @@
-{"step": 5, "epoch": 1, "loss": 10.8304, "loss_pos": 10.8305, "loss_neg": 0.0, "lr": 3.7500000000000003e-05, "elapsed_s": 1.7}
-{"step": 10, "epoch": 2, "loss": 10.8301, "loss_pos": 10.8301, "loss_neg": 0.0, "lr": 2.5e-05, "elapsed_s": 1.9}
-{"step": 15, "epoch": 2, "loss": 10.8292, "loss_pos": 10.8292, "loss_neg": 0.0, "lr": 1.25e-05, "elapsed_s": 2.1}
-{"step": 20, "epoch": 3, "loss": 10.8295, "loss_pos": 10.8295, "loss_neg": 0.0, "lr": 0.0, "elapsed_s": 2.2}

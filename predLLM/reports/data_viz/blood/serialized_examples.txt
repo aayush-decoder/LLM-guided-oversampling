@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+V1 is 0.05, V2 is 0.22, V3 is 0.22, V4 is 0.9, target is 0
+V1 is 0.05, V2 is 0.2, V3 is 0.2, V4 is 0.61, target is 0
+V1 is 0.03, V2 is 0.02, V3 is 0.02, V4 is 0.09, target is 0
+
+# v2 serialization, clean space (real categories and units):
+V1 is 4.0, V2 is 12.0, V3 is 3000.0, V4 is 88.0, Class is 1
+V1 is 4.0, V2 is 11.0, V3 is 2750.0, V4 is 61.0, Class is 1
+V1 is 2.0, V2 is 2.0, V3 is 500.0, V4 is 11.0, Class is 1
