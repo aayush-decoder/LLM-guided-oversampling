@@ -10,3 +10,7 @@ data/raw/
 *.pth
 reports/data_viz/
 .hf_cache/
+.vscode/
+.ruff_cache/
+.env
+runs
