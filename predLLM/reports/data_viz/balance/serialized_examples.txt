@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+left-weight is 0.5, left-distance is 0.25, right-weight is 0.5, right-distance is 0.75, target is 2
+left-weight is 1, left-distance is 0.75, right-weight is 1, right-distance is 0.5, target is 1
+left-weight is 0, left-distance is 0, right-weight is 1, right-distance is 0.5, target is 2
+
+# v2 serialization, clean space (real categories and units):
+left-weight is 3.0, left-distance is 2.0, right-weight is 3.0, right-distance is 4.0, class is R
+left-weight is 5.0, left-distance is 4.0, right-weight is 5.0, right-distance is 3.0, class is L
+left-weight is 1.0, left-distance is 1.0, right-weight is 5.0, right-distance is 3.0, class is R

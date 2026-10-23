@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+MedInc is 0.26, HouseAge is 0.1, AveRooms is 0.05, AveBedrms is 0.02, Population is 0.01, AveOccup is 0, Latitude is 0.14, Longitude is 0.68, target is 5.00001
+MedInc is 0.27, HouseAge is 1, AveRooms is 0.03, AveBedrms is 0.02, Population is 0.04, AveOccup is 0, Latitude is 0.55, Longitude is 0.19, target is 2.7
+MedInc is 0.24, HouseAge is 0.49, AveRooms is 0.03, AveBedrms is 0.02, Population is 0.03, AveOccup is 0, Latitude is 0.14, Longitude is 0.63, target is 1.961
+
+# v2 serialization, clean space (real categories and units):
+MedInc is 4.2386, HouseAge is 6.0, AveRooms is 7.723076923076923, AveBedrms is 1.1692307692307693, Population is 228.0, AveOccup is 3.507692307692308, Latitude is 33.83, Longitude is -117.55, MedHouseVal is 5.00001
+MedInc is 4.3898, HouseAge is 52.0, AveRooms is 5.32662192393736, AveBedrms is 1.1006711409395973, Population is 1485.0, AveOccup is 3.3221476510067114, Latitude is 37.73, Longitude is -122.44, MedHouseVal is 2.7
+MedInc is 3.9333, HouseAge is 26.0, AveRooms is 4.668478260869565, AveBedrms is 1.046195652173913, Population is 1022.0, AveOccup is 2.777173913043478, Latitude is 33.83, Longitude is -118.0, MedHouseVal is 1.961

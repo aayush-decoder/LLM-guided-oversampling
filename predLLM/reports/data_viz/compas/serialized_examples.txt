@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+age is 0.11, juv_fel_count is 0, juv_misd_count is 0, juv_other_count is 0, priors_count is 0.05, race is 0.4, sex is 0, c_charge_degree is 0, target is 0
+age is 0.74, juv_fel_count is 0, juv_misd_count is 0, juv_other_count is 0, priors_count is 0, race is 0.4, sex is 1, c_charge_degree is 1, target is 0
+age is 0.15, juv_fel_count is 0, juv_misd_count is 0, juv_other_count is 0, priors_count is 0, race is 0.4, sex is 0, c_charge_degree is 1, target is 0
+
+# v2 serialization, clean space (real categories and units):
+age is 25.0, juv_fel_count is 0.0, juv_misd_count is 0.0, juv_other_count is 0.0, priors_count is 2.0, race is Caucasian, sex is Female, c_charge_degree is F, two_year_recid is 0
+age is 66.0, juv_fel_count is 0.0, juv_misd_count is 0.0, juv_other_count is 0.0, priors_count is 0.0, race is Caucasian, sex is Male, c_charge_degree is M, two_year_recid is 0
+age is 28.0, juv_fel_count is 0.0, juv_misd_count is 0.0, juv_other_count is 0.0, priors_count is 0.0, race is Caucasian, sex is Female, c_charge_degree is M, two_year_recid is 0

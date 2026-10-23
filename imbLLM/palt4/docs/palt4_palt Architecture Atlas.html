@@ -1,0 +1,798 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>palt Architecture Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>
+  window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] },
+                     svg: { fontCache: "global" }, options: { enableMenu: false } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" defer></script>
+<style>
+:root {
+  --bg: #F4F5F2; --surface: #FFFFFF; --sunk: #ECEEE9; --ink: #19212B; --muted: #57626E;
+  --line: #D6DAD2; --accent: #1F5A86;
+  --palt: #4751A0; --palt2: #9C5C0E; --palt3: #0F6F62; --palt4: #7B3FA6;
+  --bad: #B3261E; --good: #2A7A2F; --warn: #8F6200;
+  --bad-bg: #FBE9E7; --good-bg: #E7F3E7; --warn-bg: #FBF1DC; --new-bg: #E4EEF7;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111418; --surface: #181D22; --sunk: #1E242A; --ink: #E5E9ED; --muted: #9AA4AE;
+    --line: #2B333B; --accent: #7FB3DB;
+    --palt: #A3ABF2; --palt2: #E6A955; --palt3: #52C4B1; --palt4: #CDA8F0;
+    --bad: #F2897F; --good: #83C88A; --warn: #E6BA55;
+    --bad-bg: #3A1D1B; --good-bg: #1C2F1E; --warn-bg: #33290F; --new-bg: #1B2A38;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111418; --surface: #181D22; --sunk: #1E242A; --ink: #E5E9ED; --muted: #9AA4AE;
+  --line: #2B333B; --accent: #7FB3DB;
+  --palt: #A3ABF2; --palt2: #E6A955; --palt3: #52C4B1; --palt4: #CDA8F0;
+  --bad: #F2897F; --good: #83C88A; --warn: #E6BA55;
+  --bad-bg: #3A1D1B; --good-bg: #1C2F1E; --warn-bg: #33290F; --new-bg: #1B2A38;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15.5px;
+       line-height: 1.6; margin: 0; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 80px; }
+.layout { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media (min-width: 1100px) { .layout { grid-template-columns: 210px minmax(0, 1fr); } }
+nav.toc { display: none; }
+@media (min-width: 1100px) {
+  nav.toc { display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px);
+            align-self: start; font-size: 13.5px; }
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+nav.toc a { color: var(--muted); text-decoration: none; display: block; padding: 3px 8px;
+            border-left: 2px solid transparent; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--ink); border-left-color: var(--accent); outline: none; }
+nav.toc .toc-h { font-family: var(--display); font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+                 font-size: 11.5px; color: var(--muted); margin-bottom: 8px; padding-left: 10px; }
+main { min-width: 0; }
+header.top { display: grid; gap: 14px; margin-bottom: 30px; }
+.eyebrow { font-family: var(--mono); font-size: 12.5px; color: var(--muted); letter-spacing: .02em; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 5.2vw, 54px); line-height: 1.02;
+     letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+.lede { font-size: 17.5px; max-width: 68ch; color: var(--ink); margin: 0; }
+.lineage { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin-top: 8px; }
+.repo { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--c);
+        padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.repo .name { font-family: var(--mono); font-weight: 500; color: var(--c); font-size: 14px; }
+.repo .what { font-family: var(--display); font-weight: 700; font-size: 17px; line-height: 1.25; }
+.repo .sub { color: var(--muted); font-size: 13.5px; }
+.status { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+section { margin-top: 56px; scroll-margin-top: 20px; }
+h2 { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 3vw, 31px); line-height: 1.15;
+     margin: 0 0 6px; letter-spacing: -.01em; text-wrap: balance; }
+h2 .num { font-family: var(--mono); font-weight: 500; font-size: .55em; color: var(--muted); vertical-align: middle;
+          margin-right: 10px; letter-spacing: 0; }
+h3 { font-family: var(--display); font-weight: 700; font-size: 19.5px; margin: 30px 0 6px; text-wrap: balance; }
+h4 { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .05em; text-transform: uppercase;
+     margin: 22px 0 6px; color: var(--muted); }
+p { margin: 8px 0; max-width: 74ch; }
+.section-intro { color: var(--muted); max-width: 72ch; margin-bottom: 14px; }
+ul.tight { margin: 6px 0; padding-left: 20px; max-width: 76ch; }
+ul.tight li { margin: 4px 0; }
+code, .mono { font-family: var(--mono); font-size: .88em; }
+code { background: var(--sunk); padding: 1px 5px; border-radius: 3px; }
+.scroll { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13.8px; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 9px 11px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--display); font-weight: 700; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase;
+     color: var(--muted); background: var(--sunk); position: sticky; top: 0; }
+tr:last-child td { border-bottom: none; }
+td.rowhead { font-weight: 600; white-space: nowrap; }
+table.matrix { min-width: 1300px; }
+table.matrix td { font-size: 13px; }
+table.stages { min-width: 900px; }
+.c-palt { color: var(--palt); } .c-palt2 { color: var(--palt2); } .c-palt3 { color: var(--palt3); }
+.c-palt4 { color: var(--palt4); }
+th.c-palt, th.c-palt2, th.c-palt3, th.c-palt4 { color: inherit; }
+th .tag { font-family: var(--mono); text-transform: none; letter-spacing: 0; font-weight: 500; }
+.pill { display: inline-block; font-family: var(--mono); font-size: 11.5px; font-weight: 500; padding: 1px 8px;
+        border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+.p-bad { background: var(--bad-bg); color: var(--bad); }
+.p-good { background: var(--good-bg); color: var(--good); }
+.p-warn { background: var(--warn-bg); color: var(--warn); }
+.p-new { background: var(--new-bg); color: var(--accent); }
+.p-plain { border-color: var(--line); color: var(--muted); }
+.math { overflow-x: auto; padding: 4px 0; }
+.eq { background: var(--surface); border: 1px solid var(--line); padding: 10px 16px; margin: 12px 0; overflow-x: auto; }
+.eq .cap { font-size: 12.5px; color: var(--muted); font-family: var(--mono); }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 12px 0; }
+.box { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; }
+.box h4 { margin-top: 0; }
+.box.bad { border-left: 3px solid var(--bad); } .box.good { border-left: 3px solid var(--good); }
+.box.warn { border-left: 3px solid var(--warn); } .box.new { border-left: 3px solid var(--accent); }
+.diagram { background: var(--surface); border: 1px solid var(--line); padding: 12px; overflow-x: auto; margin: 12px 0; }
+pre.mermaid { margin: 0; background: transparent; font-family: var(--body); text-align: center; }
+.callout { border: 1px solid var(--line); border-left: 4px solid var(--accent); background: var(--surface);
+           padding: 12px 16px; margin: 14px 0; max-width: 80ch; }
+.callout strong { font-family: var(--display); }
+.key { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 13px; color: var(--muted); margin: 6px 0 10px; }
+.repo-rule { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.repo-rule .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--c); flex: none; }
+.repo-rule span { font-family: var(--mono); font-size: 13px; color: var(--c); }
+footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+<div class="layout">
+<nav class="toc" aria-label="Contents">
+  <div class="toc-h">Contents</div>
+  <ol>
+    <li><a href="#glance">1 At a glance</a></li>
+    <li><a href="#papers">2 The two base papers</a></li>
+    <li><a href="#setup">3 The imbalance setup</a></li>
+    <li><a href="#palt">4 palt · Pred-LLM</a></li>
+    <li><a href="#palt2">5 palt2 · ImbLLM, first pass</a></li>
+    <li><a href="#palt3">6 palt3 · ImbLLM, corrected</a></li>
+    <li><a href="#palt4">7 palt4 · TILT (new method)</a></li>
+    <li><a href="#stages">8 ImbLLM stage by stage</a></li>
+    <li><a href="#types">9 Feature types</a></li>
+    <li><a href="#novelty">10 Novelty ledger</a></li>
+    <li><a href="#caveats">11 Caveats and status</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="top">
+  <div class="eyebrow">D:\CODING\Amazon_ML · palt · palt2 · palt3 · palt4 · 28 Sep 2026</div>
+  <h1>palt Architecture Atlas</h1>
+  <p class="lede">Four repositories, two replicated papers and one new method. palt, palt2 and palt3 replicate and correct two LLM oversamplers. palt4 builds <strong>TILT</strong> on top of them: a thesis method that generates the minority rows the classifier needs. For each version: how a table becomes text, how a language model is fine-tuned on it, how new rows come out, what that does for the minority class, and what each version got wrong or right. Nothing here has been trained yet; this describes the code, its checks, and the published numbers.</p>
+  <div class="lineage">
+    <div class="repo" style="--c: var(--palt)">
+      <div class="name">palt/</div>
+      <div class="what">Pred-LLM replication and an improved generator</div>
+      <div class="sub">v1 (paper) · v2 (N1–N5). Base: Nguyen et al., ICDM 2024, arXiv 2410.21717. Whole-table synthesis; not an imbalance method.</div>
+    </div>
+    <div class="repo" style="--c: var(--palt2)">
+      <div class="name">palt2/</div>
+      <div class="what">ImbLLM replication, first pass, with an audit</div>
+      <div class="sub">v1_replication · v2_improved (flags + presets). Base: ImbLLM, arXiv 2510.09783. Superseded by palt3.</div>
+    </div>
+    <div class="repo" style="--c: var(--palt3)">
+      <div class="name">palt3/</div>
+      <div class="what">ImbLLM replication, corrected, with attributable flags</div>
+      <div class="sub">v1_paper · v2_corrected (presets v1_exact, recommended, geometry_only, full) + baselines. The corrected harness.</div>
+    </div>
+    <div class="repo" style="--c: var(--palt4)">
+      <div class="name">palt4/</div>
+      <div class="what">TILT: task-informed LLM tilting (the thesis)</div>
+      <div class="sub">palt3's core, plus a KL-budgeted, utility-tilted sampler (SIR or field-wise twisted SMC), a validity floor, a privacy cap, theory checks and a no-LLM oracle study. Qwen3 ladder, 0.6B–32B.</div>
+    </div>
+  </div>
+  <div class="status">
+    <span class="pill p-good">fast test suites pass</span>
+    <span class="pill p-good">palt4: 6/6 theory checks pass</span>
+    <span class="pill p-warn">GPU / LLM tests not run</span>
+    <span class="pill p-bad">no experiment results in any repo</span>
+  </div>
+</header>
+
+<section id="glance">
+  <h2><span class="num">01</span>At a glance</h2>
+  <p class="section-intro">One row per version. "Imbalance" says what the version actually does about a rare class, which is not the same across the two papers.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Repo · version</th><th>Base paper</th><th>Goal</th><th>What it does about imbalance</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead c-palt">palt · v1</td><td>Pred-LLM</td><td>Faithful replication</td><td>Nothing explicit. Labels come from the model's own \(p(y\mid x)\), so the class ratio follows the model.</td><td><span class="pill p-plain">replication</span></td></tr>
+      <tr><td class="rowhead c-palt">palt · v2</td><td>Pred-LLM</td><td>Better generator (N1–N5)</td><td>Keeps the real class ratio (curation pulls towards the real joint). Still does not rebalance.</td><td><span class="pill p-warn">parts are known ideas</span></td></tr>
+      <tr><td class="rowhead c-palt2">palt2 · v1_replication</td><td>ImbLLM</td><td>Faithful replication</td><td>Generates \(|\text{largest class}|\) minority rows and trains XGBoost on majority + synthetic minority.</td><td><span class="pill p-bad">engineering bugs</span></td></tr>
+      <tr><td class="rowhead c-palt2">palt2 · v2_improved</td><td>ImbLLM</td><td>Audit fixes as flags</td><td>Same, plus an option to keep the real minority rows.</td><td><span class="pill p-bad">some fixes flawed</span></td></tr>
+      <tr><td class="rowhead c-palt3">palt3 · v1_paper</td><td>ImbLLM</td><td>Faithful and bug-free</td><td>Same as the paper. Scored with and without the real minority rows.</td><td><span class="pill p-good">reference</span></td></tr>
+      <tr><td class="rowhead c-palt3">palt3 · v2_corrected</td><td>ImbLLM</td><td>One named flag per correction</td><td>Same, with a tunable boundary tilt \(\tau\), better geometry and consistency repair.</td><td><span class="pill p-good">corrected baseline</span> <span class="pill p-warn">untrained</span></td></tr>
+      <tr><td class="rowhead c-palt4">palt4 · TILT (SIR / SMC)</td><td>new (builds on palt3 v2)</td><td>Generate what the classifier needs</td><td>Samples minority rows from \(q^\star \propto p_{\text{gen}}\,e^{\lambda u}\) within a KL budget; <code>threshold_only</code> is the baseline to beat, and the headline metric is the gain over it.</td><td><span class="pill p-new">thesis method</span> <span class="pill p-warn">untrained</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="papers">
+  <h2><span class="num">02</span>The two base papers</h2>
+  <p class="section-intro">Both papers belong to the GReaT family: write each row as a sentence, fine-tune a causal language model on the sentences, then let it write new sentences and parse them back into rows.</p>
+
+  <div class="eq">
+    <div class="cap">shared idea · serialisation and fine-tuning</div>
+    \[ t(x,y) = \text{"}X_{\pi(1)} \text{ is } v_{\pi(1)},\ \dots,\ X_{\pi(M)} \text{ is } v_{\pi(M)},\ Y \text{ is } y\text{"} \qquad
+       \min_\theta\; -\sum_{s \in \mathcal{D}'}\sum_{t} \log p_\theta(s_t \mid s_{&lt;t}) \]
+    <div class="cap">\(\pi\) is a random ordering of the columns; \(s_t\) are the tokens of one sentence.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="box">
+      <h4 class="c-palt">Pred-LLM (ICDM 2024)</h4>
+      <ul class="tight">
+        <li><strong>Encoding.</strong> Categories become integer codes, every column is MinMax-scaled to [0, 1] and rounded to 2 decimals.</li>
+        <li><strong>Permute features only.</strong> The target stays last. Training uses permuted rows plus the original order: \(\mathcal{D}' = \mathcal{D}_\pi \cup \mathcal{D}\).</li>
+        <li><strong>Feature-conditional sampling.</strong> \(n/M\) prompts per feature, each starting "\(X_i\) is \(v\)" with \(v \sim \hat p(X_i)\). Temperature \(T = 0.7\).</li>
+        <li><strong>Label querying.</strong> The generated \(x\) is re-written in the original order and the same model is asked for "target is ?".</li>
+        <li><strong>Evaluation.</strong> Train on synthetic, test on real (TSTR) with XGBoost.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4 class="c-palt2">ImbLLM (arXiv 2510.09783)</h4>
+      <ul class="tight">
+        <li><strong>Target.</strong> Learn \(p(x \mid y_{\min})\) from a small minority set and generate \(\hat n = |\text{largest class}|\) minority rows.</li>
+        <li><strong>C1, conditioning.</strong> Prompt "\(Y\) is \(y_{\min}\), \(X_i\) is \(v\)," with \(i \sim \mathcal{U}\{1..M\}\), \(v \sim p(X_i)\).</li>
+        <li><strong>C2, order.</strong> \(Y\) is fixed first; the features are shuffled.</li>
+        <li><strong>C3, corpus.</strong> Fine-tune only on minority rows plus interpolated ones: \(x' = x_i^{\text{con}} + \varepsilon\,(x_j^{\text{con}} - x_i^{\text{con}})\), \(\varepsilon \sim \mathcal{U}(0,1)\), \(j\) a random minority row.</li>
+        <li><strong>Evaluation.</strong> XGBoost trained on \(\mathcal{D}_{\text{major}} \cup \hat{\mathcal{D}}_{\text{minor}}\), minority F1 and AUC on real test rows.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="setup">
+  <h2><span class="num">03</span>The imbalance setup, and the baseline every method must beat</h2>
+  <p class="section-intro">palt2 and palt3 follow ImbLLM's protocol. The real minority set is shrunk on purpose, so the problem is hard enough to need help.</p>
+  <div class="eq">
+    <div class="cap">protocol</div>
+    \[ \mathcal{D}^*_{\text{train}} = \mathcal{D}_{\text{major}} \cup \mathcal{D}^*_{\text{minor}}, \qquad
+       \mathcal{D}_{\text{minor}} = q \cdot \mathcal{D}^*_{\text{minor}}\ (q = 0.2), \qquad
+       \hat n = |\text{largest class}| \]
+    <div class="cap">The generator may see \(\mathcal{D}_{\text{major}} \cup \mathcal{D}_{\text{minor}}\) only. The other 80% of real minority rows are held out for quality checks.</div>
+  </div>
+  <p>There are three ways to fix imbalance <em>without generating anything</em>. palt3 runs all three as references:</p>
+  <div class="eq">
+    \[ \underbrace{\hat y = y_{\min} \iff p(y_{\min}\mid x) \ge t^*}_{\text{threshold, } t^* \text{ tuned on a real validation fold}} \qquad
+       \underbrace{\hat y = \arg\max_k \frac{p(k \mid x)}{\pi_k}}_{\text{prior shift (Elkan 2001)}} \qquad
+       \underbrace{w_{\min} = \hat n / n_{\min}}_{\text{class weights}} \]
+  </div>
+  <div class="callout">
+    <strong>Why this matters for every generator below.</strong>
+    If a generator produced perfect minority rows, \(\hat x \sim p(x \mid y_{\min})\), a well-fitted classifier would only see its minority prior odds multiplied by
+    \(\frac{n_{\min} + \hat n}{n_{\min}}\). That is exactly a threshold move. So in the large-data limit, perfect oversampling equals a tuned threshold. A generator only earns its cost if it beats <code>threshold_only</code>. That extra gain can only come from finite-sample smoothing, knowledge the LLM brings from pre-training (or memorisation), or a useful tilt in what it generates.
+  </div>
+</section>
+
+<section id="palt">
+  <h2><span class="num">04</span><span class="c-palt">palt</span> · the Pred-LLM line</h2>
+  <div class="repo-rule" style="--c: var(--palt)"><span class="dot"></span><span>common/tabgen (shared) · v1/predllm_v1 · v2/predllm_v2 · 27 datasets + cardio_noleak · 18-model LLM switch</span></div>
+
+  <div class="diagram">
+<pre class="mermaid">
+flowchart LR
+  A[raw CSV] --> B[clean: drop columns, drop NaN rows, categories to strings]
+  B --> C1["v1: category codes + MinMax, 2 decimals"]
+  B --> C2["v2: raw values + schema per column"]
+  C1 --> D1["age is 0.41, job is 0.33, target is 1"]
+  C2 --> D2["age is 41, job is admin, income is 52000"]
+  D1 --> E1[fine-tune: plain token NLL]
+  D2 --> E2[fine-tune: value-only weighted NLL]
+  E1 --> F1[free sampling T 0.7, parse floats]
+  E2 --> F2["field-wise decoding: exact categories, FSM numbers"]
+  F1 --> G1[LLM label query, one order]
+  F2 --> G2[label posterior averaged over R orders]
+  G1 --> H[clip, round, decode]
+  G2 --> I["curation: DCR privacy gate + discriminator SIR"]
+  H --> J[TSTR XGBoost + fidelity]
+  I --> J
+</pre>
+  </div>
+
+  <h3>v1: Pred-LLM as published</h3>
+  <p>Shared modules in <code>common/tabgen</code>: <code>data</code> (registry, download, preprocess), <code>llm</code> (registry, loader, weighted train loop), <code>eval</code> (TSTR, fidelity, tables), <code>baselines</code> (SDV CTGAN / TVAE / CopulaGAN), <code>viz</code>, <code>audit</code>, <code>experiment</code>. On top of that, v1 adds a serialiser, a dataset of permuted sentences, a sampler, a label querier and eight presets. Those presets are GReaT, TapTap and the six Table III ablations, all on one pipeline.</p>
+
+  <h3>v2: five changes, N1 to N5</h3>
+  <div class="eq">
+    <div class="cap">N3 · weighted value-only loss</div>
+    \[ \mathcal{L} = -\frac{\sum_t w_t \log p_\theta(s_t \mid s_{&lt;t})}{\sum_t w_t}, \qquad w_t = \begin{cases} 0 & \text{column-name scaffold ("age is")} \\ \lambda = 3 & \text{target value} \\ 1 & \text{other values and the terminator} \end{cases} \]
+    <div class="cap">N2 · exact categorical choice and constrained numbers</div>
+    \[ P(v \mid \text{prefix}) \propto \Big(\prod_{t} p_\theta(\text{tok}_t(v) \mid \dots)\Big)^{1/T}, \qquad \text{logit}_k \leftarrow -\infty \text{ if token } k \text{ breaks the number grammar} \]
+    <div class="cap">N4 · label averaged over orders   ·   N5 · curation</div>
+    \[ \bar p(y \mid x) = \frac1R \sum_{r=1}^{R} p_\theta(y \mid x; \pi_r) \qquad
+       r(x) = \frac{n_{\text{syn}}}{n_{\text{real}}}\cdot\frac{D(x)}{1 - D(x)},\ \ w = \operatorname{clip}(r, \tfrac1c, c)^{\beta} \]
+    <div class="cap">N1 is raw values instead of codes. N5 also drops rows closer to a training row than the \(\alpha\)-quantile of real holdout distances (DCR gate).</div>
+  </div>
+
+  <div class="grid2">
+    <div class="box good"><h4>Done right</h4>
+      <ul class="tight">
+        <li>The Pred-LLM protocol is reproduced exactly, including the authors' scaler fitted on the full data.</li>
+        <li>Rows stop at EOS. Start tokens use the same number format as the training text.</li>
+        <li>A fine-tune cache is shared across presets. Full / LoRA / QLoRA switch, byte-level BPE models only.</li>
+        <li>v2 makes every generated value valid by construction, and keeps integer columns integer (decimals inferred as 0).</li>
+      </ul></div>
+    <div class="box bad"><h4>Flaws</h4>
+      <ul class="tight">
+        <li><strong>Leaky protocol (kept on purpose to match the paper).</strong> The scaler is fitted on train + test.</li>
+        <li><strong>Category codes are natural-sorted.</strong> Ordinal order is lost, and nominal categories get fake distances.</li>
+        <li><strong>Circular v2 score</strong> <span class="pill p-good">fixed 28 Sep</span>. v2's curation used the same kind of discriminator, on the same training rows, as the fidelity score.</li>
+        <li><strong>cardio leaks its label</strong> <span class="pill p-good">fixed 28 Sep</span>. V26–V35 one-hot encode the class, which explains the paper's 1.0000.</li>
+      </ul></div>
+    <div class="box new"><h4>Novelty vs the paper</h4>
+      <ul class="tight">
+        <li>Each of N1–N5 exists in prior work: REaLTabFormer token masks, TabularMDLM, permutation self-consistency / TabPFN, Grover 2019 / CLLM.</li>
+        <li>What is new is the combination, applied inside a Pred-LLM-style generator. A method paper would need to beat TabSyn / TabDDPM / CLLM.</li>
+      </ul></div>
+    <div class="box warn"><h4>Caveats</h4>
+      <ul class="tight">
+        <li>Not an imbalance method. Label sampling at \(T_y = 0.7\) shrinks rare labels: \(0.05 \to 0.05^{1/0.7}/Z \approx 0.015\).</li>
+        <li>The v1/v2 unit and smoke tests need torch and have not been run.</li>
+        <li>The paper rule "accuracy = 0 if a class is missing" makes small-class failures look catastrophic rather than graded.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="palt2">
+  <h2><span class="num">05</span><span class="c-palt2">palt2</span> · ImbLLM, first pass</h2>
+  <div class="repo-rule" style="--c: var(--palt2)"><span class="dot"></span><span>imbcore (shared) · v1_replication · v2_improved · audits/cli.py · AUDIT.md · 10 datasets</span></div>
+  <p><code>imbcore</code> holds the datasets, a 3-verb LLM engine (<code>finetune</code>, <code>complete</code>, <code>score_conditional</code>), classical baselines, evaluation and stats. <code>v1_replication</code> implements C1/C2/C3 as published. <code>v2_improved</code> wraps each audit finding in a flag and groups the flags into presets: <code>v1_exact</code>, <code>recommended</code>, <code>geometry_only</code> and <code>full</code>.</p>
+
+  <div class="eq">
+    <div class="cap">the audit's three central derivations (correct, and carried into palt3)</div>
+    \[ \operatorname{Cov}(x') = \mathbb{E}\big[(1-\varepsilon)^2 + \varepsilon^2\big]\,\Sigma = \tfrac23\,\Sigma \qquad
+       w(v) = \frac{p(v)}{p(v \mid y_{\min})} \qquad
+       \frac{|\mathcal{D}_{\text{inter}}|}{|\mathcal{D}_{\text{inter}}| + |\mathcal{D}_{\text{minor}}|} = \Big(1 + \frac{q}{\rho}\Big)^{-1} \ge 94\% \]
+    <div class="cap">1. Random partners shrink the spread. 2. Pooled conditioning values tilt the minority towards majority-typical values by the Bayes likelihood ratio. 3. The fine-tuning corpus is almost all interpolated rows, which carry no categoricals.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="box good"><h4>What it got right</h4>
+      <ul class="tight">
+        <li>Found the \(\tfrac23\Sigma\) contraction, the ~35% off-manifold interpolants on a bimodal minority, the pooled-marginal tilt, and the 94% categorical-free corpus.</li>
+        <li>Framed random-order fine-tuning as a dependency network (Heckerman 2000) and proposed measuring order sensitivity.</li>
+        <li>Added the missing <code>threshold_only</code> and <code>scale_pos_weight</code> baselines, and ran statistical tests on the published table.</li>
+        <li>Documented where the paper's Table I differs from the public datasets.</li>
+      </ul></div>
+    <div class="box bad"><h4>Flaws (from palt2/AUDIT.md)</h4>
+      <ul class="tight">
+        <li><strong>GPU training could not work.</strong> fp16 weights plus a GradScaler raise "Attempting to unscale FP16 gradients".</li>
+        <li><strong>Token-level problems.</strong> Left padding in training, no EOS, prompts ending in <code>", "</code>, and scoring by the mean over a whole clause.</li>
+        <li><strong>Parser problems.</strong> Yield divided by rows requested. An empty category snapped to the first category. Splitting on every comma broke values that contain commas.</li>
+        <li><strong>Gibbs was not Gibbs.</strong> It conditioned on the preceding prefix only, with one shared pool of 8 values.</li>
+        <li><strong>Other v2 fixes were flawed too.</strong> \(\tau = 0\) still drew majority-shaped values inside each bin. kNN searched raw units. Interpolated rows took categoricals from random donors.</li>
+        <li><strong>Reporting.</strong> Two Table II transcription typos, and an "identity check" that was a tautology.</li>
+        <li><strong>Hidden protocol change.</strong> <code>recommended</code> flips 6 flags at once, including a protocol change, so gains cannot be attributed.</li>
+      </ul></div>
+    <div class="box new"><h4>Novelty vs the paper</h4>
+      <ul class="tight">
+        <li>The \(\tau\)-bridge, which turns the accidental tilt into a knob: \(p_\tau(v) \propto p(v\mid y_{\min})^{1-\tau} p(v)^{\tau}\).</li>
+        <li>The fidelity–diversity frontier and the entropy identity \(\Delta H = I(G;R) - \delta\) (known maths, new use).</li>
+        <li>A negative result: local variance-preserving kNN is indistinguishable from plain kNN.</li>
+      </ul></div>
+    <div class="box warn"><h4>Caveats</h4>
+      <ul class="tight">
+        <li>Never produced a result. Any GPU number would have been a crash, or rows from mis-tokenised prompts.</li>
+        <li>Numbers were rounded to 2 decimals, and "numeric with more than 12 levels" meant continuous, which mistyped some columns.</li>
+        <li>Frozen. Cite its audit as the source of palt3's fixes.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="palt3">
+  <h2><span class="num">06</span><span class="c-palt3">palt3</span> · ImbLLM, corrected</h2>
+  <div class="repo-rule" style="--c: var(--palt3)"><span class="dot"></span><span>src/imbllm: core (data · llm · baselines · evaluate) · methods (pipeline · v1_paper · v2_corrected · llm_baselines) · experiments · audits · cli</span></div>
+
+  <div class="diagram">
+<pre class="mermaid">
+flowchart TD
+  R[raw CSV] --> P["protocol: sanitise, stratified 80/20, train-quantile binarisation, 10% real val fold, q = 0.2"]
+  P --> S["Splits: train_major · train_minor · minor_heldout · val · test"]
+  S --> K{corpus}
+  K -->|v1| K1["D_minor + random-partner interpolants, continuous only"]
+  K -->|v2| K2["D_minor + kNN interpolants in z-space, anchor categoricals"]
+  K1 --> F[engine.finetune: fp32 trainables, right pad, EOS, model cache]
+  K2 --> F
+  F --> Q{prompts}
+  Q -->|v1| Q1["Y is y_min, X_i is v, v from pooled marginal"]
+  Q -->|v2| Q2["Y is y_min, X_i is v, v from the tau-bridge"]
+  Q1 --> G[engine.complete + parse]
+  Q2 --> G
+  G --> V["v2 only: repair categories, clip, SIR-Gibbs, order-sensitivity"]
+  G --> O["n-hat minority rows (optional CLLM curation)"]
+  V --> O
+  O --> E["XGBoost + LR / RF / MLP, paper set and set with real minority"]
+  E --> M["metrics.json: f1, auc, auprc, real_*, learner_*, cov_*, cost_*"]
+</pre>
+  </div>
+
+  <p><strong>The design rule.</strong> With every flag at its v1 value (<code>--preset v1_exact</code>), v2 passes v1's own functions to the pipeline, and tests assert byte-identical corpora and prompts. Every v2 gain is attributable to one named flag. <code>imb run v2_flags</code> adds each flag to v1 alone, and removes each one from <code>recommended</code> alone.</p>
+
+  <div class="eq">
+    <div class="cap">v2 corrections in one line each</div>
+    \[ \begin{aligned}
+      &\textbf{B1 geometry:} && x' = x_i + \varepsilon(x_{\text{NN}_k(i)} - x_i),\ \text{neighbours in z-space} \ \Rightarrow\ \operatorname{Cov}(x') \approx \Sigma,\ 0\%\ \text{off-manifold} \\
+      &\textbf{B2 tilt:} && p_\tau(v) \propto p(v \mid y_{\min})^{1-\tau}\, p(v)^{\tau},\ \text{exact at } \tau \in \{0, 1\},\ \text{KDE in between} \\
+      &\textbf{B3 categoricals:} && x'^{\text{cat}} = x_i^{\text{cat}} \ (\text{the anchor's, not a random donor's}) \\
+      &\textbf{B4 consistency:} && x_j \sim p_\theta(x_j \mid y, x_{-j}),\ \text{continuous by SIR with weight } p_\theta(v\mid\cdot)/q_{\text{KDE}}(v) \\
+      &\textbf{B4 measure:} && \sigma = \operatorname{mean}_{x}\ \operatorname{std}_{\pi}\big[\log p_\theta(x \mid y; \pi)\big] / T_x,\ \text{vs the same on real held-out rows}
+    \end{aligned} \]
+  </div>
+
+  <div class="grid2">
+    <div class="box good"><h4>What it corrected</h4>
+      <ul class="tight">
+        <li><strong>16 engineering fixes.</strong> Precision, padding, EOS, prompt tokenisation, summed scoring, yield, repair, comma sanitising, 5 significant digits, config precedence, stale metrics, model cache, one runner.</li>
+        <li><strong>9 protocol fixes.</strong>
+          <ul class="tight">
+            <li>Every method is scored with its own decision rule.</li>
+            <li>A real validation fold is used for threshold tuning.</li>
+            <li>The quality metric uses one fixed metric space, reported both against the paper's reference set and against held-out rows.</li>
+            <li>Regression targets are binarised at a train-split quantile.</li>
+            <li>Multiclass datasets use a K-way classifier.</li>
+            <li>Failed methods are ranked last instead of dropped.</li>
+            <li>Holm-corrected tests, and the corrected Table II.</li>
+          </ul></li>
+        <li><strong>Added 28 Sep.</strong> Four learners, 10 seeds, contamination probes, a cost column, dataset covariates, CLLM curation, TabDDPM / ARF, an order-sensitivity reference, and integer / ordinal column handling.</li>
+      </ul></div>
+    <div class="box bad"><h4>Remaining flaws</h4>
+      <ul class="tight">
+        <li>v1_paper still writes fractional counts and ignores ordinal order. That is faithful to the paper; v2's <code>snap_discrete</code> and <code>ordinal_interpolation</code> fix both.</li>
+        <li>Ordinal orders are declared only for car and gem_price, and are not yet checked against the downloaded files.</li>
+        <li>The GReaT / TapTap / Pred-LLM baselines are re-implementations on this engine.</li>
+        <li>TabSyn, TabDiff, TabEBM and EPIC are not included.</li>
+      </ul></div>
+    <div class="box new"><h4>Novelty vs the paper</h4>
+      <ul class="tight">
+        <li>A critical replication: ImbLLM has no public code.</li>
+        <li>The order-sensitivity measurement, which appears new for GReaT-style models.</li>
+        <li>The cardio leak diagnosis.</li>
+        <li>A corrected ablation reading: minority-only fine-tuning carries +0.068. x-conditioning adds +0.058, but only together with it.</li>
+        <li>No new theorems. The \(\tau\)-bridge, SIR-Gibbs and kNN geometry are known constructions.</li>
+      </ul></div>
+    <div class="box warn"><h4>Caveats</h4>
+      <ul class="tight">
+        <li>Nothing has been trained. The smoke setting (60 epochs on a tiny model) is unverified, and so is the synthcity adapter.</li>
+        <li>Train/test duplicate rows: adult 735, compas 105, kc1 84.</li>
+        <li>The <code>clean</code> protocol trains on 72% of the data, not 80%.</li>
+        <li>With 3 datasets, a Wilcoxon test can never reach \(p &lt; 0.05\). Use at least 6 datasets.</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="palt4">
+  <h2><span class="num">07</span><span class="c-palt4">palt4</span> · TILT, the thesis method</h2>
+  <div class="repo-rule" style="--c: var(--palt4)"><span class="dot"></span><span>src/tiltgen: methods/tilt (utility · tilt · privacy · partial · smc · method) on palt3's core · experiments/oracle · audits/theory_checks · CLI <code>tilt</code></span></div>
+  <p>palt3 answered "is ImbLLM correct?". palt4 asks the next question: <em>which</em> synthetic rows help at all, given that a tuned threshold is free? TILT keeps palt3 v2's generator, with the same corpus and the same cached fine-tune, and replaces only the <strong>sampling stage</strong>. Every TILT knob is sampling-only, so one fine-tune per (dataset, seed) serves every experiment arm.</p>
+
+  <div class="diagram">
+<pre class="mermaid">
+flowchart TD
+  S["Splits (q = 0.8 on naturally imbalanced tables)"] --> C["v2 corpus: D_minor + kNN interpolants, anchor categoricals, snapped integers, rank-interpolated ordinals"]
+  C --> F["engine.finetune: Qwen3 Base, LoRA / QLoRA, cached"]
+  S --> U["UtilityModel on real D_train, 2-fold cross-fit: fisher u2, influence, epistemic, aleatoric; non-linear validity probe"]
+  F --> P{sampler}
+  P -->|SIR| A["pool of 4n rows from the v2 generator"]
+  A --> G["validity floor + DCR gate"]
+  G --> L["z = std(u); lambda from KL budget and amplification cap"]
+  L --> K["keep n rows by Gumbel-top-k with weights e^(lambda z)"]
+  P -->|SMC| B["pilot rows: lambda, and a partial-row twist trained on masked rows"]
+  B --> T["field-wise twisted SMC: extend one field per particle, reweight, resample"]
+  U --> G
+  U --> T
+  K --> O["D_major + synthetic minority: XGB / LR / RF / MLP"]
+  T --> O
+  O --> M["gain over tuned threshold, AUPRC, held-out fidelity, membership-attack AUC, cost"]
+</pre>
+  </div>
+
+  <div class="eq">
+    <div class="cap">the four propositions (docs/THEORY.md), each checked by <code>tilt audit theory</code></div>
+    \[ \begin{aligned}
+      &\textbf{Prop 1:} && \frac{\eta'}{1-\eta'} = \Big(1+\tfrac{m}{n_{\min}}\,r(x)\Big)\frac{\eta}{1-\eta},\quad r=\tfrac{q}{p_{\min}} \;\Rightarrow\; \text{no } q \text{ beats } \sup_t \mathrm{M}(\mathbb 1[\eta>t]) \text{ at population level} \\
+      &\textbf{Prop 2:} && \Delta R = -\varepsilon\,\mathbb E_q[u] + O(\varepsilon^2),\quad u_2(x)=\sigma(1-\sigma)\,\tilde x^\top H^{-1}H_{\text{val}}H^{-1}\tilde x \;\Rightarrow\; q^\star \propto p\,e^{\lambda u}\ \text{under}\ \mathrm{KL}(q\|p)\le\varepsilon \\
+      &\textbf{Prop 3:} && \log w_t \mathrel{+}= \log\psi_t(x_{1:t})-\log\psi_{t-1}(x_{1:t-1}),\quad \log\psi_T=\lambda z(x)\ \Rightarrow\ \text{exact for any positive twist} \\
+      &\textbf{Prop 4:} && \text{record amplification} \le e^{\lambda\,\mathrm{range}(z)} \;\Rightarrow\; \lambda \le \log A/\mathrm{range}(z)
+    \end{aligned} \]
+    <div class="cap">Corollary: with \(u=\log p_{\text{LM}}(x\mid y_{\text{maj}})-\log p_{\text{LM}}(x\mid y_{\min})\), the tilt equals sequence-level classifier-free guidance \(p_{\min}^{1-\lambda}p_{\text{maj}}^{\lambda}\).</div>
+  </div>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Stage</th><th class="c-palt3">palt3 · v2 recommended</th><th class="c-palt4">palt4 · TILT</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead">Benchmark</td><td>ImbLLM / Pred-LLM tables, q = 0.2</td><td>+ 10 <strong>naturally imbalanced</strong> OpenML tables (IR 5.5–67), q = 0.8 (20% held out for fidelity and the membership attack)</td></tr>
+      <tr><td class="rowhead">Backbones</td><td>distilgpt2 … Qwen3-8B</td><td>Qwen3 Base ladder 0.6B → 14B, plus Qwen2.5-32B; Qwen3.5 and MoE rejected with the reason</td></tr>
+      <tr><td class="rowhead">Corpus and fine-tune</td><td colspan="2">identical: TILT reuses v2's cached fine-tune</td></tr>
+      <tr><td class="rowhead">Which rows are kept</td><td>every parsed row (after repair / clip / snap)</td><td>rows selected \(\propto e^{\lambda z}\) inside a KL budget ε, with a validity floor and a DCR gate; or built field by field with twisted SMC</td></tr>
+      <tr><td class="rowhead">Baseline to beat</td><td>v1_exact / other oversamplers</td><td><code>threshold_only</code> (Prop. 1); the headline metric is <code>gain_vs_threshold</code></td></tr>
+      <tr><td class="rowhead">Privacy</td><td>DCR, duplicate rates</td><td>+ a DOMIAS-style membership attack on the minority rows (<code>mia_auc</code>), and an amplification cap</td></tr>
+      <tr><td class="rowhead">Evidence without an LLM</td><td>math audits</td><td>+ 6 theory checks, and the <strong>oracle study</strong> (exact \(p_{\min}\) samples, CPU): the go/no-go test</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid2">
+    <div class="box good"><h4>Done right</h4>
+      <ul class="tight">
+        <li>It starts from the honest baseline. Prop. 1 shows that no oversampler beats a tuned threshold at population level, so every result is reported as a gain over <code>threshold_only</code>, for 4 learners.</li>
+        <li>The utility is derived, not heuristic. The default Fisher-leverage \(u_2\) targets reducible variance. The aleatoric utility is a named ablation predicted to hurt, which answers the label-noise objection up front.</li>
+        <li>The theory is checked by code:
+          <ul class="tight">
+            <li>intercept shift 2.96 vs the predicted 2.996;</li>
+            <li>first-order law: correlation 0.997 at ε = 0.002;</li>
+            <li>SMC matches the target distribution (TV 0.021).</li>
+          </ul></li>
+        <li>Tests caught real weaknesses before any GPU hour was spent:
+          <ul class="tight">
+            <li>a linear validity probe fails on a bimodal minority (57% of majority rows passed), so it is now non-linear;</li>
+            <li>a wide-bandwidth attack missed exact copies (AUC 0.59), so the attack is now distance-based;</li>
+            <li>a seed-sharing artefact in the SMC check.</li>
+          </ul></li>
+        <li>Sampling-only design: one fine-tune serves every utility, budget and sampler arm.</li>
+      </ul></div>
+    <div class="box bad"><h4>Weaknesses and open issues</h4>
+      <ul class="tight">
+        <li>Prop. 2 is first-order. At balancing scale (ε = 0.05) its prediction saturates (slope 0.18). The KL budget is the fix, but the optimal ε must be found empirically.</li>
+        <li>Fisher / influence use a <em>linear</em> probe. On multi-modal minorities its notion of "boundary" is crude.</li>
+        <li>SIR selects without replacement from a finite pool, which is only an approximation of \(q^\star\). SMC de-duplication slightly flattens \(q^\star\) on all-categorical tables.</li>
+        <li>SMC costs about (N/keep)·(M+1) field calls per row. Wide tables (ozone, 72 features) are SIR-only.</li>
+        <li><strong>First oracle trial</strong> (3 seeds, n_min = 20): perfect untilted oversampling reached +0.024 over the threshold, and no tilt beat it yet (+0.005 to +0.018). This is not conclusive, but it is a warning.</li>
+      </ul></div>
+    <div class="box new"><h4>Novelty vs the base papers and the literature</h4>
+      <ul class="tight">
+        <li>New combination: a KL-budgeted utility tilt with a validity floor and a privacy cap, for LLM tabular oversampling. The closest prior work is Askari-Hemmat et al. (TMLR 2024): the same tilt for image diffusion, with no budget, no SMC and no privacy.</li>
+        <li>New application: field-wise twisted SMC with a partial-row twist (FUDGE for fields). No tabular use was found.</li>
+        <li>New: Prop. 2 (optimal placement), the CFG-as-tilt corollary, and the amplification bound. Prop. 1 is a new assembly of known results (Elkan, Koyejo et al.).</li>
+        <li>Known parts, cited: the Gibbs principle, twisted SMC, TERM, and Nakada et al.'s θ<sub>bal</sub> result.</li>
+      </ul></div>
+    <div class="box warn"><h4>Caveats</h4>
+      <ul class="tight">
+        <li>No LLM training and no real-table results yet. H1–H8 in <span class="mono">docs/EXPERIMENTS.md</span> are hypotheses with falsification conditions.</li>
+        <li>The torch tests (<code>pytest -m llm</code>, <code>tilt smoke</code>) are written but have not run on this machine.</li>
+        <li>The natural tables' shapes and targets come from the OpenML API. They have not been fetched and verified locally.</li>
+        <li>If E0 or E1 comes out negative, the thesis becomes a well-founded "when and why guidance does not help" (<span class="mono">docs/THESIS.md</span>, risks).</li>
+      </ul></div>
+  </div>
+</section>
+
+<section id="stages">
+  <h2><span class="num">08</span>ImbLLM, stage by stage, in all four versions</h2>
+  <p class="section-intro">The same pipeline, one row per stage. Differences are what explain any score gap between versions.</p>
+  <div class="scroll">
+  <table class="stages">
+    <thead><tr><th>Stage</th><th class="c-palt2">palt2 · v1</th><th class="c-palt2">palt2 · v2 (recommended)</th><th class="c-palt3">palt3 · v1_paper</th><th class="c-palt3">palt3 · v2 (recommended)</th></tr></thead>
+    <tbody>
+      <tr><td class="rowhead">Protocol</td><td>80/20 split; median binarisation on train + test</td><td>same</td><td>train-quantile binarisation (top 20% = minority); real val fold; K-way multiclass</td><td>same as v1_paper</td></tr>
+      <tr><td class="rowhead">Text format</td><td>2 decimals; prompt ends <code>", "</code>; no EOS</td><td>same</td><td>5 significant digits; prompt ends <code>","</code>; EOS</td><td>same</td></tr>
+      <tr><td class="rowhead">Interpolation</td><td>random partner (\(\tfrac23\Sigma\))</td><td>kNN on raw units</td><td>random partner, as published</td><td>kNN on z-scored values</td></tr>
+      <tr><td class="rowhead">Categoricals in corpus</td><td>dropped from interpolants</td><td>random donor rows</td><td>dropped, as published</td><td>anchor row's categoricals</td></tr>
+      <tr><td class="rowhead">Fine-tuning</td><td>fp16 + GradScaler (crashes on GPU); left pad</td><td>same</td><td>fp32 trainables, bf16/fp16 autocast, right pad</td><td>same, model cache</td></tr>
+      <tr><td class="rowhead">Prompt value \(v\)</td><td>pooled marginal (\(\tau = 1\))</td><td>\(\tau = 0\) histogram, pooled value inside the bin</td><td>pooled marginal</td><td>exact \(\tau\)-bridge (\(\tau = 0\))</td></tr>
+      <tr><td class="rowhead">Post-processing</td><td>none; bad rows dropped</td><td>repair (empty-string bug), clip</td><td>none</td><td>unique-prefix repair, clip; Gibbs in <code>full</code></td></tr>
+      <tr><td class="rowhead">Classifier train set</td><td>\(\mathcal{D}_{\text{major}} \cup \hat{\mathcal{D}}\)</td><td>\(+\,\mathcal{D}_{\text{minor}}\) (a protocol change hidden in a method flag)</td><td>both, reported as <code>f1</code> and <code>real_f1</code></td><td>both</td></tr>
+      <tr><td class="rowhead">Decision rule</td><td>0.5 for all; threshold baseline identical to no baseline</td><td>tuned on synthetic-heavy data</td><td>each method's own rule; tuned on real val</td><td>same</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="types">
+  <h2><span class="num">09</span>How each version treats each kind of column</h2>
+  <p class="section-intro">"Solving imbalance" means different things per column type. The generator has to produce plausible minority values, and the classifier has to learn from them. Read across a row to compare versions.</p>
+  <div class="key">
+    <span><span class="pill p-good">sound</span> handles the type correctly</span>
+    <span><span class="pill p-warn">partial</span> works with a known distortion</span>
+    <span><span class="pill p-bad">broken</span> loses or corrupts information</span>
+  </div>
+  <div class="scroll">
+  <table class="matrix">
+    <thead><tr>
+      <th>Column type</th>
+      <th class="c-palt">palt v1</th><th class="c-palt">palt v2</th>
+      <th class="c-palt2">palt2 v1 / v2</th>
+      <th class="c-palt3">palt3 v1_paper</th><th class="c-palt3">palt3 v2_corrected</th>
+      <th class="c-palt4">palt4 TILT</th>
+      <th>Baselines (palt3/4)</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td class="rowhead">Nominal categorical<br><span class="mono">job, city</span></td>
+        <td><span class="pill p-bad">broken</span> Natural-sorted code, then MinMax: "job is 0.33". The model writes a number, decoded by rounding to the nearest code. Invents distances between categories.</td>
+        <td><span class="pill p-good">sound</span> Raw string. Each value is chosen by exactly scoring every category, \(P(v) \propto p_\theta(v\mid\cdot)^{1/T}\), \(T = 1\). Always valid.</td>
+        <td><span class="pill p-bad">broken</span> v1: free text; an invalid category drops the row; missing from ≥94% of training rows. v2: random donor categoricals break the joint; the repair snaps "" to the first category.</td>
+        <td><span class="pill p-warn">partial</span> Free text with exact parsing; no repair. Missing from interpolated rows, as published.</td>
+        <td><span class="pill p-good">sound</span> Anchor categoricals keep the joint. \(\tau\)-bridge on Jeffreys-smoothed frequencies. Unique-prefix repair. Gibbs scores every category exactly: \(p_\theta(x_j\mid y, x_{-j})\).</td>
+        <td><span class="pill p-good">sound</span> Generator as palt3 v2. The utility and validity probes see one-hot columns. In SMC, a category outside the vocabulary kills the particle (\(\log\psi=-\infty\)), so invalid rows never reach the output.</td>
+        <td>SMOTE / ADASYN: one-hot, decoded by argmax. SMOTE-NC: the most frequent value among the k neighbours. CTGAN / TVAE: one-hot plus a conditional vector. TabDDPM: multinomial diffusion. ARF: leaf frequencies.</td>
+      </tr>
+      <tr>
+        <td class="rowhead">Ordinal<br><span class="mono">cut, buying, education</span></td>
+        <td><span class="pill p-bad">broken</span> Natural sort scrambles the order (high &lt; low &lt; med &lt; vhigh), then treats the codes as numbers.</td>
+        <td><span class="pill p-warn">partial</span> Raw names. The order is known only through the LLM's grasp of language ("Good" &lt; "Very Good"), never stated.</td>
+        <td><span class="pill p-warn">partial</span> Named levels are nominal. Integer levels with ≤12 values become categorical strings, which is exact but orderless.</td>
+        <td><span class="pill p-warn">partial</span> Named levels are nominal. Integer codes are continuous, so interpolation creates in-between levels (2.4).</td>
+        <td><span class="pill p-good">sound</span> <code>ordinal_interpolation</code>: declared orders join the kNN block as ranks, \(r' = r_i + \varepsilon(r_j - r_i)\), rounded back to a real level between the two parents. Numeric-coded ordinals are snapped to their observed levels.</td>
+        <td><span class="pill p-good">sound</span> Generation as palt3 v2 (rank interpolation). <span class="pill p-warn">partial</span> The utility probe one-hot encodes ordinals, so the tilt ignores their order.</td>
+        <td>All baselines treat ordinals as nominal, or as continuous if numeric. Only palt3 v2 uses the order, and only for datasets that declare it (car, gem_price).</td>
+      </tr>
+      <tr>
+        <td class="rowhead">Binary<br><span class="mono">smoker, default</span></td>
+        <td><span class="pill p-warn">partial</span> 0/1 code; decoded by rounding.</td>
+        <td><span class="pill p-good">sound</span> Two-way exact scoring.</td>
+        <td><span class="pill p-warn">partial</span> As nominal.</td>
+        <td><span class="pill p-good">sound</span> As nominal; exact parse.</td>
+        <td><span class="pill p-good">sound</span> As nominal, plus anchor inheritance.</td>
+        <td><span class="pill p-good">sound</span> As nominal.</td>
+        <td>As nominal.</td>
+      </tr>
+      <tr>
+        <td class="rowhead">Continuous<br><span class="mono">income, bmi</span></td>
+        <td><span class="pill p-warn">partial</span> MinMax, rounded to 0.01 of the range (101 levels). Free digits; parse; clip.</td>
+        <td><span class="pill p-good">sound</span> Raw units. A finite-state mask allows only valid numbers: at most the observed integer digits, fixed decimals, a sign only if negatives were seen. Clipped to the training range.</td>
+        <td><span class="pill p-bad">broken</span> 2 decimals (collapses small-scale features). Random partner \(\to \tfrac23\Sigma\), off-manifold on multimodal minorities. v2: kNN on raw units; \(\tau = 0\) not exact.</td>
+        <td><span class="pill p-warn">partial</span> 5 significant digits. Eq. 5 random partner: \(\tfrac23\Sigma\), and about 32% off-manifold on a bimodal minority. Pooled conditioning values.</td>
+        <td><span class="pill p-good">sound</span> kNN in z-space: covariance ratio about 1.0, 0% off-manifold. \(\tau\)-bridge by KDE reweighting of real values. SIR-Gibbs with KDE proposals. Clipped.</td>
+        <td><span class="pill p-good">sound</span> As palt3 v2. The utility uses z-scored values. The SMC twist regressor handles fields not yet written as missing (NaN).</td>
+        <td>SMOTE: z-scored kNN interpolation. CTGAN: mode-specific (Gaussian mixture) normalisation. TabDDPM: Gaussian diffusion. ARF: per-leaf densities.</td>
+      </tr>
+      <tr>
+        <td class="rowhead">Discrete / integer<br><span class="mono">children, campaign, Rings</span></td>
+        <td><span class="pill p-bad">broken</span> Scaled like continuous, so decoding gives non-integers (1.65 children).</td>
+        <td><span class="pill p-good">sound</span> Decimals inferred as 0, so the mask allows integers only.</td>
+        <td><span class="pill p-warn">partial</span> ≤12 levels: categorical, exact. >12 levels: continuous, so interpolation gives fractions.</td>
+        <td><span class="pill p-warn">partial</span> Numeric type means continuous, so interpolants are fractional. Printed as an integer only when exactly whole.</td>
+        <td><span class="pill p-good">sound</span> <code>snap_discrete</code>: interpolants, parsed rows and Gibbs candidates are snapped to the observed support, \(\operatorname{snap}(v) = \arg\min_{s\in S}|v-s|\). Gibbs is exact over \(S\) when \(|S| \le 64\).</td>
+        <td><span class="pill p-good">sound</span> Inherits <code>snap_discrete</code>. In SMC, finished rows are clipped and snapped <em>before</em> their terminal utility is scored.</td>
+        <td>SMOTE: fractional. SDV and synthcity restore integer dtypes.</td>
+      </tr>
+      <tr>
+        <td class="rowhead">Target / class balance</td>
+        <td><span class="pill p-warn">partial</span> Label from an LLM query at \(T = 0.7\). The class ratio follows the model, and rare labels shrink.</td>
+        <td><span class="pill p-warn">partial</span> Exact posterior averaged over R = 4 orders, sampled at \(T_y = 0.7\). SIR keeps the real ratio. Faithful, not rebalancing.</td>
+        <td><span class="pill p-warn">partial</span> Label fixed in the prompt; generate \(\hat n\) minority rows. Multiclass reduced to minority-vs-rest.</td>
+        <td><span class="pill p-good">sound</span> Label fixed in the prompt. \(\hat n = |\text{largest class}|\); K-way classifier; scored with and without the real minority rows.</td>
+        <td><span class="pill p-good">sound</span> Same, and the boundary tilt is tunable (\(\tau\)) instead of accidental.</td>
+        <td><span class="pill p-good">sound</span> Label fixed in the prompt. Rows are chosen \(\propto e^{\lambda z}\) inside a KL budget. A non-linear validity floor blocks label-noise rows. Scored as the gain over the tuned threshold.</td>
+        <td>Every oversampler is compared with threshold tuning, prior shift and class weights. TapTap- and Pred-LLM-style verifiers reject rows labelled majority.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout">
+    <strong>Integer and ordinal columns: fixed in palt3 v2 on 28 Sep, and inherited by palt4.</strong> palt3 v2 gained two flags: <code>snap_discrete</code> (integer columns snapped to their observed support) and <code>ordinal_interpolation</code> (declared ordinals interpolated on their rank). Their v1 values reproduce the old behaviour byte for byte, so <code>imb run v2_flags</code> measures each one separately. Details with file:line references are in <span class="mono">palt3/docs/what_corrected.md</span> §H. The downstream classifier still one-hot encodes ordinals for every method, as the paper does.
+  </div>
+</section>
+
+<section id="novelty">
+  <h2><span class="num">10</span>Novelty ledger</h2>
+  <p class="section-intro">Checked against the literature on 28 Sep 2026. "Known" means the idea is published; applying it here can still be useful, but it is not a contribution on its own.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Item</th><th>Repo</th><th>Status</th><th>Closest prior work</th></tr></thead>
+    <tbody>
+      <tr><td><strong>TILT:</strong> KL-budgeted utility tilt with a validity floor and a privacy cap, for LLM tabular oversampling</td><td class="c-palt4">palt4</td><td><span class="pill p-new">new combination</span></td><td>Askari-Hemmat et al., TMLR 2024 (same tilt, image diffusion); LiBaGS (heuristic selection); CLLM (the opposite sign)</td></tr>
+      <tr><td>Field-wise twisted SMC with a partial-row twist for table rows</td><td class="c-palt4">palt4</td><td><span class="pill p-new">new application</span></td><td>Zhao et al., ICML 2024; FUDGE (text only)</td></tr>
+      <tr><td>Prop. 2 (first-order optimal placement = exponential tilt by Fisher leverage); CFG-as-tilt corollary; amplification bound</td><td class="c-palt4">palt4</td><td><span class="pill p-new">new propositions</span></td><td>built on Koh &amp; Liang 2017, the Gibbs principle, Sanchez et al. 2023</td></tr>
+      <tr><td>Prop. 1 (perfect oversampling = a threshold move; nothing beats the tuned threshold)</td><td class="c-palt4">palt4</td><td><span class="pill p-warn">known pieces</span></td><td>Elkan 2001; Koyejo et al. 2014; Nakada et al. (θ<sub>bal</sub>)</td></tr>
+      <tr><td>Order sensitivity of GReaT-style LLMs (dependency-network framing)</td><td class="c-palt3">palt2 → palt3</td><td><span class="pill p-new">new measurement</span></td><td>Heckerman 2000; Shih et al. 2022; PAFT argues for one fixed order</td></tr>
+      <tr><td>Critical replication of ImbLLM, and the corrected ablation reading</td><td class="c-palt3">palt3</td><td><span class="pill p-new">new</span></td><td>No public code or critique found</td></tr>
+      <tr><td>cardio label leak (V26–V35 one-hot encode the class)</td><td class="c-palt3">palt3, palt</td><td><span class="pill p-warn">partly known</span></td><td>OpenML-CC18 excluded it as "too easy", without naming the cause</td></tr>
+      <tr><td>Semantic-prior 2×2, plus memorisation probes on GPT-2-sized models</td><td class="c-palt3">palt3</td><td><span class="pill p-warn">partly known</span></td><td>GReaT vs TabuLa disagree; Bordt et al. 2024 probed GPT-3.5/4 only</td></tr>
+      <tr><td>\(\tau\)-bridge, SIR-Gibbs, kNN geometry, the \(\tfrac23\Sigma\) lemma</td><td class="c-palt3">palt2, palt3</td><td><span class="pill p-plain">known</span></td><td>geometric mixtures; MCMC; SMOTE 2002; Elreedy et al. 2023</td></tr>
+      <tr><td>Threshold / prior-shift baselines</td><td class="c-palt3">palt2, palt3</td><td><span class="pill p-plain">known</span></td><td>Elkan 2001; Elor &amp; Averbuch-Elor 2022; they are missing from ImbLLM's comparison</td></tr>
+      <tr><td>N1–N5 (raw values, constrained decoding, value loss, order-averaged label, curation)</td><td class="c-palt">palt v2</td><td><span class="pill p-plain">known parts</span></td><td>REaLTabFormer, TabularMDLM, permutation self-consistency, TabPFN, CLLM</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="caveats">
+  <h2><span class="num">11</span>Caveats and verification status</h2>
+  <div class="grid2">
+    <div class="box good"><h4>Verified by running code</h4>
+      <ul class="tight">
+        <li>palt3 fast suite: 83 passed, 4 skipped. Math, paper-table and data audits pass.</li>
+        <li>palt common tests: 11 passed. The cardio leak is detected by palt's audit and confirmed column by column.</li>
+        <li>palt4: 104 fast tests pass; 6/6 theory checks pass; every one of the 119 complete example commands in COMMANDS.md / SETUP.md goes through the real CLI parser.</li>
+        <li>The published-table arithmetic behind the ablation decomposition.</li>
+      </ul></div>
+    <div class="box warn"><h4>Not verified yet</h4>
+      <ul class="tight">
+        <li>Any fine-tuning or generation, on GPU or CPU, in any repo.</li>
+        <li>palt4's full oracle study (E0) and every real-table TILT experiment (E1–E9).</li>
+        <li><code>imb smoke</code>, palt's v1/v2 smoke and unit tests (they need torch), and the synthcity baselines.</li>
+        <li>Every "expected effect" in the docs. These are hypotheses with stated falsification conditions.</li>
+      </ul></div>
+  </div>
+  <div class="callout">
+    <strong>Next steps (palt4 first).</strong>
+    <ol>
+      <li>The oracle go/no-go study, on CPU:
+        <ul class="tight"><li><code>tilt oracle --n-min 20 50 100 --seeds 30</code></li></ul></li>
+      <li>Install torch (<span class="mono">palt4/SETUP.md</span>), then run <code>tilt smoke</code>.</li>
+      <li>On the H100, the headline table:
+        <ul class="tight"><li><code>tilt run thesis_main --config h100_main --resume</code></li></ul></li>
+      <li>Report it:
+        <ul class="tight"><li><code>tilt report thesis_main --metric gain_vs_threshold</code></li></ul></li>
+    </ol>
+    <p>Every command is in <span class="mono">palt4/COMMANDS.md</span>; the thesis plan is in <span class="mono">palt4/docs/THESIS.md</span>.</p>
+  </div>
+</section>
+
+<footer>Built from the source of palt, palt2, palt3 and palt4, their docs (NOVELTY.md, AUDIT.md, what_corrected.md, RESEARCH_REVIEW.md, palt4's THEORY / METHOD / RELATED_WORK / EXPERIMENTS) and the two papers. Figures for published results are the papers' own; figures for code behaviour come from the repos' audits and tests.</footer>
+</main>
+</div>
+</div>
+
+<!--claude-mermaid-runtime-begin:3477-->
+<style>.mermaid-diagram{margin-block:4px}.mermaid-diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}</style>
+<script src="/_runtime/mermaid-11.16.1.min.js"></script>
+<script>(function(){
+var CFG={"palettes":{"light":{"surface":"#f4efe4","text":"#42392e","line":"#8a7f6d","border":"#7a6c52","bg":"#fffdf8"},"dark":{"surface":"#262b34","text":"#f2f3f5","line":"#a8adb8","border":"#9aa4b8","bg":"#1f232b"}}};
+if(typeof mermaid==='undefined')return;
+var pres=Array.prototype.slice.call(document.querySelectorAll('pre.mermaid')).filter(function(p){if(p.hasAttribute('data-claude-mermaid-claimed'))return false;p.setAttribute('data-claude-mermaid-claimed','1');return true;});
+if(!pres.length)return;
+var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+var root=document.documentElement;
+var items=pres.map(function(pre){
+var mount=document.createElement('div');mount.className='mermaid-diagram';
+return {pre:pre,mount:mount,src:pre.textContent||''};
+});
+var seq=0;
+var renderGen=0;
+var lastKey='';
+function pageBg(fallback){
+var els=[document.body,document.documentElement];
+for(var i=0;i<els.length;i++){
+var c=els[i]&&getComputedStyle(els[i]).backgroundColor;
+if(c&&c!=='transparent'&&c!=='rgba(0, 0, 0, 0)')return c;
+}
+return fallback;
+}
+function render(){
+var theme=root.getAttribute('data-theme');
+var dark=theme==='dark'||(!!(mq&&mq.matches)&&theme!=='light');
+var pal=dark?CFG.palettes.dark:CFG.palettes.light;
+var bg=pageBg(pal.bg);
+var key=(dark?'d':'l')+'|'+bg;
+if(key===lastKey)return;
+lastKey=key;
+var gen=++renderGen;
+var font=getComputedStyle(document.body).fontFamily||'sans-serif';
+var nat={useMaxWidth:false};
+mermaid.initialize({
+startOnLoad:false,securityLevel:'strict',theme:'base',
+flowchart:nat,sequence:nat,er:nat,state:nat,class:nat,pie:nat,
+gantt:nat,journey:nat,timeline:nat,gitGraph:nat,mindmap:nat,xyChart:nat,
+quadrantChart:nat,sankey:nat,c4:nat,requirement:nat,block:nat,
+packet:nat,kanban:nat,architecture:nat,radar:nat,
+themeVariables:{background:bg,mainBkg:pal.surface,primaryColor:pal.surface,
+primaryTextColor:pal.text,lineColor:pal.line,primaryBorderColor:pal.border,
+nodeBorder:pal.border,clusterBorder:pal.border,edgeLabelBackground:bg,
+clusterBkg:'rgba(127,127,127,0.07)',titleColor:pal.text,
+darkMode:dark,rowOdd:bg,rowEven:'rgba(127,127,127,0.07)',
+attributeBackgroundColorOdd:bg,attributeBackgroundColorEven:'rgba(127,127,127,0.07)',
+fontSize:'16px',fontFamily:font},
+themeCSS:'.node rect, .node circle, .node polygon, .node path, .cluster rect { stroke-width: 2px; }'
+});
+items.forEach(function(it){
+var id='claude-mermaid-'+seq++;
+mermaid.render(id,it.src).then(function(r){
+if(gen!==renderGen)return;
+var prev=it.pre.previousElementSibling;
+if(prev&&prev.className==='mermaid-diagram'&&prev!==it.mount)return;
+it.mount.innerHTML=r.svg;
+if(!it.mount.parentNode)it.pre.parentNode.insertBefore(it.mount,it.pre);
+it.pre.style.display='none';
+},function(){
+var scratch=document.getElementById(id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+scratch=document.getElementById('d'+id);
+if(scratch)scratch.parentNode.removeChild(scratch);
+if(gen!==renderGen)return;
+if(it.mount.parentNode)it.mount.parentNode.removeChild(it.mount);
+it.pre.style.display='';
+});
+});
+}
+render();
+if(mq&&mq.addEventListener)mq.addEventListener('change',render);
+if(typeof MutationObserver!=='undefined')new MutationObserver(render).observe(root,{attributes:true,attributeFilter:['data-theme']});
+})();</script>
+<!--claude-mermaid-runtime-end-->
+
+</body></html>

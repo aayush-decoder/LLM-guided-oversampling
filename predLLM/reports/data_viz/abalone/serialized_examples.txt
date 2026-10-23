@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+Length is 0.14, Diameter is 0.13, Height is 0.07, Shucked_Weight is 0.01, Viscera_Weight is 0.01, Shell_Weight is 0.01, Rings is 0.01, Sex is 0.5, target is 5
+Length is 0.19, Diameter is 0.16, Height is 0.05, Shucked_Weight is 0.01, Viscera_Weight is 0.01, Shell_Weight is 0.01, Rings is 0.01, Sex is 0.5, target is 3
+Length is 0.79, Diameter is 0.8, Height is 0.15, Shucked_Weight is 0.49, Viscera_Weight is 0.4, Shell_Weight is 0.28, Rings is 0.45, Sex is 1, target is 15
+
+# v2 serialization, clean space (real categories and units):
+Length is 0.18, Diameter is 0.135, Height is 0.08, Shucked_Weight is 0.033, Viscera_Weight is 0.0145, Shell_Weight is 0.007, Rings is 0.01, Sex is I, Age is 5.0
+Length is 0.215, Diameter is 0.15, Height is 0.055, Shucked_Weight is 0.041, Viscera_Weight is 0.015, Shell_Weight is 0.009, Rings is 0.0125, Sex is I, Age is 3.0
+Length is 0.66, Diameter is 0.53, Height is 0.17, Shucked_Weight is 1.3905, Viscera_Weight is 0.5905, Shell_Weight is 0.212, Rings is 0.453, Sex is M, Age is 15.0

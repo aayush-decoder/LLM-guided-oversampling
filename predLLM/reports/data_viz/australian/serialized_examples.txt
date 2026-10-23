@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+A1 is 1, A2 is 0.9, A3 is 0.92, A4 is 0.5, A5 is 0.69, A6 is 1, A7 is 0, A8 is 1, A9 is 1, A10 is 0.86, A11 is 0, A12 is 0.5, A13 is 0.29, A14 is 0.25, target is 0
+A1 is 0, A2 is 0.63, A3 is 0.53, A4 is 0.5, A5 is 0.23, A6 is 0.43, A7 is 0.19, A8 is 1, A9 is 0, A10 is 0, A11 is 1, A12 is 0.5, A13 is 0, A14 is 0, target is 1
+A1 is 1, A2 is 0.13, A3 is 0.25, A4 is 0.5, A5 is 0.54, A6 is 0.43, A7 is 0.39, A8 is 1, A9 is 1, A10 is 0.05, A11 is 0, A12 is 0.5, A13 is 0.18, A14 is 0.27, target is 1
+
+# v2 serialization, clean space (real categories and units):
+A1 is 1, A2 is 314.0, A3 is 197.0, A4 is 2, A5 is 10, A6 is 9, A7 is 1.0, A8 is 1, A9 is 1, A10 is 20.0, A11 is 0, A12 is 2, A13 is 50.0, A14 is 60.0, A15 is 0
+A1 is 0, A2 is 222.0, A3 is 115.0, A4 is 2, A5 is 4, A6 is 4, A7 is 26.0, A8 is 1, A9 is 0, A10 is 1.0, A11 is 1, A12 is 2, A13 is 1.0, A14 is 1.0, A15 is 1
+A1 is 1, A2 is 47.0, A3 is 54.0, A4 is 2, A5 is 8, A6 is 4, A7 is 52.0, A8 is 1, A9 is 1, A10 is 2.0, A11 is 0, A12 is 2, A13 is 32.0, A14 is 66.0, A15 is 1

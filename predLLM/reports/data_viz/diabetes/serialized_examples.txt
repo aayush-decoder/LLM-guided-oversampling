@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+preg is 0.41, plas is 0.98, pres is 0.74, skin is 0, insu is 0, mass is 0.59, pedi is 0.16, age is 0.33, target is 1
+preg is 0.12, plas is 0.41, pres is 0.59, skin is 0.15, insu is 0.09, mass is 0.45, pedi is 0.2, age is 0.07, target is 0
+preg is 0.12, plas is 0.64, pres is 0.48, skin is 0.24, insu is 0.33, mass is 0.41, pedi is 0.65, age is 0.07, target is 0
+
+# v2 serialization, clean space (real categories and units):
+preg is 7.0, plas is 196.0, pres is 90.0, skin is 0.0, insu is 0.0, mass is 39.8, pedi is 0.451, age is 41.0, class is tested_positive
+preg is 2.0, plas is 81.0, pres is 72.0, skin is 15.0, insu is 76.0, mass is 30.1, pedi is 0.547, age is 25.0, class is tested_negative
+preg is 2.0, plas is 127.0, pres is 58.0, skin is 24.0, insu is 275.0, mass is 27.7, pedi is 1.6, age is 25.0, class is tested_negative

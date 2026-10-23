@@ -1,0 +1,9 @@
+# v1 (paper) serialization, encoded space:
+balance is 0.05, duration is 0.07, campaign is 0, pdays is 0.37, previous is 0.04, age is 1, marital is 0.5, job is 0, education is 0.33, default is 0, housing is 1, loan is 0, contact is 0, poutcome is 0, target is 0
+balance is 0.04, duration is 0.04, campaign is 0.02, pdays is 0, previous is 0, age is 0, marital is 0.5, job is 0.55, education is 0.33, default is 0, housing is 1, loan is 0, contact is 1, poutcome is 1, target is 0
+balance is 0.05, duration is 0.16, campaign is 0, pdays is 0, previous is 0, age is 0, marital is 0.5, job is 0.09, education is 0.33, default is 0, housing is 1, loan is 1, contact is 0, poutcome is 1, target is 0
+
+# v2 serialization, clean space (real categories and units):
+balance is 299.0, duration is 209.0, campaign is 1.0, pdays is 321.0, previous is 1.0, age is youth, marital is married, job is admin., education is secondary, default is no, housing is yes, loan is no, contact is cellular, poutcome is failure, subscribe is no
+balance is -220.0, duration is 138.0, campaign is 2.0, pdays is -1.0, previous is 0.0, age is adult, marital is married, job is self-employed, education is secondary, default is no, housing is yes, loan is no, contact is unknown, poutcome is unknown, subscribe is no
+balance is 140.0, duration is 490.0, campaign is 1.0, pdays is -1.0, previous is 0.0, age is adult, marital is married, job is blue-collar, education is secondary, default is no, housing is yes, loan is yes, contact is cellular, poutcome is unknown, subscribe is no
