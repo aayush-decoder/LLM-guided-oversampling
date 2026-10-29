@@ -1,3 +1,4 @@
 dataset,Original(ours),v1:great@distilgpt2,v1:pred_llm@distilgpt2,v1:pred_llm@qwen2.5-0.5b,v1:pred_llm@qwen3-0.6b,v1:taptap@distilgpt2,v2:pred_llm_v2@distilgpt2,v2:pred_llm_v2@qwen2.5-0.5b,v2:pred_llm_v2@qwen2.5-1.5b,v2:pred_llm_v2@qwen3-0.6b,v2:pred_llm_v2@qwen3-1.7b,v2:v2_encoded@distilgpt2,v2:v2_plain_loss@distilgpt2,v3:pred_llm_v3@distilgpt2,v3:v3_cfg_negative@distilgpt2,v3:v3_no_curation@distilgpt2,v3:v3_no_negative@distilgpt2,v3:v3_no_outlier_range@distilgpt2,v3:v3_plain@distilgpt2
+bank,0.6704 (0.000),,,,,,0.6503 (0.000),,,,,,,,,,,,
 blood,0.5630 (0.000),,,,,,,,,,,,,0.2909 (0.000),,,,,
 iris,0.9553 (0.032),0.4053 (0.044),0.9777 (0.016),0.9329 (0.027),0.9554 (0.042),0.9094 (0.085),0.9315 (0.057),0.9441 (0.042),0.9554 (0.042),0.9554 (0.042),0.9554 (0.042),0.9316 (0.048),0.9553 (0.032),0.9666 (0.000),0.9666 (0.000),0.9313 (0.057),0.9666 (0.000),0.9664 (0.027),0.9666 (0.000)

@@ -1,0 +1,57 @@
+{
+  "dataset": "iris",
+  "method": "v2_encoded",
+  "seed": 0,
+  "llm": "tiny-gpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.5333,
+    "f1_macro": 0.4908,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "valid": true
+  },
+  "fidelity": {
+    "inverse_kl": 0.5877,
+    "discriminator": 1.0,
+    "discriminator_auc": 1.0,
+    "discriminator_acc": 1.0,
+    "discriminator_lr": 1.0,
+    "discriminator_train": 0.9907,
+    "density": 0.0,
+    "coverage": 0.0,
+    "dcr_mean": 0.7029,
+    "dcr_median": 0.6565,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "steps": 30,
+    "epochs_run": 4,
+    "final_loss": 10.811800765991212,
+    "train_seconds": 0.7,
+    "n_sequences": 240
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "posterior_entropy": 1.0972,
+    "pool_size": 180,
+    "dcr_tau": 0.03701,
+    "privacy_dropped": 0,
+    "sir_ess": 7.7,
+    "disc_mean_pool": 0.0205,
+    "preset": "v2_encoded"
+  },
+  "seconds_total": 2.7
+}

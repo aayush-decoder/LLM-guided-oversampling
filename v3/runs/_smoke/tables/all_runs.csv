@@ -1,0 +1,9 @@
+version,dataset,method,llm,seed,task,metric,score,original,discriminator,discriminator_lr,inverse_kl,density,coverage,dcr_mean,exact_copy_rate
+v3,iris,original,tiny-gpt2,0,classification,accuracy,0.9333,0.9333,0.0,0.0,0.9174,0.7333,0.9,0.0,1.0
+v3,iris,original,tiny-gpt2,0,classification,f1_macro,0.9327,0.9327,0.0,0.0,0.9174,0.7333,0.9,0.0,1.0
+v3,iris,pred_llm_v3,tiny-gpt2,0,classification,accuracy,0.6333,0.9333,1.0,0.8765,0.6154,0.0042,0.0333,0.4303,0.0
+v3,iris,pred_llm_v3,tiny-gpt2,0,classification,f1_macro,0.5402,0.9327,1.0,0.8765,0.6154,0.0042,0.0333,0.4303,0.0
+v3,iris,v3_no_negative,tiny-gpt2,0,classification,accuracy,0.6333,0.9333,1.0,0.8765,0.6154,0.0042,0.0333,0.4303,0.0
+v3,iris,v3_no_negative,tiny-gpt2,0,classification,f1_macro,0.5402,0.9327,1.0,0.8765,0.6154,0.0042,0.0333,0.4303,0.0
+v3,iris,v3_no_outlier_range,tiny-gpt2,0,classification,accuracy,0.5,0.9333,0.9753,0.7037,0.6468,0.0042,0.0333,0.4538,0.0
+v3,iris,v3_no_outlier_range,tiny-gpt2,0,classification,f1_macro,0.3961,0.9327,0.9753,0.7037,0.6468,0.0042,0.0333,0.4538,0.0

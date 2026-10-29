@@ -224,6 +224,51 @@ def plot_v3_training_loss(runs_dir: Path, out_dir: Path):
         print(f"Saved: {save_path}")
 
 
+def plot_data_augmentation(df: pd.DataFrame, out_dir: Path):
+    """Bar plot comparing Real Only vs Synthetic Only vs Augmented (Real + Synthetic)."""
+    if "augmented" not in df.columns or df["augmented"].dropna().empty:
+        return
+
+    sub = df.dropna(subset=["augmented", "score", "original"])
+    if sub.empty:
+        return
+
+    datasets = sub["dataset"].unique()
+    for ds in datasets:
+        ds_sub = sub[sub["dataset"] == ds]
+        fig, axes = plt.subplots(1, 2, figsize=(14, 5.5))
+
+        for idx, metric in enumerate(["accuracy", "f1_macro"]):
+            m_sub = ds_sub[ds_sub["metric"] == metric]
+            if m_sub.empty:
+                continue
+            ax = axes[idx]
+
+            # Aggregate over seeds per method
+            agg = m_sub.groupby(["version", "method"])[["original", "score", "augmented"]].mean().reset_index()
+            agg["label"] = agg["version"] + ":" + agg["method"]
+
+            y = np.arange(len(agg))
+            height = 0.25
+
+            ax.barh(y - height, agg["original"], height=height, label="1. Real Train Only", color="#95a5a6", alpha=0.9, edgecolor="black")
+            ax.barh(y, agg["score"], height=height, label="2. Synthetic Only (TSTR)", color="#3498db", alpha=0.85, edgecolor="black")
+            ax.barh(y + height, agg["augmented"], height=height, label="3. Real + Synthetic (Augmented)", color="#2ecc71", alpha=0.95, edgecolor="black")
+
+            ax.set_yticks(y)
+            ax.set_yticklabels(agg["label"], fontsize=9)
+            ax.set_xlabel(f"{metric.replace('_', ' ').title()}", fontsize=10)
+            ax.set_title(f"{ds.upper()} - Data Augmentation Comparison ({metric})", fontsize=11, fontweight="bold")
+            ax.grid(True, linestyle=":", alpha=0.6, axis="x")
+            ax.legend(loc="lower right", fontsize=8)
+
+        plt.tight_layout()
+        save_path = out_dir / f"05_data_augmentation_{ds}.png"
+        fig.savefig(save_path, dpi=130)
+        plt.close(fig)
+        print(f"Saved: {save_path}")
+
+
 def generate_all_graphs():
     print(f"Collecting cross-version run results from v1, v2, v3...")
     df = collect(["v1", "v2", "v3"])
@@ -236,6 +281,7 @@ def generate_all_graphs():
     plot_fidelity_metrics(df, OUT_DIR)
     plot_privacy_tradeoff(df, OUT_DIR)
     plot_v3_training_loss(Path("."), OUT_DIR)
+    plot_data_augmentation(df, OUT_DIR)
     print("All comparison graphs generated successfully!")
 
 

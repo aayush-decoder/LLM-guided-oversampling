@@ -1,0 +1,42 @@
+{
+  "run": "D:\\project\\College\\ML-project\\v2\\runs\\_smoke\\iris\\v2_plain_loss__tiny-gpt2\\seed0",
+  "status": "PASS",
+  "items": [
+    {
+      "level": "PASS",
+      "msg": "all required artifacts present"
+    },
+    {
+      "level": "PASS",
+      "msg": "no NaN in synthetic data"
+    },
+    {
+      "level": "PASS",
+      "msg": "|D_fake| = 120"
+    },
+    {
+      "level": "PASS",
+      "msg": "feature values within [0,1] (0.00% outside)"
+    },
+    {
+      "level": "PASS",
+      "msg": "all 3 classes generated"
+    },
+    {
+      "level": "PASS",
+      "msg": "label TV distance 0.033"
+    },
+    {
+      "level": "PASS",
+      "msg": "exact copies of training rows 0.00%"
+    },
+    {
+      "level": "PASS",
+      "msg": "TSTR valid: {'accuracy': 0.4, 'f1_macro': 0.3576, 'valid': True}"
+    },
+    {
+      "level": "PASS",
+      "msg": "generation validity 100.00%"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "run": "D:\\project\\College\\ML-project\\v1\\runs\\_smoke\\iris\\great__distilgpt2\\seed0",
+  "status": "PASS",
+  "items": [
+    {
+      "level": "PASS",
+      "msg": "all required artifacts present"
+    },
+    {
+      "level": "PASS",
+      "msg": "no NaN in synthetic data"
+    },
+    {
+      "level": "PASS",
+      "msg": "|D_fake| = 120"
+    },
+    {
+      "level": "PASS",
+      "msg": "feature values within [0,1] (0.00% outside)"
+    },
+    {
+      "level": "PASS",
+      "msg": "all 3 classes generated"
+    },
+    {
+      "level": "PASS",
+      "msg": "label TV distance 0.017"
+    },
+    {
+      "level": "PASS",
+      "msg": "exact copies of training rows 0.00%"
+    },
+    {
+      "level": "PASS",
+      "msg": "TSTR valid: {'accuracy': 0.5333, 'f1_macro': 0.5326, 'valid': True}"
+    },
+    {
+      "level": "PASS",
+      "msg": "generation validity 92.31%"
+    }
+  ]
+}

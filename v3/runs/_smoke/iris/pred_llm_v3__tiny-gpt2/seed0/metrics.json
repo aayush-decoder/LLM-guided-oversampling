@@ -1,0 +1,63 @@
+{
+  "dataset": "iris",
+  "method": "pred_llm_v3",
+  "seed": 0,
+  "llm": "tiny-gpt2",
+  "task": "classification",
+  "tstr": {
+    "accuracy": 0.6333,
+    "f1_macro": 0.5402,
+    "valid": true
+  },
+  "original": {
+    "accuracy": 0.9333,
+    "f1_macro": 0.9327,
+    "valid": true
+  },
+  "n_synthetic": 120,
+  "tstr_augmented": {
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "valid": true
+  },
+  "fidelity": {
+    "inverse_kl": 0.6154,
+    "discriminator": 1.0,
+    "discriminator_auc": 1.0,
+    "discriminator_acc": 1.0,
+    "discriminator_lr": 0.8765,
+    "discriminator_train": 1.0,
+    "density": 0.0042,
+    "coverage": 0.0333,
+    "dcr_mean": 0.4303,
+    "dcr_median": 0.4199,
+    "exact_copy_rate": 0.0,
+    "fidelity_reference": "heldout_test"
+  },
+  "train": {
+    "final_step": 30,
+    "epochs": 4,
+    "final_loss": 10.828,
+    "final_loss_pos": 10.828,
+    "final_loss_neg": 0.0,
+    "time_s": 1.5
+  },
+  "generation": {
+    "numeric_fallbacks": 0,
+    "validity_rate": 1.0,
+    "n_sampled": 180,
+    "range_mode": "outlier",
+    "posterior_entropy": 1.0973,
+    "pool_size": 180,
+    "dcr_tau": 0.03701,
+    "privacy_dropped": 0,
+    "anomaly_mean": -0.0999,
+    "anomaly_kept_ratio": 0.9,
+    "anomaly_threshold_high": -0.0521,
+    "sir_ess": 4.5,
+    "disc_mean_pool": 0.0481,
+    "preset": "pred_llm_v3",
+    "version": "v3"
+  },
+  "seconds_total": 4.3
+}
